@@ -82,7 +82,7 @@ export function getResponsiveVideoSources(publicId: string) {
  * Hero video configuration with optimal settings
  */
 export const HERO_VIDEO = {
-  publicId: '4_Turbo_Steady_forward_push_through_urban_plaza_archway_cinematic_dolly_shot_real_estate_video_2749429055_oayeqg',
+  publicId: 'Gen-4_Turbo_Steady_forward_push_through_urban_plaza_archway_cinematic_dolly_shot_real_estate_video_2749429055_oayeqg',
 
   // Get optimized URLs for different screen sizes
   getSources() {
