@@ -19,6 +19,15 @@ const config: Config = {
         'accent-rust': '#E17A4C',         // Alternative CTAs, secondary accents
         'divider-gray': '#374151',        // Dividers and lines
         'border-light': '#E5E7EB',        // Light borders
+
+        // Station33 Brand Colors (Sienna Specification)
+        'station-red': '#C8102E',         // Primary CTA, accents
+        'station-orange': '#F26522',      // Hover states, highlights
+        'station-gray': '#58595B',        // Subtle accents
+        'station-black': '#231F20',       // Deep blacks
+
+        // Additional Sienna Colors
+        'text-light': '#9CA3AF',          // Light text
       },
       fontFamily: {
         sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],

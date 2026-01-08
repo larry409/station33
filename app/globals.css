@@ -14,6 +14,13 @@
   --divider-gray: #374151;      /* Dividers */
   --border-light: #E5E7EB;      /* Light borders */
   --text-white: #FFFFFF;        /* Pure white */
+
+  /* Station33 Brand Colors (Sienna Specification) */
+  --station-red: #C8102E;       /* Primary CTA, accents */
+  --station-orange: #F26522;    /* Hover states, highlights */
+  --station-gray: #58595B;      /* Subtle accents */
+  --station-black: #231F20;     /* Deep blacks */
+  --text-light: #9CA3AF;        /* Light text */
 }
 
 @layer base {
