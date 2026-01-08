@@ -19,7 +19,7 @@ export default function Navigation() {
   return (
     <header
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        scrolled ? 'bg-bg-darker/95 backdrop-blur-lg shadow-xl' : 'bg-transparent'
+        scrolled ? 'bg-bg-dark/90 backdrop-blur-lg' : 'bg-bg-dark/50 backdrop-blur-sm'
       }`}
     >
       <nav className="container mx-auto flex justify-between items-center py-6">
@@ -27,19 +27,19 @@ export default function Navigation() {
         <div className="hidden md:flex gap-8">
           <Link
             href="/investors"
-            className="text-text-light hover:text-station-orange transition-colors font-medium"
+            className="text-primary-text hover:text-accent-teal transition-colors text-sm font-medium"
           >
             Investors
           </Link>
           <Link
             href="/community"
-            className="text-text-light hover:text-station-orange transition-colors font-medium"
+            className="text-primary-text hover:text-accent-teal transition-colors text-sm font-medium"
           >
             Community
           </Link>
           <Link
             href="/about"
-            className="text-text-light hover:text-station-orange transition-colors font-medium"
+            className="text-primary-text hover:text-accent-teal transition-colors text-sm font-medium"
           >
             About
           </Link>
@@ -50,15 +50,19 @@ export default function Navigation() {
           href="/"
           className="absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0 md:left-0"
         >
-          <div className="text-2xl font-bold text-white">
-            <span className="text-station-red">STATION</span>
-            <span className="text-station-orange">33</span>
+          <div className="text-2xl font-bold">
+            <span className="text-primary-text">STATION</span>
+            <span className="text-accent-rust">33</span>
           </div>
         </Link>
 
-        {/* Right button */}
-        <Link href="/contact" className="hidden md:block btn-primary text-sm">
+        {/* Right button - rounded with arrow */}
+        <Link
+          href="/contact"
+          className="hidden md:flex items-center gap-2 px-6 py-3 border-2 border-primary-text text-primary-text rounded-full hover:bg-primary-text hover:text-bg-dark transition-all duration-300 text-sm font-medium"
+        >
           Contact
+          <span className="text-lg">→</span>
         </Link>
 
         {/* Mobile menu toggle */}

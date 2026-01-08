@@ -9,19 +9,16 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        'station-red': '#C8102E',
-        'station-orange': '#F26522',
-        'station-gray': '#58595B',
-        'station-black': '#231F20',
-        'olive-green': '#708238',
-        'warm-orange': '#E17A4C',
-        'deep-brown': '#4A3426',
-        'cream': '#F1E8D6',
-        'bg-dark': '#1A1A1A',
-        'bg-darker': '#0D0D0D',
-        'card-bg': '#2A2A2A',
-        'text-light': '#F1E8D6',
-        'border-gray': '#3A3A3A',
+        // Luxury Template Color System
+        'primary-text': '#EBE3DD',        // Off-white for all headings and prominent text
+        'body-text': '#9CA3AF',           // Medium gray for descriptions
+        'bg-dark': '#1A1A1A',             // Near black primary background
+        'bg-darker': '#0D0D0D',           // Darker sections
+        'card-bg': '#2A2A2A',             // Card backgrounds
+        'accent-teal': '#14B8A6',         // Service badges, interactive elements
+        'accent-rust': '#E17A4C',         // Alternative CTAs, secondary accents
+        'divider-gray': '#374151',        // Dividers and lines
+        'border-light': '#E5E7EB',        // Light borders
       },
       fontFamily: {
         sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],

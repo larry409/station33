@@ -1,12 +1,5 @@
 import Navigation from '@/components/Navigation'
-import Hero from '@/components/Hero'
-import Stats from '@/components/Stats'
-import Features from '@/components/Features'
-import Timeline from '@/components/Timeline'
-import Location from '@/components/Location'
-import EventsCarousel from '@/components/EventsCarousel'
-import CTA from '@/components/CTA'
-import FAQ from '@/components/FAQ'
+import HeroLuxury from '@/components/HeroLuxury'
 import Footer from '@/components/Footer'
 
 export default function Home() {
@@ -14,14 +7,9 @@ export default function Home() {
     <>
       <Navigation />
       <main className="min-h-screen">
-        <Hero />
-        <Stats />
-        <Features />
-        <Timeline />
-        <Location />
-        <EventsCarousel />
-        <CTA />
-        <FAQ />
+        <HeroLuxury />
+        {/* Phase 1: Navigation + Hero Complete */}
+        {/* Phase 2: Property Cards, Statistics, Services - Coming Next */}
       </main>
       <Footer />
     </>
