@@ -90,25 +90,13 @@ export default function HeroLuxury() {
           ref={titleRef}
           className="text-5xl md:text-6xl lg:text-7xl font-bold text-primary-text mb-8 leading-tight"
         >
-          Where Chattanooga Comes Together
+          Eat. Live. Play. Shop. Work.
         </h1>
 
         {/* Subheading */}
-        <p className="hero-subtext text-xl md:text-2xl text-primary-text max-w-4xl mx-auto mb-12 leading-relaxed">
-          Experience luxury urban living at Station33 - Chattanooga's premier mixed-use destination
-          on South Broad
+        <p className="hero-subtext text-xl md:text-2xl text-primary-text max-w-4xl mx-auto leading-relaxed">
+          Where Chattanooga Comes Together
         </p>
-
-        {/* CTA Button with Arrow */}
-        <div className="hero-cta">
-          <Link
-            href="/explore"
-            className="inline-flex items-center gap-3 px-8 py-4 border-2 border-primary-text text-primary-text rounded-lg hover:bg-primary-text hover:text-bg-dark transition-all duration-300 text-lg font-medium"
-          >
-            Explore Station33
-            <span className="text-2xl">→</span>
-          </Link>
-        </div>
       </div>
     </section>
   )

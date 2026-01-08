@@ -30,7 +30,7 @@ const config: Config = {
         'text-light': '#9CA3AF',          // Light text
       },
       fontFamily: {
-        sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
+        sans: ['Inter', 'system-ui', 'sans-serif'],
       },
       fontSize: {
         'hero': ['4.2rem', { lineHeight: '1.1', letterSpacing: '-0.02em' }],

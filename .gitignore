@@ -33,9 +33,3 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
-
-# Logo files - use Cloudinary URLs instead
-public/images/*.jpg
-public/images/*.pdf
-public/images/*.ai
-public/images/*.eps

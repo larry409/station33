@@ -29,45 +29,45 @@ export default function Features() {
 
   const features = [
     {
-      icon: '🏢',
-      title: 'Premium Commercial Space',
+      icon: '🏊',
+      title: 'Rooftop Pool & Lounge',
       description:
-        "25,000+ SF of Grade-A office space designed for Chattanooga's most innovative companies. Perfect for architecture firms, law offices, medical practices, and more.",
-      link: '/community#commercial',
+        'Resort-style rooftop pool with vibrant art installations, cabanas, and panoramic city views. Your urban oasis with poolside service and lounge seating.',
+      link: '/community#rooftop',
     },
     {
-      icon: '🏠',
-      title: 'Luxury Living',
+      icon: '🎪',
+      title: 'European-Style Plaza',
       description:
-        '47 sophisticated apartments and townhomes with Riverwalk views. Pet-friendly living designed for urban professionals who want it all.',
-      link: '/community#residential',
+        'Car-free pedestrian plaza with splash fountain, green spaces, and year-round programming. Host markets, concerts, and community gatherings for up to 500 guests.',
+      link: '/about#plaza',
+    },
+    {
+      icon: '🍽️',
+      title: 'Curated Food Hall',
+      description:
+        "Chattanooga's premier food hall featuring local chefs, craft cocktails, and outdoor dining. From quick bites to chef-driven concepts, all steps from your door.",
+      link: '/community#dining',
     },
     {
       icon: '🏨',
       title: 'Boutique Hotel',
       description:
-        '63 rooms with rooftop pool and lounge. A sanctuary for travelers seeking authentic Chattanooga experiences. Marriott partnership.',
+        '63-room boutique hotel with Marriott partnership. Rooftop bar, guest amenities, and built-in neighborhood energy. Your friends will actually want to visit.',
       link: '/community#hotel',
     },
     {
-      icon: '🍽️',
-      title: 'Food Hall & Dining',
+      icon: '🅿️',
+      title: 'Covered Parking + EV Charging',
       description:
-        "A curated collection of restaurants bringing Chattanooga's culinary scene together. From quick bites to fine dining.",
-      link: '/community#dining',
-    },
-    {
-      icon: '🎪',
-      title: 'Vibrant Plaza',
-      description:
-        'European-style pedestrian plaza for concerts, markets, and community gatherings. No on-street parking means safe, walkable spaces.',
-      link: '/about#plaza',
+        'Secure covered parking with Level 2 EV charging stations. Protected from the elements with convenient elevator access to all buildings.',
+      link: '/about#parking',
     },
     {
       icon: '🌊',
       title: 'Riverwalk Connected',
       description:
-        'Direct access to 13+ miles of walking and biking paths along the Tennessee River. Minutes to downtown, Innovation District, and baseball stadium.',
+        'Direct access to 13+ miles of Tennessee Riverwalk. Walk or bike to downtown, Riverfront Parkway, and the Innovation District in minutes.',
       link: '/about#location',
     },
   ]

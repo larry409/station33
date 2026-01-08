@@ -22,7 +22,7 @@ const services = [
       'Rooftop terrace access',
       'Fitness and wellness center',
     ],
-    image: 'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?q=80&w=1200',
+    image: '/images/img80.jpg',
   },
   {
     id: 'working',
@@ -38,7 +38,7 @@ const services = [
       'Ground-floor visibility',
       'Loading dock access',
     ],
-    image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200',
+    image: '/images/img44.jpg',
   },
   {
     id: 'gathering',
@@ -54,7 +54,7 @@ const services = [
       'Indoor and outdoor options',
       'Capacity up to 500 guests',
     ],
-    image: 'https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=1200',
+    image: '/images/img164.jpg',
   },
   {
     id: 'dining',
@@ -70,7 +70,7 @@ const services = [
       'Grease trap infrastructure',
       'Ample ventilation systems',
     ],
-    image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1200',
+    image: '/images/img100.jpg',
   },
 ]
 

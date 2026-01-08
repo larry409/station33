@@ -39,17 +39,19 @@ export default function Stats() {
   }, [])
 
   const stats = [
-    { number: 25000, label: 'SF Commercial Space', suffix: '' },
-    { number: 47, label: 'Luxury Residences', suffix: '' },
-    { number: 63, label: 'Hotel Rooms', suffix: '' },
-    { number: 5, label: 'Restaurants & Bars', suffix: '' },
-    { number: 100, label: '$M+ Project Value', suffix: '+' },
+    { number: 8, label: 'Buildings', suffix: '' },
+    { number: 250, label: 'K SqFT Total Development', suffix: 'K' },
+    { number: 120, label: 'Residential Units', suffix: '' },
+    { number: 63, label: 'Boutique Hotel Rooms', suffix: '' },
+    { number: 400, label: 'Parking Spots', suffix: '' },
+    { number: 5, label: 'Event Capacity', suffix: '+' },
+    { number: 100, label: '$M+ Committed Investment', suffix: '+' },
   ]
 
   return (
     <section ref={statsRef} className="py-32 md:py-40 bg-bg-dark">
       <div className="container">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 md:gap-12 text-center">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-8 md:gap-12 text-center">
           {stats.map((stat, i) => (
             <div key={i} className="stat-item">
               <div

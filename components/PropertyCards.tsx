@@ -102,7 +102,7 @@ export default function PropertyCards() {
             Explore Station33
           </h2>
           <p className="text-xl text-body-text max-w-3xl mx-auto">
-            A diverse mix of retail, residential, and event spaces designed for modern urban living on South Broad
+            Chattanooga, TN's premier mixed-use destination on South Broad
           </p>
         </div>
 
