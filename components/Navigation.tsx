@@ -50,10 +50,14 @@ export default function Navigation() {
           href="/"
           className="absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0 md:left-0"
         >
-          <div className="text-2xl font-bold">
-            <span className="text-primary-text">STATION</span>
-            <span className="text-accent-rust">33</span>
-          </div>
+          <Image
+            src="https://res.cloudinary.com/dar0tub6u/image/upload/f_auto,q_auto,h_50/v1767897196/S33_Landscape_Logo_pxuskk"
+            alt="Station33 Logo"
+            width={180}
+            height={50}
+            priority
+            className="h-12 w-auto"
+          />
         </Link>
 
         {/* Right button - rounded with arrow */}
