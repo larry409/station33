@@ -3,10 +3,12 @@
 import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import Link from 'next/link'
+import { HERO_VIDEO } from '@/lib/cloudinary'
 
 export default function HeroLuxury() {
   const heroRef = useRef<HTMLElement>(null)
   const titleRef = useRef<HTMLHeadingElement>(null)
+  const videoRef = useRef<HTMLVideoElement>(null)
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -58,15 +60,22 @@ export default function HeroLuxury() {
       ref={heroRef}
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
-      {/* Background Image with Overlay */}
+      {/* Background Video with Overlay */}
       <div className="absolute inset-0 z-0">
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage:
-              'url(https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=2000)',
-          }}
-        />
+        <video
+          ref={videoRef}
+          autoPlay
+          loop
+          muted
+          playsInline
+          poster={HERO_VIDEO.getPosterUrl()}
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          {/* Desktop video source */}
+          <source src={HERO_VIDEO.getDesktopUrl()} type="video/mp4" media="(min-width: 1024px)" />
+          {/* Mobile video source */}
+          <source src={HERO_VIDEO.getMobileUrl()} type="video/mp4" />
+        </video>
         {/* Dark overlay for text readability */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-bg-dark" />
       </div>
