@@ -18,7 +18,7 @@
 
 @layer base {
   * {
-    @apply border-border-gray;
+    @apply border-divider-gray;
   }
 
   body {
@@ -105,15 +105,15 @@
 
   /* Cards */
   .feature-card {
-    @apply bg-card-bg p-10 rounded-xl border border-border-gray transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:border-station-orange;
+    @apply bg-card-bg p-10 rounded-xl border border-divider-gray transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:border-station-orange;
   }
 
   .timeline-card {
-    @apply p-8 bg-card-bg rounded-xl border border-border-gray;
+    @apply p-8 bg-card-bg rounded-xl border border-divider-gray;
   }
 
   .carousel-card {
-    @apply bg-card-bg rounded-xl overflow-hidden border border-border-gray transition-transform duration-300 hover:-translate-y-2;
+    @apply bg-card-bg rounded-xl overflow-hidden border border-divider-gray transition-transform duration-300 hover:-translate-y-2;
     min-width: 400px;
   }
 
@@ -136,7 +136,7 @@
 
   /* Forms */
   .form-input {
-    @apply w-full px-4 py-3 bg-card-bg border border-border-gray rounded text-white transition-colors focus:outline-none focus:border-station-orange;
+    @apply w-full px-4 py-3 bg-card-bg border border-divider-gray rounded text-white transition-colors focus:outline-none focus:border-station-orange;
   }
 
   .form-input::placeholder {

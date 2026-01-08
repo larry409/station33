@@ -93,7 +93,7 @@ export default function Timeline() {
               </div>
 
               {/* Content card */}
-              <div className="timeline-card flex-1 bg-card-bg p-8 rounded-xl border border-border-gray">
+              <div className="timeline-card flex-1 bg-card-bg p-8 rounded-xl border border-divider-gray">
                 <h3 className="text-2xl md:text-3xl font-semibold text-white mb-4">
                   {item.title}
                 </h3>

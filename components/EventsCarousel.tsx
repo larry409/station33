@@ -132,7 +132,7 @@ export default function EventsCarousel() {
             {events.map((event, i) => (
               <div
                 key={i}
-                className="carousel-item flex-shrink-0 w-80 md:w-96 bg-card-bg rounded-xl overflow-hidden border border-border-gray hover:border-station-orange transition-all hover:-translate-y-2"
+                className="carousel-item flex-shrink-0 w-80 md:w-96 bg-card-bg rounded-xl overflow-hidden border border-divider-gray hover:border-station-orange transition-all hover:-translate-y-2"
               >
                 <div className="p-8">
                   <div className="text-6xl mb-6">{event.emoji}</div>

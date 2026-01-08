@@ -76,7 +76,7 @@ export default function Location() {
           {locations.map((location, i) => (
             <div
               key={i}
-              className="location-item bg-card-bg p-8 rounded-xl border border-border-gray hover:border-station-orange transition-all"
+              className="location-item bg-card-bg p-8 rounded-xl border border-divider-gray hover:border-station-orange transition-all"
             >
               <div className="text-5xl mb-6">{location.icon}</div>
               <h3 className="text-xl md:text-2xl font-semibold text-white mb-3">
@@ -88,7 +88,7 @@ export default function Location() {
         </div>
 
         {/* Map placeholder */}
-        <div className="mt-16 bg-card-bg rounded-xl overflow-hidden border border-border-gray h-96 flex items-center justify-center">
+        <div className="mt-16 bg-card-bg rounded-xl overflow-hidden border border-divider-gray h-96 flex items-center justify-center">
           <div className="text-center">
             <div className="text-6xl mb-4">🗺️</div>
             <p className="text-text-light text-lg">Interactive Map Coming Soon</p>
