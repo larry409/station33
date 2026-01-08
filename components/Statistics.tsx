@@ -80,19 +80,26 @@ export default function Statistics() {
           { textContent: 0 },
           {
             scrollTrigger: {
-              trigger: stat,
-              start: 'top 85%',
+              trigger: sectionRef.current,
+              start: 'top 80%',
               once: true,
+              toggleActions: 'play none none none',
             },
             textContent: targetNumber,
             duration: 2,
             ease: 'power1.out',
             snap: { textContent: 1 },
+            delay: 0.3,
             onUpdate: function () {
               const current = Math.round(this.targets()[0].textContent)
               const formatted = current.toLocaleString()
               this.targets()[0].textContent = formatted + suffix
             },
+            onComplete: function() {
+              // Ensure final value is correct
+              const formatted = targetNumber.toLocaleString()
+              this.targets()[0].textContent = formatted + suffix
+            }
           }
         )
       })
