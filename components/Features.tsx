@@ -10,31 +10,23 @@ export default function Features() {
   const featuresRef = useRef<HTMLElement>(null)
 
   useEffect(() => {
-    // Ensure DOM is ready before initializing animation
-    const timer = setTimeout(() => {
-      const ctx = gsap.context(() => {
-        const cards = document.querySelectorAll('.feature-card')
+    const ctx = gsap.context(() => {
+      // Animate without conditional check - let GSAP handle it
+      gsap.from('.feature-card', {
+        scrollTrigger: {
+          trigger: featuresRef.current,
+          start: 'top 70%',
+          toggleActions: 'play none none none',
+        },
+        y: 100,
+        opacity: 0,
+        stagger: 0.15,
+        duration: 0.8,
+        ease: 'power3.out',
+      })
+    }, featuresRef)
 
-        if (cards.length >= 6) { // Verify all 6 cards exist before animating
-          gsap.from('.feature-card', {
-            scrollTrigger: {
-              trigger: featuresRef.current,
-              start: 'top 70%',
-              toggleActions: 'play none none none',
-            },
-            y: 100,
-            opacity: 0,
-            stagger: 0.15,
-            duration: 0.8,
-            ease: 'power3.out',
-          })
-        }
-      }, featuresRef)
-
-      return () => ctx.revert()
-    }, 150)
-
-    return () => clearTimeout(timer)
+    return () => ctx.revert()
   }, [])
 
   const features = [
