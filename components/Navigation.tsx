@@ -59,7 +59,7 @@ export default function Navigation() {
         {/* Right button - rounded with arrow */}
         <Link
           href="/contact"
-          className="hidden md:flex items-center gap-2 px-6 py-3 border-2 border-primary-text text-primary-text rounded-full hover:bg-primary-text hover:text-bg-dark transition-all duration-300 text-sm font-medium"
+          className="hidden md:flex items-center gap-2 px-6 py-3 border-2 border-primary-text text-primary-text rounded-lg hover:bg-primary-text hover:text-bg-dark transition-all duration-300 text-sm font-medium"
         >
           Contact
           <span className="text-lg">→</span>

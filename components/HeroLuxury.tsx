@@ -94,7 +94,7 @@ export default function HeroLuxury() {
         <div className="hero-cta">
           <Link
             href="/explore"
-            className="inline-flex items-center gap-3 px-8 py-4 border-2 border-primary-text text-primary-text rounded-full hover:bg-primary-text hover:text-bg-dark transition-all duration-300 text-lg font-medium"
+            className="inline-flex items-center gap-3 px-8 py-4 border-2 border-primary-text text-primary-text rounded-lg hover:bg-primary-text hover:text-bg-dark transition-all duration-300 text-lg font-medium"
           >
             Explore Station33
             <span className="text-2xl">→</span>

@@ -12,41 +12,17 @@ export default function CTASection() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Fade in background
-      gsap.from('.cta-background', {
+      // Animate cards with stagger
+      gsap.from('.cta-card', {
         scrollTrigger: {
           trigger: sectionRef.current,
-          start: 'top 80%',
+          start: 'top 75%',
         },
         opacity: 0,
-        scale: 0.95,
+        y: 80,
         duration: 1,
-        ease: 'power2.out',
-      })
-
-      // Animate content
-      gsap.from('.cta-content', {
-        scrollTrigger: {
-          trigger: '.cta-content',
-          start: 'top 80%',
-        },
-        opacity: 0,
-        y: 50,
-        duration: 0.8,
-        ease: 'power2.out',
-      })
-
-      // Animate buttons
-      gsap.from('.cta-button', {
-        scrollTrigger: {
-          trigger: '.cta-buttons',
-          start: 'top 85%',
-        },
-        opacity: 0,
-        y: 30,
-        duration: 0.6,
-        stagger: 0.15,
-        ease: 'power2.out',
+        stagger: 0.2,
+        ease: 'power3.out',
       })
     }, sectionRef)
 
@@ -56,74 +32,138 @@ export default function CTASection() {
   return (
     <section ref={sectionRef} className="section-standard bg-bg-dark">
       <div className="container">
-        <div
-          className="cta-background relative rounded-3xl overflow-hidden"
-          style={{
-            backgroundImage:
-              'url(https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2000)',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-          }}
-        >
-          {/* Dark Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-br from-bg-darker/95 via-bg-dark/90 to-bg-darker/95" />
+        {/* Dual Card Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          {/* Investor Card */}
+          <div className="cta-card relative rounded-3xl overflow-hidden p-12 md:p-16">
+            {/* Background Image */}
+            <div
+              className="absolute inset-0 bg-cover bg-center"
+              style={{
+                backgroundImage:
+                  'url(https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1200)',
+              }}
+            />
+            {/* Gradient Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-br from-accent-rust/95 via-accent-rust/90 to-bg-darker/95" />
 
-          {/* Accent Lines */}
-          <div className="absolute top-0 left-0 w-1 h-32 bg-accent-teal" />
-          <div className="absolute bottom-0 right-0 w-1 h-32 bg-accent-rust" />
+            {/* Accent Line */}
+            <div className="absolute top-0 left-0 w-1 h-32 bg-primary-text" />
 
-          {/* Content */}
-          <div className="cta-content relative z-10 text-center py-32 px-8 md:px-16">
-            {/* Badge */}
-            <div className="inline-block px-5 py-2 bg-accent-teal/10 text-accent-teal text-sm font-semibold rounded-full mb-8">
-              Now Leasing & Taking Reservations
-            </div>
-
-            {/* Heading */}
-            <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-primary-text mb-8 leading-tight">
-              Be Part of Station33
-            </h2>
-
-            {/* Subheading */}
-            <p className="text-xl md:text-2xl text-body-text max-w-3xl mx-auto mb-12 leading-relaxed">
-              Join a vibrant community where living, working, and gathering come together
-              in the heart of Chattanooga's South Broad district
-            </p>
-
-            {/* CTA Buttons */}
-            <div className="cta-buttons flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <Link href="/contact" className="cta-button btn-primary text-lg px-10 py-5">
-                Schedule a Tour
-              </Link>
-              <Link href="/spaces" className="cta-button btn-secondary text-lg px-10 py-5">
-                Explore Spaces
-              </Link>
-              <Link href="/investors" className="cta-button btn-rust text-lg px-10 py-5">
-                Investor Information
-              </Link>
-            </div>
-
-            {/* Contact Info */}
-            <div className="mt-16 pt-12 border-t border-divider-gray">
-              <p className="text-body-text mb-4">
-                Questions? Contact our leasing team
-              </p>
-              <div className="flex flex-col sm:flex-row gap-6 justify-center items-center text-primary-text">
-                <a
-                  href="tel:+14235551234"
-                  className="hover:text-accent-teal transition-colors flex items-center gap-2"
-                >
-                  <span className="text-accent-teal">📞</span> (423) 555-1234
-                </a>
-                <span className="hidden sm:block text-divider-gray">|</span>
-                <a
-                  href="mailto:leasing@station33.com"
-                  className="hover:text-accent-teal transition-colors flex items-center gap-2"
-                >
-                  <span className="text-accent-teal">✉</span> leasing@station33.com
-                </a>
+            {/* Content */}
+            <div className="relative z-10">
+              <div className="inline-block px-4 py-2 bg-white/10 text-white text-sm font-semibold rounded-lg mb-6">
+                Investment Opportunity
               </div>
+
+              <h3 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+                Invest in Station33
+              </h3>
+
+              <p className="text-xl text-white/90 mb-8 leading-relaxed">
+                Join a transformative $100M+ mixed-use development in the heart of Chattanooga's fastest-growing district. Prime South Broad location with exceptional ROI potential.
+              </p>
+
+              <ul className="space-y-3 mb-10">
+                <li className="flex items-start gap-3 text-white/90">
+                  <span className="text-white text-xl mt-1">✓</span>
+                  <span>Prime South Broad location</span>
+                </li>
+                <li className="flex items-start gap-3 text-white/90">
+                  <span className="text-white text-xl mt-1">✓</span>
+                  <span>Mixed-use development model</span>
+                </li>
+                <li className="flex items-start gap-3 text-white/90">
+                  <span className="text-white text-xl mt-1">✓</span>
+                  <span>Strong market fundamentals</span>
+                </li>
+              </ul>
+
+              <Link
+                href="/investors"
+                className="inline-flex items-center gap-3 px-8 py-4 bg-white text-accent-rust rounded-lg hover:bg-white/90 transition-all duration-300 font-bold text-lg"
+              >
+                View Investment Details
+                <span className="text-2xl">→</span>
+              </Link>
             </div>
+          </div>
+
+          {/* Community Card */}
+          <div className="cta-card relative rounded-3xl overflow-hidden p-12 md:p-16">
+            {/* Background Image */}
+            <div
+              className="absolute inset-0 bg-cover bg-center"
+              style={{
+                backgroundImage:
+                  'url(https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=1200)',
+              }}
+            />
+            {/* Gradient Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-br from-accent-teal/95 via-accent-teal/90 to-bg-darker/95" />
+
+            {/* Accent Line */}
+            <div className="absolute top-0 left-0 w-1 h-32 bg-primary-text" />
+
+            {/* Content */}
+            <div className="relative z-10">
+              <div className="inline-block px-4 py-2 bg-white/10 text-white text-sm font-semibold rounded-lg mb-6">
+                Now Leasing
+              </div>
+
+              <h3 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+                Join the Community
+              </h3>
+
+              <p className="text-xl text-white/90 mb-8 leading-relaxed">
+                Experience luxury urban living and premium commercial spaces in Chattanooga's most vibrant neighborhood. Residential units and retail spaces now available.
+              </p>
+
+              <ul className="space-y-3 mb-10">
+                <li className="flex items-start gap-3 text-white/90">
+                  <span className="text-white text-xl mt-1">✓</span>
+                  <span>Modern apartments & lofts</span>
+                </li>
+                <li className="flex items-start gap-3 text-white/90">
+                  <span className="text-white text-xl mt-1">✓</span>
+                  <span>Premium retail & office space</span>
+                </li>
+                <li className="flex items-start gap-3 text-white/90">
+                  <span className="text-white text-xl mt-1">✓</span>
+                  <span>Vibrant community events</span>
+                </li>
+              </ul>
+
+              <Link
+                href="/contact"
+                className="inline-flex items-center gap-3 px-8 py-4 bg-white text-accent-teal rounded-lg hover:bg-white/90 transition-all duration-300 font-bold text-lg"
+              >
+                Schedule a Tour
+                <span className="text-2xl">→</span>
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        {/* Contact Info Below Cards */}
+        <div className="mt-16 pt-12 border-t border-divider-gray text-center">
+          <p className="text-body-text mb-6">
+            Questions? Contact our team
+          </p>
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center text-primary-text">
+            <a
+              href="tel:+14235551234"
+              className="hover:text-accent-teal transition-colors flex items-center gap-2"
+            >
+              <span className="text-accent-teal">📞</span> (423) 555-1234
+            </a>
+            <span className="hidden sm:block text-divider-gray">|</span>
+            <a
+              href="mailto:leasing@station33.com"
+              className="hover:text-accent-teal transition-colors flex items-center gap-2"
+            >
+              <span className="text-accent-teal">✉</span> leasing@station33.com
+            </a>
           </div>
         </div>
       </div>
