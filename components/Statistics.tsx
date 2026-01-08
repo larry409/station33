@@ -16,7 +16,7 @@ const stats = [
   {
     id: 2,
     number: '250',
-    label: 'K SqFT Total Development',
+    label: 'SqFT Total Development',
     suffix: 'K',
   },
   {
@@ -46,8 +46,8 @@ const stats = [
   {
     id: 7,
     number: '100',
-    label: '$M+ Committed Investment',
-    suffix: '+',
+    label: 'Committed Investment',
+    suffix: 'M+',
   },
 ]
 
@@ -72,25 +72,29 @@ export default function Statistics() {
       // Count-up animation for numbers
       const statNumbers = document.querySelectorAll('.stat-number')
       statNumbers.forEach((stat) => {
-        const target = stat.textContent?.replace(/[^0-9]/g, '') || '0'
-        const targetNumber = parseInt(target)
+        const targetNum = stat.getAttribute('data-count')
+        const targetNumber = parseInt(targetNum || '0')
+        const suffix = stat.getAttribute('data-suffix') || ''
 
-        gsap.from(stat, {
-          scrollTrigger: {
-            trigger: stat,
-            start: 'top 85%',
-          },
-          textContent: 0,
-          duration: 2,
-          ease: 'power1.out',
-          snap: { textContent: 1 },
-          onUpdate: function () {
-            const current = Math.round(this.targets()[0].textContent)
-            const formatted = current.toLocaleString()
-            const suffix = stat.getAttribute('data-suffix') || ''
-            stat.textContent = formatted + suffix
-          },
-        })
+        gsap.fromTo(stat,
+          { textContent: 0 },
+          {
+            scrollTrigger: {
+              trigger: stat,
+              start: 'top 85%',
+              once: true,
+            },
+            textContent: targetNumber,
+            duration: 2,
+            ease: 'power1.out',
+            snap: { textContent: 1 },
+            onUpdate: function () {
+              const current = Math.round(this.targets()[0].textContent)
+              const formatted = current.toLocaleString()
+              this.targets()[0].textContent = formatted + suffix
+            },
+          }
+        )
       })
     }, sectionRef)
 
@@ -111,12 +115,12 @@ export default function Statistics() {
             >
               <div
                 className="stat-number text-5xl md:text-6xl lg:text-7xl font-bold text-accent-rust mb-3"
+                data-count={stat.number}
                 data-suffix={stat.suffix}
               >
-                {stat.number.toLocaleString()}
-                {stat.suffix}
+                0{stat.suffix}
               </div>
-              <div className="stat-label text-sm md:text-base text-body-text uppercase tracking-widest font-medium">
+              <div className="stat-label text-xs md:text-sm text-body-text uppercase tracking-widest font-medium">
                 {stat.label}
               </div>
             </div>

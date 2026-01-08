@@ -4,11 +4,12 @@ import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
+gsap.registerPlugin(ScrollTrigger)
+
 export default function Features() {
   const featuresRef = useRef<HTMLElement>(null)
 
   useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger)
 
     const ctx = gsap.context(() => {
       gsap.from('.feature-card', {
@@ -75,7 +76,7 @@ export default function Features() {
   return (
     <section ref={featuresRef} className="py-32 md:py-40 bg-bg-darker">
       <div className="container">
-        <h2 className="text-4xl md:text-5xl font-bold text-center text-white mb-6">
+        <h2 className="text-4xl md:text-5xl font-bold text-center text-primary-text mb-6">
           Chattanooga's First True Urban
         </h2>
         <h2 className="text-4xl md:text-5xl font-bold text-center text-station-orange mb-16">
@@ -86,7 +87,7 @@ export default function Features() {
           {features.map((feature, i) => (
             <div
               key={i}
-              className="feature-card bg-card-bg p-8 md:p-10 rounded-xl border border-divider-gray hover:border-station-orange transition-all hover:-translate-y-2 hover:shadow-2xl"
+              className="feature-card"
             >
               <div className="w-16 h-16 bg-station-orange rounded-full flex items-center justify-center mb-6 text-3xl">
                 {feature.icon}
