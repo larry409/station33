@@ -15,7 +15,7 @@ const properties = [
     description: 'Ground-floor retail with high ceilings and abundant natural light',
     size: '1,200 - 3,500 sq ft',
     badge: 'Available Now',
-    image: 'https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?q=80&w=1200',
+    image: '/images/img140.jpg',
   },
   {
     id: 2,
@@ -23,7 +23,7 @@ const properties = [
     description: 'Modern apartments with industrial-chic design and city views',
     size: '800 - 1,800 sq ft',
     badge: 'Leasing',
-    image: 'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?q=80&w=1200',
+    image: '/images/img80.jpg',
   },
   {
     id: 3,
@@ -31,7 +31,7 @@ const properties = [
     description: 'Flexible venues perfect for corporate events and private gatherings',
     size: '2,000 - 5,000 sq ft',
     badge: 'Book Now',
-    image: 'https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=1200',
+    image: '/images/img172.jpg',
   },
   {
     id: 4,
@@ -39,7 +39,7 @@ const properties = [
     description: 'Outdoor space with panoramic views of downtown Chattanooga',
     size: '3,200 sq ft',
     badge: 'Resident Access',
-    image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=1200',
+    image: '/images/img88.jpg',
   },
   {
     id: 5,
@@ -47,7 +47,7 @@ const properties = [
     description: 'Dedicated workspace for entrepreneurs and remote professionals',
     size: '150 - 800 sq ft',
     badge: 'Available',
-    image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200',
+    image: '/images/img44.jpg',
   },
   {
     id: 6,
@@ -55,7 +55,7 @@ const properties = [
     description: 'Full-service dining with indoor and outdoor seating',
     size: '4,500 sq ft',
     badge: 'Coming 2026',
-    image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1200',
+    image: '/images/img64.jpg',
   },
 ]
 
