@@ -9,15 +9,15 @@ gsap.registerPlugin(ScrollTrigger)
 const stats = [
   {
     id: 1,
-    number: '85,000',
-    label: 'Square Feet',
-    suffix: '+',
+    number: '8',
+    label: 'Buildings',
+    suffix: '',
   },
   {
     id: 2,
-    number: '50',
-    label: 'Retail & Office Spaces',
-    suffix: '+',
+    number: '250',
+    label: 'K SqFT Total Development',
+    suffix: 'K',
   },
   {
     id: 3,
@@ -27,15 +27,27 @@ const stats = [
   },
   {
     id: 4,
-    number: '5,000',
+    number: '63',
+    label: 'Boutique Hotel Rooms',
+    suffix: '',
+  },
+  {
+    id: 5,
+    number: '400',
+    label: 'Parking Spots',
+    suffix: '',
+  },
+  {
+    id: 6,
+    number: '5',
     label: 'Event Capacity',
     suffix: '+',
   },
   {
-    id: 5,
-    number: '2026',
-    label: 'Grand Opening',
-    suffix: '',
+    id: 7,
+    number: '100',
+    label: '$M+ Committed Investment',
+    suffix: '+',
   },
 ]
 
@@ -89,7 +101,7 @@ export default function Statistics() {
     <section ref={sectionRef} className="section-standard bg-bg-darker">
       <div className="container">
         {/* Stats Grid with Vertical Dividers */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 lg:gap-0">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-8 lg:gap-0">
           {stats.map((stat, index) => (
             <div
               key={stat.id}
