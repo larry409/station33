@@ -1,0 +1,116 @@
+'use client'
+
+import { useEffect, useRef } from 'react'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
+gsap.registerPlugin(ScrollTrigger)
+
+const stats = [
+  {
+    id: 1,
+    number: '85,000',
+    label: 'Square Feet',
+    suffix: '+',
+  },
+  {
+    id: 2,
+    number: '50',
+    label: 'Retail & Office Spaces',
+    suffix: '+',
+  },
+  {
+    id: 3,
+    number: '120',
+    label: 'Residential Units',
+    suffix: '',
+  },
+  {
+    id: 4,
+    number: '5,000',
+    label: 'Event Capacity',
+    suffix: '+',
+  },
+  {
+    id: 5,
+    number: '2026',
+    label: 'Grand Opening',
+    suffix: '',
+  },
+]
+
+export default function Statistics() {
+  const sectionRef = useRef<HTMLElement>(null)
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      // Animate stats with stagger
+      gsap.from('.stat-item', {
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: 'top 75%',
+        },
+        opacity: 0,
+        y: 40,
+        duration: 0.8,
+        stagger: 0.1,
+        ease: 'power2.out',
+      })
+
+      // Count-up animation for numbers
+      const statNumbers = document.querySelectorAll('.stat-number')
+      statNumbers.forEach((stat) => {
+        const target = stat.textContent?.replace(/[^0-9]/g, '') || '0'
+        const targetNumber = parseInt(target)
+
+        gsap.from(stat, {
+          scrollTrigger: {
+            trigger: stat,
+            start: 'top 85%',
+          },
+          textContent: 0,
+          duration: 2,
+          ease: 'power1.out',
+          snap: { textContent: 1 },
+          onUpdate: function () {
+            const current = Math.round(this.targets()[0].textContent)
+            const formatted = current.toLocaleString()
+            const suffix = stat.getAttribute('data-suffix') || ''
+            stat.textContent = formatted + suffix
+          },
+        })
+      })
+    }, sectionRef)
+
+    return () => ctx.revert()
+  }, [])
+
+  return (
+    <section ref={sectionRef} className="section-standard bg-bg-darker">
+      <div className="container">
+        {/* Stats Grid with Vertical Dividers */}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 lg:gap-0">
+          {stats.map((stat, index) => (
+            <div
+              key={stat.id}
+              className={`stat-item text-center px-6 ${
+                index < stats.length - 1 ? 'lg:border-r border-divider-gray' : ''
+              }`}
+            >
+              <div
+                className="stat-number text-5xl md:text-6xl lg:text-7xl font-bold text-accent-rust mb-3"
+                data-suffix={stat.suffix}
+              >
+                {stat.number.toLocaleString()}
+                {stat.suffix}
+              </div>
+              <div className="stat-label text-sm md:text-base text-body-text uppercase tracking-widest font-medium">
+                {stat.label}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
