@@ -10,22 +10,31 @@ export default function Features() {
   const featuresRef = useRef<HTMLElement>(null)
 
   useEffect(() => {
+    // Ensure DOM is ready before initializing animation
+    const timer = setTimeout(() => {
+      const ctx = gsap.context(() => {
+        const cards = document.querySelectorAll('.feature-card')
 
-    const ctx = gsap.context(() => {
-      gsap.from('.feature-card', {
-        scrollTrigger: {
-          trigger: featuresRef.current,
-          start: 'top 70%',
-        },
-        y: 100,
-        opacity: 0,
-        stagger: 0.15,
-        duration: 0.8,
-        ease: 'power3.out',
-      })
-    }, featuresRef)
+        if (cards.length >= 6) { // Verify all 6 cards exist before animating
+          gsap.from('.feature-card', {
+            scrollTrigger: {
+              trigger: featuresRef.current,
+              start: 'top 70%',
+              toggleActions: 'play none none none',
+            },
+            y: 100,
+            opacity: 0,
+            stagger: 0.15,
+            duration: 0.8,
+            ease: 'power3.out',
+          })
+        }
+      }, featuresRef)
 
-    return () => ctx.revert()
+      return () => ctx.revert()
+    }, 150)
+
+    return () => clearTimeout(timer)
   }, [])
 
   const features = [
@@ -87,7 +96,8 @@ export default function Features() {
           {features.map((feature, i) => (
             <div
               key={i}
-              className="feature-card"
+              className="feature-card opacity-100"
+              style={{ willChange: 'opacity, transform' }}
             >
               <div className="w-16 h-16 bg-station-orange rounded-full flex items-center justify-center mb-6 text-3xl">
                 {feature.icon}

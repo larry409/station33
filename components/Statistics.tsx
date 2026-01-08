@@ -121,13 +121,13 @@ export default function Statistics() {
               }`}
             >
               <div
-                className="stat-number text-5xl md:text-6xl lg:text-7xl font-bold text-accent-rust mb-3"
+                className="stat-number text-3xl md:text-4xl lg:text-5xl font-bold text-accent-rust mb-2"
                 data-count={stat.number}
                 data-suffix={stat.suffix}
               >
                 0{stat.suffix}
               </div>
-              <div className="stat-label text-xs md:text-sm text-body-text uppercase tracking-widest font-medium">
+              <div className="stat-label text-xs md:text-xs text-body-text uppercase tracking-wider font-medium">
                 {stat.label}
               </div>
             </div>
