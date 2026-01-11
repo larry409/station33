@@ -56,28 +56,28 @@ export default function CommunityPage() {
       title: 'Live',
       description:
         '47 luxury residences and townhomes with modern finishes, Riverwalk views, and pet-friendly amenities. Your urban sanctuary awaits.',
-      image: 'https://images.unsplash.com/photo-1502672260066-6bc19a9ee3a0?q=80&w=1200',
+      image: '/images/img80.jpg',
       icon: '🏠',
     },
     {
       title: 'Work',
       description:
         '25,000+ SF of Grade-A commercial space designed for innovation. Take the elevator from your residence to your office.',
-      image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200',
+      image: '/images/img44.jpg',
       icon: '💼',
     },
     {
       title: 'Dine',
       description:
         'Curated food hall featuring local chefs and diverse cuisine. From morning coffee to fine dining, all steps from your door.',
-      image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1200',
+      image: '/images/img64.jpg',
       icon: '🍽️',
     },
     {
       title: 'Play',
       description:
         'Rooftop pool, European-style plaza, fitness center, and year-round events. Every day offers something new to discover.',
-      image: 'https://images.unsplash.com/photo-1540541338287-41700207dee6?q=80&w=1200',
+      image: '/images/img88.jpg',
       icon: '🎪',
     },
   ]
@@ -103,36 +103,42 @@ export default function CommunityPage() {
       frequency: 'Every Saturday',
       description: 'Fresh local produce, artisan goods, and community gathering',
       icon: '🌾',
+      image: 'https://images.unsplash.com/photo-1488459716781-31db52582fe9?q=80&w=1200',
     },
     {
       title: 'Live Music Series',
       frequency: 'Friday & Saturday Nights',
       description: 'Regional musicians performing on the plaza',
       icon: '🎸',
+      image: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=1200',
     },
     {
       title: 'Food Truck Fridays',
       frequency: 'Every Friday',
       description: 'Rotating selection of Chattanooga\'s best food trucks',
       icon: '🚚',
+      image: 'https://images.unsplash.com/photo-1565123409695-7b5ef63a2efb?q=80&w=1200',
     },
     {
       title: 'Yoga in the Plaza',
       frequency: 'Sunday Mornings',
       description: 'Free community yoga classes with certified instructors',
       icon: '🧘',
+      image: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=1200',
     },
     {
       title: 'Art Walks',
       frequency: 'First Thursday',
       description: 'Monthly showcase of local artists and galleries',
       icon: '🎨',
+      image: 'https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?q=80&w=1200',
     },
     {
       title: 'Movie Nights',
       frequency: 'Monthly',
       description: 'Outdoor movie screenings under the stars',
       icon: '🎬',
+      image: 'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=1200',
     },
   ]
 
@@ -246,17 +252,25 @@ export default function CommunityPage() {
             </p>
           </div>
 
-          <div className="amenities-grid grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            {amenities.map((amenity, index) => (
-              <div
-                key={index}
-                className="amenity-item bg-card-bg border border-divider-gray rounded-2xl p-6 text-center hover:border-accent-teal hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
-              >
-                <div className="text-5xl mb-4">{amenity.icon}</div>
-                <h4 className="text-lg font-bold text-primary-text mb-2">{amenity.title}</h4>
-                <p className="text-sm text-body-text">{amenity.description}</p>
-              </div>
-            ))}
+          <div className="amenities-grid max-w-5xl mx-auto bg-card-bg border border-divider-gray rounded-3xl p-10 md:p-14">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6">
+              {amenities.map((amenity, index) => (
+                <div
+                  key={index}
+                  className="amenity-item flex items-start gap-4 group hover:translate-x-2 transition-all duration-300"
+                >
+                  <div className="text-4xl flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                    {amenity.icon}
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="text-lg font-bold text-primary-text mb-1 group-hover:text-accent-teal transition-colors">
+                      {amenity.title}
+                    </h4>
+                    <p className="text-sm text-body-text leading-relaxed">{amenity.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -277,16 +291,32 @@ export default function CommunityPage() {
             {events.map((event, index) => (
               <div
                 key={index}
-                className="bg-card-bg border border-divider-gray rounded-2xl p-8 hover:border-station-orange hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
+                className="group bg-card-bg border border-divider-gray rounded-2xl overflow-hidden hover:border-station-orange hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
               >
-                <div className="w-20 h-20 bg-gradient-to-br from-station-orange to-station-red rounded-2xl flex items-center justify-center mb-6 text-4xl shadow-lg">
-                  {event.icon}
+                {/* Event Image */}
+                <div className="relative h-48 overflow-hidden">
+                  <Image
+                    src={event.image}
+                    alt={event.title}
+                    fill
+                    className="object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-bg-darker/80 to-transparent" />
+                  <div className="absolute top-4 left-4">
+                    <div className="w-16 h-16 bg-gradient-to-br from-station-orange to-station-red rounded-xl flex items-center justify-center text-3xl shadow-lg">
+                      {event.icon}
+                    </div>
+                  </div>
                 </div>
-                <div className="inline-block px-4 py-2 bg-accent-teal/20 text-accent-teal text-sm font-semibold rounded-lg mb-4">
-                  {event.frequency}
+
+                {/* Event Content */}
+                <div className="p-8">
+                  <div className="inline-block px-4 py-2 bg-accent-teal/20 text-accent-teal text-sm font-semibold rounded-lg mb-4">
+                    {event.frequency}
+                  </div>
+                  <h3 className="text-2xl font-bold text-primary-text mb-3">{event.title}</h3>
+                  <p className="text-body-text leading-relaxed">{event.description}</p>
                 </div>
-                <h3 className="text-2xl font-bold text-primary-text mb-3">{event.title}</h3>
-                <p className="text-body-text leading-relaxed">{event.description}</p>
               </div>
             ))}
           </div>
