@@ -39,7 +39,7 @@ const properties = [
     description: 'Outdoor space with panoramic views of downtown Chattanooga',
     size: '3,200 sq ft',
     badge: 'Resident Access',
-    image: '/images/img88.jpg',
+    image: '/images/img50.jpg',
   },
   {
     id: 5,

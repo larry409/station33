@@ -13,11 +13,18 @@ export default function CTASection() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
+      // Set initial state - cards start visible but will animate
+      gsap.set('.cta-card', {
+        opacity: 1,
+        y: 0,
+      })
+
       // Animate cards with stagger on scroll (keep this - it's performant)
       gsap.from('.cta-card', {
         scrollTrigger: {
           trigger: sectionRef.current,
           start: 'top 75%',
+          toggleActions: 'play none none none',
         },
         opacity: 0,
         y: 80,
@@ -37,7 +44,7 @@ export default function CTASection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
           {/* Investor Card */}
           <div
-            className="cta-card group relative rounded-3xl overflow-hidden p-12 md:p-16 transition-all duration-500 hover:shadow-2xl hover:shadow-accent-rust/30"
+            className="cta-card group relative rounded-3xl overflow-hidden p-12 md:p-16 transition-all duration-500 hover:shadow-2xl hover:shadow-accent-rust/30 min-h-[600px] md:min-h-[700px]"
           >
             {/* Background Image - Optimized with Next.js Image */}
             <div className="absolute inset-0">
@@ -99,7 +106,7 @@ export default function CTASection() {
 
           {/* Community Card */}
           <div
-            className="cta-card group relative rounded-3xl overflow-hidden p-12 md:p-16 transition-all duration-500 hover:shadow-2xl hover:shadow-accent-teal/30"
+            className="cta-card group relative rounded-3xl overflow-hidden p-12 md:p-16 transition-all duration-500 hover:shadow-2xl hover:shadow-accent-teal/30 min-h-[600px] md:min-h-[700px]"
           >
             {/* Background Image - Optimized with Next.js Image */}
             <div className="absolute inset-0">
