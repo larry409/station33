@@ -22,7 +22,7 @@ const services = [
       'Rooftop terrace access',
       'Fitness and wellness center',
     ],
-    image: '/images/img80.jpg',
+    image: '/images/img140.jpg',
   },
   {
     id: 'working',

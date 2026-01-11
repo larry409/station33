@@ -40,7 +40,7 @@ export default function Features() {
       description:
         'Resort-style rooftop pool with vibrant art installations, cabanas, and panoramic city views. Your urban oasis with poolside service and lounge seating.',
       link: '/community#rooftop',
-      image: '/images/img140.jpg',
+      image: '/images/img88.jpg',
     },
     {
       icon: '🎪',
@@ -72,7 +72,7 @@ export default function Features() {
       description:
         'Secure covered parking with Level 2 EV charging stations. Protected from the elements with convenient elevator access to all buildings.',
       link: '/contact',
-      image: '/images/img12.jpg',
+      image: '/images/img148.jpg',
     },
     {
       icon: '🌊',

@@ -268,7 +268,7 @@ export default function InvestorsPage() {
             {/* Image */}
             <div className="relative h-[600px] rounded-3xl overflow-hidden shadow-2xl">
               <Image
-                src="https://images.pexels.com/photos/2355305/pexels-photo-2355305.jpeg?auto=compress&cs=tinysrgb&w=2000"
+                src="/images/img228.jpg"
                 alt="Aerial view of Chattanooga at sunset with downtown skyline and bridges"
                 fill
                 className="object-cover"
