@@ -25,6 +25,8 @@ const config: Config = {
         'station-orange': '#F26522',      // Hover states, highlights
         'station-gray': '#58595B',        // Subtle accents
         'station-black': '#231F20',       // Deep blacks
+        'station-green': '#0A7C68',       // Dark green for community/lifestyle sections
+        'station-green-light': '#0D9B82', // Lighter green for hover states
 
         // Additional Sienna Colors
         'text-light': '#9CA3AF',          // Light text

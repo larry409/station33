@@ -181,19 +181,19 @@ export default function CommunityPage() {
             {/* Mobile video source */}
             <source src={HERO_VIDEO.getMobileUrl()} type="video/mp4" />
           </video>
-          <div className="absolute inset-0 bg-gradient-to-br from-bg-darker/95 via-bg-dark/90 to-accent-teal/30" />
+          <div className="absolute inset-0 bg-gradient-to-br from-bg-darker/95 via-bg-dark/90 to-station-green/30" />
         </div>
 
         {/* Content */}
         <div className="container relative z-10">
           <div className="hero-content max-w-4xl mx-auto text-center">
-            <div className="inline-block px-6 py-3 bg-accent-teal/20 text-accent-teal text-sm font-semibold rounded-full mb-8 border border-accent-teal/30">
+            <div className="inline-block px-6 py-3 bg-station-green/20 text-station-green text-sm font-semibold rounded-full mb-8 border border-station-green/30">
               Now Leasing
             </div>
 
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-primary-text mb-8 leading-tight">
               Join a Thriving
-              <span className="text-accent-teal block mt-2">Urban Community</span>
+              <span className="text-station-green block mt-2">Urban Community</span>
             </h1>
 
             <p className="text-xl md:text-2xl text-body-text mb-12 leading-relaxed max-w-3xl mx-auto">
@@ -204,14 +204,14 @@ export default function CommunityPage() {
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Link
                 href="#lifestyle"
-                className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-accent-teal text-white rounded-lg hover:bg-accent-teal/90 transition-all duration-300 font-bold text-lg shadow-xl hover:shadow-2xl hover:-translate-y-1"
+                className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-station-green text-white rounded-2xl hover:bg-station-green-light transition-all duration-300 font-bold text-lg shadow-xl hover:shadow-2xl hover:-translate-y-1"
               >
                 Explore the Lifestyle
                 <span className="text-2xl">→</span>
               </Link>
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center gap-3 px-8 py-4 border-2 border-primary-text text-primary-text rounded-lg hover:bg-primary-text hover:text-bg-dark transition-all duration-300 font-bold text-lg"
+                className="inline-flex items-center justify-center gap-3 px-8 py-4 border-2 border-station-green text-station-green rounded-2xl hover:bg-station-green hover:text-white transition-all duration-300 font-bold text-lg"
               >
                 Schedule a Tour
               </Link>
@@ -252,7 +252,7 @@ export default function CommunityPage() {
                 {/* Content */}
                 <div className="absolute bottom-0 left-0 right-0 p-8">
                   <h3 className="text-3xl font-bold text-primary-text mb-3">{feature.title}</h3>
-                  <p className="text-body-text leading-relaxed">{feature.description}</p>
+                  <p className="text-white leading-relaxed">{feature.description}</p>
                 </div>
               </div>
             ))}
@@ -281,12 +281,12 @@ export default function CommunityPage() {
                 >
                   <div className="flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                     <amenity.icon
-                      className="w-14 h-14 text-station-orange group-hover:text-accent-teal transition-colors duration-300"
+                      className="w-14 h-14 text-station-green group-hover:text-station-green-light transition-colors duration-300"
                       strokeWidth={1.5}
                     />
                   </div>
                   <div className="flex-1">
-                    <h4 className="text-lg font-bold text-primary-text mb-1 group-hover:text-accent-teal transition-colors">
+                    <h4 className="text-lg font-bold text-primary-text mb-1 group-hover:text-station-green transition-colors">
                       {amenity.title}
                     </h4>
                     <p className="text-sm text-body-text leading-relaxed">{amenity.description}</p>
@@ -329,7 +329,7 @@ export default function CommunityPage() {
 
                 {/* Event Content */}
                 <div className="p-8">
-                  <div className="inline-block px-4 py-2 bg-accent-teal/20 text-accent-teal text-sm font-semibold rounded-lg mb-4">
+                  <div className="inline-block px-4 py-2 bg-station-green/20 text-station-green text-sm font-semibold rounded-lg mb-4">
                     {event.frequency}
                   </div>
                   <h3 className="text-2xl font-bold text-primary-text mb-3">{event.title}</h3>
@@ -349,7 +349,7 @@ export default function CommunityPage() {
             <div>
               <h2 className="text-4xl md:text-5xl font-bold text-primary-text mb-6">
                 Luxury Residences
-                <span className="text-accent-teal block mt-2">Now Leasing</span>
+                <span className="text-station-green block mt-2">Now Leasing</span>
               </h2>
               <p className="text-xl text-body-text mb-8 leading-relaxed">
                 47 thoughtfully designed apartments and townhomes featuring high-end finishes,
@@ -394,7 +394,7 @@ export default function CommunityPage() {
 
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-3 px-8 py-4 bg-accent-teal text-white rounded-lg hover:bg-accent-teal/90 transition-all duration-300 font-bold text-lg shadow-xl"
+                className="inline-flex items-center gap-3 px-8 py-4 bg-station-green text-white rounded-2xl hover:bg-station-green-light transition-all duration-300 font-bold text-lg shadow-xl"
               >
                 View Floor Plans
                 <span className="text-2xl">→</span>
@@ -417,7 +417,7 @@ export default function CommunityPage() {
       {/* CTA Section */}
       <section className="section-standard bg-bg-darker">
         <div className="container">
-          <div className="max-w-4xl mx-auto text-center bg-gradient-to-br from-accent-teal/10 to-station-orange/10 border border-accent-teal/30 rounded-3xl p-12 md:p-16">
+          <div className="max-w-4xl mx-auto text-center bg-gradient-to-br from-station-green/10 to-station-orange/10 border border-station-green/30 rounded-3xl p-12 md:p-16">
             <h2 className="text-4xl md:text-5xl font-bold text-primary-text mb-6">
               Ready to Make Station33 Home?
             </h2>
@@ -429,14 +429,14 @@ export default function CommunityPage() {
             <div className="flex flex-col sm:flex-row gap-6 justify-center mb-8">
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-accent-teal text-white rounded-lg hover:bg-accent-teal/90 transition-all duration-300 font-bold text-lg shadow-xl"
+                className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-station-green text-white rounded-2xl hover:bg-station-green-light transition-all duration-300 font-bold text-lg shadow-xl"
               >
                 Schedule a Tour
                 <span className="text-2xl">📅</span>
               </Link>
               <a
                 href="mailto:leasing@station33.com"
-                className="inline-flex items-center justify-center gap-3 px-8 py-4 border-2 border-primary-text text-primary-text rounded-lg hover:bg-primary-text hover:text-bg-dark transition-all duration-300 font-bold text-lg"
+                className="inline-flex items-center justify-center gap-3 px-8 py-4 border-2 border-station-green text-station-green rounded-2xl hover:bg-station-green hover:text-white transition-all duration-300 font-bold text-lg"
               >
                 leasing@station33.com
                 <span className="text-2xl">✉</span>

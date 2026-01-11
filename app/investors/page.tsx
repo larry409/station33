@@ -147,14 +147,14 @@ export default function InvestorsPage() {
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Link
                 href="#opportunities"
-                className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-station-orange text-white rounded-lg hover:bg-station-red transition-all duration-300 font-bold text-lg shadow-xl hover:shadow-2xl hover:-translate-y-1"
+                className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-station-green text-white rounded-2xl hover:bg-station-green-light transition-all duration-300 font-bold text-lg shadow-xl hover:shadow-2xl hover:-translate-y-1"
               >
                 View Investment Details
                 <span className="text-2xl">→</span>
               </Link>
               <a
                 href="mailto:investors@station33.com"
-                className="inline-flex items-center justify-center gap-3 px-8 py-4 border-2 border-primary-text text-primary-text rounded-lg hover:bg-primary-text hover:text-bg-dark transition-all duration-300 font-bold text-lg"
+                className="inline-flex items-center justify-center gap-3 px-8 py-4 border-2 border-station-green text-station-green rounded-2xl hover:bg-station-green hover:text-white transition-all duration-300 font-bold text-lg"
               >
                 Contact Investor Relations
               </a>
@@ -211,7 +211,7 @@ export default function InvestorsPage() {
               <div className="mt-8 pt-6 border-t-2 border-station-orange/30">
                 <Link
                   href="#opportunities"
-                  className="block w-full text-center px-6 py-3 bg-station-orange text-white rounded-lg hover:bg-station-red transition-colors font-semibold"
+                  className="block w-full text-center px-6 py-3 bg-station-green text-white rounded-2xl hover:bg-station-green-light transition-colors font-semibold"
                 >
                   View Investment Details →
                 </Link>
@@ -375,14 +375,14 @@ export default function InvestorsPage() {
             <div className="flex flex-col sm:flex-row gap-6 justify-center mb-8">
               <a
                 href="mailto:investors@station33.com"
-                className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-station-red text-white rounded-lg hover:bg-station-orange transition-all duration-300 font-bold text-lg shadow-xl"
+                className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-station-green text-white rounded-2xl hover:bg-station-green-light transition-all duration-300 font-bold text-lg shadow-xl"
               >
                 Request Investment Package
                 <span className="text-2xl">→</span>
               </a>
               <a
                 href="tel:+14235550133"
-                className="inline-flex items-center justify-center gap-3 px-8 py-4 border-2 border-primary-text text-primary-text rounded-lg hover:bg-primary-text hover:text-bg-dark transition-all duration-300 font-bold text-lg"
+                className="inline-flex items-center justify-center gap-3 px-8 py-4 border-2 border-station-green text-station-green rounded-2xl hover:bg-station-green hover:text-white transition-all duration-300 font-bold text-lg"
               >
                 Schedule Call
                 <span className="text-2xl">→</span>
