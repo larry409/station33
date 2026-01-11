@@ -7,6 +7,21 @@ import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 import Link from 'next/link'
 import Image from 'next/image'
+import { HERO_VIDEO } from '@/lib/cloudinary'
+import {
+  Waves,
+  Dumbbell,
+  PawPrint,
+  CircleParking,
+  Square,
+  Route,
+  Hotel,
+  Wine,
+  Bike,
+  Package,
+  TreeDeciduous,
+  Music,
+} from 'lucide-react'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -83,52 +98,19 @@ export default function CommunityPage() {
   ]
 
   const amenities = [
-    { icon: 'pool', title: 'Rooftop Pool', description: 'Resort-style pool with city views' },
-    { icon: 'fitness', title: 'Fitness Center', description: '24/7 state-of-the-art equipment' },
-    { icon: 'pet', title: 'Pet-Friendly', description: 'Dog park and pet wash station' },
-    { icon: 'parking', title: 'Covered Parking', description: 'Secure parking with EV charging' },
-    { icon: 'event', title: 'Event Plaza', description: 'Host private events for 500+' },
-    { icon: 'water', title: 'Riverwalk Access', description: 'Direct access to 13+ miles' },
-    { icon: 'hotel', title: 'Boutique Hotel', description: '63-room hotel with amenities' },
-    { icon: 'drink', title: 'Rooftop Bar', description: 'Craft cocktails and sunset views' },
-    { icon: 'bike', title: 'Bike Storage', description: 'Secure indoor bike parking' },
-    { icon: 'package', title: 'Package Lockers', description: '24/7 secure package delivery' },
-    { icon: 'tree', title: 'Green Spaces', description: 'Landscaped courtyards and gardens' },
-    { icon: 'music', title: 'Live Music', description: 'Regular concerts and performances' },
+    { icon: Waves, title: 'Rooftop Pool', description: 'Resort-style pool with city views' },
+    { icon: Dumbbell, title: 'Fitness Center', description: '24/7 state-of-the-art equipment' },
+    { icon: PawPrint, title: 'Pet-Friendly', description: 'Dog park and pet wash station' },
+    { icon: CircleParking, title: 'Covered Parking', description: 'Secure parking with EV charging' },
+    { icon: Square, title: 'Event Plaza', description: 'Host private events for 500+' },
+    { icon: Route, title: 'Riverwalk Access', description: 'Direct access to 13+ miles' },
+    { icon: Hotel, title: 'Boutique Hotel', description: '63-room hotel with amenities' },
+    { icon: Wine, title: 'Rooftop Bar', description: 'Craft cocktails and sunset views' },
+    { icon: Bike, title: 'Bike Storage', description: 'Secure indoor bike parking' },
+    { icon: Package, title: 'Package Lockers', description: '24/7 secure package delivery' },
+    { icon: TreeDeciduous, title: 'Green Spaces', description: 'Landscaped courtyards and gardens' },
+    { icon: Music, title: 'Live Music', description: 'Regular concerts and performances' },
   ]
-
-  const getAmenityIcon = (iconType: string) => {
-    const iconClass = "w-10 h-10 text-station-orange group-hover:text-accent-teal transition-colors"
-
-    switch (iconType) {
-      case 'pool':
-        return <svg className={iconClass} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5" /></svg>
-      case 'fitness':
-        return <svg className={iconClass} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.5 12.75l6 6 9-13.5" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 7l-1-1m0 0l-1-1m1 1h.5a3.5 3.5 0 010 7h-.5m0-7v7m-9-7h1a3.5 3.5 0 010 7h-1m0-7v7" /></svg>
-      case 'pet':
-        return <svg className={iconClass} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-      case 'parking':
-        return <svg className={iconClass} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" /></svg>
-      case 'event':
-        return <svg className={iconClass} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
-      case 'water':
-        return <svg className={iconClass} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" /></svg>
-      case 'hotel':
-        return <svg className={iconClass} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
-      case 'drink':
-        return <svg className={iconClass} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16l-4 4m0-4l4 4" /></svg>
-      case 'bike':
-        return <svg className={iconClass} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
-      case 'package':
-        return <svg className={iconClass} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" /></svg>
-      case 'tree':
-        return <svg className={iconClass} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064" /></svg>
-      case 'music':
-        return <svg className={iconClass} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" /></svg>
-      default:
-        return <svg className={iconClass} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-    }
-  }
 
   const events = [
     {
@@ -184,15 +166,21 @@ export default function CommunityPage() {
         ref={heroRef}
         className="min-h-screen flex items-center justify-center pt-32 pb-20 relative overflow-hidden"
       >
-        {/* Background Image */}
+        {/* Background Video with Overlay */}
         <div className="absolute inset-0 z-0">
-          <Image
-            src="https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=2000"
-            alt="Community Living"
-            fill
-            className="object-cover"
-            priority
-          />
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            poster={HERO_VIDEO.getPosterUrl()}
+            className="absolute inset-0 w-full h-full object-cover"
+          >
+            {/* Desktop video source */}
+            <source src={HERO_VIDEO.getDesktopUrl()} type="video/mp4" media="(min-width: 1024px)" />
+            {/* Mobile video source */}
+            <source src={HERO_VIDEO.getMobileUrl()} type="video/mp4" />
+          </video>
           <div className="absolute inset-0 bg-gradient-to-br from-bg-darker/95 via-bg-dark/90 to-accent-teal/30" />
         </div>
 
@@ -292,7 +280,10 @@ export default function CommunityPage() {
                   className="amenity-item flex items-start gap-4 group hover:translate-x-2 transition-all duration-300"
                 >
                   <div className="flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-                    {getAmenityIcon(amenity.icon)}
+                    <amenity.icon
+                      className="w-14 h-14 text-station-orange group-hover:text-accent-teal transition-colors duration-300"
+                      strokeWidth={1.5}
+                    />
                   </div>
                   <div className="flex-1">
                     <h4 className="text-lg font-bold text-primary-text mb-1 group-hover:text-accent-teal transition-colors">
@@ -315,7 +306,7 @@ export default function CommunityPage() {
               Year-Round Events
             </h2>
             <p className="text-xl text-body-text max-w-3xl mx-auto">
-              Regular programming that brings neighbors together and creates lasting connections
+              Regular activities that drive deeper connections, creating lasting friendships
             </p>
           </div>
 
