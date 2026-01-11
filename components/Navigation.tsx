@@ -1,12 +1,15 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { usePathname } from 'next/navigation'
 
 export default function Navigation() {
   const [scrolled, setScrolled] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const mobileMenuRef = useRef<HTMLDivElement>(null)
+  const pathname = usePathname()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,6 +18,28 @@ export default function Navigation() {
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
+
+  // Close mobile menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (mobileMenuOpen && mobileMenuRef.current && !mobileMenuRef.current.contains(event.target as Node)) {
+        setMobileMenuOpen(false)
+      }
+    }
+
+    if (mobileMenuOpen) {
+      document.addEventListener('mousedown', handleClickOutside)
+      // Prevent body scroll when menu is open
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = 'unset'
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside)
+      document.body.style.overflow = 'unset'
+    }
+  }, [mobileMenuOpen])
 
   return (
     <header
@@ -27,19 +52,25 @@ export default function Navigation() {
         <div className="hidden md:flex gap-8">
           <Link
             href="/investors"
-            className="text-primary-text hover:text-accent-teal transition-colors text-sm font-medium"
+            className={`text-primary-text hover:text-accent-teal transition-colors text-sm font-medium pb-1 ${
+              pathname === '/investors' ? 'text-accent-teal border-b-2 border-accent-teal' : ''
+            }`}
           >
             Investors
           </Link>
           <Link
             href="/community"
-            className="text-primary-text hover:text-accent-teal transition-colors text-sm font-medium"
+            className={`text-primary-text hover:text-accent-teal transition-colors text-sm font-medium pb-1 ${
+              pathname === '/community' ? 'text-accent-teal border-b-2 border-accent-teal' : ''
+            }`}
           >
             Community
           </Link>
           <Link
             href="/about"
-            className="text-primary-text hover:text-accent-teal transition-colors text-sm font-medium"
+            className={`text-primary-text hover:text-accent-teal transition-colors text-sm font-medium pb-1 ${
+              pathname === '/about' ? 'text-accent-teal border-b-2 border-accent-teal' : ''
+            }`}
           >
             About
           </Link>
@@ -53,10 +84,10 @@ export default function Navigation() {
           <Image
             src="https://res.cloudinary.com/dar0tub6u/image/upload/f_auto,q_auto,h_80,e_brightness:20,e_vibrance:30/v1767897196/S33_Landscape_Logo_pxuskk"
             alt="Station33 Logo"
-            width={240}
-            height={80}
+            width={360}
+            height={120}
             priority
-            className="h-16 md:h-20 w-auto brightness-110"
+            className="h-24 md:h-32 w-auto brightness-110"
           />
         </Link>
 
@@ -95,32 +126,43 @@ export default function Navigation() {
 
       {/* Mobile menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden fixed inset-0 top-20 bg-bg-darker/98 backdrop-blur-lg z-40 p-8">
+        <div
+          ref={mobileMenuRef}
+          className="md:hidden fixed inset-0 top-0 bg-bg-darker/98 backdrop-blur-lg z-40 pt-24 px-8"
+        >
           <nav className="flex flex-col gap-6">
             <Link
               href="/investors"
-              className="text-2xl text-white hover:text-station-orange transition-colors"
+              className={`text-2xl text-white hover:text-station-orange transition-colors ${
+                pathname === '/investors' ? 'text-station-orange' : ''
+              }`}
               onClick={() => setMobileMenuOpen(false)}
             >
               Investors
             </Link>
             <Link
               href="/community"
-              className="text-2xl text-white hover:text-station-orange transition-colors"
+              className={`text-2xl text-white hover:text-station-orange transition-colors ${
+                pathname === '/community' ? 'text-station-orange' : ''
+              }`}
               onClick={() => setMobileMenuOpen(false)}
             >
               Community
             </Link>
             <Link
               href="/about"
-              className="text-2xl text-white hover:text-station-orange transition-colors"
+              className={`text-2xl text-white hover:text-station-orange transition-colors ${
+                pathname === '/about' ? 'text-station-orange' : ''
+              }`}
               onClick={() => setMobileMenuOpen(false)}
             >
               About
             </Link>
             <Link
               href="/contact"
-              className="text-2xl text-white hover:text-station-orange transition-colors"
+              className={`text-2xl text-white hover:text-station-orange transition-colors ${
+                pathname === '/contact' ? 'text-station-orange' : ''
+              }`}
               onClick={() => setMobileMenuOpen(false)}
             >
               Contact

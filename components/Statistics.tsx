@@ -112,11 +112,11 @@ export default function Statistics() {
     <section ref={sectionRef} className="section-standard bg-bg-darker">
       <div className="container">
         {/* Stats Grid with Vertical Dividers */}
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-8 lg:gap-0">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-6 md:gap-8 lg:gap-0">
           {stats.map((stat, index) => (
             <div
               key={stat.id}
-              className={`stat-item text-center px-6 ${
+              className={`stat-item text-center px-4 md:px-6 ${
                 index < stats.length - 1 ? 'lg:border-r border-divider-gray' : ''
               }`}
             >
@@ -127,7 +127,7 @@ export default function Statistics() {
               >
                 0{stat.suffix}
               </div>
-              <div className="stat-label text-[10px] md:text-xs text-body-text uppercase tracking-wide font-medium leading-tight">
+              <div className="stat-label text-xs text-body-text uppercase tracking-wide font-medium leading-tight">
                 {stat.label}
               </div>
             </div>

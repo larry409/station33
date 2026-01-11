@@ -11,18 +11,21 @@ export default function Features() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Animate without conditional check - let GSAP handle it
-      gsap.from('.feature-card', {
+      // Set initial state explicitly before animating
+      gsap.set('.feature-card', { opacity: 0, y: 60 })
+
+      // Animate to visible state
+      gsap.to('.feature-card', {
         scrollTrigger: {
           trigger: featuresRef.current,
-          start: 'top 70%',
+          start: 'top 80%',
           toggleActions: 'play none none none',
         },
-        y: 100,
-        opacity: 0,
-        stagger: 0.15,
-        duration: 0.8,
-        ease: 'power3.out',
+        y: 0,
+        opacity: 1,
+        stagger: 0.12,
+        duration: 0.6,
+        ease: 'power2.out',
       })
     }, featuresRef)
 
@@ -75,31 +78,51 @@ export default function Features() {
   ]
 
   return (
-    <section ref={featuresRef} className="py-32 md:py-40 bg-bg-darker">
+    <section ref={featuresRef} className="section-standard bg-bg-darker">
       <div className="container">
-        <h2 className="text-4xl md:text-5xl font-bold text-center text-primary-text mb-6">
-          Chattanooga's First True Urban
-        </h2>
-        <h2 className="text-4xl md:text-5xl font-bold text-center text-station-orange mb-16">
-          Mixed-Use Destination
-        </h2>
+        {/* Section Heading */}
+        <div className="text-center mb-20">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-text mb-4">
+            Chattanooga's First True Urban
+          </h2>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-station-orange mb-6">
+            Mixed-Use Destination
+          </h2>
+          <p className="text-xl text-body-text max-w-3xl mx-auto">
+            Unparalleled amenities and experiences designed for modern urban living
+          </p>
+        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Features Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
           {features.map((feature, i) => (
             <div
               key={i}
-              className="feature-card opacity-100"
+              className="feature-card group bg-card-bg border border-divider-gray rounded-2xl p-8 hover:border-accent-teal hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
               style={{ willChange: 'opacity, transform' }}
             >
-              <div className="w-16 h-16 bg-station-orange rounded-full flex items-center justify-center mb-6 text-3xl">
+              {/* Icon */}
+              <div className="w-20 h-20 bg-gradient-to-br from-station-orange to-station-red rounded-2xl flex items-center justify-center mb-6 text-4xl shadow-lg group-hover:scale-110 transition-transform duration-300">
                 {feature.icon}
               </div>
-              <h3 className="text-xl md:text-2xl font-semibold text-white mb-4">
+
+              {/* Title */}
+              <h3 className="text-2xl font-bold text-primary-text mb-4 group-hover:text-accent-teal transition-colors">
                 {feature.title}
               </h3>
-              <p className="text-text-light leading-relaxed mb-6">{feature.description}</p>
-              <a href={feature.link} className="link-arrow">
+
+              {/* Description */}
+              <p className="text-body-text leading-relaxed mb-6 min-h-[120px]">
+                {feature.description}
+              </p>
+
+              {/* Link */}
+              <a
+                href={feature.link}
+                className="inline-flex items-center gap-2 text-station-orange font-semibold hover:text-accent-teal transition-colors group/link"
+              >
                 Learn More
+                <span className="text-xl group-hover/link:translate-x-1 transition-transform">→</span>
               </a>
             </div>
           ))}

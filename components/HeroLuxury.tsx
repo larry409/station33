@@ -21,33 +21,33 @@ export default function HeroLuxury() {
           .map((word) => `<span class="inline-block word-animate">${word}</span>`)
           .join(' ')
 
-        // Blur-fade animation on words
+        // Blur-fade animation on words - faster for better engagement
         gsap.from('.word-animate', {
           opacity: 0,
           filter: 'blur(12px)',
           y: 30,
-          duration: 0.6,
-          stagger: 0.09,
+          duration: 0.5,
+          stagger: 0.06,
           ease: 'power1.out',
-          delay: 0.5,
+          delay: 0.2,
         })
       }
 
-      // Fade in subtext and CTA
+      // Fade in subtext and CTA - faster reveal
       gsap.from(['.hero-subtext', '.hero-cta'], {
         opacity: 0,
         y: 40,
-        duration: 0.8,
-        stagger: 0.2,
-        delay: 1.5,
+        duration: 0.7,
+        stagger: 0.15,
+        delay: 0.9,
         ease: 'power2.out',
       })
 
       // Animate vertical accent line
       gsap.from('.accent-line', {
         scaleY: 0,
-        duration: 1,
-        delay: 0.3,
+        duration: 0.8,
+        delay: 0.2,
         ease: 'power2.out',
       })
     }, heroRef)

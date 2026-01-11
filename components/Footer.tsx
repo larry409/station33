@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Footer() {
   const [email, setEmail] = useState('')
@@ -82,10 +83,15 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Company Info */}
           <div>
-            <div className="text-2xl font-bold mb-4">
-              <span className="text-primary-text">STATION</span>
-              <span className="text-accent-rust">33</span>
-            </div>
+            <Link href="/" className="block mb-4">
+              <Image
+                src="https://res.cloudinary.com/dar0tub6u/image/upload/f_auto,q_auto,h_80,e_brightness:20,e_vibrance:30/v1767897196/S33_Landscape_Logo_pxuskk"
+                alt="Station33 Logo"
+                width={240}
+                height={80}
+                className="h-16 w-auto brightness-110"
+              />
+            </Link>
             <p className="text-body-text text-sm mb-4">
               Where Chattanooga comes together. A transformative mixed-use destination on South
               Broad.
