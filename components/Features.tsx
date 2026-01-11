@@ -40,7 +40,7 @@ export default function Features() {
       description:
         'Resort-style rooftop pool with vibrant art installations, cabanas, and panoramic city views. Your urban oasis with poolside service and lounge seating.',
       link: '/community#rooftop',
-      image: '/images/img88.jpg',
+      image: '/images/img140.jpg',
     },
     {
       icon: '🎪',
@@ -56,7 +56,7 @@ export default function Features() {
       description:
         "Chattanooga's premier food hall featuring local chefs, craft cocktails, and outdoor dining. From quick bites to chef-driven concepts, all steps from your door.",
       link: '/community#dining',
-      image: '/images/img64.jpg',
+      image: '/images/img100.jpg',
     },
     {
       icon: '🏨',

@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Link from 'next/link'
@@ -10,20 +10,23 @@ gsap.registerPlugin(ScrollTrigger)
 
 export default function CTASection() {
   const sectionRef = useRef<HTMLElement>(null)
+  const [imagesLoaded, setImagesLoaded] = useState(0)
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Animate cards with stagger on scroll (keep this - it's performant)
+      // Animate cards with stagger on scroll - delayed to ensure images load
       gsap.from('.cta-card', {
         scrollTrigger: {
           trigger: sectionRef.current,
-          start: 'top 75%',
+          start: 'top 80%', // Start slightly later to allow image loading
+          toggleActions: 'play none none none',
         },
         opacity: 0,
         y: 80,
         duration: 1,
         stagger: 0.2,
         ease: 'power3.out',
+        delay: 0.1, // Small delay to ensure images start loading
       })
     }, sectionRef)
 
@@ -40,15 +43,16 @@ export default function CTASection() {
             className="cta-card group relative rounded-3xl overflow-hidden p-12 md:p-16 transition-all duration-500 hover:shadow-2xl hover:shadow-accent-rust/30"
           >
             {/* Background Image - Optimized with Next.js Image */}
-            <div className="absolute inset-0">
+            <div className="absolute inset-0 bg-bg-darker">
               <Image
-                src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1200"
+                src="/images/img140.jpg"
                 alt="Investment opportunity"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
-                priority={false}
-                quality={85}
+                loading="eager"
+                quality={90}
+                onLoad={() => setImagesLoaded((prev) => prev + 1)}
               />
             </div>
 
@@ -102,15 +106,16 @@ export default function CTASection() {
             className="cta-card group relative rounded-3xl overflow-hidden p-12 md:p-16 transition-all duration-500 hover:shadow-2xl hover:shadow-accent-teal/30"
           >
             {/* Background Image - Optimized with Next.js Image */}
-            <div className="absolute inset-0">
+            <div className="absolute inset-0 bg-bg-darker">
               <Image
-                src="https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=1200"
+                src="/images/img156.jpg"
                 alt="Community spaces"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
-                priority={false}
-                quality={85}
+                loading="eager"
+                quality={90}
+                onLoad={() => setImagesLoaded((prev) => prev + 1)}
               />
             </div>
 

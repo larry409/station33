@@ -15,7 +15,7 @@ const properties = [
     description: 'Ground-floor retail with high ceilings and abundant natural light',
     size: '1,200 - 3,500 sq ft',
     badge: 'Available Now',
-    image: '/images/img140.jpg',
+    image: '/images/img212.jpg',
   },
   {
     id: 2,
@@ -23,7 +23,7 @@ const properties = [
     description: 'Modern apartments with industrial-chic design and city views',
     size: '800 - 1,800 sq ft',
     badge: 'Leasing',
-    image: '/images/img80.jpg',
+    image: '/images/img132.jpg',
   },
   {
     id: 3,
@@ -55,7 +55,7 @@ const properties = [
     description: 'Full-service dining with indoor and outdoor seating',
     size: '4,500 sq ft',
     badge: 'Coming 2026',
-    image: '/images/img64.jpg',
+    image: '/images/img212.jpg',
   },
 ]
 

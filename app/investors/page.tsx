@@ -56,53 +56,53 @@ export default function InvestorsPage() {
       title: 'Prime South Broad Location',
       description:
         'Strategic position on Chattanooga\'s fastest-growing corridor. Direct Riverwalk access serves 11M annual tourists. Surrounded by $1B+ in concurrent development projects.',
-      icon: '📍',
       metrics: '13+ miles Riverwalk access',
+      accentColor: 'station-orange',
     },
     {
       title: 'Diversified Revenue Streams',
       description:
         'Four income sources create stability: residential leasing (47 units), Grade-A commercial (25K+ SF), boutique hotel (63 rooms, Marriott partnership), and retail/F&B operations.',
-      icon: '💼',
       metrics: '4 revenue streams',
+      accentColor: 'accent-teal',
     },
     {
       title: 'First-Mover Advantage',
       description:
         'Only true mixed-use development in Chattanooga\'s urban core. Setting premium pricing as market leader while surrounding neighborhoods rapidly gentrify.',
-      icon: '🏆',
       metrics: 'Zero direct competition',
+      accentColor: 'station-orange',
     },
     {
       title: 'Proven Development Team',
       description:
         'Experienced team with $500M+ in completed Southeast projects. Strong relationships with city officials, contractors, and major tenants including Marriott International.',
-      icon: '👥',
       metrics: '25+ years experience',
+      accentColor: 'accent-teal',
     },
     {
       title: 'Explosive Market Growth',
       description:
-        'Chattanooga home prices up 9.5% YoY. Building permits +12.8% in 2024. Population growing 1.82% annually. Tech sector expanding 18%. All indicators trending positive.',
-      icon: '📈',
-      metrics: '9.5% price appreciation YoY',
+        'Chattanooga home prices up 6.0% YoY (Jan 2025). Building permits +12.8%. Population growing 1.82% annually. $1.2B tech sector anchored by VW and Novonix. All indicators trending positive.',
+      metrics: '6.0% price appreciation YoY',
+      accentColor: 'station-orange',
     },
     {
       title: 'Future-Proof Design',
       description:
         'EV charging infrastructure, walkable urban layout, energy-efficient systems. Targeting LEED certification. Aligns with millennial/Gen-Z preferences driving 70% of new rentals.',
-      icon: '🌱',
       metrics: 'LEED certification target',
+      accentColor: 'accent-teal',
     },
   ]
 
   const projectStats = [
-    { label: 'Total Investment', value: '$100M+', icon: '💰', subtext: 'Multi-phase development' },
-    { label: 'Commercial Space', value: '25,000+ SF', icon: '🏢', subtext: 'Grade-A office' },
-    { label: 'Residential Units', value: '47 Units', icon: '🏠', subtext: 'Luxury apartments' },
-    { label: 'Hotel Rooms', value: '63 Rooms', icon: '🏨', subtext: 'Marriott partnership' },
-    { label: 'Market Growth', value: '9.5%', icon: '📊', subtext: 'Home price YoY' },
-    { label: 'Delivery', value: 'Q2 2026', icon: '⏱️', subtext: 'Phased opening' },
+    { label: 'Total Investment', value: '$100M+', subtext: 'Multi-phase development' },
+    { label: 'Commercial Space', value: '25,000+ SF', subtext: 'Grade-A office' },
+    { label: 'Residential Units', value: '47 Units', subtext: 'Luxury apartments' },
+    { label: 'Hotel Rooms', value: '63 Rooms', subtext: 'Marriott partnership' },
+    { label: 'Market Growth', value: '6.0%', subtext: 'Jan 2025 YoY' },
+    { label: 'Delivery', value: 'Q2 2026', subtext: 'Phased opening' },
   ]
 
   return (
@@ -139,9 +139,9 @@ export default function InvestorsPage() {
             </h1>
 
             <p className="text-xl md:text-2xl text-body-text mb-12 leading-relaxed max-w-3xl mx-auto">
-              Join a transformative $100M+ mixed-use development in Chattanooga—where 1.82% annual
-              population growth, $1.8B tourism revenue, and historic 2.5% unemployment create
-              exceptional investment fundamentals.
+              $100M+ mixed-use development on South Broad—where $365K median home prices (+6.0% YoY),
+              800 monthly closings, and 1.82% population growth signal unstoppable demand in Tennessee's
+              fastest-growing metro. Backed by VW's $4.3B EV facility and Novonix's $1B battery plant.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -163,7 +163,7 @@ export default function InvestorsPage() {
         </div>
       </section>
 
-      {/* Project Stats */}
+      {/* Project Overview */}
       <section className="section-standard bg-bg-darker">
         <div className="container">
           <div className="text-center mb-16">
@@ -175,18 +175,48 @@ export default function InvestorsPage() {
             </p>
           </div>
 
-          <div className="stats-grid grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-            {projectStats.map((stat, index) => (
-              <div
-                key={index}
-                className="stat-item bg-card-bg border border-divider-gray rounded-2xl p-6 text-center hover:border-station-orange hover:shadow-xl transition-all duration-300"
-              >
-                <div className="text-5xl mb-4">{stat.icon}</div>
-                <div className="text-3xl font-bold text-station-orange mb-2">{stat.value}</div>
-                <div className="text-sm text-primary-text font-semibold mb-1">{stat.label}</div>
-                <div className="text-xs text-body-text">{stat.subtext}</div>
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
+            {/* Image - takes 3 columns */}
+            <div className="lg:col-span-3 relative h-[500px] lg:h-[600px] rounded-2xl overflow-hidden shadow-2xl">
+              <Image
+                src="/images/img228.jpg"
+                alt="Station33 Development Rendering"
+                fill
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-bg-darker/90 via-bg-darker/20 to-transparent" />
+            </div>
+
+            {/* Data Table - takes 2 columns */}
+            <div className="lg:col-span-2 bg-card-bg border-2 border-station-orange/30 rounded-2xl p-8 shadow-xl">
+              <h3 className="text-2xl font-bold text-primary-text mb-6 pb-4 border-b-2 border-station-orange/30">
+                Key Metrics
+              </h3>
+
+              <div className="space-y-5">
+                {projectStats.map((stat, index) => (
+                  <div
+                    key={index}
+                    className="flex justify-between items-center py-3 border-b border-divider-gray last:border-0"
+                  >
+                    <div>
+                      <div className="text-sm text-body-text">{stat.label}</div>
+                      <div className="text-xs text-body-text/70 mt-1">{stat.subtext}</div>
+                    </div>
+                    <div className="text-2xl font-bold text-station-orange">{stat.value}</div>
+                  </div>
+                ))}
               </div>
-            ))}
+
+              <div className="mt-8 pt-6 border-t-2 border-station-orange/30">
+                <Link
+                  href="#opportunities"
+                  className="block w-full text-center px-6 py-3 bg-station-orange text-white rounded-lg hover:bg-station-red transition-colors font-semibold"
+                >
+                  View Investment Details →
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -208,16 +238,21 @@ export default function InvestorsPage() {
             {opportunities.map((opportunity, index) => (
               <div
                 key={index}
-                className="opportunity-card bg-card-bg border border-divider-gray rounded-2xl p-8 hover:border-accent-teal hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
+                className={`opportunity-card bg-card-bg border-2 rounded-2xl p-8 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 ${
+                  opportunity.accentColor === 'station-orange'
+                    ? 'border-station-orange/30 hover:border-station-orange'
+                    : 'border-accent-teal/30 hover:border-accent-teal'
+                }`}
               >
-                <div className="w-20 h-20 bg-gradient-to-br from-station-orange to-station-red rounded-2xl flex items-center justify-center mb-6 text-4xl shadow-lg">
-                  {opportunity.icon}
-                </div>
                 <h3 className="text-2xl font-bold text-primary-text mb-4">
                   {opportunity.title}
                 </h3>
                 <p className="text-body-text leading-relaxed mb-4">{opportunity.description}</p>
-                <div className="inline-block px-4 py-2 bg-accent-teal/20 text-accent-teal text-sm font-semibold rounded-lg">
+                <div className={`inline-block px-4 py-2 text-sm font-semibold rounded-lg ${
+                  opportunity.accentColor === 'station-orange'
+                    ? 'bg-station-orange/20 text-station-orange'
+                    : 'bg-accent-teal/20 text-accent-teal'
+                }`}>
                   {opportunity.metrics}
                 </div>
               </div>
@@ -233,14 +268,14 @@ export default function InvestorsPage() {
             {/* Image */}
             <div className="relative h-[600px] rounded-3xl overflow-hidden shadow-2xl">
               <Image
-                src="https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=2000"
-                alt="Chattanooga Walnut Street Bridge"
+                src="https://images.pexels.com/photos/2355305/pexels-photo-2355305.jpeg?auto=compress&cs=tinysrgb&w=2000"
+                alt="Aerial view of Chattanooga at sunset with downtown skyline and bridges"
                 fill
                 className="object-cover"
               />
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-bg-darker/95 to-transparent p-8">
                 <p className="text-sm text-body-text italic">
-                  Iconic Walnut Street Bridge - 13+ miles of connected Riverwalk infrastructure
+                  Downtown Chattanooga - Strategic position at convergence of commerce, culture, and connectivity
                 </p>
               </div>
             </div>
@@ -256,46 +291,46 @@ export default function InvestorsPage() {
               </p>
 
               <div className="space-y-6">
-                <div className="flex items-start gap-4 p-6 bg-card-bg rounded-xl border-l-4 border-station-orange">
-                  <div className="text-3xl">💰</div>
+                <div className="p-6 bg-card-bg rounded-xl border-l-4 border-station-orange">
                   <div>
-                    <h4 className="text-xl font-bold text-primary-text mb-2">Real Estate Boom</h4>
+                    <h4 className="text-xl font-bold text-primary-text mb-2">Real Estate Surge</h4>
                     <p className="text-body-text mb-3">
-                      Median home prices reached $345K in Dec 2024 (+9.5% YoY). 10,300+ closings
-                      annually. Building permits up 12.8% as demand outpaces supply.
+                      Median home prices reached $365K in Jan 2025 (+6.0% YoY). 800 monthly closings
+                      indicate robust demand. Building permits up 12.8% while inventory surges +34.5%,
+                      signaling strong development confidence.
                     </p>
                     <div className="text-sm text-station-orange font-semibold">
-                      Source: Norada Real Estate Market Analysis 2024
+                      Source: Redfin & Norada Real Estate (Jan 2025)
                     </div>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4 p-6 bg-card-bg rounded-xl border-l-4 border-accent-teal">
-                  <div className="text-3xl">👥</div>
+                <div className="p-6 bg-card-bg rounded-xl border-l-4 border-accent-teal">
                   <div>
-                    <h4 className="text-xl font-bold text-primary-text mb-2">Population Influx</h4>
+                    <h4 className="text-xl font-bold text-primary-text mb-2">Population Growth</h4>
                     <p className="text-body-text mb-3">
-                      Metro population 588K and growing 1.82% annually (3x national average). Young
-                      professionals relocating for quality of life and career opportunities.
+                      Metro population 437K growing 0.92% annually. City proper growing 1.82% annually
+                      (3x national average). Young professionals and remote workers relocating for quality
+                      of life and career opportunities.
                     </p>
                     <div className="text-sm text-accent-teal font-semibold">
-                      Source: MacroTrends & US Census Bureau 2024
+                      Source: MacroTrends & US Census Bureau (2025)
                     </div>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4 p-6 bg-card-bg rounded-xl border-l-4 border-station-orange">
-                  <div className="text-3xl">🚀</div>
+                <div className="p-6 bg-card-bg rounded-xl border-l-4 border-station-orange">
                   <div>
                     <h4 className="text-xl font-bold text-primary-text mb-2">
-                      Economic Diversification
+                      Major Industrial Investment
                     </h4>
                     <p className="text-body-text mb-3">
-                      Tech sector growing 18%. $1B+ in new corporate investments (Novonix, Westar).
-                      Tourism revenue $1.8B (+4.23% YoY). Unemployment at historic 2.5%.
+                      VW's $4.3B EV facility and Novonix's $1B battery plant anchor $1.2B tech sector.
+                      Tourism revenue $1.8B with 11M+ annual visitors. Unemployment at 3.3%—among lowest
+                      in Southeast.
                     </p>
                     <div className="text-sm text-station-orange font-semibold">
-                      Source: BLS & Greater Chattanooga Economic Partnership
+                      Source: BLS, Visit Chattanooga & Economic Partnership (2025)
                     </div>
                   </div>
                 </div>
@@ -323,17 +358,17 @@ export default function InvestorsPage() {
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
-              <div className="bg-card-bg rounded-xl p-6 border border-divider-gray">
-                <div className="text-3xl mb-3">📊</div>
-                <div className="text-sm text-body-text">Detailed Pro Forma</div>
+              <div className="bg-card-bg rounded-xl p-6 border-2 border-station-orange/30 hover:border-station-orange transition-colors">
+                <div className="text-lg font-bold text-station-orange mb-2">Pro Forma</div>
+                <div className="text-sm text-body-text">Detailed financial projections</div>
               </div>
-              <div className="bg-card-bg rounded-xl p-6 border border-divider-gray">
-                <div className="text-3xl mb-3">🏗️</div>
-                <div className="text-sm text-body-text">Site Plans & Renderings</div>
+              <div className="bg-card-bg rounded-xl p-6 border-2 border-station-orange/30 hover:border-station-orange transition-colors">
+                <div className="text-lg font-bold text-station-orange mb-2">Site Plans</div>
+                <div className="text-sm text-body-text">Architectural renderings</div>
               </div>
-              <div className="bg-card-bg rounded-xl p-6 border border-divider-gray">
-                <div className="text-3xl mb-3">🤝</div>
-                <div className="text-sm text-body-text">Partnership Terms</div>
+              <div className="bg-card-bg rounded-xl p-6 border-2 border-station-orange/30 hover:border-station-orange transition-colors">
+                <div className="text-lg font-bold text-station-orange mb-2">Partnership</div>
+                <div className="text-sm text-body-text">Investment structure</div>
               </div>
             </div>
 
@@ -350,7 +385,7 @@ export default function InvestorsPage() {
                 className="inline-flex items-center justify-center gap-3 px-8 py-4 border-2 border-primary-text text-primary-text rounded-lg hover:bg-primary-text hover:text-bg-dark transition-all duration-300 font-bold text-lg"
               >
                 Schedule Call
-                <span className="text-2xl">📞</span>
+                <span className="text-2xl">→</span>
               </a>
             </div>
 

@@ -71,7 +71,7 @@ export default function CommunityPage() {
       title: 'Live',
       description:
         '47 luxury residences and townhomes with modern finishes, Riverwalk views, and pet-friendly amenities. Your urban sanctuary awaits.',
-      image: '/images/img80.jpg',
+      image: '/images/img132.jpg',
       icon: '🏠',
     },
     {
@@ -85,7 +85,7 @@ export default function CommunityPage() {
       title: 'Dine',
       description:
         'Curated food hall featuring local chefs and diverse cuisine. From morning coffee to fine dining, all steps from your door.',
-      image: '/images/img64.jpg',
+      image: '/images/img100.jpg',
       icon: '🍽️',
     },
     {
