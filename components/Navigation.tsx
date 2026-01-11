@@ -82,7 +82,7 @@ export default function Navigation() {
           className="absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0 md:left-0"
         >
           <Image
-            src="https://res.cloudinary.com/dar0tub6u/image/upload/f_auto,q_auto,h_80,e_brightness:20,e_vibrance:30/v1767897196/S33_Landscape_Logo_pxuskk"
+            src="https://res.cloudinary.com/dar0tub6u/image/upload/f_auto,q_100,h_256,dpr_2.0,e_brightness:20,e_vibrance:30/v1767897196/S33_Landscape_Logo_pxuskk"
             alt="Station33 Logo"
             width={360}
             height={120}

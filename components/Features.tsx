@@ -85,7 +85,7 @@ export default function Features() {
   ]
 
   return (
-    <section ref={featuresRef} className="section-standard bg-bg-darker overflow-hidden">
+    <section ref={featuresRef} className="pt-12 md:pt-16 pb-16 md:pb-24 lg:pb-32 bg-bg-darker overflow-hidden">
       <div className="container">
         {/* Section Heading */}
         <div className="text-center mb-16">
