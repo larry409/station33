@@ -20,6 +20,8 @@
   --station-orange: #F26522;    /* Hover states, highlights */
   --station-gray: #58595B;      /* Subtle accents */
   --station-black: #231F20;     /* Deep blacks */
+  --station-green: #708238;     /* Olive green for community/lifestyle */
+  --station-green-light: #8A9D4A; /* Lighter olive green for hover states */
   --text-light: #B8BFC7;        /* Light text - improved contrast */
 }
 
