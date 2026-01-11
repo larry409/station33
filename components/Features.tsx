@@ -85,10 +85,10 @@ export default function Features() {
   ]
 
   return (
-    <section ref={featuresRef} className="section-standard bg-bg-darker">
+    <section ref={featuresRef} className="section-standard bg-bg-darker overflow-hidden">
       <div className="container">
         {/* Section Heading */}
-        <div className="text-center mb-20">
+        <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-text mb-4">
             Chattanooga's First True Urban
           </h2>
@@ -100,51 +100,67 @@ export default function Features() {
           </p>
         </div>
 
-        {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
-          {features.map((feature, i) => (
-            <div
-              key={i}
-              className="feature-card group bg-card-bg border border-divider-gray rounded-2xl overflow-hidden hover:border-accent-teal hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
-              style={{ willChange: 'opacity, transform' }}
-            >
-              {/* Image */}
-              <div className="relative h-64 w-full overflow-hidden">
-                <Image
-                  src={feature.image}
-                  alt={feature.title}
-                  fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                {/* Icon Overlay */}
-                <div className="absolute top-4 right-4 w-16 h-16 bg-gradient-to-br from-station-orange to-station-red rounded-xl flex items-center justify-center text-3xl shadow-lg">
-                  {feature.icon}
+        {/* Horizontal Scrolling Carousel */}
+        <div
+          className="overflow-x-auto scroll-smooth pb-8 -mx-[5%] px-[5%] md:-mx-[8%] md:px-[8%] lg:-mx-[10%] lg:px-[10%]"
+          style={{
+            scrollSnapType: 'x mandatory',
+            WebkitOverflowScrolling: 'touch',
+            scrollbarWidth: 'thin',
+            scrollbarColor: '#374151 #1A1A1A',
+          }}
+        >
+          <div className="flex gap-8 w-max">
+            {features.map((feature, i) => (
+              <a
+                key={i}
+                href={feature.link}
+                className="feature-card group block"
+                style={{ scrollSnapAlign: 'start', willChange: 'opacity, transform' }}
+              >
+                {/* Square Card Container */}
+                <div className="w-[350px] h-[350px] md:w-[400px] md:h-[400px] bg-card-bg border border-divider-gray rounded-2xl overflow-hidden hover:border-accent-teal hover:shadow-2xl transition-all duration-300">
+                  {/* Image */}
+                  <div className="relative h-3/5 w-full overflow-hidden">
+                    <Image
+                      src={feature.image}
+                      alt={feature.title}
+                      fill
+                      className="object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                  </div>
+
+                  {/* Content */}
+                  <div className="h-2/5 p-6 flex flex-col justify-between">
+                    <div>
+                      {/* Title */}
+                      <h3 className="text-xl font-bold text-primary-text mb-2 group-hover:text-accent-teal transition-colors line-clamp-2">
+                        {feature.title}
+                      </h3>
+
+                      {/* Description */}
+                      <p className="text-sm text-body-text leading-relaxed line-clamp-2">
+                        {feature.description}
+                      </p>
+                    </div>
+
+                    {/* Link */}
+                    <div className="inline-flex items-center gap-2 text-station-orange font-semibold hover:text-accent-teal transition-colors group/link mt-2">
+                      <span>Learn More</span>
+                      <span className="text-xl group-hover/link:translate-x-1 transition-transform">→</span>
+                    </div>
+                  </div>
                 </div>
-              </div>
+              </a>
+            ))}
+          </div>
+        </div>
 
-              {/* Content */}
-              <div className="p-8">
-                {/* Title */}
-                <h3 className="text-2xl font-bold text-primary-text mb-4 group-hover:text-accent-teal transition-colors">
-                  {feature.title}
-                </h3>
-
-                {/* Description */}
-                <p className="text-body-text leading-relaxed mb-6">
-                  {feature.description}
-                </p>
-
-                {/* Link */}
-                <a
-                  href={feature.link}
-                  className="inline-flex items-center gap-2 text-station-orange font-semibold hover:text-accent-teal transition-colors group/link"
-                >
-                  Learn More
-                  <span className="text-xl group-hover/link:translate-x-1 transition-transform">→</span>
-                </a>
-              </div>
-            </div>
-          ))}
+        {/* Scroll Hint */}
+        <div className="text-center mt-8">
+          <p className="text-sm text-body-text">
+            ← Scroll to explore more amenities →
+          </p>
         </div>
       </div>
     </section>
