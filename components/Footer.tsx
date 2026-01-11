@@ -112,7 +112,7 @@ export default function Footer() {
             <ul className="space-y-2">
               <li>
                 <Link
-                  href="/about"
+                  href="/community"
                   className="text-body-text hover:text-accent-teal transition-colors text-sm"
                 >
                   About Station33

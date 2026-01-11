@@ -66,14 +66,6 @@ export default function Navigation() {
           >
             Community
           </Link>
-          <Link
-            href="/about"
-            className={`text-primary-text hover:text-accent-teal transition-colors text-sm font-medium pb-1 ${
-              pathname === '/about' ? 'text-accent-teal border-b-2 border-accent-teal' : ''
-            }`}
-          >
-            About
-          </Link>
         </div>
 
         {/* Center logo */}
@@ -148,15 +140,6 @@ export default function Navigation() {
               onClick={() => setMobileMenuOpen(false)}
             >
               Community
-            </Link>
-            <Link
-              href="/about"
-              className={`text-2xl text-white hover:text-station-orange transition-colors ${
-                pathname === '/about' ? 'text-station-orange' : ''
-              }`}
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              About
             </Link>
             <Link
               href="/contact"

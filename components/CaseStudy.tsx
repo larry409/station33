@@ -123,8 +123,8 @@ export default function CaseStudy() {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/about" className="btn-primary">
-                View Project Details
+              <Link href="/contact" className="btn-primary">
+                Request Information
               </Link>
               <Link href="/contact" className="btn-rust">
                 Schedule a Tour

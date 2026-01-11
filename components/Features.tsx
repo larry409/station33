@@ -47,7 +47,7 @@ export default function Features() {
       title: 'European-Style Plaza',
       description:
         'Car-free pedestrian plaza with splash fountain, green spaces, and year-round programming. Host markets, concerts, and community gatherings for up to 500 guests.',
-      link: '/about#plaza',
+      link: '/contact',
       image: '/images/img172.jpg',
     },
     {
@@ -71,7 +71,7 @@ export default function Features() {
       title: 'Covered Parking + EV Charging',
       description:
         'Secure covered parking with Level 2 EV charging stations. Protected from the elements with convenient elevator access to all buildings.',
-      link: '/about#parking',
+      link: '/contact',
       image: '/images/img12.jpg',
     },
     {
@@ -79,7 +79,7 @@ export default function Features() {
       title: 'Riverwalk Connected',
       description:
         'Direct access to 13+ miles of Tennessee Riverwalk. Walk or bike to downtown, Riverfront Parkway, and the Innovation District in minutes.',
-      link: '/about#location',
+      link: '/contact',
       image: '/images/img50.jpg',
     },
   ]
