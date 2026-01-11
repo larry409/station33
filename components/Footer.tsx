@@ -35,31 +35,31 @@ export default function Footer() {
   }
 
   return (
-    <footer className="bg-bg-darker py-16 md:py-20 border-t border-divider-gray">
+    <footer className="bg-bg-darker py-12 md:py-16 lg:py-20 border-t border-divider-gray">
       <div className="container">
         {/* Newsletter Section */}
-        <div className="max-w-2xl mx-auto text-center mb-16">
-          <h3 className="text-3xl md:text-4xl font-bold text-primary-text mb-4">Stay Updated</h3>
-          <p className="text-body-text mb-6">
+        <div className="max-w-2xl mx-auto text-center mb-12 md:mb-16 px-4">
+          <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary-text mb-3 md:mb-4">Stay Updated</h3>
+          <p className="text-sm sm:text-base md:text-lg text-body-text mb-6">
             Get exclusive updates on construction progress, leasing opportunities, and community
             events.
           </p>
 
-          <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4">
+          <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 md:gap-4">
             <input
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Enter your email"
               required
-              className="form-input flex-1"
+              className="form-input flex-1 text-base md:text-lg"
               disabled={isSubmitting}
               aria-label="Email address"
             />
             <button
               type="submit"
               disabled={isSubmitting}
-              className="btn-primary whitespace-nowrap disabled:opacity-50 disabled:cursor-not-allowed"
+              className="btn-primary whitespace-nowrap disabled:opacity-50 disabled:cursor-not-allowed min-h-[56px] px-6 md:px-8 text-base md:text-lg"
               aria-label="Subscribe to newsletter"
             >
               {isSubmitting ? 'Subscribing...' : 'Subscribe'}
@@ -68,7 +68,7 @@ export default function Footer() {
 
           {message && (
             <p
-              className={`mt-4 text-sm ${
+              className={`mt-4 text-sm md:text-base ${
                 message.includes('Thank you') ? 'text-accent-teal' : 'text-red-400'
               }`}
               role="status"
@@ -80,23 +80,23 @@ export default function Footer() {
         </div>
 
         {/* Footer Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10 lg:gap-12 mb-10 md:mb-12">
           {/* Company Info */}
-          <div>
-            <Link href="/" className="block mb-4">
+          <div className="px-4">
+            <Link href="/" className="block mb-4 min-h-[44px] flex items-center">
               <Image
                 src="https://res.cloudinary.com/dar0tub6u/image/upload/f_auto,q_auto,h_80,e_brightness:20,e_vibrance:30/v1767897196/S33_Landscape_Logo_pxuskk"
                 alt="Station33 Logo"
                 width={240}
                 height={80}
-                className="h-16 w-auto brightness-110"
+                className="h-14 md:h-16 w-auto brightness-110"
               />
             </Link>
-            <p className="text-body-text text-sm mb-4">
+            <p className="text-body-text text-sm md:text-base mb-4">
               Where Chattanooga comes together. A transformative mixed-use destination on South
               Broad.
             </p>
-            <div className="text-body-text text-sm space-y-1">
+            <div className="text-body-text text-sm md:text-base space-y-1">
               <p>South Broad Street</p>
               <p>Chattanooga, TN 37408</p>
               <p className="mt-3">(423) 555-0133</p>
@@ -105,15 +105,15 @@ export default function Footer() {
           </div>
 
           {/* Quick Links */}
-          <div>
-            <h4 className="text-primary-text font-semibold mb-4 uppercase tracking-wider text-sm">
+          <div className="px-4">
+            <h4 className="text-primary-text font-semibold mb-4 uppercase tracking-wider text-sm md:text-base">
               Quick Links
             </h4>
-            <ul className="space-y-2">
+            <ul className="space-y-3">
               <li>
                 <Link
                   href="/community"
-                  className="text-body-text hover:text-accent-teal transition-colors text-sm"
+                  className="text-body-text hover:text-accent-teal transition-colors text-sm md:text-base inline-block min-h-[44px] flex items-center"
                 >
                   About Station33
                 </Link>
@@ -121,7 +121,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/investors"
-                  className="text-body-text hover:text-accent-teal transition-colors text-sm"
+                  className="text-body-text hover:text-accent-teal transition-colors text-sm md:text-base inline-block min-h-[44px] flex items-center"
                 >
                   Investment Opportunities
                 </Link>
@@ -129,7 +129,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/community"
-                  className="text-body-text hover:text-accent-teal transition-colors text-sm"
+                  className="text-body-text hover:text-accent-teal transition-colors text-sm md:text-base inline-block min-h-[44px] flex items-center"
                 >
                   Community
                 </Link>
@@ -137,7 +137,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/contact"
-                  className="text-body-text hover:text-accent-teal transition-colors text-sm"
+                  className="text-body-text hover:text-accent-teal transition-colors text-sm md:text-base inline-block min-h-[44px] flex items-center"
                 >
                   Contact Us
                 </Link>
@@ -146,15 +146,15 @@ export default function Footer() {
           </div>
 
           {/* Resources */}
-          <div>
-            <h4 className="text-primary-text font-semibold mb-4 uppercase tracking-wider text-sm">
+          <div className="px-4">
+            <h4 className="text-primary-text font-semibold mb-4 uppercase tracking-wider text-sm md:text-base">
               Resources
             </h4>
-            <ul className="space-y-2">
+            <ul className="space-y-3">
               <li>
                 <Link
                   href="/leasing"
-                  className="text-body-text hover:text-accent-teal transition-colors text-sm"
+                  className="text-body-text hover:text-accent-teal transition-colors text-sm md:text-base inline-block min-h-[44px] flex items-center"
                 >
                   Residential Leasing
                 </Link>
@@ -162,7 +162,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/commercial"
-                  className="text-body-text hover:text-accent-teal transition-colors text-sm"
+                  className="text-body-text hover:text-accent-teal transition-colors text-sm md:text-base inline-block min-h-[44px] flex items-center"
                 >
                   Commercial Space
                 </Link>
@@ -170,7 +170,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/events"
-                  className="text-body-text hover:text-accent-teal transition-colors text-sm"
+                  className="text-body-text hover:text-accent-teal transition-colors text-sm md:text-base inline-block min-h-[44px] flex items-center"
                 >
                   Events Calendar
                 </Link>
@@ -178,7 +178,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/news"
-                  className="text-body-text hover:text-accent-teal transition-colors text-sm"
+                  className="text-body-text hover:text-accent-teal transition-colors text-sm md:text-base inline-block min-h-[44px] flex items-center"
                 >
                   News & Updates
                 </Link>
@@ -187,40 +187,40 @@ export default function Footer() {
           </div>
 
           {/* Social */}
-          <div>
-            <h4 className="text-primary-text font-semibold mb-4 uppercase tracking-wider text-sm">
+          <div className="px-4">
+            <h4 className="text-primary-text font-semibold mb-4 uppercase tracking-wider text-sm md:text-base">
               Follow Us
             </h4>
-            <div className="flex gap-4 mb-6">
+            <div className="flex gap-3 md:gap-4 mb-6">
               <a
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-card-bg rounded-full flex items-center justify-center text-body-text hover:bg-accent-teal hover:text-white transition-all"
+                className="w-12 h-12 md:w-14 md:h-14 bg-card-bg rounded-full flex items-center justify-center text-body-text hover:bg-accent-teal hover:text-white transition-all"
                 aria-label="Follow us on Facebook"
               >
-                <span className="text-xl">f</span>
+                <span className="text-xl md:text-2xl">f</span>
               </a>
               <a
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-card-bg rounded-full flex items-center justify-center text-body-text hover:bg-accent-teal hover:text-white transition-all"
+                className="w-12 h-12 md:w-14 md:h-14 bg-card-bg rounded-full flex items-center justify-center text-body-text hover:bg-accent-teal hover:text-white transition-all"
                 aria-label="Follow us on Instagram"
               >
-                <span className="text-xl">📷</span>
+                <span className="text-xl md:text-2xl">📷</span>
               </a>
               <a
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-card-bg rounded-full flex items-center justify-center text-body-text hover:bg-accent-teal hover:text-white transition-all"
+                className="w-12 h-12 md:w-14 md:h-14 bg-card-bg rounded-full flex items-center justify-center text-body-text hover:bg-accent-teal hover:text-white transition-all"
                 aria-label="Follow us on LinkedIn"
               >
-                <span className="text-xl">in</span>
+                <span className="text-xl md:text-2xl">in</span>
               </a>
             </div>
-            <p className="text-body-text text-sm">
+            <p className="text-body-text text-sm md:text-base">
               #Station33
               <br />
               #ChatLife
@@ -229,20 +229,20 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-divider-gray flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-body-text text-sm">
+        <div className="pt-6 md:pt-8 border-t border-divider-gray flex flex-col md:flex-row justify-between items-center gap-4 px-4">
+          <p className="text-body-text text-xs sm:text-sm text-center md:text-left">
             © 2026 South Broad Development. All rights reserved.
           </p>
-          <div className="flex gap-6">
+          <div className="flex flex-col sm:flex-row gap-4 md:gap-6">
             <Link
               href="/privacy"
-              className="text-body-text hover:text-accent-teal transition-colors text-sm"
+              className="text-body-text hover:text-accent-teal transition-colors text-xs sm:text-sm min-h-[44px] flex items-center justify-center"
             >
               Privacy Policy
             </Link>
             <Link
               href="/terms"
-              className="text-body-text hover:text-accent-teal transition-colors text-sm"
+              className="text-body-text hover:text-accent-teal transition-colors text-xs sm:text-sm min-h-[44px] flex items-center justify-center"
             >
               Terms of Service
             </Link>

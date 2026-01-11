@@ -164,7 +164,7 @@ export default function CommunityPage() {
       {/* Hero Section */}
       <section
         ref={heroRef}
-        className="min-h-screen flex items-center justify-center pt-32 pb-20 relative overflow-hidden"
+        className="min-h-screen flex items-center justify-center pt-24 md:pt-32 pb-12 md:pb-20 relative overflow-hidden"
       >
         {/* Background Video with Overlay */}
         <div className="absolute inset-0 z-0">
@@ -186,32 +186,32 @@ export default function CommunityPage() {
 
         {/* Content */}
         <div className="container relative z-10">
-          <div className="hero-content max-w-4xl mx-auto text-center">
-            <div className="inline-block px-6 py-3 bg-station-green/20 text-station-green text-sm font-semibold rounded-full mb-8 border border-station-green/30">
+          <div className="hero-content max-w-4xl mx-auto text-center px-4">
+            <div className="inline-block px-5 md:px-6 py-2.5 md:py-3 bg-station-green/20 text-station-green text-sm md:text-base font-semibold rounded-full mb-6 md:mb-8 border border-station-green/30">
               Now Leasing
             </div>
 
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-primary-text mb-8 leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-primary-text mb-6 md:mb-8 leading-tight">
               Join a Thriving
               <span className="text-station-green block mt-2">Urban Community</span>
             </h1>
 
-            <p className="text-xl md:text-2xl text-body-text mb-12 leading-relaxed max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-body-text mb-8 md:mb-12 leading-relaxed max-w-3xl mx-auto">
               Experience luxury living where everything you need is within walking distance. From
               rooftop pools to riverside trails, Station33 offers an unparalleled urban lifestyle.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center">
               <Link
                 href="#lifestyle"
-                className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-station-green text-white rounded-2xl hover:bg-station-green-light transition-all duration-300 font-bold text-lg shadow-xl hover:shadow-2xl hover:-translate-y-1"
+                className="inline-flex items-center justify-center gap-3 px-6 md:px-8 py-4 md:py-5 bg-station-green text-white rounded-2xl hover:bg-station-green-light transition-all duration-300 font-bold text-base md:text-lg shadow-xl hover:shadow-2xl hover:-translate-y-1 min-h-[56px]"
               >
                 Explore the Lifestyle
                 <span className="text-2xl">→</span>
               </Link>
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center gap-3 px-8 py-4 border-2 border-station-green text-station-green rounded-2xl hover:bg-station-green hover:text-white transition-all duration-300 font-bold text-lg"
+                className="inline-flex items-center justify-center gap-3 px-6 md:px-8 py-4 md:py-5 border-2 border-station-green text-station-green rounded-2xl hover:bg-station-green hover:text-white transition-all duration-300 font-bold text-base md:text-lg min-h-[56px]"
               >
                 Schedule a Tour
               </Link>
@@ -394,7 +394,7 @@ export default function CommunityPage() {
 
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-3 px-8 py-4 bg-station-green text-white rounded-2xl hover:bg-station-green-light transition-all duration-300 font-bold text-lg shadow-xl"
+                className="inline-flex items-center gap-3 px-6 md:px-8 py-4 md:py-5 bg-station-green text-white rounded-2xl hover:bg-station-green-light transition-all duration-300 font-bold text-base md:text-lg shadow-xl min-h-[56px]"
               >
                 View Floor Plans
                 <span className="text-2xl">→</span>
@@ -426,17 +426,17 @@ export default function CommunityPage() {
               experience the Station33 lifestyle firsthand.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-6 justify-center mb-8">
+            <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center mb-6 md:mb-8">
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-station-green text-white rounded-2xl hover:bg-station-green-light transition-all duration-300 font-bold text-lg shadow-xl"
+                className="inline-flex items-center justify-center gap-3 px-6 md:px-8 py-4 md:py-5 bg-station-green text-white rounded-2xl hover:bg-station-green-light transition-all duration-300 font-bold text-base md:text-lg shadow-xl min-h-[56px]"
               >
                 Schedule a Tour
                 <span className="text-2xl">📅</span>
               </Link>
               <a
                 href="mailto:leasing@station33.com"
-                className="inline-flex items-center justify-center gap-3 px-8 py-4 border-2 border-station-green text-station-green rounded-2xl hover:bg-station-green hover:text-white transition-all duration-300 font-bold text-lg"
+                className="inline-flex items-center justify-center gap-3 px-6 md:px-8 py-4 md:py-5 border-2 border-station-green text-station-green rounded-2xl hover:bg-station-green hover:text-white transition-all duration-300 font-bold text-base md:text-lg min-h-[56px]"
               >
                 leasing@station33.com
                 <span className="text-2xl">✉</span>

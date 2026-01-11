@@ -47,12 +47,12 @@ export default function Navigation() {
         scrolled ? 'bg-bg-dark/90 backdrop-blur-lg' : 'bg-bg-dark/50 backdrop-blur-sm'
       }`}
     >
-      <nav className="container mx-auto flex justify-between items-center py-6">
+      <nav className="container mx-auto flex justify-between items-center py-4 md:py-6">
         {/* Left nav */}
         <div className="hidden md:flex gap-8">
           <Link
             href="/investors"
-            className={`text-primary-text hover:text-accent-teal transition-colors text-sm font-medium pb-1 ${
+            className={`text-primary-text hover:text-accent-teal transition-colors text-base font-medium pb-1 min-h-[44px] flex items-center ${
               pathname === '/investors' ? 'text-accent-teal border-b-2 border-accent-teal' : ''
             }`}
           >
@@ -60,7 +60,7 @@ export default function Navigation() {
           </Link>
           <Link
             href="/community"
-            className={`text-primary-text hover:text-accent-teal transition-colors text-sm font-medium pb-1 ${
+            className={`text-primary-text hover:text-accent-teal transition-colors text-base font-medium pb-1 min-h-[44px] flex items-center ${
               pathname === '/community' ? 'text-accent-teal border-b-2 border-accent-teal' : ''
             }`}
           >
@@ -71,7 +71,7 @@ export default function Navigation() {
         {/* Center logo */}
         <Link
           href="/"
-          className="absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0 md:left-0"
+          className="absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0 md:left-0 min-h-[44px] flex items-center"
         >
           <Image
             src="https://res.cloudinary.com/dar0tub6u/image/upload/f_auto,q_100,h_256,dpr_2.0,e_brightness:20,e_vibrance:30/v1767897196/S33_Landscape_Logo_pxuskk"
@@ -79,22 +79,22 @@ export default function Navigation() {
             width={360}
             height={120}
             priority
-            className="h-24 md:h-32 w-auto brightness-110"
+            className="h-20 md:h-24 lg:h-32 w-auto brightness-110"
           />
         </Link>
 
         {/* Right button - rounded with arrow */}
         <Link
           href="/contact"
-          className="hidden md:flex items-center gap-2 px-6 py-3 border-2 border-primary-text text-primary-text rounded-lg hover:bg-primary-text hover:text-bg-dark transition-all duration-300 text-sm font-medium"
+          className="hidden md:flex items-center gap-2 px-6 py-3 border-2 border-primary-text text-primary-text rounded-lg hover:bg-primary-text hover:text-bg-dark transition-all duration-300 text-base font-medium min-h-[44px]"
         >
           Contact
           <span className="text-lg">→</span>
         </Link>
 
-        {/* Mobile menu toggle */}
+        {/* Mobile menu toggle - improved touch target */}
         <button
-          className="md:hidden flex flex-col gap-1.5 p-2 z-50"
+          className="md:hidden flex flex-col gap-1.5 p-3 z-50 min-w-[44px] min-h-[44px] justify-center items-center"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label="Toggle menu"
         >
@@ -120,12 +120,12 @@ export default function Navigation() {
       {mobileMenuOpen && (
         <div
           ref={mobileMenuRef}
-          className="md:hidden fixed inset-0 top-0 bg-bg-darker/98 backdrop-blur-lg z-40 pt-24 px-8"
+          className="md:hidden fixed inset-0 top-0 bg-bg-darker/98 backdrop-blur-lg z-40 pt-28 px-6"
         >
-          <nav className="flex flex-col gap-6">
+          <nav className="flex flex-col gap-8">
             <Link
               href="/investors"
-              className={`text-2xl text-white hover:text-station-orange transition-colors ${
+              className={`text-3xl text-white hover:text-station-orange transition-colors py-3 min-h-[56px] flex items-center ${
                 pathname === '/investors' ? 'text-station-orange' : ''
               }`}
               onClick={() => setMobileMenuOpen(false)}
@@ -134,7 +134,7 @@ export default function Navigation() {
             </Link>
             <Link
               href="/community"
-              className={`text-2xl text-white hover:text-station-orange transition-colors ${
+              className={`text-3xl text-white hover:text-station-orange transition-colors py-3 min-h-[56px] flex items-center ${
                 pathname === '/community' ? 'text-station-orange' : ''
               }`}
               onClick={() => setMobileMenuOpen(false)}
@@ -143,7 +143,7 @@ export default function Navigation() {
             </Link>
             <Link
               href="/contact"
-              className={`text-2xl text-white hover:text-station-orange transition-colors ${
+              className={`text-3xl text-white hover:text-station-orange transition-colors py-3 min-h-[56px] flex items-center ${
                 pathname === '/contact' ? 'text-station-orange' : ''
               }`}
               onClick={() => setMobileMenuOpen(false)}

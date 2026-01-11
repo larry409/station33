@@ -112,7 +112,7 @@ export default function InvestorsPage() {
       {/* Hero Section */}
       <section
         ref={heroRef}
-        className="min-h-screen flex items-center justify-center pt-32 pb-20 relative overflow-hidden"
+        className="min-h-screen flex items-center justify-center pt-24 md:pt-32 pb-12 md:pb-20 relative overflow-hidden"
       >
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
@@ -128,33 +128,33 @@ export default function InvestorsPage() {
 
         {/* Content */}
         <div className="container relative z-10">
-          <div className="hero-content max-w-4xl mx-auto text-center">
-            <div className="inline-block px-6 py-3 bg-station-orange/20 text-station-orange text-sm font-semibold rounded-full mb-8 border border-station-orange/30">
+          <div className="hero-content max-w-4xl mx-auto text-center px-4">
+            <div className="inline-block px-5 md:px-6 py-2.5 md:py-3 bg-station-orange/20 text-station-orange text-sm md:text-base font-semibold rounded-full mb-6 md:mb-8 border border-station-orange/30">
               Accredited Investors Only
             </div>
 
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-primary-text mb-8 leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-primary-text mb-6 md:mb-8 leading-tight">
               Invest in America's
               <span className="text-station-orange block mt-2">Fastest-Growing City</span>
             </h1>
 
-            <p className="text-xl md:text-2xl text-body-text mb-12 leading-relaxed max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-body-text mb-8 md:mb-12 leading-relaxed max-w-3xl mx-auto">
               $100M+ mixed-use development on South Broad—where $365K median home prices (+6.0% YoY),
               800 monthly closings, and 1.82% population growth signal unstoppable demand in Tennessee's
               fastest-growing metro. Backed by VW's $4.3B EV facility and Novonix's $1B battery plant.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center">
               <Link
                 href="#opportunities"
-                className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-station-green text-white rounded-2xl hover:bg-station-green-light transition-all duration-300 font-bold text-lg shadow-xl hover:shadow-2xl hover:-translate-y-1"
+                className="inline-flex items-center justify-center gap-3 px-6 md:px-8 py-4 md:py-5 bg-station-green text-white rounded-2xl hover:bg-station-green-light transition-all duration-300 font-bold text-base md:text-lg shadow-xl hover:shadow-2xl hover:-translate-y-1 min-h-[56px]"
               >
                 View Investment Details
                 <span className="text-2xl">→</span>
               </Link>
               <a
                 href="mailto:investors@station33.com"
-                className="inline-flex items-center justify-center gap-3 px-8 py-4 border-2 border-station-green text-station-green rounded-2xl hover:bg-station-green hover:text-white transition-all duration-300 font-bold text-lg"
+                className="inline-flex items-center justify-center gap-3 px-6 md:px-8 py-4 md:py-5 border-2 border-station-green text-station-green rounded-2xl hover:bg-station-green hover:text-white transition-all duration-300 font-bold text-base md:text-lg min-h-[56px]"
               >
                 Contact Investor Relations
               </a>
@@ -166,18 +166,18 @@ export default function InvestorsPage() {
       {/* Project Overview */}
       <section className="section-standard bg-bg-darker">
         <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-primary-text mb-4">
+          <div className="text-center mb-12 md:mb-16 px-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary-text mb-4">
               Project Overview
             </h2>
-            <p className="text-xl text-body-text max-w-2xl mx-auto">
+            <p className="text-lg md:text-xl text-body-text max-w-2xl mx-auto">
               A comprehensive mixed-use development designed for long-term value creation
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 md:gap-12 items-center">
             {/* Image - takes 3 columns */}
-            <div className="lg:col-span-3 relative h-[500px] lg:h-[600px] rounded-2xl overflow-hidden shadow-2xl">
+            <div className="lg:col-span-3 relative h-[400px] sm:h-[500px] lg:h-[600px] rounded-2xl overflow-hidden shadow-2xl">
               <Image
                 src="/images/img228.jpg"
                 alt="Station33 Development Rendering"
@@ -188,30 +188,30 @@ export default function InvestorsPage() {
             </div>
 
             {/* Data Table - takes 2 columns */}
-            <div className="lg:col-span-2 bg-card-bg border-2 border-station-orange/30 rounded-2xl p-8 shadow-xl">
-              <h3 className="text-2xl font-bold text-primary-text mb-6 pb-4 border-b-2 border-station-orange/30">
+            <div className="lg:col-span-2 bg-card-bg border-2 border-station-orange/30 rounded-2xl p-6 md:p-8 shadow-xl">
+              <h3 className="text-xl md:text-2xl font-bold text-primary-text mb-6 pb-4 border-b-2 border-station-orange/30">
                 Key Metrics
               </h3>
 
-              <div className="space-y-5">
+              <div className="space-y-4 md:space-y-5">
                 {projectStats.map((stat, index) => (
                   <div
                     key={index}
                     className="flex justify-between items-center py-3 border-b border-divider-gray last:border-0"
                   >
                     <div>
-                      <div className="text-sm text-body-text">{stat.label}</div>
-                      <div className="text-xs text-body-text/70 mt-1">{stat.subtext}</div>
+                      <div className="text-sm md:text-base text-body-text">{stat.label}</div>
+                      <div className="text-xs md:text-sm text-body-text/70 mt-1">{stat.subtext}</div>
                     </div>
-                    <div className="text-2xl font-bold text-station-orange">{stat.value}</div>
+                    <div className="text-xl md:text-2xl font-bold text-station-orange">{stat.value}</div>
                   </div>
                 ))}
               </div>
 
-              <div className="mt-8 pt-6 border-t-2 border-station-orange/30">
+              <div className="mt-6 md:mt-8 pt-6 border-t-2 border-station-orange/30">
                 <Link
                   href="#opportunities"
-                  className="block w-full text-center px-6 py-3 bg-station-green text-white rounded-2xl hover:bg-station-green-light transition-colors font-semibold"
+                  className="block w-full text-center px-6 py-4 bg-station-green text-white rounded-2xl hover:bg-station-green-light transition-colors font-semibold text-base md:text-lg min-h-[56px] flex items-center justify-center"
                 >
                   View Investment Details →
                 </Link>
@@ -372,17 +372,17 @@ export default function InvestorsPage() {
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-6 justify-center mb-8">
+            <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center mb-6 md:mb-8">
               <a
                 href="mailto:investors@station33.com"
-                className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-station-green text-white rounded-2xl hover:bg-station-green-light transition-all duration-300 font-bold text-lg shadow-xl"
+                className="inline-flex items-center justify-center gap-3 px-6 md:px-8 py-4 md:py-5 bg-station-green text-white rounded-2xl hover:bg-station-green-light transition-all duration-300 font-bold text-base md:text-lg shadow-xl min-h-[56px]"
               >
                 Request Investment Package
                 <span className="text-2xl">→</span>
               </a>
               <a
                 href="tel:+14235550133"
-                className="inline-flex items-center justify-center gap-3 px-8 py-4 border-2 border-station-green text-station-green rounded-2xl hover:bg-station-green hover:text-white transition-all duration-300 font-bold text-lg"
+                className="inline-flex items-center justify-center gap-3 px-6 md:px-8 py-4 md:py-5 border-2 border-station-green text-station-green rounded-2xl hover:bg-station-green hover:text-white transition-all duration-300 font-bold text-base md:text-lg min-h-[56px]"
               >
                 Schedule Call
                 <span className="text-2xl">→</span>

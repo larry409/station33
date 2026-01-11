@@ -85,24 +85,24 @@ export default function Features() {
   ]
 
   return (
-    <section ref={featuresRef} className="pt-12 md:pt-16 pb-16 md:pb-24 lg:pb-32 bg-bg-darker overflow-hidden">
+    <section ref={featuresRef} className="pt-10 md:pt-12 lg:pt-16 pb-12 md:pb-16 lg:pb-24 bg-bg-darker overflow-hidden">
       <div className="container">
         {/* Section Heading */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-text mb-4">
+        <div className="text-center mb-10 md:mb-12 lg:mb-16 px-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-primary-text mb-2 md:mb-4">
             Chattanooga's First True Urban
           </h2>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-station-orange mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-station-orange mb-4 md:mb-6">
             Mixed-Use Destination
           </h2>
-          <p className="text-xl text-body-text max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-body-text max-w-3xl mx-auto">
             Unparalleled amenities and experiences designed for modern urban living
           </p>
         </div>
 
         {/* Horizontal Scrolling Carousel */}
         <div
-          className="overflow-x-auto scroll-smooth pb-8 -mx-[5%] px-[5%] md:-mx-[8%] md:px-[8%] lg:-mx-[10%] lg:px-[10%]"
+          className="overflow-x-auto scroll-smooth pb-6 md:pb-8 -mx-[5%] px-[5%] md:-mx-[8%] md:px-[8%] lg:-mx-[10%] lg:px-[10%]"
           style={{
             scrollSnapType: 'x mandatory',
             WebkitOverflowScrolling: 'touch',
@@ -110,7 +110,7 @@ export default function Features() {
             scrollbarColor: '#374151 #1A1A1A',
           }}
         >
-          <div className="flex gap-8 w-max">
+          <div className="flex gap-4 md:gap-6 lg:gap-8 w-max">
             {features.map((feature, i) => (
               <a
                 key={i}
@@ -118,10 +118,10 @@ export default function Features() {
                 className="feature-card group block"
                 style={{ scrollSnapAlign: 'start', willChange: 'opacity, transform' }}
               >
-                {/* Square Card Container */}
-                <div className="w-[350px] h-[350px] md:w-[400px] md:h-[400px] bg-card-bg border border-divider-gray rounded-2xl overflow-hidden hover:border-accent-teal hover:shadow-2xl transition-all duration-300">
+                {/* Square Card Container - Optimized for mobile */}
+                <div className="w-[300px] h-[340px] sm:w-[350px] sm:h-[370px] md:w-[400px] md:h-[400px] bg-card-bg border border-divider-gray rounded-2xl overflow-hidden hover:border-accent-teal hover:shadow-2xl transition-all duration-300">
                   {/* Image */}
-                  <div className="relative h-3/5 w-full overflow-hidden">
+                  <div className="relative h-[55%] w-full overflow-hidden">
                     <Image
                       src={feature.image}
                       alt={feature.title}
@@ -131,23 +131,23 @@ export default function Features() {
                   </div>
 
                   {/* Content */}
-                  <div className="h-2/5 p-6 flex flex-col justify-between">
+                  <div className="h-[45%] p-4 sm:p-5 md:p-6 flex flex-col justify-between">
                     <div>
                       {/* Title */}
-                      <h3 className="text-xl font-bold text-primary-text mb-2 group-hover:text-accent-teal transition-colors line-clamp-2">
+                      <h3 className="text-lg sm:text-xl font-bold text-primary-text mb-1.5 md:mb-2 group-hover:text-accent-teal transition-colors line-clamp-2">
                         {feature.title}
                       </h3>
 
                       {/* Description */}
-                      <p className="text-sm text-body-text leading-relaxed line-clamp-2">
+                      <p className="text-xs sm:text-sm text-body-text leading-relaxed line-clamp-3">
                         {feature.description}
                       </p>
                     </div>
 
                     {/* Link */}
-                    <div className="inline-flex items-center gap-2 text-station-orange font-semibold hover:text-accent-teal transition-colors group/link mt-2">
+                    <div className="inline-flex items-center gap-2 text-station-orange font-semibold hover:text-accent-teal transition-colors group/link mt-2 text-sm md:text-base min-h-[44px]">
                       <span>Learn More</span>
-                      <span className="text-xl group-hover/link:translate-x-1 transition-transform">→</span>
+                      <span className="text-lg md:text-xl group-hover/link:translate-x-1 transition-transform">→</span>
                     </div>
                   </div>
                 </div>
@@ -157,8 +157,8 @@ export default function Features() {
         </div>
 
         {/* Scroll Hint */}
-        <div className="text-center mt-8">
-          <p className="text-sm text-body-text">
+        <div className="text-center mt-6 md:mt-8 px-4">
+          <p className="text-xs sm:text-sm text-body-text">
             ← Scroll to explore more amenities →
           </p>
         </div>

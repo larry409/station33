@@ -41,10 +41,10 @@ export default function CTASection() {
     <section ref={sectionRef} className="section-standard bg-bg-dark">
       <div className="container">
         {/* Dual Card Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 items-stretch">
           {/* Investor Card */}
           <div
-            className="cta-card group relative rounded-3xl overflow-hidden p-12 md:p-16 transition-all duration-500 hover:shadow-2xl hover:shadow-accent-rust/30 min-h-[600px] md:min-h-[700px]"
+            className="cta-card group relative rounded-3xl overflow-hidden p-8 sm:p-10 md:p-12 lg:p-16 transition-all duration-500 hover:shadow-2xl hover:shadow-accent-rust/30 min-h-[550px] sm:min-h-[600px] md:min-h-[700px]"
           >
             {/* Background Image - Optimized with Next.js Image */}
             <div className="absolute inset-0">
@@ -67,36 +67,36 @@ export default function CTASection() {
 
             {/* Content */}
             <div className="relative z-10 flex flex-col h-full">
-              <div className="inline-block px-4 py-2 bg-white/10 text-white text-sm font-semibold rounded-lg mb-6 w-fit backdrop-blur-sm transition-all duration-300 group-hover:bg-white/20">
+              <div className="inline-block px-4 py-2 bg-white/10 text-white text-xs sm:text-sm font-semibold rounded-lg mb-4 md:mb-6 w-fit backdrop-blur-sm transition-all duration-300 group-hover:bg-white/20">
                 Investment Opportunity
               </div>
 
-              <h3 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight transition-all duration-300 group-hover:text-white group-hover:drop-shadow-[0_2px_8px_rgba(255,255,255,0.3)]">
+              <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 md:mb-6 leading-tight transition-all duration-300 group-hover:text-white group-hover:drop-shadow-[0_2px_8px_rgba(255,255,255,0.3)]">
                 Invest in Station33
               </h3>
 
-              <p className="text-xl text-white/90 mb-8 leading-relaxed transition-colors duration-300 group-hover:text-white">
+              <p className="text-base sm:text-lg md:text-xl text-white/90 mb-6 md:mb-8 leading-relaxed transition-colors duration-300 group-hover:text-white">
                 Join a transformative $100M+ mixed-use development in the heart of Chattanooga's fastest-growing district. Prime South Broad location with exceptional ROI potential.
               </p>
 
-              <ul className="space-y-3 mb-10 flex-grow">
-                <li className="flex items-start gap-3 text-white/90 transition-colors duration-300 group-hover:text-white">
-                  <span className="text-white text-xl mt-1">✓</span>
+              <ul className="space-y-2 md:space-y-3 mb-8 md:mb-10 flex-grow">
+                <li className="flex items-start gap-3 text-sm sm:text-base text-white/90 transition-colors duration-300 group-hover:text-white">
+                  <span className="text-white text-lg sm:text-xl mt-0.5 sm:mt-1">✓</span>
                   <span>Prime South Broad location</span>
                 </li>
-                <li className="flex items-start gap-3 text-white/90 transition-colors duration-300 group-hover:text-white">
-                  <span className="text-white text-xl mt-1">✓</span>
+                <li className="flex items-start gap-3 text-sm sm:text-base text-white/90 transition-colors duration-300 group-hover:text-white">
+                  <span className="text-white text-lg sm:text-xl mt-0.5 sm:mt-1">✓</span>
                   <span>Mixed-use development model</span>
                 </li>
-                <li className="flex items-start gap-3 text-white/90 transition-colors duration-300 group-hover:text-white">
-                  <span className="text-white text-xl mt-1">✓</span>
+                <li className="flex items-start gap-3 text-sm sm:text-base text-white/90 transition-colors duration-300 group-hover:text-white">
+                  <span className="text-white text-lg sm:text-xl mt-0.5 sm:mt-1">✓</span>
                   <span>Strong market fundamentals</span>
                 </li>
               </ul>
 
               <Link
                 href="/investors"
-                className="inline-flex items-center gap-3 px-8 py-4 bg-white text-accent-rust rounded-lg hover:bg-white hover:gap-4 hover:shadow-lg hover:shadow-white/30 transition-all duration-300 font-bold text-lg"
+                className="inline-flex items-center gap-3 px-6 md:px-8 py-4 md:py-5 bg-white text-accent-rust rounded-lg hover:bg-white hover:gap-4 hover:shadow-lg hover:shadow-white/30 transition-all duration-300 font-bold text-base md:text-lg min-h-[56px]"
               >
                 View Investment Details
                 <span className="text-2xl transition-transform duration-300 group-hover:translate-x-1">→</span>
@@ -106,7 +106,7 @@ export default function CTASection() {
 
           {/* Community Card */}
           <div
-            className="cta-card group relative rounded-3xl overflow-hidden p-12 md:p-16 transition-all duration-500 hover:shadow-2xl hover:shadow-accent-teal/30 min-h-[600px] md:min-h-[700px]"
+            className="cta-card group relative rounded-3xl overflow-hidden p-8 sm:p-10 md:p-12 lg:p-16 transition-all duration-500 hover:shadow-2xl hover:shadow-accent-teal/30 min-h-[550px] sm:min-h-[600px] md:min-h-[700px]"
           >
             {/* Background Image - Optimized with Next.js Image */}
             <div className="absolute inset-0">
@@ -129,36 +129,36 @@ export default function CTASection() {
 
             {/* Content */}
             <div className="relative z-10 flex flex-col h-full">
-              <div className="inline-block px-4 py-2 bg-white/10 text-white text-sm font-semibold rounded-lg mb-6 w-fit backdrop-blur-sm transition-all duration-300 group-hover:bg-white/20">
+              <div className="inline-block px-4 py-2 bg-white/10 text-white text-xs sm:text-sm font-semibold rounded-lg mb-4 md:mb-6 w-fit backdrop-blur-sm transition-all duration-300 group-hover:bg-white/20">
                 Now Leasing
               </div>
 
-              <h3 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight transition-all duration-300 group-hover:text-white group-hover:drop-shadow-[0_2px_8px_rgba(255,255,255,0.3)]">
+              <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 md:mb-6 leading-tight transition-all duration-300 group-hover:text-white group-hover:drop-shadow-[0_2px_8px_rgba(255,255,255,0.3)]">
                 Join the Community
               </h3>
 
-              <p className="text-xl text-white/90 mb-8 leading-relaxed transition-colors duration-300 group-hover:text-white">
+              <p className="text-base sm:text-lg md:text-xl text-white/90 mb-6 md:mb-8 leading-relaxed transition-colors duration-300 group-hover:text-white">
                 Experience luxury urban living and premium commercial spaces in Chattanooga's most vibrant neighborhood. Residential units and retail spaces now available.
               </p>
 
-              <ul className="space-y-3 mb-10 flex-grow">
-                <li className="flex items-start gap-3 text-white/90 transition-colors duration-300 group-hover:text-white">
-                  <span className="text-white text-xl mt-1">✓</span>
+              <ul className="space-y-2 md:space-y-3 mb-8 md:mb-10 flex-grow">
+                <li className="flex items-start gap-3 text-sm sm:text-base text-white/90 transition-colors duration-300 group-hover:text-white">
+                  <span className="text-white text-lg sm:text-xl mt-0.5 sm:mt-1">✓</span>
                   <span>Modern apartments & lofts</span>
                 </li>
-                <li className="flex items-start gap-3 text-white/90 transition-colors duration-300 group-hover:text-white">
-                  <span className="text-white text-xl mt-1">✓</span>
+                <li className="flex items-start gap-3 text-sm sm:text-base text-white/90 transition-colors duration-300 group-hover:text-white">
+                  <span className="text-white text-lg sm:text-xl mt-0.5 sm:mt-1">✓</span>
                   <span>Premium retail & office space</span>
                 </li>
-                <li className="flex items-start gap-3 text-white/90 transition-colors duration-300 group-hover:text-white">
-                  <span className="text-white text-xl mt-1">✓</span>
+                <li className="flex items-start gap-3 text-sm sm:text-base text-white/90 transition-colors duration-300 group-hover:text-white">
+                  <span className="text-white text-lg sm:text-xl mt-0.5 sm:mt-1">✓</span>
                   <span>Vibrant community events</span>
                 </li>
               </ul>
 
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-3 px-8 py-4 bg-white text-accent-teal rounded-lg hover:bg-white hover:gap-4 hover:shadow-lg hover:shadow-white/30 transition-all duration-300 font-bold text-lg"
+                className="inline-flex items-center gap-3 px-6 md:px-8 py-4 md:py-5 bg-white text-accent-teal rounded-lg hover:bg-white hover:gap-4 hover:shadow-lg hover:shadow-white/30 transition-all duration-300 font-bold text-base md:text-lg min-h-[56px]"
               >
                 Schedule a Tour
                 <span className="text-2xl transition-transform duration-300 group-hover:translate-x-1">→</span>
@@ -168,21 +168,21 @@ export default function CTASection() {
         </div>
 
         {/* Contact Info Below Cards */}
-        <div className="mt-16 pt-12 border-t border-divider-gray text-center">
-          <p className="text-body-text mb-6">
+        <div className="mt-12 md:mt-16 pt-8 md:pt-12 border-t border-divider-gray text-center px-4">
+          <p className="text-base md:text-lg text-body-text mb-4 md:mb-6">
             Questions? Contact our team
           </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center text-primary-text">
+          <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-center text-primary-text">
             <a
               href="tel:+14235551234"
-              className="hover:text-accent-teal transition-colors flex items-center gap-2"
+              className="hover:text-accent-teal transition-colors flex items-center gap-2 text-base md:text-lg min-h-[44px]"
             >
               <span className="text-accent-teal">📞</span> (423) 555-1234
             </a>
             <span className="hidden sm:block text-divider-gray">|</span>
             <a
               href="mailto:leasing@station33.com"
-              className="hover:text-accent-teal transition-colors flex items-center gap-2"
+              className="hover:text-accent-teal transition-colors flex items-center gap-2 text-base md:text-lg min-h-[44px]"
             >
               <span className="text-accent-teal">✉</span> leasing@station33.com
             </a>
