@@ -72,7 +72,7 @@ export default function FAQ() {
   return (
     <section ref={faqRef} className="py-32 md:py-40 bg-bg-dark">
       <div className="container">
-        <h2 className="text-4xl md:text-5xl font-bold text-center text-white mb-6">
+        <h2 className="text-4xl md:text-5xl font-semibold text-center text-white mb-6">
           Frequently Asked Questions
         </h2>
         <p className="text-lg md:text-xl text-text-light text-center max-w-3xl mx-auto mb-16">

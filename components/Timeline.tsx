@@ -63,7 +63,7 @@ export default function Timeline() {
   return (
     <section ref={timelineRef} className="py-32 md:py-40 bg-bg-dark">
       <div className="container">
-        <h2 className="text-4xl md:text-5xl font-bold text-center text-white mb-6">
+        <h2 className="text-4xl md:text-5xl font-semibold text-center text-white mb-6">
           A Day in the Life at Station33
         </h2>
         <p className="text-lg md:text-xl text-text-light text-center max-w-3xl mx-auto mb-20">
@@ -86,7 +86,7 @@ export default function Timeline() {
                     i % 2 === 0 ? 'md:text-right' : 'md:text-left'
                   }`}
                 >
-                  <div className="inline-block bg-station-orange text-white px-4 py-2 rounded-lg font-bold text-lg">
+                  <div className="inline-block bg-station-orange text-white px-4 py-2 rounded-lg font-semibold text-lg">
                     {item.time}
                   </div>
                 </div>

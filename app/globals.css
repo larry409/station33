@@ -3,26 +3,58 @@
 @tailwind utilities;
 
 :root {
-  /* Luxury Real Estate Template Colors */
-  --primary-text: #EBE3DD;      /* Off-white for headings */
-  --body-text: #B8BFC7;         /* Medium gray for body - improved contrast for WCAG AA */
-  --bg-dark: #1A1A1A;           /* Near black background */
-  --bg-darker: #0D0D0D;         /* Darker sections */
-  --card-bg: #2A2A2A;           /* Card backgrounds */
-  --accent-teal: #14B8A6;       /* Teal accent */
-  --accent-rust: #E17A4C;       /* Rust/terracotta accent */
-  --divider-gray: #374151;      /* Dividers */
-  --border-light: #E5E7EB;      /* Light borders */
-  --text-white: #FFFFFF;        /* Pure white */
+  /* ========================================
+     Station33 Brand Colors (Brand Kit v1.0)
+     ======================================== */
+  --color-dark: #31363a;        /* Station Dark Charcoal */
+  --color-gold: #c8b493;        /* Station Gold */
+  --color-white: #ffffff;       /* Station White */
 
-  /* Station33 Brand Colors (Sienna Specification) */
-  --station-red: #C8102E;       /* Primary CTA, accents */
-  --station-orange: #F26522;    /* Hover states, highlights */
-  --station-gray: #58595B;      /* Subtle accents */
-  --station-black: #231F20;     /* Deep blacks */
-  --station-green: #708238;     /* Olive green for community/lifestyle */
-  --station-green-light: #8A9D4A; /* Lighter olive green for hover states */
-  --text-light: #B8BFC7;        /* Light text - improved contrast */
+  /* Semantic Color Aliases */
+  --color-bg-primary: var(--color-dark);
+  --color-bg-secondary: var(--color-white);
+  --color-bg-accent: var(--color-gold);
+  --color-text-primary: var(--color-dark);
+  --color-text-reversed: var(--color-white);
+  --color-text-accent: var(--color-gold);
+  --color-border-accent: var(--color-gold);
+
+  /* Typography Tokens */
+  --font-family-brand: var(--font-metropolis), 'Inter', system-ui, sans-serif;
+  --text-display: clamp(2.5rem, 6vw, 4.5rem);
+  --text-h1: clamp(2rem, 4vw, 3rem);
+  --text-h2: clamp(1.5rem, 3vw, 2.25rem);
+  --text-h3: clamp(1.25rem, 2.5vw, 1.75rem);
+  --text-h4: 1.25rem;
+  --text-body-lg: 1.125rem;
+  --text-body: 1rem;
+  --text-body-sm: 0.875rem;
+  --text-caption: 0.75rem;
+  --tracking-display: 0.05em;
+  --tracking-tight: -0.01em;
+  --tracking-normal: 0;
+
+  /* ========================================
+     Legacy Colors (mapped to new brand)
+     ======================================== */
+  --primary-text: var(--color-white);
+  --body-text: #B8BFC7;
+  --bg-dark: var(--color-dark);
+  --bg-darker: #252a2e;
+  --card-bg: #3d4347;
+  --accent-teal: var(--color-gold);
+  --accent-rust: var(--color-gold);
+  --divider-gray: #4a5056;
+  --border-light: var(--color-gold);
+  --text-white: var(--color-white);
+
+  --station-red: var(--color-gold);
+  --station-orange: var(--color-gold);
+  --station-gray: #58595B;
+  --station-black: var(--color-dark);
+  --station-green: var(--color-gold);
+  --station-green-light: #d4c4a7;
+  --text-light: #B8BFC7;
 }
 
 @layer base {
@@ -32,13 +64,15 @@
 
   body {
     @apply bg-bg-dark text-body-text antialiased;
-    font-family: var(--font-montserrat), system-ui, sans-serif;
-    font-size: 16px; /* Ensure minimum 16px base for mobile */
+    font-family: var(--font-family-brand);
+    font-weight: 500;
+    font-size: 16px;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply text-primary-text font-bold;
-    font-family: var(--font-playfair), Georgia, serif;
+    @apply text-primary-text font-semibold;
+    font-family: var(--font-family-brand);
+    font-weight: 600;
   }
 
   h1 {
@@ -188,7 +222,7 @@
   }
 
   .text-gradient {
-    background: linear-gradient(135deg, var(--station-red), var(--station-orange));
+    background: linear-gradient(135deg, var(--color-gold), var(--color-dark));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;

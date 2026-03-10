@@ -128,7 +128,7 @@ export default function Services() {
       <div className="container">
         {/* Section Heading */}
         <div className="services-heading text-center mb-16">
-          <h2 className="text-5xl md:text-6xl font-bold text-primary-text mb-6">
+          <h2 className="text-5xl md:text-6xl font-semibold text-primary-text mb-6">
             Amenities & Services
           </h2>
           <p className="text-xl text-body-text max-w-3xl mx-auto">
@@ -167,7 +167,7 @@ export default function Services() {
 
           {/* Content */}
           <div>
-            <h3 className="text-4xl font-bold text-primary-text mb-6">
+            <h3 className="text-4xl font-semibold text-primary-text mb-6">
               {activeService.title}
             </h3>
             <p className="text-lg text-body-text mb-8 leading-relaxed">

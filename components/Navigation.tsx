@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
-import Image from 'next/image'
+import Logo from './Logo'
 import { usePathname } from 'next/navigation'
 
 export default function Navigation() {
@@ -29,7 +29,6 @@ export default function Navigation() {
 
     if (mobileMenuOpen) {
       document.addEventListener('mousedown', handleClickOutside)
-      // Prevent body scroll when menu is open
       document.body.style.overflow = 'hidden'
     } else {
       document.body.style.overflow = 'unset'
@@ -42,26 +41,38 @@ export default function Navigation() {
   }, [mobileMenuOpen])
 
   return (
-    <header
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        scrolled ? 'bg-bg-dark/90 backdrop-blur-lg' : 'bg-bg-dark/50 backdrop-blur-sm'
-      }`}
-    >
-      <nav className="container mx-auto flex justify-between items-center py-4 md:py-6">
-        {/* Left nav */}
-        <div className="hidden md:flex gap-8">
+    <header className="fixed top-0 w-full z-50 px-4 md:px-8 pt-4 md:pt-6 pointer-events-none">
+      {/* Floating Pill Nav */}
+      <nav
+        className={`pointer-events-auto mx-auto max-w-5xl flex justify-between items-center px-4 md:px-6 py-3 rounded-full border transition-all duration-500 ${
+          scrolled
+            ? 'backdrop-blur-xl border-station-gold/30 shadow-xl shadow-black/30'
+            : 'backdrop-blur-md border-white/10'
+        }`}
+        style={{
+          backgroundColor: scrolled
+            ? 'rgba(37, 42, 46, 0.95)'
+            : 'rgba(37, 42, 46, 0.75)',
+        }}
+      >
+        {/* Left nav links */}
+        <div className="hidden md:flex items-center gap-6">
           <Link
             href="/investors"
-            className={`text-primary-text hover:text-accent-teal transition-colors text-base font-medium pb-1 min-h-[44px] flex items-center ${
-              pathname === '/investors' ? 'text-accent-teal border-b-2 border-accent-teal' : ''
+            className={`text-sm font-semibold uppercase tracking-wider transition-colors min-h-[44px] flex items-center px-3 ${
+              pathname === '/investors'
+                ? 'text-station-gold'
+                : 'text-white/90 hover:text-station-gold'
             }`}
           >
             Investors
           </Link>
           <Link
             href="/community"
-            className={`text-primary-text hover:text-accent-teal transition-colors text-base font-medium pb-1 min-h-[44px] flex items-center ${
-              pathname === '/community' ? 'text-accent-teal border-b-2 border-accent-teal' : ''
+            className={`text-sm font-semibold uppercase tracking-wider transition-colors min-h-[44px] flex items-center px-3 ${
+              pathname === '/community'
+                ? 'text-station-gold'
+                : 'text-white/90 hover:text-station-gold'
             }`}
           >
             Community
@@ -71,45 +82,38 @@ export default function Navigation() {
         {/* Center logo */}
         <Link
           href="/"
-          className="absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0 md:left-0 min-h-[44px] flex items-center"
+          className="absolute left-1/2 -translate-x-1/2 min-h-[44px] flex items-center"
         >
-          <Image
-            src="https://res.cloudinary.com/dar0tub6u/image/upload/f_auto,q_100,h_256,dpr_2.0,e_brightness:20,e_vibrance:30/v1767897196/S33_Landscape_Logo_pxuskk"
-            alt="Station33 Logo"
-            width={360}
-            height={120}
-            priority
-            className="h-20 md:h-24 lg:h-32 w-auto brightness-110"
-          />
+          <Logo className="h-28 md:h-36 w-auto" />
         </Link>
 
-        {/* Right button - rounded with arrow */}
+        {/* Right CTA */}
         <Link
           href="/contact"
-          className="hidden md:flex items-center gap-2 px-6 py-3 border-2 border-primary-text text-primary-text rounded-lg hover:bg-primary-text hover:text-bg-dark transition-all duration-300 text-base font-medium min-h-[44px]"
+          className="hidden md:flex items-center gap-2 px-5 py-2.5 bg-station-gold text-station-dark rounded-full hover:bg-white transition-all duration-300 text-sm font-semibold uppercase tracking-wider min-h-[44px]"
         >
           Contact
-          <span className="text-lg">→</span>
+          <span className="text-base">→</span>
         </Link>
 
-        {/* Mobile menu toggle - improved touch target */}
+        {/* Mobile menu toggle */}
         <button
-          className="md:hidden flex flex-col gap-1.5 p-3 z-50 min-w-[44px] min-h-[44px] justify-center items-center"
+          className="md:hidden flex flex-col gap-1.5 p-3 z-50 min-w-[44px] min-h-[44px] justify-center items-center ml-auto"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label="Toggle menu"
         >
           <span
-            className={`w-6 h-0.5 bg-white transition-all duration-300 ${
+            className={`w-5 h-0.5 bg-white transition-all duration-300 ${
               mobileMenuOpen ? 'rotate-45 translate-y-2' : ''
             }`}
           />
           <span
-            className={`w-6 h-0.5 bg-white transition-all duration-300 ${
+            className={`w-5 h-0.5 bg-white transition-all duration-300 ${
               mobileMenuOpen ? 'opacity-0' : ''
             }`}
           />
           <span
-            className={`w-6 h-0.5 bg-white transition-all duration-300 ${
+            className={`w-5 h-0.5 bg-white transition-all duration-300 ${
               mobileMenuOpen ? '-rotate-45 -translate-y-2' : ''
             }`}
           />
@@ -120,13 +124,13 @@ export default function Navigation() {
       {mobileMenuOpen && (
         <div
           ref={mobileMenuRef}
-          className="md:hidden fixed inset-0 top-0 bg-bg-darker/98 backdrop-blur-lg z-40 pt-28 px-6"
+          className="pointer-events-auto md:hidden fixed inset-0 top-0 bg-station-dark/98 backdrop-blur-lg z-40 pt-28 px-6"
         >
-          <nav className="flex flex-col gap-8">
+          <nav className="flex flex-col gap-6">
             <Link
               href="/investors"
-              className={`text-3xl text-white hover:text-station-orange transition-colors py-3 min-h-[56px] flex items-center ${
-                pathname === '/investors' ? 'text-station-orange' : ''
+              className={`text-2xl font-semibold uppercase tracking-wider py-3 min-h-[56px] flex items-center transition-colors ${
+                pathname === '/investors' ? 'text-station-gold' : 'text-white hover:text-station-gold'
               }`}
               onClick={() => setMobileMenuOpen(false)}
             >
@@ -134,8 +138,8 @@ export default function Navigation() {
             </Link>
             <Link
               href="/community"
-              className={`text-3xl text-white hover:text-station-orange transition-colors py-3 min-h-[56px] flex items-center ${
-                pathname === '/community' ? 'text-station-orange' : ''
+              className={`text-2xl font-semibold uppercase tracking-wider py-3 min-h-[56px] flex items-center transition-colors ${
+                pathname === '/community' ? 'text-station-gold' : 'text-white hover:text-station-gold'
               }`}
               onClick={() => setMobileMenuOpen(false)}
             >
@@ -143,8 +147,8 @@ export default function Navigation() {
             </Link>
             <Link
               href="/contact"
-              className={`text-3xl text-white hover:text-station-orange transition-colors py-3 min-h-[56px] flex items-center ${
-                pathname === '/contact' ? 'text-station-orange' : ''
+              className={`text-2xl font-semibold uppercase tracking-wider py-3 min-h-[56px] flex items-center transition-colors ${
+                pathname === '/contact' ? 'text-station-gold' : 'text-white hover:text-station-gold'
               }`}
               onClick={() => setMobileMenuOpen(false)}
             >

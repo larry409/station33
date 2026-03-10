@@ -34,7 +34,7 @@ export default function CTA() {
       className="py-32 md:py-40 bg-gradient-to-b from-bg-darker via-station-red/10 to-bg-darker"
     >
       <div className="container">
-        <h2 className="text-4xl md:text-5xl font-bold text-center text-white mb-6">
+        <h2 className="text-4xl md:text-5xl font-semibold text-center text-white mb-6">
           Be Part of Something Extraordinary
         </h2>
         <p className="text-lg md:text-xl text-text-light text-center max-w-3xl mx-auto mb-16">
@@ -45,12 +45,12 @@ export default function CTA() {
           {/* Investor Card */}
           <div className="cta-card bg-card-bg p-10 md:p-12 rounded-2xl border-2 border-station-red hover:border-station-orange transition-all hover:shadow-2xl">
             <div className="mb-6">
-              <span className="inline-block bg-station-red text-white px-4 py-2 rounded-lg text-sm font-bold uppercase tracking-wider">
+              <span className="inline-block bg-station-red text-white px-4 py-2 rounded-lg text-sm font-semibold uppercase tracking-wider">
                 For Investors
               </span>
             </div>
 
-            <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            <h3 className="text-3xl md:text-4xl font-semibold text-white mb-6">
               Secure Your Position
             </h3>
 
@@ -86,12 +86,12 @@ export default function CTA() {
           {/* Community Card */}
           <div className="cta-card bg-card-bg p-10 md:p-12 rounded-2xl border-2 border-station-orange hover:border-station-red transition-all hover:shadow-2xl">
             <div className="mb-6">
-              <span className="inline-block bg-station-orange text-white px-4 py-2 rounded-lg text-sm font-bold uppercase tracking-wider">
+              <span className="inline-block bg-station-orange text-white px-4 py-2 rounded-lg text-sm font-semibold uppercase tracking-wider">
                 For Community
               </span>
             </div>
 
-            <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            <h3 className="text-3xl md:text-4xl font-semibold text-white mb-6">
               Join the Movement
             </h3>
 

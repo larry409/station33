@@ -65,7 +65,7 @@ export default function Location() {
   return (
     <section ref={locationRef} className="py-32 md:py-40 bg-bg-darker">
       <div className="container">
-        <h2 className="text-4xl md:text-5xl font-bold text-center text-white mb-6">
+        <h2 className="text-4xl md:text-5xl font-semibold text-center text-white mb-6">
           South Broad's Most Connected Address
         </h2>
         <p className="text-lg md:text-xl text-text-light text-center max-w-3xl mx-auto mb-16">
