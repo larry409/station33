@@ -97,8 +97,8 @@ export default function PropertyCards() {
     <section ref={sectionRef} className="section-standard bg-bg-dark">
       <div className="container">
         {/* Section Heading */}
-        <div className="properties-heading text-center mb-20">
-          <h2 className="text-5xl md:text-6xl font-semibold text-primary-text mb-6">
+        <div className="properties-heading text-center mb-12 md:mb-20">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-primary-text mb-4 md:mb-6">
             Explore Station33
           </h2>
           <p className="text-xl text-body-text max-w-3xl mx-auto">
@@ -107,7 +107,7 @@ export default function PropertyCards() {
         </div>
 
         {/* Property Grid */}
-        <div className="properties-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="properties-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {properties.map((property) => (
             <Link
               key={property.id}
@@ -116,7 +116,7 @@ export default function PropertyCards() {
             >
               <div className="feature-card h-full flex flex-col">
                 {/* Image */}
-                <div className="relative h-64 mb-6 rounded-lg overflow-hidden">
+                <div className="relative h-48 sm:h-64 mb-6 rounded-lg overflow-hidden">
                   <Image
                     src={property.image}
                     alt={property.title}

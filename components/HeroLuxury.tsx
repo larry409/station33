@@ -84,17 +84,17 @@ export default function HeroLuxury() {
       <div className="accent-line absolute right-8 md:right-16 top-1/4 bottom-1/4 w-px bg-primary-text origin-top" />
 
       {/* Content */}
-      <div className="container relative z-10 text-center px-6 md:px-12">
+      <div className="container relative z-10 text-center px-4 sm:px-6 md:px-12">
         {/* Main Headline with word-by-word animation */}
         <h1
           ref={titleRef}
-          className="text-5xl md:text-6xl lg:text-7xl font-semibold text-primary-text mb-8 leading-tight"
+          className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-primary-text mb-6 sm:mb-8 leading-tight break-words"
         >
           Eat. Live. Play. Shop. Work.
         </h1>
 
         {/* Subheading */}
-        <p className="hero-subtext text-xl md:text-2xl text-primary-text max-w-4xl mx-auto leading-relaxed">
+        <p className="hero-subtext text-lg sm:text-xl md:text-2xl text-primary-text max-w-4xl mx-auto leading-relaxed">
           Where Chattanooga Comes Together
         </p>
       </div>

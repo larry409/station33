@@ -147,7 +147,7 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <Link
-                  href="/leasing"
+                  href="/contact"
                   className="text-body-text hover:text-accent-teal transition-colors text-sm md:text-base inline-block min-h-[44px] flex items-center"
                 >
                   Residential Leasing
@@ -155,7 +155,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/commercial"
+                  href="/contact"
                   className="text-body-text hover:text-accent-teal transition-colors text-sm md:text-base inline-block min-h-[44px] flex items-center"
                 >
                   Commercial Space
@@ -163,15 +163,15 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/events"
+                  href="/community"
                   className="text-body-text hover:text-accent-teal transition-colors text-sm md:text-base inline-block min-h-[44px] flex items-center"
                 >
-                  Events Calendar
+                  Events & Community
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/news"
+                  href="/community"
                   className="text-body-text hover:text-accent-teal transition-colors text-sm md:text-base inline-block min-h-[44px] flex items-center"
                 >
                   News & Updates

@@ -165,7 +165,7 @@ export default function TeamPage() {
       {/* Hero Section */}
       <section
         ref={heroRef}
-        className="min-h-screen flex items-center justify-center pt-32 pb-20 relative overflow-hidden"
+        className="min-h-screen flex items-center justify-center pt-24 md:pt-32 pb-12 md:pb-20 relative overflow-hidden"
       >
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
@@ -176,25 +176,25 @@ export default function TeamPage() {
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-bg-darker/95 via-bg-dark/90 to-station-orange/20" />
+          <div className="absolute inset-0 bg-gradient-to-br from-bg-darker/95 via-bg-dark/90 to-station-gold/20" />
         </div>
 
         {/* Content */}
         <div className="container relative z-10">
-          <div className="hero-content max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-primary-text mb-8 leading-tight">
+          <div className="hero-content max-w-4xl mx-auto text-center px-4">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-primary-text mb-6 md:mb-8 leading-tight">
               Building Chattanooga's
-              <span className="text-station-orange block mt-2">Urban Future</span>
+              <span className="text-station-gold block mt-2">Urban Future</span>
             </h1>
 
-            <p className="text-xl md:text-2xl text-body-text mb-12 leading-relaxed max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-body-text mb-8 md:mb-12 leading-relaxed max-w-3xl mx-auto">
               A passionate team of developers, designers, and community builders committed to
               creating spaces where people thrive.
             </p>
 
             <Link
               href="#team"
-              className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-station-orange text-white rounded-lg hover:bg-station-red transition-all duration-300 font-bold text-lg shadow-xl hover:shadow-2xl hover:-translate-y-1"
+              className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-station-gold text-white rounded-lg hover:bg-station-gold/90 transition-all duration-300 font-semibold text-lg shadow-xl hover:shadow-2xl hover:-translate-y-1"
             >
               Meet the Team
               <span className="text-2xl">→</span>
@@ -207,14 +207,14 @@ export default function TeamPage() {
       <section className="section-standard bg-bg-darker">
         <div className="container">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-primary-text mb-8">Our Mission</h2>
-            <blockquote className="text-2xl md:text-3xl text-body-text leading-relaxed italic border-l-4 border-station-orange pl-8 py-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-primary-text mb-6 md:mb-8">Our Mission</h2>
+            <blockquote className="text-2xl md:text-3xl text-body-text leading-relaxed italic border-l-4 border-station-gold pl-8 py-4">
               "We're building something Chattanooga has never seen before—a walkable urban
               neighborhood where you can live, work, dine, and play without ever getting in your
               car. Station33 isn't just a development; it's a vision for how modern cities should
               feel."
             </blockquote>
-            <p className="text-xl text-station-orange mt-8 font-semibold">
+            <p className="text-xl text-station-gold mt-8 font-semibold">
               — Michael Rodriguez, Principal Developer
             </p>
           </div>
@@ -225,7 +225,7 @@ export default function TeamPage() {
       <section id="team" className="section-standard bg-bg-dark">
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-primary-text mb-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-primary-text mb-4 md:mb-6">
               Leadership Team
             </h2>
             <p className="text-xl text-body-text max-w-3xl mx-auto">
@@ -238,10 +238,10 @@ export default function TeamPage() {
             {teamMembers.map((member, index) => (
               <div
                 key={index}
-                className="team-card group bg-card-bg border border-divider-gray rounded-2xl overflow-hidden hover:border-station-orange hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
+                className="team-card group bg-card-bg border border-divider-gray rounded-2xl overflow-hidden hover:border-station-gold hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
               >
                 {/* Photo */}
-                <div className="relative h-80 overflow-hidden">
+                <div className="relative h-60 sm:h-72 md:h-80 overflow-hidden">
                   <Image
                     src={member.image}
                     alt={member.name}
@@ -253,13 +253,13 @@ export default function TeamPage() {
 
                 {/* Content */}
                 <div className="p-6">
-                  <h3 className="text-2xl font-bold text-primary-text mb-2">{member.name}</h3>
-                  <p className="text-station-orange font-semibold mb-4">{member.role}</p>
+                  <h3 className="text-2xl font-semibold text-primary-text mb-2">{member.name}</h3>
+                  <p className="text-station-gold font-semibold mb-4">{member.role}</p>
                   <p className="text-body-text leading-relaxed mb-6">{member.bio}</p>
 
                   <a
                     href={member.linkedin}
-                    className="inline-flex items-center gap-2 text-accent-teal font-semibold hover:text-station-orange transition-colors group/link"
+                    className="inline-flex items-center gap-2 text-accent-teal font-semibold hover:text-station-gold transition-colors group/link"
                   >
                     Connect on LinkedIn
                     <span className="text-xl group-hover/link:translate-x-1 transition-transform">
@@ -277,7 +277,7 @@ export default function TeamPage() {
       <section className="values-section section-standard bg-bg-darker">
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-primary-text mb-4">Our Values</h2>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-primary-text mb-4 md:mb-6">Our Values</h2>
             <p className="text-xl text-body-text max-w-3xl mx-auto">
               The principles that guide every decision we make
             </p>
@@ -289,10 +289,10 @@ export default function TeamPage() {
                 key={index}
                 className="value-item bg-card-bg border border-divider-gray rounded-2xl p-8 hover:border-accent-teal hover:shadow-xl transition-all duration-300"
               >
-                <div className="w-20 h-20 bg-gradient-to-br from-station-orange to-station-red rounded-2xl flex items-center justify-center mb-6 text-4xl shadow-lg">
+                <div className="w-20 h-20 bg-gradient-to-br from-station-gold to-station-gold/80 rounded-2xl flex items-center justify-center mb-6 text-4xl shadow-lg">
                   {value.icon}
                 </div>
-                <h3 className="text-2xl font-bold text-primary-text mb-4">{value.title}</h3>
+                <h3 className="text-2xl font-semibold text-primary-text mb-4">{value.title}</h3>
                 <p className="text-body-text leading-relaxed">{value.description}</p>
               </div>
             ))}
@@ -304,7 +304,7 @@ export default function TeamPage() {
       <section className="section-standard bg-bg-dark">
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-primary-text mb-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-primary-text mb-4 md:mb-6">
               Our Partners
             </h2>
             <p className="text-xl text-body-text max-w-3xl mx-auto">
@@ -318,8 +318,8 @@ export default function TeamPage() {
                 key={index}
                 className="bg-card-bg border border-divider-gray rounded-2xl p-8 hover:border-accent-teal hover:shadow-2xl transition-all duration-300"
               >
-                <h3 className="text-2xl font-bold text-primary-text mb-2">{partner.name}</h3>
-                <p className="text-station-orange font-semibold mb-4">{partner.role}</p>
+                <h3 className="text-2xl font-semibold text-primary-text mb-2">{partner.name}</h3>
+                <p className="text-station-gold font-semibold mb-4">{partner.role}</p>
                 <p className="text-body-text leading-relaxed">{partner.description}</p>
               </div>
             ))}
@@ -333,7 +333,7 @@ export default function TeamPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Content */}
             <div>
-              <h2 className="text-4xl md:text-5xl font-bold text-primary-text mb-6">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-primary-text mb-6">
                 Proven Track Record
               </h2>
               <p className="text-xl text-body-text mb-8 leading-relaxed">
@@ -343,26 +343,26 @@ export default function TeamPage() {
 
               <div className="grid grid-cols-2 gap-6 mb-10">
                 <div className="bg-card-bg border border-divider-gray rounded-xl p-6 text-center">
-                  <div className="text-4xl font-bold text-station-orange mb-2">25+</div>
+                  <div className="text-4xl font-semibold text-station-gold mb-2">25+</div>
                   <div className="text-sm text-body-text">Years Experience</div>
                 </div>
                 <div className="bg-card-bg border border-divider-gray rounded-xl p-6 text-center">
-                  <div className="text-4xl font-bold text-station-orange mb-2">$2B+</div>
+                  <div className="text-4xl font-semibold text-station-gold mb-2">$2B+</div>
                   <div className="text-sm text-body-text">Projects Delivered</div>
                 </div>
                 <div className="bg-card-bg border border-divider-gray rounded-xl p-6 text-center">
-                  <div className="text-4xl font-bold text-station-orange mb-2">20+</div>
+                  <div className="text-4xl font-semibold text-station-gold mb-2">20+</div>
                   <div className="text-sm text-body-text">Major Developments</div>
                 </div>
                 <div className="bg-card-bg border border-divider-gray rounded-xl p-6 text-center">
-                  <div className="text-4xl font-bold text-station-orange mb-2">100%</div>
+                  <div className="text-4xl font-semibold text-station-gold mb-2">100%</div>
                   <div className="text-sm text-body-text">On-Time Delivery</div>
                 </div>
               </div>
 
               <Link
                 href="/investors"
-                className="inline-flex items-center gap-3 px-8 py-4 bg-station-orange text-white rounded-lg hover:bg-station-red transition-all duration-300 font-bold text-lg shadow-xl"
+                className="inline-flex items-center gap-3 px-8 py-4 bg-station-gold text-white rounded-lg hover:bg-station-gold/90 transition-all duration-300 font-semibold text-lg shadow-xl"
               >
                 View Investment Opportunities
                 <span className="text-2xl">→</span>
@@ -370,7 +370,7 @@ export default function TeamPage() {
             </div>
 
             {/* Image */}
-            <div className="relative h-[600px] rounded-3xl overflow-hidden shadow-2xl">
+            <div className="relative h-[350px] sm:h-[450px] lg:h-[600px] rounded-3xl overflow-hidden shadow-2xl">
               <Image
                 src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=1200"
                 alt="Development Projects"
@@ -385,8 +385,8 @@ export default function TeamPage() {
       {/* CTA Section */}
       <section className="section-standard bg-bg-dark">
         <div className="container">
-          <div className="max-w-4xl mx-auto text-center bg-gradient-to-br from-station-orange/10 to-accent-teal/10 border border-station-orange/30 rounded-3xl p-12 md:p-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-primary-text mb-6">
+          <div className="max-w-4xl mx-auto text-center bg-gradient-to-br from-station-gold/10 to-accent-teal/10 border border-station-gold/30 rounded-3xl p-12 md:p-16">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-primary-text mb-6">
               Let's Build the Future Together
             </h2>
             <p className="text-xl text-body-text mb-10 leading-relaxed">
@@ -397,14 +397,14 @@ export default function TeamPage() {
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-station-orange text-white rounded-lg hover:bg-station-red transition-all duration-300 font-bold text-lg shadow-xl"
+                className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-station-gold text-white rounded-lg hover:bg-station-gold/90 transition-all duration-300 font-semibold text-lg shadow-xl"
               >
                 Get in Touch
                 <span className="text-2xl">📧</span>
               </Link>
               <Link
                 href="/community"
-                className="inline-flex items-center justify-center gap-3 px-8 py-4 border-2 border-primary-text text-primary-text rounded-lg hover:bg-primary-text hover:text-bg-dark transition-all duration-300 font-bold text-lg"
+                className="inline-flex items-center justify-center gap-3 px-8 py-4 border-2 border-primary-text text-primary-text rounded-lg hover:bg-primary-text hover:text-bg-dark transition-all duration-300 font-semibold text-lg"
               >
                 Explore the Community
                 <span className="text-2xl">→</span>

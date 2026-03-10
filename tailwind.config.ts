@@ -30,6 +30,7 @@ const config: Config = {
         'station-black': '#31363a',
         'station-green': '#c8b493',
         'station-green-light': '#d4c4a7',
+        'station-gold-light': '#d4c4a7',
         'text-light': '#B8BFC7',
       },
       fontFamily: {
