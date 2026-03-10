@@ -127,8 +127,8 @@ export default function Services() {
     <section ref={sectionRef} className="section-standard bg-bg-dark">
       <div className="container">
         {/* Section Heading */}
-        <div className="services-heading text-center mb-16">
-          <h2 className="text-5xl md:text-6xl font-semibold text-primary-text mb-6">
+        <div className="services-heading text-center mb-10 md:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-primary-text mb-4 md:mb-6">
             Amenities & Services
           </h2>
           <p className="text-xl text-body-text max-w-3xl mx-auto">
@@ -137,12 +137,12 @@ export default function Services() {
         </div>
 
         {/* Tab Navigation */}
-        <div className="service-tabs flex flex-wrap justify-center gap-4 mb-16">
+        <div className="service-tabs flex flex-wrap justify-center gap-3 sm:gap-4 mb-10 md:mb-16">
           {services.map((service) => (
             <button
               key={service.id}
               onClick={() => setActiveTab(service.id)}
-              className={`service-tab px-8 py-4 rounded-full font-semibold transition-all duration-300 ${
+              className={`service-tab px-5 py-3 sm:px-8 sm:py-4 rounded-full font-semibold transition-all duration-300 text-sm sm:text-base ${
                 activeTab === service.id
                   ? 'bg-accent-teal text-white'
                   : 'bg-card-bg text-body-text hover:bg-card-bg/70 hover:text-primary-text'
@@ -156,7 +156,7 @@ export default function Services() {
         {/* Tab Content */}
         <div ref={contentRef} className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Image */}
-          <div className="relative h-[500px] rounded-xl overflow-hidden">
+          <div className="relative h-[280px] sm:h-[350px] md:h-[400px] lg:h-[500px] rounded-xl overflow-hidden">
             <Image
               src={activeService.image}
               alt={activeService.title}

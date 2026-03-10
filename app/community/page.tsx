@@ -187,13 +187,13 @@ export default function CommunityPage() {
         {/* Content */}
         <div className="container relative z-10">
           <div className="hero-content max-w-4xl mx-auto text-center px-4">
-            <div className="inline-block px-5 md:px-6 py-2.5 md:py-3 bg-station-green/20 text-station-green text-sm md:text-base font-semibold rounded-full mb-6 md:mb-8 border border-station-green/30">
+            <div className="inline-block px-5 md:px-6 py-2.5 md:py-3 bg-station-gold/20 text-station-gold text-sm md:text-base font-semibold rounded-full mb-6 md:mb-8 border border-station-gold/30">
               Now Leasing
             </div>
 
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-primary-text mb-6 md:mb-8 leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-primary-text mb-6 md:mb-8 leading-tight">
               Join a Thriving
-              <span className="text-station-green block mt-2">Urban Community</span>
+              <span className="text-station-gold block mt-2">Urban Community</span>
             </h1>
 
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-body-text mb-8 md:mb-12 leading-relaxed max-w-3xl mx-auto">
@@ -204,14 +204,14 @@ export default function CommunityPage() {
             <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center">
               <Link
                 href="#lifestyle"
-                className="inline-flex items-center justify-center gap-3 px-6 md:px-8 py-4 md:py-5 bg-station-green text-white rounded-2xl hover:bg-station-green-light transition-all duration-300 font-bold text-base md:text-lg shadow-xl hover:shadow-2xl hover:-translate-y-1 min-h-[56px]"
+                className="inline-flex items-center justify-center gap-3 px-6 md:px-8 py-4 md:py-5 bg-station-gold text-white rounded-2xl hover:bg-station-gold-light transition-all duration-300 font-semibold text-base md:text-lg shadow-xl hover:shadow-2xl hover:-translate-y-1 min-h-[56px]"
               >
                 Explore the Lifestyle
                 <span className="text-2xl">→</span>
               </Link>
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center gap-3 px-6 md:px-8 py-4 md:py-5 border-2 border-station-green text-station-green rounded-2xl hover:bg-station-green hover:text-white transition-all duration-300 font-bold text-base md:text-lg min-h-[56px]"
+                className="inline-flex items-center justify-center gap-3 px-6 md:px-8 py-4 md:py-5 border-2 border-station-gold text-station-gold rounded-2xl hover:bg-station-gold hover:text-white transition-all duration-300 font-semibold text-base md:text-lg min-h-[56px]"
               >
                 Schedule a Tour
               </Link>
@@ -224,7 +224,7 @@ export default function CommunityPage() {
       <section id="lifestyle" className="lifestyle-section section-standard bg-bg-darker">
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-primary-text mb-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-primary-text mb-4 md:mb-6">
               Eat. Play. Live. Work. Shop.
             </h2>
             <p className="text-xl text-body-text max-w-2xl mx-auto">
@@ -239,7 +239,7 @@ export default function CommunityPage() {
                 className="lifestyle-card group relative rounded-3xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500 hover:-translate-y-2"
               >
                 {/* Background Image */}
-                <div className="relative h-[400px]">
+                <div className="relative h-[280px] sm:h-[350px] md:h-[400px]">
                   <Image
                     src={feature.image}
                     alt={feature.title}
@@ -251,7 +251,7 @@ export default function CommunityPage() {
 
                 {/* Content */}
                 <div className="absolute bottom-0 left-0 right-0 p-8">
-                  <h3 className="text-3xl font-bold text-primary-text mb-3">{feature.title}</h3>
+                  <h3 className="text-3xl font-semibold text-primary-text mb-3">{feature.title}</h3>
                   <p className="text-white leading-relaxed">{feature.description}</p>
                 </div>
               </div>
@@ -264,7 +264,7 @@ export default function CommunityPage() {
       <section className="section-standard bg-bg-dark">
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-primary-text mb-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-primary-text mb-4 md:mb-6">
               World-Class Amenities
             </h2>
             <p className="text-xl text-body-text max-w-3xl mx-auto">
@@ -281,12 +281,12 @@ export default function CommunityPage() {
                 >
                   <div className="flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                     <amenity.icon
-                      className="w-14 h-14 text-station-green group-hover:text-station-green-light transition-colors duration-300"
+                      className="w-14 h-14 text-station-gold group-hover:text-station-gold-light transition-colors duration-300"
                       strokeWidth={1.5}
                     />
                   </div>
                   <div className="flex-1">
-                    <h4 className="text-lg font-bold text-primary-text mb-1 group-hover:text-station-green transition-colors">
+                    <h4 className="text-lg font-semibold text-primary-text mb-1 group-hover:text-station-gold transition-colors">
                       {amenity.title}
                     </h4>
                     <p className="text-sm text-body-text leading-relaxed">{amenity.description}</p>
@@ -302,7 +302,7 @@ export default function CommunityPage() {
       <section className="section-standard bg-bg-darker">
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-primary-text mb-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-primary-text mb-4 md:mb-6">
               Year-Round Events
             </h2>
             <p className="text-xl text-body-text max-w-3xl mx-auto">
@@ -314,7 +314,7 @@ export default function CommunityPage() {
             {events.map((event, index) => (
               <div
                 key={index}
-                className="group bg-card-bg border border-divider-gray rounded-2xl overflow-hidden hover:border-station-orange hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
+                className="group bg-card-bg border border-divider-gray rounded-2xl overflow-hidden hover:border-station-gold hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
               >
                 {/* Event Image */}
                 <div className="relative h-48 overflow-hidden">
@@ -329,10 +329,10 @@ export default function CommunityPage() {
 
                 {/* Event Content */}
                 <div className="p-8">
-                  <div className="inline-block px-4 py-2 bg-station-green/20 text-station-green text-sm font-semibold rounded-lg mb-4">
+                  <div className="inline-block px-4 py-2 bg-station-gold/20 text-station-gold text-sm font-semibold rounded-lg mb-4">
                     {event.frequency}
                   </div>
-                  <h3 className="text-2xl font-bold text-primary-text mb-3">{event.title}</h3>
+                  <h3 className="text-2xl font-semibold text-primary-text mb-3">{event.title}</h3>
                   <p className="text-body-text leading-relaxed">{event.description}</p>
                 </div>
               </div>
@@ -347,9 +347,9 @@ export default function CommunityPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Content */}
             <div>
-              <h2 className="text-4xl md:text-5xl font-bold text-primary-text mb-6">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-primary-text mb-6">
                 Luxury Residences
-                <span className="text-station-green block mt-2">Now Leasing</span>
+                <span className="text-station-gold block mt-2">Now Leasing</span>
               </h2>
               <p className="text-xl text-body-text mb-8 leading-relaxed">
                 47 thoughtfully designed apartments and townhomes featuring high-end finishes,
@@ -360,7 +360,7 @@ export default function CommunityPage() {
                 <div className="flex items-start gap-4">
                   <span className="text-3xl">✓</span>
                   <div>
-                    <h4 className="text-xl font-bold text-primary-text mb-1">
+                    <h4 className="text-xl font-semibold text-primary-text mb-1">
                       Modern Finishes
                     </h4>
                     <p className="text-body-text">
@@ -372,7 +372,7 @@ export default function CommunityPage() {
                 <div className="flex items-start gap-4">
                   <span className="text-3xl">✓</span>
                   <div>
-                    <h4 className="text-xl font-bold text-primary-text mb-1">Pet-Friendly</h4>
+                    <h4 className="text-xl font-semibold text-primary-text mb-1">Pet-Friendly</h4>
                     <p className="text-body-text">
                       Welcome your furry friends with dog park and pet wash station
                     </p>
@@ -382,7 +382,7 @@ export default function CommunityPage() {
                 <div className="flex items-start gap-4">
                   <span className="text-3xl">✓</span>
                   <div>
-                    <h4 className="text-xl font-bold text-primary-text mb-1">
+                    <h4 className="text-xl font-semibold text-primary-text mb-1">
                       Riverwalk Views
                     </h4>
                     <p className="text-body-text">
@@ -394,7 +394,7 @@ export default function CommunityPage() {
 
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-3 px-6 md:px-8 py-4 md:py-5 bg-station-green text-white rounded-2xl hover:bg-station-green-light transition-all duration-300 font-bold text-base md:text-lg shadow-xl min-h-[56px]"
+                className="inline-flex items-center gap-3 px-6 md:px-8 py-4 md:py-5 bg-station-gold text-white rounded-2xl hover:bg-station-gold-light transition-all duration-300 font-semibold text-base md:text-lg shadow-xl min-h-[56px]"
               >
                 View Floor Plans
                 <span className="text-2xl">→</span>
@@ -402,7 +402,7 @@ export default function CommunityPage() {
             </div>
 
             {/* Image */}
-            <div className="relative h-[600px] rounded-3xl overflow-hidden shadow-2xl">
+            <div className="relative h-[350px] sm:h-[450px] lg:h-[600px] rounded-3xl overflow-hidden shadow-2xl">
               <Image
                 src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=1200"
                 alt="Luxury Apartment Interior"
@@ -417,8 +417,8 @@ export default function CommunityPage() {
       {/* CTA Section */}
       <section className="section-standard bg-bg-darker">
         <div className="container">
-          <div className="max-w-4xl mx-auto text-center bg-gradient-to-br from-station-green/10 to-station-orange/10 border border-station-green/30 rounded-3xl p-12 md:p-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-primary-text mb-6">
+          <div className="max-w-4xl mx-auto text-center bg-gradient-to-br from-station-green/10 to-station-gold/10 border border-station-gold/30 rounded-3xl p-12 md:p-16">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-primary-text mb-6">
               Ready to Make Station33 Home?
             </h2>
             <p className="text-xl text-body-text mb-10 leading-relaxed">
@@ -429,14 +429,14 @@ export default function CommunityPage() {
             <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center mb-6 md:mb-8">
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center gap-3 px-6 md:px-8 py-4 md:py-5 bg-station-green text-white rounded-2xl hover:bg-station-green-light transition-all duration-300 font-bold text-base md:text-lg shadow-xl min-h-[56px]"
+                className="inline-flex items-center justify-center gap-3 px-6 md:px-8 py-4 md:py-5 bg-station-gold text-white rounded-2xl hover:bg-station-gold-light transition-all duration-300 font-semibold text-base md:text-lg shadow-xl min-h-[56px]"
               >
                 Schedule a Tour
                 <span className="text-2xl">📅</span>
               </Link>
               <a
                 href="mailto:leasing@station33.com"
-                className="inline-flex items-center justify-center gap-3 px-6 md:px-8 py-4 md:py-5 border-2 border-station-green text-station-green rounded-2xl hover:bg-station-green hover:text-white transition-all duration-300 font-bold text-base md:text-lg min-h-[56px]"
+                className="inline-flex items-center justify-center gap-3 px-6 md:px-8 py-4 md:py-5 border-2 border-station-gold text-station-gold rounded-2xl hover:bg-station-gold hover:text-white transition-all duration-300 font-semibold text-base md:text-lg min-h-[56px]"
               >
                 leasing@station33.com
                 <span className="text-2xl">✉</span>

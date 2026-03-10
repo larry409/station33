@@ -57,9 +57,9 @@ export default function CaseStudy() {
   return (
     <section ref={sectionRef} className="section-standard bg-bg-dark overflow-hidden">
       <div className="container">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-center">
           {/* Image Side - with parallax */}
-          <div className="relative h-[600px] lg:h-[700px] rounded-xl overflow-hidden">
+          <div className="relative h-[350px] sm:h-[450px] lg:h-[600px] xl:h-[700px] rounded-xl overflow-hidden">
             <div className="case-study-image absolute inset-0 -top-20 -bottom-20">
               <Image
                 src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=1200"
@@ -76,11 +76,11 @@ export default function CaseStudy() {
               Featured Development
             </div>
 
-            <h2 className="text-5xl md:text-6xl font-semibold text-primary-text mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-primary-text mb-4 md:mb-6">
               Redefining South Broad
             </h2>
 
-            <p className="text-xl text-body-text mb-8 leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl text-body-text mb-6 md:mb-8 leading-relaxed">
               Station33 represents the future of mixed-use development in Chattanooga.
               Strategically located on South Broad, we're creating a vibrant community
               hub that seamlessly blends residential living, retail experiences, and

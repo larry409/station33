@@ -63,12 +63,12 @@ export default function Location() {
   ]
 
   return (
-    <section ref={locationRef} className="py-32 md:py-40 bg-bg-darker">
+    <section ref={locationRef} className="py-20 md:py-32 lg:py-40 bg-bg-darker">
       <div className="container">
-        <h2 className="text-4xl md:text-5xl font-semibold text-center text-white mb-6">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-center text-white mb-4 md:mb-6">
           South Broad's Most Connected Address
         </h2>
-        <p className="text-lg md:text-xl text-text-light text-center max-w-3xl mx-auto mb-16">
+        <p className="text-base sm:text-lg md:text-xl text-text-light text-center max-w-3xl mx-auto mb-10 md:mb-16">
           Everything that makes Chattanooga special is within walking distance of Station33.
         </p>
 
@@ -76,9 +76,9 @@ export default function Location() {
           {locations.map((location, i) => (
             <div
               key={i}
-              className="location-item bg-card-bg p-8 rounded-xl border border-divider-gray hover:border-station-orange transition-all"
+              className="location-item bg-card-bg p-6 md:p-8 rounded-xl border border-divider-gray hover:border-station-gold transition-all"
             >
-              <div className="text-5xl mb-6">{location.icon}</div>
+              <div className="text-4xl md:text-5xl mb-4 md:mb-6">{location.icon}</div>
               <h3 className="text-xl md:text-2xl font-semibold text-white mb-3">
                 {location.title}
               </h3>
@@ -88,7 +88,7 @@ export default function Location() {
         </div>
 
         {/* Map placeholder */}
-        <div className="mt-16 bg-card-bg rounded-xl overflow-hidden border border-divider-gray h-96 flex items-center justify-center">
+        <div className="mt-10 md:mt-16 bg-card-bg rounded-xl overflow-hidden border border-divider-gray h-64 md:h-96 flex items-center justify-center">
           <div className="text-center">
             <div className="text-6xl mb-4">🗺️</div>
             <p className="text-text-light text-lg">Interactive Map Coming Soon</p>

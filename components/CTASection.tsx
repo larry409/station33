@@ -44,7 +44,7 @@ export default function CTASection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 items-stretch">
           {/* Investor Card */}
           <div
-            className="cta-card group relative rounded-3xl overflow-hidden p-8 sm:p-10 md:p-12 lg:p-16 transition-all duration-500 hover:shadow-2xl hover:shadow-accent-rust/30 min-h-[550px] sm:min-h-[600px] md:min-h-[700px]"
+            className="cta-card group relative rounded-3xl overflow-hidden p-8 sm:p-10 md:p-12 lg:p-16 transition-all duration-500 hover:shadow-2xl hover:shadow-station-gold/30 min-h-[420px] sm:min-h-[500px] md:min-h-[600px] lg:min-h-[700px]"
           >
             {/* Background Image - Optimized with Next.js Image */}
             <div className="absolute inset-0">
@@ -106,7 +106,7 @@ export default function CTASection() {
 
           {/* Community Card */}
           <div
-            className="cta-card group relative rounded-3xl overflow-hidden p-8 sm:p-10 md:p-12 lg:p-16 transition-all duration-500 hover:shadow-2xl hover:shadow-accent-teal/30 min-h-[550px] sm:min-h-[600px] md:min-h-[700px]"
+            className="cta-card group relative rounded-3xl overflow-hidden p-8 sm:p-10 md:p-12 lg:p-16 transition-all duration-500 hover:shadow-2xl hover:shadow-station-gold/30 min-h-[420px] sm:min-h-[500px] md:min-h-[600px] lg:min-h-[700px]"
           >
             {/* Background Image - Optimized with Next.js Image */}
             <div className="absolute inset-0">
