@@ -52,7 +52,7 @@ export default function Hero() {
       <div className="container text-center">
         <h1
           ref={titleRef}
-          className="hero-title text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-12 leading-tight tracking-tight"
+          className="hero-title text-5xl md:text-6xl lg:text-7xl font-semibold text-white mb-12 leading-tight tracking-tight"
         >
           Where Chattanooga Comes Together
         </h1>

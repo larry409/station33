@@ -95,7 +95,7 @@ export default function EventsCarousel() {
   return (
     <section ref={carouselRef} className="py-32 md:py-40 bg-bg-dark overflow-hidden">
       <div className="container">
-        <h2 className="text-4xl md:text-5xl font-bold text-center text-white mb-6">
+        <h2 className="text-4xl md:text-5xl font-semibold text-center text-white mb-6">
           Live, Gather, Celebrate
         </h2>
         <p className="text-lg md:text-xl text-text-light text-center max-w-3xl mx-auto mb-12">
@@ -106,14 +106,14 @@ export default function EventsCarousel() {
           {/* Navigation buttons */}
           <button
             onClick={() => scroll('left')}
-            className="hidden md:block absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 w-12 h-12 bg-station-orange rounded-full text-white font-bold hover:bg-station-red transition-colors shadow-xl"
+            className="hidden md:block absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 w-12 h-12 bg-station-orange rounded-full text-white font-semibold hover:bg-station-red transition-colors shadow-xl"
             aria-label="Scroll left"
           >
             ←
           </button>
           <button
             onClick={() => scroll('right')}
-            className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 w-12 h-12 bg-station-orange rounded-full text-white font-bold hover:bg-station-red transition-colors shadow-xl"
+            className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 w-12 h-12 bg-station-orange rounded-full text-white font-semibold hover:bg-station-red transition-colors shadow-xl"
             aria-label="Scroll right"
           >
             →

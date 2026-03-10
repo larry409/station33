@@ -98,7 +98,7 @@ export default function PropertyCards() {
       <div className="container">
         {/* Section Heading */}
         <div className="properties-heading text-center mb-20">
-          <h2 className="text-5xl md:text-6xl font-bold text-primary-text mb-6">
+          <h2 className="text-5xl md:text-6xl font-semibold text-primary-text mb-6">
             Explore Station33
           </h2>
           <p className="text-xl text-body-text max-w-3xl mx-auto">
@@ -133,7 +133,7 @@ export default function PropertyCards() {
 
                 {/* Content */}
                 <div className="flex-1 flex flex-col">
-                  <h3 className="text-2xl font-bold text-primary-text mb-3 group-hover:text-accent-teal transition-colors">
+                  <h3 className="text-2xl font-semibold text-primary-text mb-3 group-hover:text-accent-teal transition-colors">
                     {property.title}
                   </h3>
                   <p className="text-body-text mb-4 leading-relaxed flex-1">

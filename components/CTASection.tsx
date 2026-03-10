@@ -60,7 +60,7 @@ export default function CTASection() {
             </div>
 
             {/* Gradient Overlay - Now with CSS hover for vibrant color shift */}
-            <div className="absolute inset-0 bg-gradient-to-br from-accent-rust/95 via-accent-rust/90 to-bg-darker/95 transition-all duration-500 group-hover:from-[#FF8C5A]/98 group-hover:via-[#F97D47]/95 group-hover:to-bg-darker/90" />
+            <div className="absolute inset-0 bg-gradient-to-br from-accent-rust/95 via-accent-rust/90 to-bg-darker/95 transition-all duration-500 group-hover:from-station-gold/98 group-hover:via-station-gold/95 group-hover:to-bg-darker/90" />
 
             {/* Accent Line */}
             <div className="absolute top-0 left-0 w-1 h-32 bg-primary-text transition-all duration-500 group-hover:h-40 group-hover:bg-white" />
@@ -71,7 +71,7 @@ export default function CTASection() {
                 Investment Opportunity
               </div>
 
-              <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 md:mb-6 leading-tight transition-all duration-300 group-hover:text-white group-hover:drop-shadow-[0_2px_8px_rgba(255,255,255,0.3)]">
+              <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-white mb-4 md:mb-6 leading-tight transition-all duration-300 group-hover:text-white group-hover:drop-shadow-[0_2px_8px_rgba(255,255,255,0.3)]">
                 Invest in Station33
               </h3>
 
@@ -96,7 +96,7 @@ export default function CTASection() {
 
               <Link
                 href="/investors"
-                className="inline-flex items-center gap-3 px-6 md:px-8 py-4 md:py-5 bg-white text-accent-rust rounded-lg hover:bg-white hover:gap-4 hover:shadow-lg hover:shadow-white/30 transition-all duration-300 font-bold text-base md:text-lg min-h-[56px]"
+                className="inline-flex items-center gap-3 px-6 md:px-8 py-4 md:py-5 bg-white text-accent-rust rounded-lg hover:bg-white hover:gap-4 hover:shadow-lg hover:shadow-white/30 transition-all duration-300 font-semibold text-base md:text-lg min-h-[56px]"
               >
                 View Investment Details
                 <span className="text-2xl transition-transform duration-300 group-hover:translate-x-1">→</span>
@@ -122,7 +122,7 @@ export default function CTASection() {
             </div>
 
             {/* Gradient Overlay - Now with CSS hover for vibrant color shift */}
-            <div className="absolute inset-0 bg-gradient-to-br from-accent-teal/95 via-accent-teal/90 to-bg-darker/95 transition-all duration-500 group-hover:from-[#17D4BC]/98 group-hover:via-[#15C9B3]/95 group-hover:to-bg-darker/90" />
+            <div className="absolute inset-0 bg-gradient-to-br from-accent-teal/95 via-accent-teal/90 to-bg-darker/95 transition-all duration-500 group-hover:from-station-gold/98 group-hover:via-station-gold/95 group-hover:to-bg-darker/90" />
 
             {/* Accent Line */}
             <div className="absolute top-0 left-0 w-1 h-32 bg-primary-text transition-all duration-500 group-hover:h-40 group-hover:bg-white" />
@@ -133,7 +133,7 @@ export default function CTASection() {
                 Now Leasing
               </div>
 
-              <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 md:mb-6 leading-tight transition-all duration-300 group-hover:text-white group-hover:drop-shadow-[0_2px_8px_rgba(255,255,255,0.3)]">
+              <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-white mb-4 md:mb-6 leading-tight transition-all duration-300 group-hover:text-white group-hover:drop-shadow-[0_2px_8px_rgba(255,255,255,0.3)]">
                 Join the Community
               </h3>
 
@@ -158,7 +158,7 @@ export default function CTASection() {
 
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-3 px-6 md:px-8 py-4 md:py-5 bg-white text-accent-teal rounded-lg hover:bg-white hover:gap-4 hover:shadow-lg hover:shadow-white/30 transition-all duration-300 font-bold text-base md:text-lg min-h-[56px]"
+                className="inline-flex items-center gap-3 px-6 md:px-8 py-4 md:py-5 bg-white text-accent-teal rounded-lg hover:bg-white hover:gap-4 hover:shadow-lg hover:shadow-white/30 transition-all duration-300 font-semibold text-base md:text-lg min-h-[56px]"
               >
                 Schedule a Tour
                 <span className="text-2xl transition-transform duration-300 group-hover:translate-x-1">→</span>

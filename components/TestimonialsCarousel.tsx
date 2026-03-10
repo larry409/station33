@@ -120,7 +120,7 @@ export default function TestimonialsCarousel() {
       <div className="container">
         {/* Section Heading */}
         <div className="carousel-heading text-center mb-16">
-          <h2 className="text-5xl md:text-6xl font-bold text-primary-text mb-6">
+          <h2 className="text-5xl md:text-6xl font-semibold text-primary-text mb-6">
             Community Voices
           </h2>
           <p className="text-xl text-body-text max-w-3xl mx-auto">
@@ -157,7 +157,7 @@ export default function TestimonialsCarousel() {
 
               {/* Author Details */}
               <div>
-                <div className="text-xl font-bold text-primary-text mb-1">
+                <div className="text-xl font-semibold text-primary-text mb-1">
                   {currentTestimonial.author}
                 </div>
                 <div className="text-body-text">
@@ -176,14 +176,14 @@ export default function TestimonialsCarousel() {
             <div className="flex gap-4">
               <button
                 onClick={goToPrev}
-                className="w-14 h-14 rounded-lg border-2 border-primary-text text-primary-text hover:bg-primary-text hover:text-bg-dark transition-all duration-300 flex items-center justify-center font-bold text-xl"
+                className="w-14 h-14 rounded-lg border-2 border-primary-text text-primary-text hover:bg-primary-text hover:text-bg-dark transition-all duration-300 flex items-center justify-center font-semibold text-xl"
                 aria-label="Previous testimonial"
               >
                 ←
               </button>
               <button
                 onClick={goToNext}
-                className="w-14 h-14 rounded-lg border-2 border-primary-text text-primary-text hover:bg-primary-text hover:text-bg-dark transition-all duration-300 flex items-center justify-center font-bold text-xl"
+                className="w-14 h-14 rounded-lg border-2 border-primary-text text-primary-text hover:bg-primary-text hover:text-bg-dark transition-all duration-300 flex items-center justify-center font-semibold text-xl"
                 aria-label="Next testimonial"
               >
                 →

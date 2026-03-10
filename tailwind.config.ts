@@ -9,31 +9,33 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Luxury Template Color System
-        'primary-text': '#EBE3DD',        // Off-white for all headings and prominent text
-        'body-text': '#9CA3AF',           // Medium gray for descriptions
-        'bg-dark': '#1A1A1A',             // Near black primary background
-        'bg-darker': '#0D0D0D',           // Darker sections
-        'card-bg': '#2A2A2A',             // Card backgrounds
-        'accent-teal': '#14B8A6',         // Service badges, interactive elements
-        'accent-rust': '#E17A4C',         // Alternative CTAs, secondary accents
-        'divider-gray': '#374151',        // Dividers and lines
-        'border-light': '#E5E7EB',        // Light borders
+        // Station33 Brand Colors (Brand Kit v1.0)
+        'station-dark': '#31363a',
+        'station-gold': '#c8b493',
+        'station-white': '#ffffff',
 
-        // Station33 Brand Colors (Sienna Specification)
-        'station-red': '#C8102E',         // Primary CTA, accents
-        'station-orange': '#F26522',      // Hover states, highlights
-        'station-gray': '#58595B',        // Subtle accents
-        'station-black': '#231F20',       // Deep blacks
-        'station-green': '#708238',       // Olive green for community/lifestyle sections
-        'station-green-light': '#8A9D4A', // Lighter olive green for hover states
-
-        // Additional Sienna Colors
-        'text-light': '#9CA3AF',          // Light text
+        // Legacy mappings (pointed to new brand palette)
+        'primary-text': '#ffffff',
+        'body-text': '#B8BFC7',
+        'bg-dark': '#31363a',
+        'bg-darker': '#252a2e',
+        'card-bg': '#3d4347',
+        'accent-teal': '#c8b493',
+        'accent-rust': '#c8b493',
+        'divider-gray': '#4a5056',
+        'border-light': '#c8b493',
+        'station-red': '#c8b493',
+        'station-orange': '#c8b493',
+        'station-gray': '#58595B',
+        'station-black': '#31363a',
+        'station-green': '#c8b493',
+        'station-green-light': '#d4c4a7',
+        'text-light': '#B8BFC7',
       },
       fontFamily: {
-        serif: ['var(--font-playfair)', 'Georgia', 'serif'],
-        sans: ['var(--font-montserrat)', 'system-ui', 'sans-serif'],
+        brand: ['var(--font-metropolis)', 'Inter', 'system-ui', 'sans-serif'],
+        serif: ['var(--font-metropolis)', 'Inter', 'system-ui', 'sans-serif'],
+        sans: ['var(--font-metropolis)', 'Inter', 'system-ui', 'sans-serif'],
       },
       fontSize: {
         'hero': ['4.2rem', { lineHeight: '1.1', letterSpacing: '-0.02em' }],

@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import Image from 'next/image'
+import Logo from './Logo'
 
 export default function Footer() {
   const [email, setEmail] = useState('')
@@ -39,7 +39,7 @@ export default function Footer() {
       <div className="container">
         {/* Newsletter Section */}
         <div className="max-w-2xl mx-auto text-center mb-12 md:mb-16 px-4">
-          <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary-text mb-3 md:mb-4">Stay Updated</h3>
+          <h3 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-primary-text mb-3 md:mb-4">Stay Updated</h3>
           <p className="text-sm sm:text-base md:text-lg text-body-text mb-6">
             Get exclusive updates on construction progress, leasing opportunities, and community
             events.
@@ -84,13 +84,7 @@ export default function Footer() {
           {/* Company Info */}
           <div className="px-4">
             <Link href="/" className="block mb-4 min-h-[44px] flex items-center">
-              <Image
-                src="https://res.cloudinary.com/dar0tub6u/image/upload/f_auto,q_auto,h_80,e_brightness:20,e_vibrance:30/v1767897196/S33_Landscape_Logo_pxuskk"
-                alt="Station33 Logo"
-                width={240}
-                height={80}
-                className="h-14 md:h-16 w-auto brightness-110"
-              />
+              <Logo className="h-36 md:h-44 w-auto" />
             </Link>
             <p className="text-body-text text-sm md:text-base mb-4">
               Where Chattanooga comes together. A transformative mixed-use destination on South

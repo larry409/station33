@@ -90,7 +90,7 @@ export default function Carousel() {
       <div className="container">
         {/* Section Heading */}
         <div className="carousel-heading text-center mb-16">
-          <h2 className="text-5xl md:text-6xl font-bold text-primary-text mb-6">
+          <h2 className="text-5xl md:text-6xl font-semibold text-primary-text mb-6">
             Events & Happenings
           </h2>
           <p className="text-xl text-body-text max-w-3xl mx-auto">
@@ -106,7 +106,7 @@ export default function Carousel() {
             scrollSnapType: 'x mandatory',
             WebkitOverflowScrolling: 'touch',
             scrollbarWidth: 'thin',
-            scrollbarColor: '#374151 #1A1A1A',
+            scrollbarColor: '#4a5056 #31363a',
           }}
         >
           <div className="flex gap-8 w-max">
@@ -138,7 +138,7 @@ export default function Carousel() {
                   <div className="text-sm text-accent-rust font-semibold mb-2 uppercase tracking-wider">
                     {event.date}
                   </div>
-                  <h3 className="text-2xl font-bold text-primary-text mb-3 group-hover:text-accent-teal transition-colors">
+                  <h3 className="text-2xl font-semibold text-primary-text mb-3 group-hover:text-accent-teal transition-colors">
                     {event.title}
                   </h3>
                   <p className="text-body-text leading-relaxed">

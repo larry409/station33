@@ -88,7 +88,7 @@ export default function HeroLuxury() {
         {/* Main Headline with word-by-word animation */}
         <h1
           ref={titleRef}
-          className="text-5xl md:text-6xl lg:text-7xl font-bold text-primary-text mb-8 leading-tight"
+          className="text-5xl md:text-6xl lg:text-7xl font-semibold text-primary-text mb-8 leading-tight"
         >
           Eat. Live. Play. Shop. Work.
         </h1>

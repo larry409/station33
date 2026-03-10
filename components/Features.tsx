@@ -89,10 +89,10 @@ export default function Features() {
       <div className="container">
         {/* Section Heading */}
         <div className="text-center mb-10 md:mb-12 lg:mb-16 px-4">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-primary-text mb-2 md:mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold text-primary-text mb-2 md:mb-4">
             Chattanooga's First True Urban
           </h2>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-station-orange mb-4 md:mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold text-station-orange mb-4 md:mb-6">
             Mixed-Use Destination
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-body-text max-w-3xl mx-auto">
@@ -107,7 +107,7 @@ export default function Features() {
             scrollSnapType: 'x mandatory',
             WebkitOverflowScrolling: 'touch',
             scrollbarWidth: 'thin',
-            scrollbarColor: '#374151 #1A1A1A',
+            scrollbarColor: '#4a5056 #31363a',
           }}
         >
           <div className="flex gap-4 md:gap-6 lg:gap-8 w-max">
@@ -134,7 +134,7 @@ export default function Features() {
                   <div className="h-[45%] p-4 sm:p-5 md:p-6 flex flex-col justify-between">
                     <div>
                       {/* Title */}
-                      <h3 className="text-lg sm:text-xl font-bold text-primary-text mb-1.5 md:mb-2 group-hover:text-accent-teal transition-colors line-clamp-2">
+                      <h3 className="text-lg sm:text-xl font-semibold text-primary-text mb-1.5 md:mb-2 group-hover:text-accent-teal transition-colors line-clamp-2">
                         {feature.title}
                       </h3>
 

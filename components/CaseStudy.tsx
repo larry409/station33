@@ -76,7 +76,7 @@ export default function CaseStudy() {
               Featured Development
             </div>
 
-            <h2 className="text-5xl md:text-6xl font-bold text-primary-text mb-6">
+            <h2 className="text-5xl md:text-6xl font-semibold text-primary-text mb-6">
               Redefining South Broad
             </h2>
 
@@ -96,25 +96,25 @@ export default function CaseStudy() {
             {/* Key Features Grid */}
             <div className="case-study-features grid grid-cols-2 gap-6 mb-12">
               <div className="case-study-feature">
-                <div className="text-3xl font-bold text-accent-rust mb-2">LEED</div>
+                <div className="text-3xl font-semibold text-accent-rust mb-2">LEED</div>
                 <div className="text-sm text-body-text uppercase tracking-wider">
                   Certified Green
                 </div>
               </div>
               <div className="case-study-feature">
-                <div className="text-3xl font-bold text-accent-rust mb-2">Prime</div>
+                <div className="text-3xl font-semibold text-accent-rust mb-2">Prime</div>
                 <div className="text-sm text-body-text uppercase tracking-wider">
                   South Broad Location
                 </div>
               </div>
               <div className="case-study-feature">
-                <div className="text-3xl font-bold text-accent-rust mb-2">Mixed</div>
+                <div className="text-3xl font-semibold text-accent-rust mb-2">Mixed</div>
                 <div className="text-sm text-body-text uppercase tracking-wider">
                   Use Development
                 </div>
               </div>
               <div className="case-study-feature">
-                <div className="text-3xl font-bold text-accent-rust mb-2">2026</div>
+                <div className="text-3xl font-semibold text-accent-rust mb-2">2026</div>
                 <div className="text-sm text-body-text uppercase tracking-wider">
                   Grand Opening
                 </div>
