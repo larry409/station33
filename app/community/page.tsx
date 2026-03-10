@@ -7,7 +7,6 @@ import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 import Link from 'next/link'
 import Image from 'next/image'
-import { HERO_VIDEO } from '@/lib/cloudinary'
 import {
   Waves,
   Dumbbell,
@@ -173,13 +172,9 @@ export default function CommunityPage() {
             loop
             muted
             playsInline
-            poster={HERO_VIDEO.getPosterUrl()}
             className="absolute inset-0 w-full h-full object-cover"
+            src="/video/hero.mp4"
           >
-            {/* Desktop video source */}
-            <source src={HERO_VIDEO.getDesktopUrl()} type="video/mp4" media="(min-width: 1024px)" />
-            {/* Mobile video source */}
-            <source src={HERO_VIDEO.getMobileUrl()} type="video/mp4" />
           </video>
           <div className="absolute inset-0 bg-gradient-to-br from-bg-darker/95 via-bg-dark/90 to-station-green/30" />
         </div>

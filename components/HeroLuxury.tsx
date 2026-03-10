@@ -3,7 +3,6 @@
 import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import Link from 'next/link'
-import { HERO_VIDEO } from '@/lib/cloudinary'
 
 export default function HeroLuxury() {
   const heroRef = useRef<HTMLElement>(null)
@@ -68,13 +67,9 @@ export default function HeroLuxury() {
           loop
           muted
           playsInline
-          poster={HERO_VIDEO.getPosterUrl()}
           className="absolute inset-0 w-full h-full object-cover"
+          src="/video/hero.mp4"
         >
-          {/* Desktop video source */}
-          <source src={HERO_VIDEO.getDesktopUrl()} type="video/mp4" media="(min-width: 1024px)" />
-          {/* Mobile video source */}
-          <source src={HERO_VIDEO.getMobileUrl()} type="video/mp4" />
         </video>
         {/* Dark overlay for text readability */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-bg-dark" />
