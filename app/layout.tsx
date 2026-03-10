@@ -25,8 +25,12 @@ export const metadata: Metadata = {
   keywords: 'Station33, Chattanooga, mixed-use development, real estate, downtown Chattanooga, commercial space, residential, Tennessee',
   authors: [{ name: 'Station33' }],
   icons: {
-    icon: 'https://res.cloudinary.com/dar0tub6u/image/upload/f_png,w_32,h_32/v1767897203/S33_Portrait_Logo_iakogv',
-    apple: 'https://res.cloudinary.com/dar0tub6u/image/upload/f_png,w_180,h_180/v1767897203/S33_Portrait_Logo_iakogv',
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+    ],
+    apple: '/apple-touch-icon.png',
   },
   openGraph: {
     title: 'Station33 | Chattanooga\'s Premier Mixed-Use Development',
