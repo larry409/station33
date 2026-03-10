@@ -12,7 +12,7 @@ import Footer from '@/components/Footer'
 export default function Home() {
   return (
     <>
-<Navigation />
+      <Navigation />
       <main id="main-content" className="min-h-screen">
         <HeroLuxury />
         {/* Phase 1: Navigation + Hero Complete */}

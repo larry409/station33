@@ -172,6 +172,7 @@ export default function CommunityPage() {
             loop
             muted
             playsInline
+            poster="/video/hero-poster.jpg"
             className="absolute inset-0 w-full h-full object-cover"
             src="/video/hero.mp4"
           >

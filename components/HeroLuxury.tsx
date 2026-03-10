@@ -2,7 +2,6 @@
 
 import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
-import Link from 'next/link'
 
 export default function HeroLuxury() {
   const heroRef = useRef<HTMLElement>(null)
@@ -67,6 +66,7 @@ export default function HeroLuxury() {
           loop
           muted
           playsInline
+          poster="/video/hero-poster.jpg"
           className="absolute inset-0 w-full h-full object-cover"
           src="/video/hero.mp4"
         >
