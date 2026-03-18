@@ -12,6 +12,16 @@ interface BrandPatternProps {
   opacity?: number
 }
 
+const textProps = {
+  fontSize: '24',
+  fontFamily: 'Metropolis, Inter, system-ui, sans-serif',
+  fontWeight: '600',
+  letterSpacing: '0.05em',
+} as const
+
+const darkStyle = { fill: 'var(--color-dark)' }
+const copperStyle = { fill: 'var(--color-copper)' }
+
 export default function BrandPattern({ className = '', opacity = 1 }: BrandPatternProps) {
   return (
     <svg
@@ -33,26 +43,26 @@ export default function BrandPattern({ className = '', opacity = 1 }: BrandPatte
           patternTransform="rotate(-17)"
         >
           {/* Row 1 - Dark */}
-          <text x="0" y="30" fill="#2b2f33" fontSize="24" fontFamily="Metropolis, Inter, system-ui, sans-serif" fontWeight="600" letterSpacing="0.05em">STATION33</text>
-          <text x="210" y="30" fill="#a85f42" fontSize="24" fontFamily="Metropolis, Inter, system-ui, sans-serif" fontWeight="600" letterSpacing="0.05em">STATION33</text>
+          <text x="0" y="30" style={darkStyle} {...textProps}>STATION33</text>
+          <text x="210" y="30" style={copperStyle} {...textProps}>STATION33</text>
           {/* Row 2 - Offset */}
-          <text x="105" y="65" fill="#a85f42" fontSize="24" fontFamily="Metropolis, Inter, system-ui, sans-serif" fontWeight="600" letterSpacing="0.05em">STATION33</text>
-          <text x="315" y="65" fill="#2b2f33" fontSize="24" fontFamily="Metropolis, Inter, system-ui, sans-serif" fontWeight="600" letterSpacing="0.05em">STATION33</text>
+          <text x="105" y="65" style={copperStyle} {...textProps}>STATION33</text>
+          <text x="315" y="65" style={darkStyle} {...textProps}>STATION33</text>
           {/* Row 3 - Dark */}
-          <text x="0" y="100" fill="#a85f42" fontSize="24" fontFamily="Metropolis, Inter, system-ui, sans-serif" fontWeight="600" letterSpacing="0.05em">STATION33</text>
-          <text x="210" y="100" fill="#2b2f33" fontSize="24" fontFamily="Metropolis, Inter, system-ui, sans-serif" fontWeight="600" letterSpacing="0.05em">STATION33</text>
+          <text x="0" y="100" style={copperStyle} {...textProps}>STATION33</text>
+          <text x="210" y="100" style={darkStyle} {...textProps}>STATION33</text>
           {/* Row 4 - Offset */}
-          <text x="105" y="135" fill="#2b2f33" fontSize="24" fontFamily="Metropolis, Inter, system-ui, sans-serif" fontWeight="600" letterSpacing="0.05em">STATION33</text>
-          <text x="315" y="135" fill="#a85f42" fontSize="24" fontFamily="Metropolis, Inter, system-ui, sans-serif" fontWeight="600" letterSpacing="0.05em">STATION33</text>
+          <text x="105" y="135" style={darkStyle} {...textProps}>STATION33</text>
+          <text x="315" y="135" style={copperStyle} {...textProps}>STATION33</text>
           {/* Row 5 - Dark */}
-          <text x="0" y="170" fill="#2b2f33" fontSize="24" fontFamily="Metropolis, Inter, system-ui, sans-serif" fontWeight="600" letterSpacing="0.05em">STATION33</text>
-          <text x="210" y="170" fill="#a85f42" fontSize="24" fontFamily="Metropolis, Inter, system-ui, sans-serif" fontWeight="600" letterSpacing="0.05em">STATION33</text>
+          <text x="0" y="170" style={darkStyle} {...textProps}>STATION33</text>
+          <text x="210" y="170" style={copperStyle} {...textProps}>STATION33</text>
           {/* Row 6 - Offset */}
-          <text x="105" y="205" fill="#a85f42" fontSize="24" fontFamily="Metropolis, Inter, system-ui, sans-serif" fontWeight="600" letterSpacing="0.05em">STATION33</text>
-          <text x="315" y="205" fill="#2b2f33" fontSize="24" fontFamily="Metropolis, Inter, system-ui, sans-serif" fontWeight="600" letterSpacing="0.05em">STATION33</text>
+          <text x="105" y="205" style={copperStyle} {...textProps}>STATION33</text>
+          <text x="315" y="205" style={darkStyle} {...textProps}>STATION33</text>
         </pattern>
       </defs>
-      <rect width="100%" height="100%" fill="#ece8e1" />
+      <rect width="100%" height="100%" style={{ fill: 'var(--color-white)' }} />
       <rect width="100%" height="100%" fill="url(#station33-pattern)" />
     </svg>
   )

@@ -7,17 +7,17 @@
      Station33 Brand Colors (Brand Kit v2.0)
      ======================================== */
   --color-dark: #2b2f33;        /* Station Dark Charcoal */
-  --color-gold: #a85f42;        /* Station Copper */
+  --color-copper: #a85f42;        /* Station Copper */
   --color-white: #ece8e1;       /* Station Cream */
 
   /* Semantic Color Aliases */
   --color-bg-primary: var(--color-dark);
   --color-bg-secondary: var(--color-white);
-  --color-bg-accent: var(--color-gold);
+  --color-bg-accent: var(--color-copper);
   --color-text-primary: var(--color-dark);
   --color-text-reversed: var(--color-white);
-  --color-text-accent: var(--color-gold);
-  --color-border-accent: var(--color-gold);
+  --color-text-accent: var(--color-copper);
+  --color-border-accent: var(--color-copper);
 
   /* Typography Tokens */
   --font-family-brand: var(--font-metropolis), 'Inter', system-ui, sans-serif;
@@ -42,17 +42,17 @@
   --bg-dark: var(--color-dark);
   --bg-darker: #1f2327;
   --card-bg: #373b3f;
-  --accent-teal: var(--color-gold);
-  --accent-rust: var(--color-gold);
+  --accent-teal: var(--color-copper);
+  --accent-rust: var(--color-copper);
   --divider-gray: #44494e;
-  --border-light: var(--color-gold);
+  --border-light: var(--color-copper);
   --text-white: var(--color-white);
 
-  --station-red: var(--color-gold);
-  --station-orange: var(--color-gold);
+  --station-red: var(--color-copper);
+  --station-orange: var(--color-copper);
   --station-gray: #525455;
   --station-black: var(--color-dark);
-  --station-green: var(--color-gold);
+  --station-green: var(--color-copper);
   --station-green-light: #c4876e;
   --text-light: #B8BFC7;
 }
@@ -222,7 +222,7 @@
   }
 
   .text-gradient {
-    background: linear-gradient(135deg, var(--color-gold), var(--color-dark));
+    background: linear-gradient(135deg, var(--color-copper), var(--color-dark));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;

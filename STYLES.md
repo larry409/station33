@@ -32,7 +32,7 @@
 ```css
 :root {
   --color-dark: #2b2f33;
-  --color-gold: #a85f42;    /* copper */
+  --color-copper: #a85f42;    /* copper */
   --color-white: #ece8e1;   /* cream */
   --bg-darker: #1f2327;
   --card-bg: #373b3f;

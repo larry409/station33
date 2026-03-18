@@ -1,5 +1,19 @@
 import type { Config } from 'tailwindcss'
 
+// Brand Kit v2.0 — single source of truth for all color tokens.
+// Tailwind aliases below all reference these constants so values are never duplicated.
+const brand = {
+  dark: '#2b2f33',
+  copper: '#a85f42',
+  cream: '#ece8e1',
+  darker: '#1f2327',
+  cardBg: '#373b3f',
+  divider: '#44494e',
+  gray: '#525455',
+  copperLight: '#c4876e',
+  bodyText: '#B8BFC7',
+} as const
+
 const config: Config = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -9,29 +23,31 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Station33 Brand Colors (Brand Kit v2.0)
-        'station-dark': '#2b2f33',
-        'station-gold': '#a85f42',
-        'station-white': '#ece8e1',
+        // Primary brand tokens
+        'station-dark': brand.dark,
+        'station-gold': brand.copper,
+        'station-white': brand.cream,
 
-        // Legacy mappings (pointed to new brand palette)
-        'primary-text': '#ece8e1',
-        'body-text': '#B8BFC7',
-        'bg-dark': '#2b2f33',
-        'bg-darker': '#1f2327',
-        'card-bg': '#373b3f',
-        'accent-teal': '#a85f42',
-        'accent-rust': '#a85f42',
-        'divider-gray': '#44494e',
-        'border-light': '#a85f42',
-        'station-red': '#a85f42',
-        'station-orange': '#a85f42',
-        'station-gray': '#525455',
-        'station-black': '#2b2f33',
-        'station-green': '#a85f42',
-        'station-green-light': '#c4876e',
-        'station-gold-light': '#c4876e',
-        'text-light': '#B8BFC7',
+        // Semantic tokens
+        'primary-text': brand.cream,
+        'body-text': brand.bodyText,
+        'bg-dark': brand.dark,
+        'bg-darker': brand.darker,
+        'card-bg': brand.cardBg,
+        'divider-gray': brand.divider,
+        'station-gray': brand.gray,
+        'station-black': brand.dark,
+        'station-gold-light': brand.copperLight,
+        'station-green-light': brand.copperLight,
+        'text-light': brand.bodyText,
+
+        // Legacy aliases (all point to copper accent)
+        'accent-teal': brand.copper,
+        'accent-rust': brand.copper,
+        'border-light': brand.copper,
+        'station-red': brand.copper,
+        'station-orange': brand.copper,
+        'station-green': brand.copper,
       },
       fontFamily: {
         brand: ['var(--font-metropolis)', 'Inter', 'system-ui', 'sans-serif'],
