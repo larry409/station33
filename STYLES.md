@@ -33,7 +33,7 @@
 :root {
   --color-dark: #2b2f33;
   --color-copper: #a85f42;    /* copper */
-  --color-white: #ece8e1;   /* cream */
+  --color-cream: #ece8e1;   /* cream */
   --bg-darker: #1f2327;
   --card-bg: #373b3f;
   --divider-gray: #44494e;
@@ -78,34 +78,23 @@
 
 ## Token Architecture
 
-All colors flow through CSS custom properties in `globals.css`. Tailwind tokens in `tailwind.config.ts` mirror these values for utility-class usage. Legacy alias names (e.g. `station-red`, `accent-teal`, `station-orange`) all point to the single copper accent `#a85f42`.
+All colors flow through CSS custom properties in `globals.css`. Tailwind tokens in `tailwind.config.ts` are sourced from a single `brand` constants object so values are never duplicated. Legacy alias names (e.g. `station-red`, `accent-teal`, `station-orange`) all point to the single copper accent.
 
 ### Tailwind Color Tokens
 
-```ts
-colors: {
-  'station-dark': '#2b2f33',
-  'station-gold': '#a85f42',
-  'station-white': '#ece8e1',
-  'primary-text': '#ece8e1',
-  'body-text': '#B8BFC7',
-  'bg-dark': '#2b2f33',
-  'bg-darker': '#1f2327',
-  'card-bg': '#373b3f',
-  'accent-teal': '#a85f42',
-  'accent-rust': '#a85f42',
-  'divider-gray': '#44494e',
-  'border-light': '#a85f42',
-  'station-red': '#a85f42',
-  'station-orange': '#a85f42',
-  'station-gray': '#525455',
-  'station-black': '#2b2f33',
-  'station-green': '#a85f42',
-  'station-green-light': '#c4876e',
-  'station-gold-light': '#c4876e',
-  'text-light': '#B8BFC7',
-}
-```
+All values below resolve from the `brand` constant in `tailwind.config.ts`:
+
+| Token | Resolves to |
+|-------|-------------|
+| `station-dark`, `bg-dark`, `station-black` | `brand.dark` (`#2b2f33`) |
+| `station-gold`, `accent-teal`, `accent-rust`, `border-light`, `station-red`, `station-orange`, `station-green` | `brand.copper` (`#a85f42`) |
+| `station-white`, `primary-text` | `brand.cream` (`#ece8e1`) |
+| `bg-darker` | `brand.darker` (`#1f2327`) |
+| `card-bg` | `brand.cardBg` (`#373b3f`) |
+| `divider-gray` | `brand.divider` (`#44494e`) |
+| `station-gray` | `brand.gray` (`#525455`) |
+| `station-gold-light`, `station-green-light` | `brand.copperLight` (`#c4876e`) |
+| `body-text`, `text-light` | `brand.bodyText` (`#B8BFC7`) |
 
 ---
 

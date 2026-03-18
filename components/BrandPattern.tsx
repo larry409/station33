@@ -62,7 +62,7 @@ export default function BrandPattern({ className = '', opacity = 1 }: BrandPatte
           <text x="315" y="205" style={darkStyle} {...textProps}>STATION33</text>
         </pattern>
       </defs>
-      <rect width="100%" height="100%" style={{ fill: 'var(--color-white)' }} />
+      <rect width="100%" height="100%" style={{ fill: 'var(--color-cream)' }} />
       <rect width="100%" height="100%" fill="url(#station33-pattern)" />
     </svg>
   )

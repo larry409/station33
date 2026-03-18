@@ -8,14 +8,14 @@
      ======================================== */
   --color-dark: #2b2f33;        /* Station Dark Charcoal */
   --color-copper: #a85f42;        /* Station Copper */
-  --color-white: #ece8e1;       /* Station Cream */
+  --color-cream: #ece8e1;       /* Station Cream */
 
   /* Semantic Color Aliases */
   --color-bg-primary: var(--color-dark);
-  --color-bg-secondary: var(--color-white);
+  --color-bg-secondary: var(--color-cream);
   --color-bg-accent: var(--color-copper);
   --color-text-primary: var(--color-dark);
-  --color-text-reversed: var(--color-white);
+  --color-text-reversed: var(--color-cream);
   --color-text-accent: var(--color-copper);
   --color-border-accent: var(--color-copper);
 
@@ -37,7 +37,7 @@
   /* ========================================
      Legacy Colors (mapped to new brand)
      ======================================== */
-  --primary-text: var(--color-white);
+  --primary-text: var(--color-cream);
   --body-text: #B8BFC7;
   --bg-dark: var(--color-dark);
   --bg-darker: #1f2327;
@@ -46,7 +46,7 @@
   --accent-rust: var(--color-copper);
   --divider-gray: #44494e;
   --border-light: var(--color-copper);
-  --text-white: var(--color-white);
+  --text-white: var(--color-cream);
 
   --station-red: var(--color-copper);
   --station-orange: var(--color-copper);

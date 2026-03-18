@@ -4,8 +4,8 @@ interface LogoProps {
 }
 
 export default function Logo({ variant = 'light', className = '' }: LogoProps) {
-  const stationFill = variant === 'light' ? '#ece8e1' : '#2b2f33'
-  const numberFill = '#a85f42'
+  const stationFill = variant === 'light' ? 'var(--color-cream)' : 'var(--color-dark)'
+  const numberFill = 'var(--color-copper)'
 
   return (
     <svg
