@@ -9,28 +9,28 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Station33 Brand Colors (Brand Kit v1.0)
-        'station-dark': '#31363a',
-        'station-gold': '#c8b493',
-        'station-white': '#ffffff',
+        // Station33 Brand Colors (Brand Kit v2.0)
+        'station-dark': '#2b2f33',
+        'station-gold': '#a85f42',
+        'station-white': '#ece8e1',
 
         // Legacy mappings (pointed to new brand palette)
-        'primary-text': '#ffffff',
+        'primary-text': '#ece8e1',
         'body-text': '#B8BFC7',
-        'bg-dark': '#31363a',
-        'bg-darker': '#252a2e',
-        'card-bg': '#3d4347',
-        'accent-teal': '#c8b493',
-        'accent-rust': '#c8b493',
-        'divider-gray': '#4a5056',
-        'border-light': '#c8b493',
-        'station-red': '#c8b493',
-        'station-orange': '#c8b493',
-        'station-gray': '#58595B',
-        'station-black': '#31363a',
-        'station-green': '#c8b493',
-        'station-green-light': '#d4c4a7',
-        'station-gold-light': '#d4c4a7',
+        'bg-dark': '#2b2f33',
+        'bg-darker': '#1f2327',
+        'card-bg': '#373b3f',
+        'accent-teal': '#a85f42',
+        'accent-rust': '#a85f42',
+        'divider-gray': '#44494e',
+        'border-light': '#a85f42',
+        'station-red': '#a85f42',
+        'station-orange': '#a85f42',
+        'station-gray': '#525455',
+        'station-black': '#2b2f33',
+        'station-green': '#a85f42',
+        'station-green-light': '#c4876e',
+        'station-gold-light': '#c4876e',
         'text-light': '#B8BFC7',
       },
       fontFamily: {

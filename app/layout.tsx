@@ -6,7 +6,7 @@ const metropolis = localFont({
   src: [
     {
       path: '../public/fonts/Metropolis-Medium.woff2',
-      weight: '500',
+      weight: '400',
       style: 'normal',
     },
     {
