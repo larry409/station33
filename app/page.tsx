@@ -12,9 +12,6 @@ import Footer from '@/components/Footer'
 export default function Home() {
   return (
     <>
-      <a href="#main-content" className="skip-to-content">
-        Skip to main content
-      </a>
       <Navigation />
       <main id="main-content" className="min-h-screen">
         <HeroLuxury />

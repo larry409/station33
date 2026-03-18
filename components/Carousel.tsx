@@ -106,7 +106,7 @@ export default function Carousel() {
             scrollSnapType: 'x mandatory',
             WebkitOverflowScrolling: 'touch',
             scrollbarWidth: 'thin',
-            scrollbarColor: '#4a5056 #31363a',
+            scrollbarColor: 'var(--divider-gray) var(--color-dark)',
           }}
         >
           <div className="flex gap-8 w-max">

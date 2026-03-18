@@ -107,7 +107,7 @@ export default function Features() {
             scrollSnapType: 'x mandatory',
             WebkitOverflowScrolling: 'touch',
             scrollbarWidth: 'thin',
-            scrollbarColor: '#4a5056 #31363a',
+            scrollbarColor: 'var(--divider-gray) var(--color-dark)',
           }}
         >
           <div className="flex gap-4 md:gap-6 lg:gap-8 w-max">

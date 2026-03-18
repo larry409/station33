@@ -4,20 +4,20 @@
 
 :root {
   /* ========================================
-     Station33 Brand Colors (Brand Kit v1.0)
+     Station33 Brand Colors (Brand Kit v2.0)
      ======================================== */
-  --color-dark: #31363a;        /* Station Dark Charcoal */
-  --color-gold: #c8b493;        /* Station Gold */
-  --color-white: #ffffff;       /* Station White */
+  --color-dark: #2b2f33;        /* Station Dark Charcoal */
+  --color-copper: #a85f42;        /* Station Copper */
+  --color-cream: #ece8e1;       /* Station Cream */
 
   /* Semantic Color Aliases */
   --color-bg-primary: var(--color-dark);
-  --color-bg-secondary: var(--color-white);
-  --color-bg-accent: var(--color-gold);
+  --color-bg-secondary: var(--color-cream);
+  --color-bg-accent: var(--color-copper);
   --color-text-primary: var(--color-dark);
-  --color-text-reversed: var(--color-white);
-  --color-text-accent: var(--color-gold);
-  --color-border-accent: var(--color-gold);
+  --color-text-reversed: var(--color-cream);
+  --color-text-accent: var(--color-copper);
+  --color-border-accent: var(--color-copper);
 
   /* Typography Tokens */
   --font-family-brand: var(--font-metropolis), 'Inter', system-ui, sans-serif;
@@ -37,23 +37,23 @@
   /* ========================================
      Legacy Colors (mapped to new brand)
      ======================================== */
-  --primary-text: var(--color-white);
+  --primary-text: var(--color-cream);
   --body-text: #B8BFC7;
   --bg-dark: var(--color-dark);
-  --bg-darker: #252a2e;
-  --card-bg: #3d4347;
-  --accent-teal: var(--color-gold);
-  --accent-rust: var(--color-gold);
-  --divider-gray: #4a5056;
-  --border-light: var(--color-gold);
-  --text-white: var(--color-white);
+  --bg-darker: #1f2327;
+  --card-bg: #373b3f;
+  --accent-teal: var(--color-copper);
+  --accent-rust: var(--color-copper);
+  --divider-gray: #44494e;
+  --border-light: var(--color-copper);
+  --text-white: var(--color-cream);
 
-  --station-red: var(--color-gold);
-  --station-orange: var(--color-gold);
-  --station-gray: #58595B;
+  --station-red: var(--color-copper);
+  --station-orange: var(--color-copper);
+  --station-gray: #525455;
   --station-black: var(--color-dark);
-  --station-green: var(--color-gold);
-  --station-green-light: #d4c4a7;
+  --station-green: var(--color-copper);
+  --station-green-light: #c4876e;
   --text-light: #B8BFC7;
 }
 
@@ -65,7 +65,7 @@
   body {
     @apply bg-bg-dark text-body-text antialiased;
     font-family: var(--font-family-brand);
-    font-weight: 500;
+    font-weight: 400;
     font-size: 16px;
   }
 
@@ -222,7 +222,7 @@
   }
 
   .text-gradient {
-    background: linear-gradient(135deg, var(--color-gold), var(--color-dark));
+    background: linear-gradient(135deg, var(--color-copper), var(--color-dark));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -255,11 +255,6 @@
 @layer utilities {
   .text-hero {
     @apply text-5xl md:text-6xl lg:text-7xl leading-tight tracking-tight font-bold;
-  }
-
-  /* Accessibility - Skip to content link */
-  .skip-to-content {
-    @apply absolute -top-full left-0 bg-accent-teal text-white px-6 py-3 z-50 focus:top-4 focus:left-4 transition-all;
   }
 
   /* Focus states for better keyboard navigation */
