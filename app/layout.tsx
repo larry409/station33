@@ -1,21 +1,10 @@
 import type { Metadata } from 'next'
-import localFont from 'next/font/local'
+import { Inter_Tight } from 'next/font/google'
 import './globals.css'
 
-const metropolis = localFont({
-  src: [
-    {
-      path: '../public/fonts/Metropolis-Medium.woff2',
-      weight: '400',
-      style: 'normal',
-    },
-    {
-      path: '../public/fonts/Metropolis-SemiBold.woff2',
-      weight: '600',
-      style: 'normal',
-    },
-  ],
-  variable: '--font-metropolis',
+const interTight = Inter_Tight({
+  subsets: ['latin'],
+  variable: '--font-inter-tight',
   display: 'swap',
 })
 
@@ -67,8 +56,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={metropolis.variable}>
-      <body className={metropolis.className}>{children}</body>
+    <html lang="en" className={interTight.variable}>
+      <body className={interTight.className}>{children}</body>
     </html>
   )
 }
