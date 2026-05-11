@@ -270,14 +270,14 @@ export default function InvestorsPage() {
             {/* Image */}
             <div className="relative h-[350px] sm:h-[450px] lg:h-[600px] rounded-3xl overflow-hidden shadow-2xl">
               <Image
-                src="/images/40-Things-to-Do-in-Downtown-Chattanooga.png"
-                alt="Aerial view of Chattanooga at sunset with downtown skyline and bridges"
+                src="/images/rendering-aerial.jpg"
+                alt="Aerial rendering of Station33 development at dusk with clock tower and plaza"
                 fill
                 className="object-cover"
               />
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-bg-darker/95 to-transparent p-8">
                 <p className="text-sm text-body-text italic">
-                  Downtown Chattanooga - Strategic position at convergence of commerce, culture, and connectivity
+                  Station33 at dusk - A walkable mixed-use destination at the convergence of commerce, culture, and community
                 </p>
               </div>
             </div>
