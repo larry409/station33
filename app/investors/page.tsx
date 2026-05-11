@@ -114,14 +114,16 @@ export default function InvestorsPage() {
         ref={heroRef}
         className="min-h-screen flex items-center justify-center pt-24 md:pt-32 pb-12 md:pb-20 relative overflow-hidden"
       >
-        {/* Background Image */}
+        {/* Background Video */}
         <div className="absolute inset-0 z-0">
-          <Image
-            src="https://images.unsplash.com/photo-1600298882525-4db16bce04a2?q=80&w=2000"
-            alt="Chattanooga Skyline Investment Opportunity"
-            fill
-            className="object-cover"
-            priority
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            poster="/video/hero-poster.jpg"
+            className="absolute inset-0 w-full h-full object-cover"
+            src="/video/hero-home.mp4"
           />
           <div className="absolute inset-0 bg-gradient-to-br from-bg-darker/95 via-bg-dark/90 to-accent-rust/30" />
         </div>
@@ -179,8 +181,8 @@ export default function InvestorsPage() {
             {/* Image - takes 3 columns */}
             <div className="lg:col-span-3 relative h-[400px] sm:h-[500px] lg:h-[600px] rounded-2xl overflow-hidden shadow-2xl">
               <Image
-                src="/images/img228.jpg"
-                alt="Station33 Development Rendering"
+                src="/images/rendering-clock-tower.jpg"
+                alt="Station33 clock tower viewed from the hotel courtyard"
                 fill
                 className="object-cover"
               />
@@ -344,17 +346,12 @@ export default function InvestorsPage() {
       <section className="section-standard bg-bg-dark">
         <div className="container">
           <div className="max-w-4xl mx-auto text-center bg-gradient-to-br from-station-orange/20 to-accent-rust/20 border-2 border-station-gold rounded-3xl p-12 md:p-16">
-            <div className="inline-block px-6 py-3 bg-station-gold text-white text-sm font-semibold rounded-full mb-6">
-              Limited Offering - Accredited Investors Only
-            </div>
-
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-primary-text mb-6">
-              Investment Opportunity Closes Q1 2026
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-primary-text mb-6 leading-tight">
+              Receive detailed financial projections, site plans, market analysis, and partnership structure.
             </h2>
 
             <p className="text-xl text-body-text mb-10 leading-relaxed">
-              Receive detailed financial projections, site plans, market analysis, and partnership
-              structure. Chattanooga's premier mixed-use development won't wait.
+              Chattanooga's premier mixed-use development won't wait.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">

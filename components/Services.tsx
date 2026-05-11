@@ -70,7 +70,7 @@ const services = [
       'Grease trap infrastructure',
       'Ample ventilation systems',
     ],
-    image: '/images/img100.jpg',
+    image: '/images/rendering-food-hall.jpg',
   },
 ]
 

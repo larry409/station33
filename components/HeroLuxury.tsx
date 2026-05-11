@@ -68,7 +68,7 @@ export default function HeroLuxury() {
           playsInline
           poster="/video/hero-poster.jpg"
           className="absolute inset-0 w-full h-full object-cover"
-          src="/video/hero.mp4"
+          src="/video/hero-home.mp4"
         >
         </video>
         {/* Dark overlay for text readability */}

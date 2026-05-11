@@ -48,7 +48,7 @@ export default function Features() {
       description:
         'Car-free pedestrian plaza with splash fountain, green spaces, and year-round programming. Host markets, concerts, and community gatherings for up to 500 guests.',
       link: '/contact',
-      image: '/images/img172.jpg',
+      image: '/images/rendering-plaza.jpg',
     },
     {
       icon: '🍽️',
@@ -56,7 +56,7 @@ export default function Features() {
       description:
         "Chattanooga's premier food hall featuring local chefs, craft cocktails, and outdoor dining. From quick bites to chef-driven concepts, all steps from your door.",
       link: '/community#dining',
-      image: '/images/img100.jpg',
+      image: '/images/rendering-food-hall.jpg',
     },
     {
       icon: '🏨',
@@ -64,7 +64,7 @@ export default function Features() {
       description:
         '63-room boutique hotel with Marriott partnership. Rooftop bar, guest amenities, and built-in neighborhood energy. Your friends will actually want to visit.',
       link: '/community#hotel',
-      image: '/images/img80.jpg',
+      image: '/images/rendering-hotel.jpg',
     },
     {
       icon: '🅿️',
