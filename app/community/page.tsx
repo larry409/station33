@@ -84,7 +84,7 @@ export default function CommunityPage() {
       title: 'Dine',
       description:
         'Curated food hall featuring local chefs and diverse cuisine. From morning coffee to fine dining, all steps from your door.',
-      image: '/images/img100.jpg',
+      image: '/images/rendering-food-hall.jpg',
       icon: '🍽️',
     },
     {
