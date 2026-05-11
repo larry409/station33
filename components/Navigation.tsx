@@ -84,7 +84,7 @@ export default function Navigation() {
           href="/"
           className="absolute left-1/2 -translate-x-1/2 min-h-[44px] flex items-center"
         >
-          <Logo className="h-28 md:h-36 w-auto" />
+          <Logo className="h-8 md:h-10 w-auto" />
         </Link>
 
         {/* Right CTA */}

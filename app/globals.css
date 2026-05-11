@@ -20,7 +20,7 @@
   --color-border-accent: var(--color-copper);
 
   /* Typography Tokens */
-  --font-family-brand: var(--font-metropolis), 'Inter', system-ui, sans-serif;
+  --font-family-brand: var(--font-inter-tight), 'Inter Tight', system-ui, sans-serif;
   --text-display: clamp(2.5rem, 6vw, 4.5rem);
   --text-h1: clamp(2rem, 4vw, 3rem);
   --text-h2: clamp(1.5rem, 3vw, 2.25rem);
@@ -70,9 +70,9 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply text-primary-text font-semibold;
+    @apply text-primary-text;
     font-family: var(--font-family-brand);
-    font-weight: 600;
+    font-weight: 800;
   }
 
   h1 {

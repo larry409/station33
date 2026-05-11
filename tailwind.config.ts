@@ -50,9 +50,9 @@ const config: Config = {
         'station-green': brand.copper,
       },
       fontFamily: {
-        brand: ['var(--font-metropolis)', 'Inter', 'system-ui', 'sans-serif'],
-        serif: ['var(--font-metropolis)', 'Inter', 'system-ui', 'sans-serif'],
-        sans: ['var(--font-metropolis)', 'Inter', 'system-ui', 'sans-serif'],
+        brand: ['var(--font-inter-tight)', 'Inter', 'system-ui', 'sans-serif'],
+        serif: ['var(--font-inter-tight)', 'Inter', 'system-ui', 'sans-serif'],
+        sans: ['var(--font-inter-tight)', 'Inter', 'system-ui', 'sans-serif'],
       },
       fontSize: {
         'hero': ['4.2rem', { lineHeight: '1.1', letterSpacing: '-0.02em' }],
