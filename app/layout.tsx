@@ -30,10 +30,10 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://res.cloudinary.com/dar0tub6u/image/upload/f_auto,q_auto,w_1200,h_630/v1767897196/S33_Landscape_Logo_pxuskk',
+        url: '/images/og-share.jpg',
         width: 1200,
         height: 630,
-        alt: 'Station33 Logo',
+        alt: 'Station33 - Chattanooga\'s premier mixed-use development at dusk',
       },
     ],
   },
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Station33 | Chattanooga\'s Premier Mixed-Use Development',
     description: 'Experience the future of urban living at Station33 in downtown Chattanooga, TN.',
-    images: ['https://res.cloudinary.com/dar0tub6u/image/upload/f_auto,q_auto,w_1200,h_630/v1767897196/S33_Landscape_Logo_pxuskk'],
+    images: ['/images/og-share.jpg'],
   },
   viewport: {
     width: 'device-width',
