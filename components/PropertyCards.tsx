@@ -23,7 +23,7 @@ const properties = [
     description: 'Modern apartments with industrial-chic design and city views',
     size: '800 - 1,800 sq ft',
     badge: 'Leasing',
-    image: '/images/img132.jpg',
+    image: '/images/rendering-alley-buildings.jpg',
   },
   {
     id: 3,
@@ -55,7 +55,7 @@ const properties = [
     description: 'Full-service dining with indoor and outdoor seating',
     size: '4,500 sq ft',
     badge: 'Coming 2026',
-    image: '/images/img212.jpg',
+    image: '/images/rendering-archway.jpg',
   },
 ]
 
