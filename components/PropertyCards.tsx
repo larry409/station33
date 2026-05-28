@@ -57,6 +57,14 @@ const properties = [
     badge: 'Coming 2026',
     image: '/images/rendering-archway.jpg',
   },
+  {
+    id: 7,
+    title: 'Medical Office Space',
+    description: 'Purpose-built medical office suites with street-level access and modern infrastructure',
+    size: '1,500 - 6,000 sq ft',
+    badge: 'Pre-Leasing',
+    image: '/images/rendering-medical-office.jpg',
+  },
 ]
 
 export default function PropertyCards() {

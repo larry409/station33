@@ -122,10 +122,10 @@ export default function InvestorsPage() {
             muted
             playsInline
             poster="/video/hero-poster.jpg"
-            className="absolute inset-0 w-full h-full object-cover"
+            className="absolute inset-0 w-full h-full object-cover brightness-110 contrast-105 saturate-105"
             src="/video/hero-home.mp4"
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-bg-darker/95 via-bg-dark/90 to-accent-rust/30" />
+          <div className="absolute inset-0 bg-gradient-to-br from-bg-darker/85 via-bg-dark/70 to-accent-rust/30" />
         </div>
 
         {/* Content */}
@@ -219,6 +219,29 @@ export default function InvestorsPage() {
                 </Link>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Master Site Plan */}
+      <section className="section-standard bg-bg-dark">
+        <div className="container">
+          <div className="text-center mb-10 md:mb-12 px-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-primary-text mb-4 md:mb-6">
+              Master Site Plan
+            </h2>
+            <p className="text-lg md:text-xl text-body-text max-w-2xl mx-auto">
+              A walkable, mixed-use layout integrating residential, commercial, hotel, and retail across the full South Broad block
+            </p>
+          </div>
+
+          <div className="relative aspect-[3/2] max-w-5xl mx-auto rounded-2xl overflow-hidden shadow-2xl bg-bg-darker">
+            <Image
+              src="/images/rendering-site-plan.jpg"
+              alt="Station33 master site plan, aerial top-down view at dusk"
+              fill
+              className="object-contain"
+            />
           </div>
         </div>
       </section>
