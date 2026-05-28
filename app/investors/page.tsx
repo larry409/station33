@@ -122,15 +122,20 @@ export default function InvestorsPage() {
             muted
             playsInline
             poster="/video/hero-poster.jpg"
-            className="absolute inset-0 w-full h-full object-cover"
+            className="absolute inset-0 w-full h-full object-cover brightness-[1.35] contrast-105 saturate-105"
             src="/video/hero-home.mp4"
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-bg-darker/95 via-bg-dark/90 to-accent-rust/30" />
+          <div className="absolute inset-0 bg-gradient-to-br from-bg-darker/70 via-bg-dark/55 to-accent-rust/30" />
         </div>
 
         {/* Content */}
         <div className="container relative z-10">
-          <div className="hero-content max-w-4xl mx-auto text-center px-4">
+          <div className="hero-content relative max-w-4xl mx-auto text-center px-4">
+            {/* Localized scrim: keeps the brightened video vivid while the body copy stays legible (AA) on bright frames */}
+            <div
+              aria-hidden
+              className="pointer-events-none absolute -inset-x-8 -inset-y-6 -z-10 bg-[radial-gradient(ellipse_at_center,_rgba(0,0,0,0.55),_rgba(0,0,0,0.3)_55%,_transparent_80%)]"
+            />
             <div className="inline-block px-5 md:px-6 py-2.5 md:py-3 bg-station-gold/20 text-station-gold text-sm md:text-base font-semibold rounded-full mb-6 md:mb-8 border border-station-gold/30">
               Accredited Investors Only
             </div>
@@ -219,6 +224,29 @@ export default function InvestorsPage() {
                 </Link>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Master Site Plan */}
+      <section className="section-standard bg-bg-darker">
+        <div className="container">
+          <div className="text-center mb-10 md:mb-12 px-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-primary-text mb-4 md:mb-6">
+              Master Site Plan
+            </h2>
+            <p className="text-lg md:text-xl text-body-text max-w-2xl mx-auto">
+              A walkable, mixed-use layout integrating residential, commercial, hotel, and retail across the full South Broad block
+            </p>
+          </div>
+
+          <div className="relative aspect-[3/2] max-w-5xl mx-auto rounded-2xl overflow-hidden shadow-2xl bg-bg-darker">
+            <Image
+              src="/images/rendering-site-plan.jpg"
+              alt="Station33 master site plan, aerial top-down view at dusk"
+              fill
+              className="object-contain"
+            />
           </div>
         </div>
       </section>
