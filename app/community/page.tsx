@@ -8,7 +8,6 @@ import Footer from '@/components/Footer'
 import Link from 'next/link'
 import Image from 'next/image'
 import {
-  Waves,
   Dumbbell,
   PawPrint,
   CircleParking,
@@ -90,14 +89,13 @@ export default function CommunityPage() {
     {
       title: 'Play',
       description:
-        'Rooftop pool, European-style plaza, fitness center, and year-round events. Every day offers something new to discover.',
+        'European-style plaza, fitness center, and year-round events. Every day offers something new to discover.',
       image: '/images/img88.jpg',
       icon: '🎪',
     },
   ]
 
   const amenities = [
-    { icon: Waves, title: 'Rooftop Pool', description: 'Resort-style pool with city views' },
     { icon: Dumbbell, title: 'Fitness Center', description: '24/7 state-of-the-art equipment' },
     { icon: PawPrint, title: 'Pet-Friendly', description: 'Dog park and pet wash station' },
     { icon: CircleParking, title: 'Covered Parking', description: 'Secure parking with EV charging' },
@@ -194,7 +192,7 @@ export default function CommunityPage() {
 
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-body-text mb-8 md:mb-12 leading-relaxed max-w-3xl mx-auto">
               Experience luxury living where everything you need is within walking distance. From
-              rooftop pools to riverside trails, Station33 offers an unparalleled urban lifestyle.
+              rooftop lounges to riverside trails, Station33 offers an unparalleled urban lifestyle.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center">

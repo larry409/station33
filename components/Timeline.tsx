@@ -44,13 +44,13 @@ export default function Timeline() {
       time: '12:30 PM',
       title: 'Lunch at the Food Hall',
       description:
-        'Choose from diverse cuisine options. Grab a sandwich and enjoy it poolside with mountain views.',
+        'Choose from diverse cuisine options. Grab a sandwich and enjoy it on the plaza with mountain views.',
     },
     {
       time: '6:00 PM',
       title: 'Sunset Happy Hour',
       description:
-        'Meet friends at the rooftop pool deck. Watch the sun set over Lookout Mountain with a craft cocktail.',
+        'Meet friends at the rooftop bar. Watch the sun set over Lookout Mountain with a craft cocktail.',
     },
     {
       time: '8:00 PM',
