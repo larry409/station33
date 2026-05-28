@@ -67,12 +67,12 @@ export default function HeroLuxury() {
           muted
           playsInline
           poster="/video/hero-poster.jpg"
-          className="absolute inset-0 w-full h-full object-cover brightness-[1.35] contrast-105 saturate-105"
+          className="absolute inset-0 w-full h-full object-cover brightness-150 contrast-105 saturate-105"
           src="/video/hero-home.mp4"
         >
         </video>
         {/* Dark overlay for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-bg-dark" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-bg-dark" />
       </div>
 
       {/* Vertical Accent Line - Right Side */}
@@ -83,13 +83,13 @@ export default function HeroLuxury() {
         {/* Main Headline with word-by-word animation */}
         <h1
           ref={titleRef}
-          className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-primary-text mb-6 sm:mb-8 leading-tight break-words"
+          className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-primary-text mb-6 sm:mb-8 leading-tight break-words [text-shadow:0_2px_14px_rgba(0,0,0,0.6)]"
         >
           Eat. Live. Play. Shop. Work.
         </h1>
 
         {/* Subheading */}
-        <p className="hero-subtext text-lg sm:text-xl md:text-2xl text-primary-text max-w-4xl mx-auto leading-relaxed">
+        <p className="hero-subtext text-lg sm:text-xl md:text-2xl text-primary-text max-w-4xl mx-auto leading-relaxed [text-shadow:0_2px_10px_rgba(0,0,0,0.6)]">
           Where Chattanooga Comes Together
         </p>
       </div>
