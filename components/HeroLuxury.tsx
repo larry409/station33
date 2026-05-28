@@ -67,12 +67,12 @@ export default function HeroLuxury() {
           muted
           playsInline
           poster="/video/hero-poster.jpg"
-          className="absolute inset-0 w-full h-full object-cover brightness-125 contrast-105 saturate-105"
+          className="absolute inset-0 w-full h-full object-cover brightness-[1.35] contrast-105 saturate-105"
           src="/video/hero-home.mp4"
         >
         </video>
         {/* Dark overlay for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/45 via-black/35 to-bg-dark" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-bg-dark" />
       </div>
 
       {/* Vertical Accent Line - Right Side */}
