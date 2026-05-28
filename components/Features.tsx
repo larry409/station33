@@ -35,14 +35,6 @@ export default function Features() {
 
   const features = [
     {
-      icon: '🏊',
-      title: 'Rooftop Pool & Lounge',
-      description:
-        'Resort-style rooftop pool with vibrant art installations, cabanas, and panoramic city views. Your urban oasis with poolside service and lounge seating.',
-      link: '/community#rooftop',
-      image: '/images/img88.jpg',
-    },
-    {
       icon: '🎪',
       title: 'European-Style Plaza',
       description:
