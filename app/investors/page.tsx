@@ -122,10 +122,10 @@ export default function InvestorsPage() {
             muted
             playsInline
             poster="/video/hero-poster.jpg"
-            className="absolute inset-0 w-full h-full object-cover brightness-110 contrast-105 saturate-105"
+            className="absolute inset-0 w-full h-full object-cover brightness-125 contrast-105 saturate-105"
             src="/video/hero-home.mp4"
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-bg-darker/85 via-bg-dark/70 to-accent-rust/30" />
+          <div className="absolute inset-0 bg-gradient-to-br from-bg-darker/75 via-bg-dark/60 to-accent-rust/30" />
         </div>
 
         {/* Content */}
