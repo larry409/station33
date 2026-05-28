@@ -130,7 +130,12 @@ export default function InvestorsPage() {
 
         {/* Content */}
         <div className="container relative z-10">
-          <div className="hero-content max-w-4xl mx-auto text-center px-4">
+          <div className="hero-content relative max-w-4xl mx-auto text-center px-4">
+            {/* Localized scrim: keeps the brightened video vivid while the body copy stays legible (AA) on bright frames */}
+            <div
+              aria-hidden
+              className="pointer-events-none absolute -inset-x-8 -inset-y-6 -z-10 bg-[radial-gradient(ellipse_at_center,_rgba(0,0,0,0.55),_rgba(0,0,0,0.3)_55%,_transparent_80%)]"
+            />
             <div className="inline-block px-5 md:px-6 py-2.5 md:py-3 bg-station-gold/20 text-station-gold text-sm md:text-base font-semibold rounded-full mb-6 md:mb-8 border border-station-gold/30">
               Accredited Investors Only
             </div>
@@ -224,7 +229,7 @@ export default function InvestorsPage() {
       </section>
 
       {/* Master Site Plan */}
-      <section className="section-standard bg-bg-dark">
+      <section className="section-standard bg-bg-darker">
         <div className="container">
           <div className="text-center mb-10 md:mb-12 px-4">
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-primary-text mb-4 md:mb-6">
