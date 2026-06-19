@@ -16,7 +16,11 @@ export default function HeroLuxury() {
         const words = text.split(' ')
 
         titleRef.current.innerHTML = words
-          .map((word) => `<span class="inline-block word-animate">${word}</span>`)
+          .map((word) =>
+            word === '+'
+              ? `<span class="inline-block word-animate" style="color:var(--color-copper)">${word}</span>`
+              : `<span class="inline-block word-animate">${word}</span>`
+          )
           .join(' ')
 
         // Blur-fade animation on words - faster for better engagement
@@ -85,7 +89,7 @@ export default function HeroLuxury() {
           ref={titleRef}
           className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-primary-text mb-6 sm:mb-8 leading-tight break-words [text-shadow:0_2px_14px_rgba(0,0,0,0.6)]"
         >
-          Eat. Live. Play. Shop. Work.
+          Live + Gather + Work + Play
         </h1>
 
         {/* Subheading */}
