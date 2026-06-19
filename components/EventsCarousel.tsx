@@ -96,7 +96,9 @@ export default function EventsCarousel() {
     <section ref={carouselRef} className="py-32 md:py-40 bg-bg-dark overflow-hidden">
       <div className="container">
         <h2 className="text-4xl md:text-5xl font-semibold text-center text-white mb-6">
-          Live, Gather, Celebrate
+          Live <span style={{ color: 'var(--color-copper)' }}>+</span> Gather{' '}
+          <span style={{ color: 'var(--color-copper)' }}>+</span> Work{' '}
+          <span style={{ color: 'var(--color-copper)' }}>+</span> Play
         </h2>
         <p className="text-lg md:text-xl text-text-light text-center max-w-3xl mx-auto mb-12">
           Station33 is designed for community—from weekly markets to annual celebrations.
