@@ -58,7 +58,7 @@ export default function Hero() {
         </h1>
 
         <p className="hero-subtitle text-2xl md:text-3xl lg:text-4xl font-semibold text-station-orange mb-6 uppercase tracking-wider">
-          Eat. Play. Live. Work. Shop.
+          Live + Gather + Work + Play
         </p>
 
         <p className="hero-description text-lg md:text-xl text-text-light max-w-4xl mx-auto mb-12 leading-relaxed">

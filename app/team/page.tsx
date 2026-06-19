@@ -210,7 +210,7 @@ export default function TeamPage() {
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-primary-text mb-6 md:mb-8">Our Mission</h2>
             <blockquote className="text-2xl md:text-3xl text-body-text leading-relaxed italic border-l-4 border-station-gold pl-8 py-4">
               "We're building something Chattanooga has never seen before—a walkable urban
-              neighborhood where you can live, work, dine, and play without ever getting in your
+              neighborhood where you can live, gather, work, and play without ever getting in your
               car. Station33 isn't just a development; it's a vision for how modern cities should
               feel."
             </blockquote>

@@ -219,7 +219,9 @@ export default function CommunityPage() {
         <div className="container">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-primary-text mb-4 md:mb-6">
-              Eat. Play. Live. Work. Shop.
+              Live <span style={{ color: 'var(--color-copper)' }}>+</span> Gather{' '}
+              <span style={{ color: 'var(--color-copper)' }}>+</span> Work{' '}
+              <span style={{ color: 'var(--color-copper)' }}>+</span> Play
             </h2>
             <p className="text-xl text-body-text max-w-2xl mx-auto">
               Everything you need, all in one place
