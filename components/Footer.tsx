@@ -84,7 +84,7 @@ export default function Footer() {
           {/* Company Info */}
           <div className="px-4">
             <Link href="/" className="block mb-4 min-h-[44px] flex items-center">
-              <Logo className="h-12 md:h-14 w-auto" />
+              <Logo tagline className="h-16 md:h-20 w-auto" />
             </Link>
             <p className="text-body-text text-sm md:text-base mb-4">
               Where Chattanooga comes together. A transformative mixed-use destination on South
