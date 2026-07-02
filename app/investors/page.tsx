@@ -1,10 +1,11 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
+import InvestorContactModal from '@/components/InvestorContactModal'
 import Link from 'next/link'
 import Image from 'next/image'
 
@@ -12,6 +13,7 @@ gsap.registerPlugin(ScrollTrigger)
 
 export default function InvestorsPage() {
   const heroRef = useRef<HTMLElement>(null)
+  const [contactOpen, setContactOpen] = useState(false)
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -147,19 +149,14 @@ export default function InvestorsPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center">
-              <Link
-                href="#opportunities"
+              <button
+                type="button"
+                onClick={() => setContactOpen(true)}
                 className="inline-flex items-center justify-center gap-3 px-6 md:px-8 py-4 md:py-5 bg-station-gold text-white rounded-2xl hover:bg-station-gold-light transition-all duration-300 font-semibold text-base md:text-lg shadow-xl hover:shadow-2xl hover:-translate-y-1 min-h-[56px]"
               >
-                View Investment Details
-                <span className="text-2xl">→</span>
-              </Link>
-              <a
-                href="mailto:investors@station33.com"
-                className="inline-flex items-center justify-center gap-3 px-6 md:px-8 py-4 md:py-5 border-2 border-station-gold text-station-gold rounded-2xl hover:bg-station-gold hover:text-white transition-all duration-300 font-semibold text-base md:text-lg min-h-[56px]"
-              >
                 Contact Investor Relations
-              </a>
+                <span className="text-2xl">→</span>
+              </button>
             </div>
           </div>
         </div>
@@ -393,13 +390,14 @@ export default function InvestorsPage() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center mb-6 md:mb-8">
-              <a
-                href="mailto:investors@station33.com"
+              <button
+                type="button"
+                onClick={() => setContactOpen(true)}
                 className="inline-flex items-center justify-center gap-3 px-6 md:px-8 py-4 md:py-5 bg-station-gold text-white rounded-2xl hover:bg-station-gold-light transition-all duration-300 font-semibold text-base md:text-lg shadow-xl min-h-[56px]"
               >
                 Request Investment Package
                 <span className="text-2xl">→</span>
-              </a>
+              </button>
               <a
                 href="tel:+14235550133"
                 className="inline-flex items-center justify-center gap-3 px-6 md:px-8 py-4 md:py-5 border-2 border-station-gold text-station-gold rounded-2xl hover:bg-station-gold hover:text-white transition-all duration-300 font-semibold text-base md:text-lg min-h-[56px]"
@@ -417,6 +415,8 @@ export default function InvestorsPage() {
           </div>
         </div>
       </section>
+
+      <InvestorContactModal open={contactOpen} onClose={() => setContactOpen(false)} />
 
       <Footer />
     </>

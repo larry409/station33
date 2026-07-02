@@ -44,14 +44,6 @@ export default function Logo({ variant = 'light', tagline = false, className = '
             <tspan fill="var(--color-copper)">+</tspan>
             <tspan fill={stationColor}> PLAY</tspan>
           </text>
-          <line
-            x1="30"
-            y1="124"
-            x2="470"
-            y2="124"
-            stroke={stationColor}
-            strokeWidth="2.5"
-          />
         </>
       )}
     </svg>

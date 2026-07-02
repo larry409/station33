@@ -15,6 +15,7 @@ export default function ContactPage() {
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitMessage, setSubmitMessage] = useState('')
+  const [errorMessage, setErrorMessage] = useState('')
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -54,27 +55,32 @@ export default function ContactPage() {
     })
   }
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setIsSubmitting(true)
     setSubmitMessage('')
+    setErrorMessage('')
 
-    // Log form data to console for Phase 1
-    console.log('Contact Form Submission:', formData)
+    // Encode all named fields (including form-name and the honeypot) for Netlify Forms
+    const params = new URLSearchParams()
+    new FormData(e.currentTarget).forEach((value, key) => params.append(key, value.toString()))
 
-    // Simulate submission delay
-    setTimeout(() => {
-      setSubmitMessage('Thank you for contacting us! We will get back to you within 24 hours.')
-      setIsSubmitting(false)
-
-      // Reset form
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        message: '',
+    try {
+      const res = await fetch('/__forms.html', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: params.toString(),
       })
-    }, 1000)
+      if (!res.ok) throw new Error(`Netlify Forms responded ${res.status}`)
+
+      setSubmitMessage('Thank you for contacting us! We will get back to you within 24 hours.')
+      setFormData({ name: '', email: '', phone: '', message: '' })
+    } catch (err) {
+      console.error('Contact form submission failed:', err)
+      setErrorMessage('Sorry — something went wrong sending your message. Please email leasing@station33.com or try again.')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -159,7 +165,22 @@ export default function ContactPage() {
                 Fill out the form below and we'll get back to you as soon as possible.
               </p>
 
-              <form onSubmit={handleSubmit} className="space-y-5 md:space-y-6">
+              <form
+                name="contact"
+                method="POST"
+                data-netlify="true"
+                data-netlify-honeypot="bot-field"
+                onSubmit={handleSubmit}
+                className="space-y-5 md:space-y-6"
+              >
+                <input type="hidden" name="form-name" value="contact" />
+                {/* Honeypot field — hidden from users, catches bots */}
+                <p className="hidden">
+                  <label>
+                    Don’t fill this out if you’re human: <input name="bot-field" />
+                  </label>
+                </p>
+
                 {/* Name */}
                 <div>
                   <label htmlFor="name" className="form-label text-sm md:text-base">
@@ -241,6 +262,13 @@ export default function ContactPage() {
               {submitMessage && (
                 <div className="mt-6 p-4 bg-accent-teal/20 border border-accent-teal rounded-lg text-accent-teal text-center">
                   {submitMessage}
+                </div>
+              )}
+
+              {/* Error Message */}
+              {errorMessage && (
+                <div className="mt-6 p-4 bg-station-red/20 border border-station-red rounded-lg text-station-red text-center">
+                  {errorMessage}
                 </div>
               )}
             </div>
