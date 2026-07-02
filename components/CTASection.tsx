@@ -1,15 +1,17 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Link from 'next/link'
 import Image from 'next/image'
+import InvestorContactModal from './InvestorContactModal'
 
 gsap.registerPlugin(ScrollTrigger)
 
 export default function CTASection() {
   const sectionRef = useRef<HTMLElement>(null)
+  const [contactOpen, setContactOpen] = useState(false)
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -94,13 +96,14 @@ export default function CTASection() {
                 </li>
               </ul>
 
-              <Link
-                href="/investors"
+              <button
+                type="button"
+                onClick={() => setContactOpen(true)}
                 className="inline-flex items-center gap-3 px-6 md:px-8 py-4 md:py-5 bg-white text-accent-rust rounded-lg hover:bg-white hover:gap-4 hover:shadow-lg hover:shadow-white/30 transition-all duration-300 font-semibold text-base md:text-lg min-h-[56px]"
               >
-                View Investment Details
+                Contact Investor Relations
                 <span className="text-2xl transition-transform duration-300 group-hover:translate-x-1">→</span>
-              </Link>
+              </button>
             </div>
           </div>
 
@@ -189,6 +192,8 @@ export default function CTASection() {
           </div>
         </div>
       </div>
+
+      <InvestorContactModal open={contactOpen} onClose={() => setContactOpen(false)} />
     </section>
   )
 }
