@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Station33 | Chattanooga\'s Premier Mixed-Use Development',
     description: 'Experience the future of urban living at Station33 in downtown Chattanooga, TN.',
-    url: 'https://station33chattanooga.com',
+    url: 'https://station33.co',
     siteName: 'Station33',
     locale: 'en_US',
     type: 'website',

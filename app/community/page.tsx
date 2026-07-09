@@ -7,6 +7,7 @@ import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 import Link from 'next/link'
 import Image from 'next/image'
+import { BrandName } from '@/components/BrandName'
 import {
   Dumbbell,
   PawPrint,
@@ -68,7 +69,7 @@ export default function CommunityPage() {
     {
       title: 'Live',
       description:
-        '47 luxury residences and townhomes with modern finishes, Riverwalk views, and pet-friendly amenities. Your urban sanctuary awaits.',
+        '91 luxury residences and townhomes with modern finishes, Riverwalk views, and pet-friendly amenities. Your urban sanctuary awaits.',
       image: '/images/img132.jpg',
       icon: '🏠',
     },
@@ -101,7 +102,7 @@ export default function CommunityPage() {
     { icon: CircleParking, title: 'Covered Parking', description: 'Secure parking with EV charging' },
     { icon: Square, title: 'Event Plaza', description: 'Host private events for 500+' },
     { icon: Route, title: 'Riverwalk Access', description: 'Direct access to 13+ miles' },
-    { icon: Hotel, title: 'Boutique Hotel', description: '63-room hotel with amenities' },
+    { icon: Hotel, title: 'Aloft by Marriott', description: '120-room hotel with amenities' },
     { icon: Wine, title: 'Rooftop Bar', description: 'Craft cocktails and sunset views' },
     { icon: Bike, title: 'Bike Storage', description: 'Secure indoor bike parking' },
     { icon: Package, title: 'Package Lockers', description: '24/7 secure package delivery' },
@@ -192,7 +193,7 @@ export default function CommunityPage() {
 
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-body-text mb-8 md:mb-12 leading-relaxed max-w-3xl mx-auto">
               Experience luxury living where everything you need is within walking distance. From
-              rooftop lounges to riverside trails, Station33 offers an unparalleled urban lifestyle.
+              rooftop lounges to riverside trails, <BrandName /> offers an unparalleled urban lifestyle.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center">
@@ -348,7 +349,7 @@ export default function CommunityPage() {
                 <span className="text-station-gold block mt-2">Now Leasing</span>
               </h2>
               <p className="text-xl text-body-text mb-8 leading-relaxed">
-                47 thoughtfully designed apartments and townhomes featuring high-end finishes,
+                91 thoughtfully designed residences and townhomes featuring high-end finishes,
                 floor-to-ceiling windows, and modern open layouts.
               </p>
 
@@ -415,11 +416,11 @@ export default function CommunityPage() {
         <div className="container">
           <div className="max-w-4xl mx-auto text-center bg-gradient-to-br from-station-green/10 to-station-gold/10 border border-station-gold/30 rounded-3xl p-12 md:p-16">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-primary-text mb-6">
-              Ready to Make Station33 Home?
+              Ready to Make <BrandName /> Home?
             </h2>
             <p className="text-xl text-body-text mb-10 leading-relaxed">
               Join a vibrant community where luxury meets convenience. Schedule a tour today and
-              experience the Station33 lifestyle firsthand.
+              experience the <BrandName /> lifestyle firsthand.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center mb-6 md:mb-8">
@@ -431,10 +432,10 @@ export default function CommunityPage() {
                 <span className="text-2xl">📅</span>
               </Link>
               <a
-                href="mailto:leasing@station33.com"
+                href="mailto:info@station33.co"
                 className="inline-flex items-center justify-center gap-3 px-6 md:px-8 py-4 md:py-5 border-2 border-station-gold text-station-gold rounded-2xl hover:bg-station-gold hover:text-white transition-all duration-300 font-semibold text-base md:text-lg min-h-[56px]"
               >
-                leasing@station33.com
+                info@station33.co
                 <span className="text-2xl">✉</span>
               </a>
             </div>

@@ -9,7 +9,7 @@ gsap.registerPlugin(ScrollTrigger)
 const stats = [
   {
     id: 1,
-    number: '8',
+    number: '5',
     label: 'Buildings',
     suffix: '',
   },
@@ -21,26 +21,26 @@ const stats = [
   },
   {
     id: 3,
-    number: '120',
+    number: '91',
     label: 'Residential Units',
     suffix: '',
   },
   {
     id: 4,
-    number: '63',
-    label: 'Boutique Hotel Rooms',
+    number: '120',
+    label: 'Marriott Hotel Rooms',
     suffix: '',
   },
   {
     id: 5,
-    number: '400',
+    number: '475',
     label: 'Parking Spots',
     suffix: '',
   },
   {
     id: 6,
     number: '5',
-    label: 'Event Capacity',
+    label: 'Restaurants',
     suffix: '+',
   },
   {

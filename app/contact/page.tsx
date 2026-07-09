@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react'
 import gsap from 'gsap'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
+import { BrandName } from '@/components/BrandName'
 
 export default function ContactPage() {
   const heroRef = useRef<HTMLElement>(null)
@@ -77,7 +78,7 @@ export default function ContactPage() {
       setFormData({ name: '', email: '', phone: '', message: '' })
     } catch (err) {
       console.error('Contact form submission failed:', err)
-      setErrorMessage('Sorry — something went wrong sending your message. Please email leasing@station33.com or try again.')
+      setErrorMessage('Sorry — something went wrong sending your message. Please email info@station33.co or try again.')
     } finally {
       setIsSubmitting(false)
     }
@@ -108,7 +109,7 @@ export default function ContactPage() {
       {/* Contact Info Cards */}
       <section className="section-standard bg-bg-dark">
         <div className="container">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-12 md:mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-12 md:mb-16 max-w-3xl mx-auto">
             {/* General Inquiries */}
             <div className="contact-info-card bg-card-bg border-2 border-accent-teal/30 rounded-2xl p-6 md:p-8 text-center hover:border-accent-teal transition-all duration-300">
               <div className="w-16 h-16 bg-accent-teal/20 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6">
@@ -117,25 +118,10 @@ export default function ContactPage() {
               <h3 className="text-xl md:text-2xl font-semibold text-primary-text mb-3">General Inquiries</h3>
               <p className="text-sm md:text-base text-body-text mb-4">For general questions and information</p>
               <a
-                href="mailto:leasing@station33.com"
+                href="mailto:info@station33.co"
                 className="text-accent-teal hover:text-accent-teal/80 transition-colors font-semibold text-base md:text-lg inline-block min-h-[44px] flex items-center justify-center"
               >
-                leasing@station33.com
-              </a>
-            </div>
-
-            {/* Phone */}
-            <div className="contact-info-card bg-card-bg border-2 border-station-gold/30 rounded-2xl p-6 md:p-8 text-center hover:border-station-gold transition-all duration-300">
-              <div className="w-16 h-16 bg-station-gold/20 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6">
-                <span className="text-3xl text-station-gold">📞</span>
-              </div>
-              <h3 className="text-xl md:text-2xl font-semibold text-primary-text mb-3">Call Us</h3>
-              <p className="text-sm md:text-base text-body-text mb-4">Monday - Friday, 9am - 5pm EST</p>
-              <a
-                href="tel:+14235550133"
-                className="text-station-gold hover:text-station-red transition-colors font-semibold text-lg md:text-xl inline-block min-h-[44px] flex items-center justify-center"
-              >
-                (423) 555-0133
+                info@station33.co
               </a>
             </div>
 
@@ -147,10 +133,10 @@ export default function ContactPage() {
               <h3 className="text-xl md:text-2xl font-semibold text-primary-text mb-3">Investor Relations</h3>
               <p className="text-sm md:text-base text-body-text mb-4">For investment opportunities</p>
               <a
-                href="mailto:investors@station33.com"
+                href="mailto:info@station33.co"
                 className="text-accent-teal hover:text-accent-teal/80 transition-colors font-semibold text-base md:text-lg inline-block min-h-[44px] flex items-center justify-center"
               >
-                investors@station33.com
+                info@station33.co
               </a>
             </div>
           </div>
@@ -227,7 +213,7 @@ export default function ContactPage() {
                     value={formData.phone}
                     onChange={handleChange}
                     className="form-input text-base md:text-lg"
-                    placeholder="(423) 555-0133"
+                    placeholder="Your phone number"
                   />
                 </div>
 
@@ -284,26 +270,19 @@ export default function ContactPage() {
               Visit Us
             </h2>
             <p className="text-lg md:text-xl text-body-text mb-6 md:mb-8 px-4">
-              Station33 is located in the heart of Chattanooga's vibrant South Broad district,
+              <BrandName /> is located in the heart of Chattanooga's vibrant South Broad district,
               where innovation meets community.
             </p>
             <div className="bg-card-bg border-2 border-station-gold/30 rounded-2xl p-6 md:p-8">
-              <p className="text-xl md:text-2xl text-primary-text font-semibold mb-2">Station33</p>
+              <p className="text-xl md:text-2xl text-primary-text font-semibold mb-2"><BrandName /></p>
               <p className="text-body-text text-base md:text-lg mb-6">
-                South Broad Street
+                3210 Broad Street
                 <br />
                 Chattanooga, TN 37408
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex justify-center">
                 <a
-                  href="tel:+14235550133"
-                  className="inline-flex items-center justify-center gap-3 px-6 md:px-8 py-4 bg-station-gold text-white rounded-lg hover:bg-station-gold/90 transition-all duration-300 font-semibold text-base md:text-lg min-h-[56px]"
-                >
-                  Call Now
-                  <span className="text-xl">→</span>
-                </a>
-                <a
-                  href="mailto:leasing@station33.com"
+                  href="mailto:info@station33.co"
                   className="inline-flex items-center justify-center gap-3 px-6 md:px-8 py-4 border-2 border-primary-text text-primary-text rounded-lg hover:bg-primary-text hover:text-bg-dark transition-all duration-300 font-semibold text-base md:text-lg min-h-[56px]"
                 >
                   Email Us

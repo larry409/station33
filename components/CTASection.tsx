@@ -177,17 +177,10 @@ export default function CTASection() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-center text-primary-text">
             <a
-              href="tel:+14235551234"
+              href="mailto:info@station33.co"
               className="hover:text-accent-teal transition-colors flex items-center gap-2 text-base md:text-lg min-h-[44px]"
             >
-              <span className="text-accent-teal">📞</span> (423) 555-1234
-            </a>
-            <span className="hidden sm:block text-divider-gray">|</span>
-            <a
-              href="mailto:leasing@station33.com"
-              className="hover:text-accent-teal transition-colors flex items-center gap-2 text-base md:text-lg min-h-[44px]"
-            >
-              <span className="text-accent-teal">✉</span> leasing@station33.com
+              <span className="text-accent-teal">✉</span> info@station33.co
             </a>
           </div>
         </div>

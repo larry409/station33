@@ -38,7 +38,7 @@ export default function Features() {
       icon: '🎪',
       title: 'European-Style Plaza',
       description:
-        'Car-free pedestrian plaza with splash fountain, green spaces, and year-round programming. Host markets, concerts, and community gatherings for up to 500 guests.',
+        'Pedestrian-only plaza with splash fountain, green spaces, and year-round programming. Host markets, concerts, and community gatherings for up to 500 guests.',
       link: '/contact',
       image: '/images/rendering-plaza.jpg',
     },
@@ -52,9 +52,9 @@ export default function Features() {
     },
     {
       icon: '🏨',
-      title: 'Boutique Hotel',
+      title: 'Aloft by Marriott',
       description:
-        '63-room boutique hotel with Marriott partnership. Rooftop bar, guest amenities, and built-in neighborhood energy. Your friends will actually want to visit.',
+        '120-room Aloft by Marriott hotel. Rooftop bar, guest amenities, and built-in neighborhood energy. Your friends will actually want to visit.',
       link: '/community#hotel',
       image: '/images/rendering-hotel.jpg',
     },
@@ -64,7 +64,7 @@ export default function Features() {
       description:
         'Secure covered parking with Level 2 EV charging stations. Protected from the elements with convenient elevator access to all buildings.',
       link: '/contact',
-      image: '/images/img148.jpg',
+      image: '/images/aerial-station33.jpg',
     },
     {
       icon: '🌊',
@@ -72,7 +72,7 @@ export default function Features() {
       description:
         'Direct access to 13+ miles of Tennessee Riverwalk. Walk or bike to downtown, Riverfront Parkway, and the Innovation District in minutes.',
       link: '/contact',
-      image: '/images/img50.jpg',
+      image: '/images/aerial-station33.jpg',
     },
   ]
 

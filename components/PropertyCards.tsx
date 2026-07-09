@@ -5,6 +5,7 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Image from 'next/image'
 import Link from 'next/link'
+import { BrandName } from './BrandName'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -13,57 +14,33 @@ const properties = [
     id: 1,
     title: 'Premium Retail Spaces',
     description: 'Ground-floor retail with high ceilings and abundant natural light',
-    size: '1,200 - 3,500 sq ft',
+    size: '400 - 8,000 sq ft',
     badge: 'Available Now',
     image: '/images/img212.jpg',
   },
   {
     id: 2,
     title: 'Urban Loft Residences',
-    description: 'Modern apartments with industrial-chic design and city views',
+    description: 'Modern condos with chic design and mountain views',
     size: '800 - 1,800 sq ft',
     badge: 'Leasing',
     image: '/images/rendering-alley-buildings.jpg',
   },
   {
-    id: 3,
-    title: 'Event & Meeting Spaces',
-    description: 'Flexible venues perfect for corporate events and private gatherings',
-    size: '2,000 - 5,000 sq ft',
-    badge: 'Book Now',
-    image: '/images/img172.jpg',
-  },
-  {
-    id: 4,
-    title: 'Rooftop Terrace',
-    description: 'Outdoor space with panoramic views of downtown Chattanooga',
-    size: '3,200 sq ft',
-    badge: 'Resident Access',
-    image: '/images/img50.jpg',
-  },
-  {
     id: 5,
-    title: 'Co-Working Studios',
-    description: 'Dedicated workspace for entrepreneurs and remote professionals',
-    size: '150 - 800 sq ft',
+    title: 'Class-A Working Space',
+    description: 'Elevated Class-A offices built for teams who expect more—efficient floor plates, abundant natural light, and premium finishes throughout',
+    size: '46,000 total sq ft',
     badge: 'Available',
     image: '/images/img44.jpg',
   },
   {
     id: 6,
-    title: 'Restaurant & Bar',
-    description: 'Full-service dining with indoor and outdoor seating',
-    size: '4,500 sq ft',
+    title: 'Restaurants & Bar',
+    description: 'Four to five full-service restaurants with indoor and outdoor seating',
+    size: '4 - 5 restaurants',
     badge: 'Coming 2026',
     image: '/images/rendering-archway.jpg',
-  },
-  {
-    id: 7,
-    title: 'Medical Office Space',
-    description: 'Purpose-built medical office suites with street-level access and modern infrastructure',
-    size: '1,500 - 6,000 sq ft',
-    badge: 'Pre-Leasing',
-    image: '/images/rendering-medical-office.jpg',
   },
 ]
 
@@ -107,7 +84,7 @@ export default function PropertyCards() {
         {/* Section Heading */}
         <div className="properties-heading text-center mb-12 md:mb-20">
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-primary-text mb-4 md:mb-6">
-            Explore Station33
+            Explore <BrandName />
           </h2>
           <p className="text-xl text-body-text max-w-3xl mx-auto">
             Chattanooga, TN's premier mixed-use destination on South Broad
