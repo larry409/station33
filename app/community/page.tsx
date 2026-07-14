@@ -402,7 +402,7 @@ export default function CommunityPage() {
             <div className="relative h-[350px] sm:h-[450px] lg:h-[600px] rounded-3xl overflow-hidden shadow-2xl">
               <Image
                 src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=1200"
-                alt="Luxury Apartment Interior"
+                alt="Luxury Condo Interior"
                 fill
                 className="object-cover"
               />

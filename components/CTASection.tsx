@@ -147,7 +147,7 @@ export default function CTASection() {
               <ul className="space-y-2 md:space-y-3 mb-8 md:mb-10 flex-grow">
                 <li className="flex items-start gap-3 text-sm sm:text-base text-white/90 transition-colors duration-300 group-hover:text-white">
                   <span className="text-white text-lg sm:text-xl mt-0.5 sm:mt-1">✓</span>
-                  <span>Modern apartments & lofts</span>
+                  <span>Modern condos & lofts</span>
                 </li>
                 <li className="flex items-start gap-3 text-sm sm:text-base text-white/90 transition-colors duration-300 group-hover:text-white">
                   <span className="text-white text-lg sm:text-xl mt-0.5 sm:mt-1">✓</span>

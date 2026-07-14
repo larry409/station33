@@ -155,7 +155,7 @@ export default function TeamPage() {
     {
       name: 'GreenBuild Engineering',
       role: 'Sustainability Consultants',
-      description: 'LEED-certified experts in energy-efficient building systems',
+      description: 'Sustainability and energy-efficiency experts for high-performance building systems',
     },
   ]
 
