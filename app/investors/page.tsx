@@ -108,6 +108,40 @@ export default function InvestorsPage() {
     { label: 'Delivery', value: 'Q2 2026', subtext: 'Phased opening' },
   ]
 
+  // Scannable market signals for the hero (replaces the dense stat paragraph)
+  const heroStats = [
+    { value: '$365K', label: 'Median home price' },
+    { value: '+6.0%', label: 'Prices YoY' },
+    { value: '800', label: 'Closings / month' },
+    { value: '1.82%', label: 'Population growth' },
+  ]
+
+  // "Across the street" — the South Broad District transformation Station33 fronts
+  const neighborhood = [
+    {
+      name: 'Erlanger Park',
+      tag: 'Open now',
+      blurb:
+        'The new home of the Chattanooga Lookouts, built on the historic U.S. Pipe & Wheland Foundry site—with the original Powerhouse and Pattern Shop preserved as its gates.',
+      stats: [
+        { value: 'Apr 2026', label: 'Opened' },
+        { value: '8,032', label: 'Seats' },
+        { value: '$115M', label: 'Ballpark' },
+      ],
+    },
+    {
+      name: 'The Foundry District',
+      tag: 'Rising now',
+      blurb:
+        '140 acres of former foundry land reborn as a live-work-play neighborhood of residences, Class-A office, and public space—Chattanooga’s gateway from I-24.',
+      stats: [
+        { value: '140 ac', label: 'Master plan' },
+        { value: '$1B+', label: 'Investment' },
+        { value: '$2.3B', label: 'Economic impact' },
+      ],
+    },
+  ]
+
   return (
     <>
       <Navigation />
@@ -117,7 +151,7 @@ export default function InvestorsPage() {
         ref={heroRef}
         className="min-h-screen flex items-center justify-center pt-24 md:pt-32 pb-12 md:pb-20 relative overflow-hidden"
       >
-        {/* Background Video */}
+        {/* Background Video — dimmed and scrimmed so the copy stays legible */}
         <div className="absolute inset-0 z-0">
           <video
             autoPlay
@@ -125,10 +159,11 @@ export default function InvestorsPage() {
             muted
             playsInline
             poster="/video/hero-poster.jpg"
-            className="absolute inset-0 w-full h-full object-cover brightness-150 contrast-105 saturate-105"
+            className="absolute inset-0 w-full h-full object-cover brightness-[0.5] contrast-105"
             src="/video/hero-home.mp4"
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-bg-darker/55 via-bg-dark/40 to-accent-rust/30" />
+          <div className="absolute inset-0 bg-gradient-to-b from-bg-darker/85 via-bg-darker/70 to-bg-darker/92" />
+          <div className="absolute inset-0 bg-gradient-to-tr from-accent-rust/20 via-transparent to-transparent" />
         </div>
 
         {/* Content */}
@@ -138,15 +173,35 @@ export default function InvestorsPage() {
               Accredited Investors Only
             </div>
 
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-primary-text mb-6 md:mb-8 leading-tight [text-shadow:0_2px_12px_rgba(0,0,0,0.6)]">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-primary-text mb-6 md:mb-8 leading-[1.05] tracking-tight">
               Invest in America's
               <span className="text-station-gold block mt-2">Fastest-Growing City</span>
             </h1>
 
-            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-body-text mb-8 md:mb-12 leading-relaxed max-w-3xl mx-auto [text-shadow:0_2px_10px_rgba(0,0,0,0.6)]">
-              $100M+ mixed-use development on South Broad—where $365K median home prices (+6.0% YoY),
-              800 monthly closings, and 1.82% population growth signal unstoppable demand in Tennessee's
-              fastest-growing metro. Backed by VW's $4.3B EV facility and Novonix's $1B battery plant.
+            <p className="text-lg sm:text-xl md:text-2xl text-primary-text/90 mb-8 md:mb-10 leading-relaxed max-w-3xl mx-auto">
+              A $100M+ mixed-use development on South Broad—directly across the street from{' '}
+              <span className="text-station-gold font-semibold">Erlanger Park</span> and{' '}
+              <span className="text-station-gold font-semibold">The Foundry</span>, Chattanooga’s
+              $1B+ stadium-anchored district.
+            </p>
+
+            {/* Scannable market signals — far easier to read than the old number-packed sentence */}
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 md:gap-4 max-w-3xl mx-auto mb-6 md:mb-8">
+              {heroStats.map((stat) => (
+                <div
+                  key={stat.label}
+                  className="rounded-2xl bg-bg-darker/60 border border-station-gold/25 backdrop-blur-sm px-3 py-4 md:py-5"
+                >
+                  <div className="text-2xl md:text-3xl font-semibold text-station-gold leading-none">
+                    {stat.value}
+                  </div>
+                  <div className="text-xs md:text-sm text-body-text mt-2 leading-tight">{stat.label}</div>
+                </div>
+              ))}
+            </div>
+
+            <p className="text-sm md:text-base text-body-text/80 mb-8 md:mb-10">
+              Anchored by VW’s $4.3B EV plant and Novonix’s $1B battery facility.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center">
@@ -160,6 +215,73 @@ export default function InvestorsPage() {
               </button>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Across the Street — The Foundry & Erlanger Park */}
+      <section className="section-standard bg-bg-dark relative overflow-hidden">
+        <div className="container relative z-10">
+          <div className="text-center max-w-3xl mx-auto mb-10 md:mb-14 px-4">
+            <span className="inline-block text-station-gold text-xs md:text-sm font-semibold uppercase tracking-[0.22em] mb-4">
+              Across Broad Street
+            </span>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-primary-text mb-5 md:mb-6 leading-tight">
+              Our front yard is a{' '}
+              <span className="text-station-gold">$1B+ transformation</span>
+            </h2>
+            <p className="text-lg md:text-xl text-body-text leading-relaxed">
+              Station33 fronts the South Broad District—the largest urban redevelopment in
+              Chattanooga’s history, anchored by a new ballpark that opened in April 2026.
+            </p>
+          </div>
+
+          {/* Proximity motif — two anchors, one street between them */}
+          <div className="max-w-md mx-auto mb-10 md:mb-14">
+            <div className="flex items-center justify-center gap-3 md:gap-5 text-sm md:text-base">
+              <span className="font-semibold text-primary-text whitespace-nowrap">Station33</span>
+              <span className="flex-1 flex items-center gap-2 text-station-gold">
+                <span className="h-2 w-2 rounded-full bg-station-gold shrink-0" />
+                <span className="flex-1 border-t-2 border-dashed border-station-gold/50" />
+                <span className="h-2 w-2 rounded-full bg-station-gold shrink-0" />
+              </span>
+              <span className="font-semibold text-primary-text whitespace-nowrap">The District</span>
+            </div>
+            <p className="text-center text-xs md:text-sm text-body-text/70 uppercase tracking-[0.18em] mt-3">
+              across Broad Street
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6 md:gap-8 max-w-5xl mx-auto">
+            {neighborhood.map((place) => (
+              <div
+                key={place.name}
+                className="bg-card-bg border-2 border-station-gold/30 rounded-2xl p-6 md:p-8 hover:border-station-gold transition-colors duration-300"
+              >
+                <div className="flex items-start justify-between gap-4 mb-4">
+                  <h3 className="text-2xl md:text-3xl font-semibold text-primary-text">{place.name}</h3>
+                  <span className="shrink-0 mt-1 px-3 py-1 rounded-full bg-station-gold/15 border border-station-gold/30 text-station-gold text-xs font-semibold uppercase tracking-wider">
+                    {place.tag}
+                  </span>
+                </div>
+                <p className="text-body-text leading-relaxed mb-6">{place.blurb}</p>
+                <div className="grid grid-cols-3 gap-3 pt-5 border-t border-divider-gray">
+                  {place.stats.map((stat) => (
+                    <div key={stat.label}>
+                      <div className="text-xl md:text-2xl font-semibold text-station-gold leading-none">
+                        {stat.value}
+                      </div>
+                      <div className="text-xs text-body-text/80 mt-1.5 leading-tight">{stat.label}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <p className="text-center text-base md:text-lg text-body-text max-w-3xl mx-auto mt-10 md:mt-12 leading-relaxed">
+            A stadium district on the doorstep means built-in foot traffic, rising land values, and a
+            year-round destination that fills Station33’s retail, restaurants, and residences.
+          </p>
         </div>
       </section>
 
