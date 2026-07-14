@@ -5,17 +5,18 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Image from 'next/image'
 import Link from 'next/link'
+import { BrandName, brandify } from './BrandName'
 
 gsap.registerPlugin(ScrollTrigger)
 
 const events = [
   {
     id: 1,
-    title: 'Community Launch Event',
-    date: 'March 15, 2026',
-    category: 'Grand Opening',
+    title: 'Groundbreaking',
+    date: 'July 23, 2026',
+    category: 'Groundbreaking',
     image: 'https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=1200',
-    description: 'Join us for the grand opening celebration of Station33'
+    description: 'Join us as we break ground on Station33'
   },
   {
     id: 2,
@@ -94,7 +95,7 @@ export default function Carousel() {
             Events & Happenings
           </h2>
           <p className="text-xl text-body-text max-w-3xl mx-auto">
-            Experience the vibrant community life at Station33 with regular events and gatherings
+            Experience the vibrant community life at <BrandName /> with regular events and gatherings
           </p>
         </div>
 
@@ -142,7 +143,7 @@ export default function Carousel() {
                     {event.title}
                   </h3>
                   <p className="text-body-text leading-relaxed">
-                    {event.description}
+                    {brandify(event.description)}
                   </p>
                 </div>
               </Link>

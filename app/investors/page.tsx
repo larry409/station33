@@ -8,6 +8,7 @@ import Footer from '@/components/Footer'
 import InvestorContactModal from '@/components/InvestorContactModal'
 import Link from 'next/link'
 import Image from 'next/image'
+import { BrandName } from '@/components/BrandName'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -64,7 +65,7 @@ export default function InvestorsPage() {
     {
       title: 'Diversified Revenue Streams',
       description:
-        'Four income sources create stability: residential leasing (47 units), Grade-A commercial (25K+ SF), boutique hotel (63 rooms, Marriott partnership), and retail/F&B operations.',
+        'Four income sources create stability: residential leasing (91 units), Grade-A commercial (25K+ SF), Aloft by Marriott hotel (120 rooms), and retail/F&B operations.',
       metrics: '4 revenue streams',
       accentColor: 'accent-teal',
     },
@@ -92,8 +93,8 @@ export default function InvestorsPage() {
     {
       title: 'Future-Proof Design',
       description:
-        'EV charging infrastructure, walkable urban layout, energy-efficient systems. Targeting LEED certification. Aligns with millennial/Gen-Z preferences driving 70% of new rentals.',
-      metrics: 'LEED certification target',
+        'EV charging infrastructure, walkable urban layout, and energy-efficient systems. Sustainable, future-ready design that aligns with millennial/Gen-Z preferences driving 70% of new rentals.',
+      metrics: 'Energy-efficient design',
       accentColor: 'accent-teal',
     },
   ]
@@ -101,8 +102,8 @@ export default function InvestorsPage() {
   const projectStats = [
     { label: 'Total Investment', value: '$100M+', subtext: 'Multi-phase development' },
     { label: 'Commercial Space', value: '25,000+ SF', subtext: 'Grade-A office' },
-    { label: 'Residential Units', value: '47 Units', subtext: 'Luxury apartments' },
-    { label: 'Hotel Rooms', value: '63 Rooms', subtext: 'Marriott partnership' },
+    { label: 'Residential Units', value: '91 Units', subtext: 'Luxury residences' },
+    { label: 'Hotel Rooms', value: '120 Rooms', subtext: 'Aloft by Marriott' },
     { label: 'Market Growth', value: '6.0%', subtext: 'Jan 2025 YoY' },
     { label: 'Delivery', value: 'Q2 2026', subtext: 'Phased opening' },
   ]
@@ -248,7 +249,7 @@ export default function InvestorsPage() {
         <div className="container">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-primary-text mb-4 md:mb-6">
-              Why Invest in Station33?
+              Why Invest in <BrandName />?
             </h2>
             <p className="text-xl text-body-text max-w-3xl mx-auto">
               A unique opportunity to participate in Chattanooga's most ambitious urban development
@@ -297,7 +298,7 @@ export default function InvestorsPage() {
               />
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-bg-darker/95 to-transparent p-8">
                 <p className="text-sm text-body-text italic">
-                  Station33 at dusk - A walkable mixed-use destination at the convergence of commerce, culture, and community
+                  <BrandName /> at dusk - A walkable mixed-use destination at the convergence of commerce, culture, and community
                 </p>
               </div>
             </div>
@@ -399,10 +400,10 @@ export default function InvestorsPage() {
                 <span className="text-2xl">→</span>
               </button>
               <a
-                href="tel:+14235550133"
+                href="mailto:info@station33.co"
                 className="inline-flex items-center justify-center gap-3 px-6 md:px-8 py-4 md:py-5 border-2 border-station-gold text-station-gold rounded-2xl hover:bg-station-gold hover:text-white transition-all duration-300 font-semibold text-base md:text-lg min-h-[56px]"
               >
-                Schedule Call
+                Email Us
                 <span className="text-2xl">→</span>
               </a>
             </div>

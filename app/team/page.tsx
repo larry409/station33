@@ -7,6 +7,7 @@ import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 import Link from 'next/link'
 import Image from 'next/image'
+import { BrandName } from '@/components/BrandName'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -130,7 +131,7 @@ export default function TeamPage() {
     {
       title: 'Local Impact',
       description:
-        'Prioritizing local contractors, artists, and businesses. Station33 is built by Chattanooga, for Chattanooga.',
+        'Prioritizing local contractors, artists, and businesses. Built by Chattanooga, for Chattanooga.',
       icon: '📍',
     },
   ]
@@ -149,12 +150,12 @@ export default function TeamPage() {
     {
       name: 'Marriott International',
       role: 'Hospitality Partner',
-      description: 'Operating the 63-room boutique hotel and rooftop amenities',
+      description: 'Operating the 120-room Aloft by Marriott hotel and rooftop amenities',
     },
     {
       name: 'GreenBuild Engineering',
       role: 'Sustainability Consultants',
-      description: 'LEED-certified experts in energy-efficient building systems',
+      description: 'Sustainability and energy-efficiency experts for high-performance building systems',
     },
   ]
 
@@ -211,7 +212,7 @@ export default function TeamPage() {
             <blockquote className="text-2xl md:text-3xl text-body-text leading-relaxed italic border-l-4 border-station-gold pl-8 py-4">
               "We're building something Chattanooga has never seen before—a walkable urban
               neighborhood where you can live, gather, work, and play without ever getting in your
-              car. Station33 isn't just a development; it's a vision for how modern cities should
+              car. <BrandName /> isn't just a development; it's a vision for how modern cities should
               feel."
             </blockquote>
             <p className="text-xl text-station-gold mt-8 font-semibold">

@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Image from 'next/image'
+import { brandify } from './BrandName'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -13,13 +14,13 @@ const services = [
     label: 'Living',
     title: 'Modern Urban Living',
     description:
-      'Experience luxury apartment living in the heart of South Broad. Our residences feature high-end finishes, floor-to-ceiling windows, and access to premium amenities including fitness center, rooftop terrace, and co-working spaces.',
+      'Experience luxury condo living in the heart of South Broad. Our residences feature high-end finishes, floor-to-ceiling windows, and access to premium amenities including a fitness center, co-working spaces, and on-site casual and fine-dining restaurants.',
     features: [
       'Premium finishes and appliances',
       'Floor-to-ceiling windows',
       '24/7 concierge service',
       'Pet-friendly community',
-      'Rooftop terrace access',
+      'Casual & fine-dining on-site',
       'Fitness and wellness center',
     ],
     image: '/images/img140.jpg',
@@ -171,7 +172,7 @@ export default function Services() {
               {activeService.title}
             </h3>
             <p className="text-lg text-body-text mb-8 leading-relaxed">
-              {activeService.description}
+              {brandify(activeService.description)}
             </p>
 
             {/* Features List */}

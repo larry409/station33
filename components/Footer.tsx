@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import Logo from './Logo'
+import { BrandName } from './BrandName'
 
 export default function Footer() {
   const [email, setEmail] = useState('')
@@ -91,10 +92,9 @@ export default function Footer() {
               Broad.
             </p>
             <div className="text-body-text text-sm md:text-base space-y-1">
-              <p>South Broad Street</p>
+              <p>3210 Broad Street</p>
               <p>Chattanooga, TN 37408</p>
-              <p className="mt-3">(423) 555-0133</p>
-              <p>info@station33chattanooga.com</p>
+              <p className="mt-3">info@station33.co</p>
             </div>
           </div>
 
@@ -109,7 +109,7 @@ export default function Footer() {
                   href="/community"
                   className="text-body-text hover:text-accent-teal transition-colors text-sm md:text-base inline-block min-h-[44px] flex items-center"
                 >
-                  About Station33
+                  About <BrandName />
                 </Link>
               </li>
               <li>

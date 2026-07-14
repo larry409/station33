@@ -5,6 +5,7 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Image from 'next/image'
 import Link from 'next/link'
+import { BrandName } from './BrandName'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -81,7 +82,7 @@ export default function CaseStudy() {
             </h2>
 
             <p className="text-base sm:text-lg md:text-xl text-body-text mb-6 md:mb-8 leading-relaxed">
-              Station33 represents the future of mixed-use development in Chattanooga.
+              <BrandName /> represents the future of mixed-use development in Chattanooga.
               Strategically located on South Broad, we're creating a vibrant community
               hub that seamlessly blends residential living, retail experiences, and
               event spaces into one cohesive destination.
@@ -89,16 +90,16 @@ export default function CaseStudy() {
 
             <p className="text-lg text-body-text mb-12 leading-relaxed">
               Our commitment to quality, sustainability, and community engagement sets
-              Station33 apart as a landmark development that will shape the Southside
+              <BrandName /> apart as a landmark development that will shape the Southside
               district for generations to come.
             </p>
 
             {/* Key Features Grid */}
             <div className="case-study-features grid grid-cols-2 gap-6 mb-12">
               <div className="case-study-feature">
-                <div className="text-3xl font-semibold text-accent-rust mb-2">LEED</div>
+                <div className="text-3xl font-semibold text-accent-rust mb-2">Green</div>
                 <div className="text-sm text-body-text uppercase tracking-wider">
-                  Certified Green
+                  Sustainable Design
                 </div>
               </div>
               <div className="case-study-feature">

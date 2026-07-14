@@ -47,7 +47,7 @@ export default function InvestorContactModal({ open, onClose }: InvestorContactM
       setFormData({ name: '', email: '', phone: '', message: '' })
     } catch (err) {
       console.error('Investor Relations form submission failed:', err)
-      setErrorMessage('Sorry — something went wrong sending your message. Please email investors@station33.com or try again.')
+      setErrorMessage('Sorry — something went wrong sending your message. Please email info@station33.co or try again.')
     } finally {
       setIsSubmitting(false)
     }
@@ -162,7 +162,7 @@ export default function InvestorContactModal({ open, onClose }: InvestorContactM
               value={formData.phone}
               onChange={handleChange}
               className="form-input text-base md:text-lg"
-              placeholder="(423) 555-0133"
+              placeholder="Your phone number"
             />
           </div>
 
