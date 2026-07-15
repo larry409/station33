@@ -65,7 +65,7 @@ export default function InvestorsPage() {
     {
       title: 'Diversified Revenue Streams',
       description:
-        'Four income sources create stability: residential leasing (91 units), Grade-A commercial (25K+ SF), Aloft by Marriott hotel (120 rooms), and retail/F&B operations.',
+        'Four income sources create stability: residential leasing (91 units), Class-A commercial (25K+ SF), Aloft by Marriott hotel (120 rooms), and retail/F&B operations.',
       metrics: '4 revenue streams',
       accentColor: 'accent-teal',
     },
@@ -101,7 +101,7 @@ export default function InvestorsPage() {
 
   const projectStats = [
     { label: 'Total Investment', value: '$100M+', subtext: 'Multi-phase development' },
-    { label: 'Commercial Space', value: '25,000+ SF', subtext: 'Grade-A office' },
+    { label: 'Commercial Space', value: '25,000+ SF', subtext: 'Class-A office' },
     { label: 'Residential Units', value: '91 Units', subtext: 'Condos & townhomes' },
     { label: 'Hotel Rooms', value: '120 Rooms', subtext: 'Aloft by Marriott' },
     { label: 'Market Growth', value: '6.0%', subtext: 'Jan 2025 YoY' },

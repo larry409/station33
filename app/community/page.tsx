@@ -76,7 +76,7 @@ export default function CommunityPage() {
     {
       title: 'Work',
       description:
-        '25,000+ SF of Grade-A commercial space designed for innovation. Take the elevator from your residence to your office.',
+        '25,000+ SF of Class-A commercial space designed for innovation. Take the elevator from your residence to your office.',
       image: '/images/img44.jpg',
       icon: '💼',
     },
