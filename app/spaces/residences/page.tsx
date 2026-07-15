@@ -47,14 +47,16 @@ export default function ResidencesPage() {
         {/* Hero — exterior / context */}
         <section className="relative min-h-[70vh] flex items-end pt-24 md:pt-32 pb-12 md:pb-16 overflow-hidden">
           <div className="absolute inset-0 z-0">
-            <Image
-              src="/images/rendering-alley-buildings.jpg"
-              alt="Station33 residences and townhomes at twilight on South Broad"
-              fill
-              priority
-              className="object-cover"
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              poster="/images/residences/hero-poster.jpg"
+              className="absolute inset-0 w-full h-full object-cover"
+              src="/video/residences-hero.mp4"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-bg-darker via-bg-darker/70 to-bg-darker/30" />
+            <div className="absolute inset-0 bg-gradient-to-t from-bg-darker via-bg-darker/70 to-bg-darker/40" />
           </div>
 
           <div className="container relative z-10">
@@ -122,8 +124,37 @@ export default function ResidencesPage() {
           </div>
         </section>
 
-        {/* Gallery */}
+        {/* Floor plan */}
         <section className="section-standard bg-bg-darker">
+          <div className="container">
+            <div className="grid lg:grid-cols-5 gap-8 md:gap-12 items-center">
+              <div className="lg:col-span-2">
+                <span className="inline-block text-station-gold text-xs md:text-sm font-semibold uppercase tracking-[0.22em] mb-4">
+                  The layout
+                </span>
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-primary-text mb-5 md:mb-6 leading-tight">
+                  Two bedrooms, two baths
+                </h2>
+                <p className="text-lg md:text-xl text-body-text leading-relaxed">
+                  An open kitchen-and-living core with bedrooms tucked to either side — 800–1,800 sq
+                  ft of flexible, light-filled space.
+                </p>
+              </div>
+              <div className="lg:col-span-3 bg-white rounded-2xl p-4 md:p-6 shadow-2xl">
+                <Image
+                  src="/images/residences/floor-plan-2br.jpg"
+                  alt="Station33 two-bedroom, two-bath condo floor plan, aerial dollhouse view"
+                  width={1800}
+                  height={1012}
+                  className="w-full h-auto rounded-lg"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Gallery */}
+        <section className="section-standard bg-bg-dark">
           <div className="container">
             <div className="max-w-3xl mb-10 md:mb-14">
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-primary-text mb-4 md:mb-6 leading-tight">
@@ -139,7 +170,7 @@ export default function ResidencesPage() {
         </section>
 
         {/* Closing CTA */}
-        <section className="section-standard bg-bg-dark">
+        <section className="section-standard bg-bg-darker">
           <div className="container">
             <div className="max-w-4xl mx-auto text-center bg-gradient-to-br from-station-green/10 to-station-gold/10 border border-station-gold/30 rounded-3xl p-10 md:p-16">
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-primary-text mb-6">
