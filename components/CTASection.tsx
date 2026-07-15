@@ -141,7 +141,7 @@ export default function CTASection() {
               </h3>
 
               <p className="text-base sm:text-lg md:text-xl text-white/90 mb-6 md:mb-8 leading-relaxed transition-colors duration-300 group-hover:text-white">
-                Experience luxury urban living and premium commercial spaces in Chattanooga's most vibrant neighborhood. Residential units and retail spaces now available.
+                Experience elevated urban living and modern commercial spaces in Chattanooga's most vibrant neighborhood. Residential units and retail spaces now available.
               </p>
 
               <ul className="space-y-2 md:space-y-3 mb-8 md:mb-10 flex-grow">
