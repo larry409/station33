@@ -93,7 +93,7 @@ export default function InvestorsPage() {
     {
       title: 'Future-Proof Design',
       description:
-        'EV charging infrastructure, walkable urban layout, and energy-efficient systems. Sustainable, future-ready design that aligns with millennial/Gen-Z preferences driving 70% of new rentals.',
+        'Walkable urban layout and energy-efficient systems. Sustainable, future-ready design that aligns with millennial/Gen-Z preferences driving 70% of new rentals.',
       metrics: 'Energy-efficient design',
       accentColor: 'accent-teal',
     },
@@ -330,14 +330,6 @@ export default function InvestorsPage() {
                 ))}
               </div>
 
-              <div className="mt-6 md:mt-8 pt-6 border-t-2 border-station-gold/30">
-                <Link
-                  href="#opportunities"
-                  className="block w-full text-center px-6 py-4 bg-station-gold text-white rounded-2xl hover:bg-station-gold-light transition-colors font-semibold text-base md:text-lg min-h-[56px] flex items-center justify-center"
-                >
-                  View Investment Details →
-                </Link>
-              </div>
             </div>
           </div>
         </div>

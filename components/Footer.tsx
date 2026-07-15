@@ -5,13 +5,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import Logo from './Logo'
 import { BrandName } from './BrandName'
-
-const partners = [
-  { name: 'Aloft Hotels', src: '/images/partners/aloft.png', alt: 'Aloft Hotels — hospitality partner', w: 336, h: 260 },
-  { name: 'Grace', src: '/images/partners/grace.png', alt: 'Grace — development, construction & procurement', w: 241, h: 260 },
-  { name: 'Kinsey Company', src: '/images/partners/kinsey.png', alt: 'Kinsey Company Real Estate', w: 201, h: 260 },
-  { name: 'River Street', src: '/images/partners/river.png', alt: 'River Street Architecture + Interiors', w: 1149, h: 260 },
-]
+import { partners } from '@/lib/partners'
 
 export default function Footer() {
   const [email, setEmail] = useState('')

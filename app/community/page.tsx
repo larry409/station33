@@ -91,7 +91,7 @@ export default function CommunityPage() {
       title: 'Play',
       description:
         'European-style plaza, fitness center, and year-round events. Every day offers something new to discover.',
-      image: '/images/img88.jpg',
+      image: '/images/img164.jpg',
       icon: '🎪',
     },
   ]
@@ -99,7 +99,7 @@ export default function CommunityPage() {
   const amenities = [
     { icon: Dumbbell, title: 'Fitness Center', description: '24/7 state-of-the-art equipment' },
     { icon: PawPrint, title: 'Pet-Friendly', description: 'Dog park and pet wash station' },
-    { icon: CircleParking, title: 'Covered Parking', description: 'Secure parking with EV charging' },
+    { icon: CircleParking, title: 'Covered Parking', description: 'Secure covered parking with elevator access' },
     { icon: Square, title: 'Event Plaza', description: 'Host private events for 500+' },
     { icon: Route, title: 'Riverwalk Access', description: 'Direct access to 13+ miles' },
     { icon: Hotel, title: 'Aloft by Marriott', description: '120-room hotel with amenities' },
@@ -290,6 +290,39 @@ export default function CommunityPage() {
                   </div>
                 </div>
               ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Aloft by Marriott */}
+      <section className="section-standard bg-bg-dark">
+        <div className="container">
+          <div className="grid lg:grid-cols-2 gap-10 md:gap-14 items-center">
+            <div className="relative h-[300px] sm:h-[400px] lg:h-[480px] rounded-3xl overflow-hidden shadow-2xl">
+              <Image
+                src="/images/rendering-aloft.jpg"
+                alt="Aloft by Marriott hotel at Station33 at dusk"
+                fill
+                className="object-cover object-top"
+              />
+            </div>
+            <div>
+              <span className="inline-block text-station-gold text-xs md:text-sm font-semibold uppercase tracking-[0.22em] mb-4">
+                Stay
+              </span>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-primary-text mb-5 md:mb-6 leading-tight">
+                Aloft by Marriott
+              </h2>
+              <p className="text-lg md:text-xl text-body-text leading-relaxed mb-6">
+                A 120-room Aloft by Marriott anchors the neighborhood — a rooftop bar, guest
+                amenities, and a place for friends and family to stay steps from your door.
+              </p>
+              <ul className="space-y-3 text-body-text text-base md:text-lg">
+                <li className="flex items-start gap-3"><span className="text-station-gold mt-1">✓</span> 120 guest rooms</li>
+                <li className="flex items-start gap-3"><span className="text-station-gold mt-1">✓</span> Rooftop bar with skyline views</li>
+                <li className="flex items-start gap-3"><span className="text-station-gold mt-1">✓</span> On-site dining and event space</li>
+              </ul>
             </div>
           </div>
         </div>
