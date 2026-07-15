@@ -69,7 +69,7 @@ export default function CommunityPage() {
     {
       title: 'Live',
       description:
-        '91 luxury residences and townhomes with modern finishes, Riverwalk views, and pet-friendly amenities. Your urban sanctuary awaits.',
+        '91 residences and townhomes with modern finishes, Riverwalk views, and pet-friendly amenities. Walk downstairs for coffee, not to your car.',
       image: '/images/img132.jpg',
       icon: '🏠',
     },
@@ -192,8 +192,8 @@ export default function CommunityPage() {
             </h1>
 
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-body-text mb-8 md:mb-12 leading-relaxed max-w-3xl mx-auto">
-              Experience luxury living where everything you need is within walking distance. From
-              rooftop lounges to riverside trails, <BrandName /> offers an unparalleled urban lifestyle.
+              Everything you need is within walking distance — from rooftop lounges to riverside
+              trails. This is what connected, walkable living looks like in Chattanooga.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center">
@@ -265,7 +265,7 @@ export default function CommunityPage() {
               World-Class Amenities
             </h2>
             <p className="text-xl text-body-text max-w-3xl mx-auto">
-              Resort-style living meets urban convenience with amenities designed for modern life
+              Everyday convenience, dialed up — amenities designed for modern life on South Broad.
             </p>
           </div>
 
@@ -345,7 +345,7 @@ export default function CommunityPage() {
             {/* Content */}
             <div>
               <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-primary-text mb-6">
-                Luxury Residences
+                Residences
                 <span className="text-station-gold block mt-2">Now Leasing</span>
               </h2>
               <p className="text-xl text-body-text mb-8 leading-relaxed">
@@ -402,7 +402,7 @@ export default function CommunityPage() {
             <div className="relative h-[350px] sm:h-[450px] lg:h-[600px] rounded-3xl overflow-hidden shadow-2xl">
               <Image
                 src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=1200"
-                alt="Luxury Condo Interior"
+                alt="Condo Interior"
                 fill
                 className="object-cover"
               />
@@ -419,7 +419,7 @@ export default function CommunityPage() {
               Ready to Make <BrandName /> Home?
             </h2>
             <p className="text-xl text-body-text mb-10 leading-relaxed">
-              Join a vibrant community where luxury meets convenience. Schedule a tour today and
+              Join a vibrant, walkable community on South Broad. Schedule a tour today and
               experience the <BrandName /> lifestyle firsthand.
             </p>
 

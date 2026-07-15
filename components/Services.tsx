@@ -14,7 +14,7 @@ const services = [
     label: 'Living',
     title: 'Modern Urban Living',
     description:
-      'Experience luxury condo living in the heart of South Broad. Our residences feature high-end finishes, floor-to-ceiling windows, and access to premium amenities including a fitness center, co-working spaces, and on-site casual and fine-dining restaurants.',
+      "Home is an elevator ride from everything else. Station33's residences feature high-end finishes, floor-to-ceiling windows, and access to on-site amenities — a fitness center, co-working spaces, and casual and fine-dining restaurants, all without moving your car.",
     features: [
       'Premium finishes and appliances',
       'Floor-to-ceiling windows',
