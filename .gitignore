@@ -36,3 +36,11 @@ next-env.d.ts
 
 # Local Netlify folder
 .netlify
+
+# Source design assets — heavy originals (PDF/.ai/.eps/4K video/source renders).
+# Optimized web copies live in public/images and public/video; keep originals local.
+/Brand Kit/
+/Logo variations/
+/design-sources/
+/public/images/Updated pics S33 July 15/
+/S33 full guides.pdf
