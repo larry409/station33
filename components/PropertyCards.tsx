@@ -9,7 +9,17 @@ import { BrandName } from './BrandName'
 
 gsap.registerPlugin(ScrollTrigger)
 
-const properties = [
+type Property = {
+  id: number
+  title: string
+  description: string
+  size: string
+  badge: string
+  image: string
+  href?: string
+}
+
+const properties: Property[] = [
   {
     id: 1,
     title: 'Premium Retail Spaces',
@@ -24,6 +34,7 @@ const properties = [
     description: 'Modern condos with chic design and mountain views',
     size: '800 - 1,800 sq ft',
     badge: 'Leasing',
+    href: '/spaces/residences',
     image: '/images/rendering-alley-buildings.jpg',
   },
   {
@@ -32,7 +43,7 @@ const properties = [
     description: 'Elevated Class-A offices built for teams who expect more—efficient floor plates, abundant natural light, and premium finishes throughout',
     size: '46,000 total sq ft',
     badge: 'Available',
-    image: '/images/img44.jpg',
+    image: '/images/aerial-classa.jpg',
   },
   {
     id: 6,
@@ -96,7 +107,7 @@ export default function PropertyCards() {
           {properties.map((property) => (
             <Link
               key={property.id}
-              href={`/spaces/${property.id}`}
+              href={property.href ?? `/spaces/${property.id}`}
               className="property-card group block"
             >
               <div className="feature-card h-full flex flex-col">

@@ -56,7 +56,7 @@ export default function Features() {
       description:
         '120-room Aloft by Marriott hotel. Rooftop bar, guest amenities, and built-in neighborhood energy. Your friends will actually want to visit.',
       link: '/community#hotel',
-      image: '/images/rendering-hotel.jpg',
+      image: '/images/rendering-aloft.jpg',
     },
     {
       icon: '🅿️',

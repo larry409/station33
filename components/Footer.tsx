@@ -2,8 +2,16 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import Logo from './Logo'
 import { BrandName } from './BrandName'
+
+const partners = [
+  { name: 'Aloft Hotels', src: '/images/partners/aloft.png', alt: 'Aloft Hotels — hospitality partner', w: 336, h: 260 },
+  { name: 'Grace', src: '/images/partners/grace.png', alt: 'Grace — development, construction & procurement', w: 241, h: 260 },
+  { name: 'Kinsey Company', src: '/images/partners/kinsey.png', alt: 'Kinsey Company Real Estate', w: 201, h: 260 },
+  { name: 'River Street', src: '/images/partners/river.png', alt: 'River Street Architecture + Interiors', w: 1149, h: 260 },
+]
 
 export default function Footer() {
   const [email, setEmail] = useState('')
@@ -219,6 +227,30 @@ export default function Footer() {
               <br />
               #ChatLife
             </p>
+          </div>
+        </div>
+
+        {/* Project Partners */}
+        <div className="border-t border-divider-gray pt-10 md:pt-12 mb-10 md:mb-12">
+          <p className="text-center text-primary-text font-semibold uppercase tracking-wider text-sm md:text-base mb-6 md:mb-8">
+            Project Partners
+          </p>
+          <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6">
+            {partners.map((partner) => (
+              <div
+                key={partner.name}
+                className="bg-white rounded-xl px-5 md:px-6 py-3 md:py-4 flex items-center justify-center h-20 md:h-24 w-40 md:w-48"
+              >
+                <Image
+                  src={partner.src}
+                  alt={partner.alt}
+                  width={partner.w}
+                  height={partner.h}
+                  style={{ height: 'auto' }}
+                  className="max-h-full max-w-full w-auto object-contain"
+                />
+              </div>
+            ))}
           </div>
         </div>
 

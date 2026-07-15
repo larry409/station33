@@ -390,7 +390,7 @@ export default function CommunityPage() {
               </div>
 
               <Link
-                href="/contact"
+                href="/spaces/residences"
                 className="inline-flex items-center gap-3 px-6 md:px-8 py-4 md:py-5 bg-station-gold text-white rounded-2xl hover:bg-station-gold-light transition-all duration-300 font-semibold text-base md:text-lg shadow-xl min-h-[56px]"
               >
                 View Floor Plans
@@ -401,8 +401,8 @@ export default function CommunityPage() {
             {/* Image */}
             <div className="relative h-[350px] sm:h-[450px] lg:h-[600px] rounded-3xl overflow-hidden shadow-2xl">
               <Image
-                src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=1200"
-                alt="Condo Interior"
+                src="/images/residences/interior-3.jpg"
+                alt="Station33 two-bedroom condo living room with mountain views"
                 fill
                 className="object-cover"
               />
