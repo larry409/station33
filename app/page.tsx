@@ -1,6 +1,7 @@
 import Navigation from '@/components/Navigation'
 import HeroLuxury from '@/components/HeroLuxury'
 import PropertyCards from '@/components/PropertyCards'
+import ResidencesSpotlight from '@/components/ResidencesSpotlight'
 import Statistics from '@/components/Statistics'
 import Features from '@/components/Features'
 import Services from '@/components/Services'
@@ -17,6 +18,7 @@ export default function Home() {
         <HeroLuxury />
         {/* Phase 1: Navigation + Hero Complete */}
         <PropertyCards />
+        <ResidencesSpotlight />
         <Statistics />
         <Features />
         <Services />

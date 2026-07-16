@@ -57,16 +57,36 @@ export default function Navigation() {
       >
         {/* Left nav links */}
         <div className="hidden md:flex items-center gap-6">
-          <Link
-            href="/spaces/residences"
-            className={`text-sm font-semibold uppercase tracking-wider transition-colors min-h-[44px] flex items-center px-3 ${
-              pathname === '/spaces/residences'
-                ? 'text-station-gold'
-                : 'text-white/90 hover:text-station-gold'
-            }`}
-          >
-            Residences
-          </Link>
+          <div className="relative group">
+            <Link
+              href="/spaces/residences"
+              className={`text-sm font-semibold uppercase tracking-wider transition-colors min-h-[44px] flex items-center gap-1 px-3 ${
+                pathname === '/spaces/residences'
+                  ? 'text-station-gold'
+                  : 'text-white/90 hover:text-station-gold'
+              }`}
+            >
+              Residences
+              <span className="text-[10px] mt-0.5 transition-transform duration-200 group-hover:rotate-180">▾</span>
+            </Link>
+            <div className="absolute left-0 top-full pt-3 opacity-0 invisible translate-y-1 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 group-focus-within:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 transition-all duration-200">
+              <div className="min-w-[190px] rounded-2xl border border-station-gold/20 bg-station-dark/98 backdrop-blur-xl shadow-xl shadow-black/30 py-2">
+                {[
+                  { href: '/spaces/residences', label: 'Overview' },
+                  { href: '/spaces/residences#floor-plan', label: 'Floor Plan' },
+                  { href: '/spaces/residences#gallery', label: 'Gallery' },
+                ].map((item) => (
+                  <Link
+                    key={item.label}
+                    href={item.href}
+                    className="block px-5 py-2.5 text-sm font-semibold text-white/90 hover:text-station-gold hover:bg-white/5 transition-colors"
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
           <Link
             href="/investors"
             className={`text-sm font-semibold uppercase tracking-wider transition-colors min-h-[44px] flex items-center px-3 ${
@@ -146,6 +166,22 @@ export default function Navigation() {
             >
               Residences
             </Link>
+            <div className="-mt-3 pl-4 flex flex-col gap-3 border-l-2 border-station-gold/20">
+              <Link
+                href="/spaces/residences#floor-plan"
+                className="text-lg font-medium text-white/75 hover:text-station-gold min-h-[44px] flex items-center transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Floor Plan
+              </Link>
+              <Link
+                href="/spaces/residences#gallery"
+                className="text-lg font-medium text-white/75 hover:text-station-gold min-h-[44px] flex items-center transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Gallery
+              </Link>
+            </div>
             <Link
               href="/investors"
               className={`text-2xl font-semibold uppercase tracking-wider py-3 min-h-[56px] flex items-center transition-colors ${

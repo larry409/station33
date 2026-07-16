@@ -30,8 +30,8 @@ const properties: Property[] = [
   },
   {
     id: 2,
-    title: 'Urban Loft Residences',
-    description: 'Modern condos with chic design and mountain views',
+    title: 'Residences',
+    description: 'Modern condos and townhomes with chic design and mountain views',
     size: '800 - 1,800 sq ft',
     badge: 'Leasing',
     href: '/spaces/residences',

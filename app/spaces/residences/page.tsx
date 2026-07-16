@@ -21,15 +21,15 @@ const heroStats = [
 
 // Growable gallery — add new unit renderings here as they arrive.
 const galleryImages: GalleryImage[] = [
-  { src: '/images/residences/interior-3.jpg', alt: 'Living room with mountain views and warm modern furnishings' },
-  { src: '/images/residences/interior-4.jpg', alt: 'Open living and dining area with a media wall and wine display' },
-  { src: '/images/residences/interior-1.jpg', alt: "Chef's kitchen with waterfall island and bar seating" },
-  { src: '/images/residences/interior-2.jpg', alt: 'Kitchen with quartz island and natural-stone backsplash' },
-  { src: '/images/residences/interior-5.jpg', alt: 'Primary bedroom with a built-in desk and mountain view' },
-  { src: '/images/residences/interior-7.jpg', alt: 'Bedroom with a paneled accent wall and valley view' },
-  { src: '/images/residences/interior-6.jpg', alt: 'Spa-style bathroom with a soaking tub and walk-in shower' },
-  { src: '/images/residences/interior-8.jpg', alt: 'Bathroom with a walk-in shower and floating wood vanity' },
-  { src: '/images/residences/interior-9.jpg', alt: 'Double-vanity bathroom with natural-stone finishes' },
+  { src: '/images/residences/interior-3.jpg', alt: 'Living room with mountain views and warm modern furnishings', category: 'Living' },
+  { src: '/images/residences/interior-4.jpg', alt: 'Open living and dining area with a media wall and wine display', category: 'Living' },
+  { src: '/images/residences/interior-1.jpg', alt: "Chef's kitchen with waterfall island and bar seating", category: 'Kitchen' },
+  { src: '/images/residences/interior-2.jpg', alt: 'Kitchen with quartz island and natural-stone backsplash', category: 'Kitchen' },
+  { src: '/images/residences/interior-5.jpg', alt: 'Primary bedroom with a built-in desk and mountain view', category: 'Bedroom' },
+  { src: '/images/residences/interior-7.jpg', alt: 'Bedroom with a paneled accent wall and valley view', category: 'Bedroom' },
+  { src: '/images/residences/interior-6.jpg', alt: 'Spa-style bathroom with a soaking tub and walk-in shower', category: 'Bath' },
+  { src: '/images/residences/interior-8.jpg', alt: 'Bathroom with a walk-in shower and floating wood vanity', category: 'Bath' },
+  { src: '/images/residences/interior-9.jpg', alt: 'Double-vanity bathroom with natural-stone finishes', category: 'Bath' },
 ]
 
 const highlights = [
@@ -125,20 +125,27 @@ export default function ResidencesPage() {
         </section>
 
         {/* Floor plan */}
-        <section className="section-standard bg-bg-darker">
+        <section id="floor-plan" className="section-standard bg-bg-darker scroll-mt-24">
           <div className="container">
             <div className="grid lg:grid-cols-5 gap-8 md:gap-12 items-center">
               <div className="lg:col-span-2">
-                <span className="inline-block text-station-gold text-xs md:text-sm font-semibold uppercase tracking-[0.22em] mb-4">
-                  The layout
+                <span className="inline-flex items-center gap-2 rounded-full bg-station-gold/15 border border-station-gold/30 text-station-gold text-xs md:text-sm font-semibold uppercase tracking-[0.18em] px-4 py-1.5 mb-5">
+                  <span className="h-2 w-2 rounded-full bg-station-gold" /> Now leasing
                 </span>
                 <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-primary-text mb-5 md:mb-6 leading-tight">
                   Two bedrooms, two baths
                 </h2>
-                <p className="text-lg md:text-xl text-body-text leading-relaxed">
+                <p className="text-lg md:text-xl text-body-text leading-relaxed mb-8">
                   An open kitchen-and-living core with bedrooms tucked to either side — 800–1,800 sq
                   ft of flexible, light-filled space.
                 </p>
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center justify-center gap-3 px-6 md:px-8 py-4 bg-station-gold text-white rounded-2xl hover:bg-station-gold-light transition-all duration-300 font-semibold text-base md:text-lg shadow-xl min-h-[56px]"
+                >
+                  Check availability
+                  <span className="text-2xl">→</span>
+                </Link>
               </div>
               <div className="lg:col-span-3 bg-white rounded-2xl p-4 md:p-6 shadow-2xl">
                 <Image
@@ -154,7 +161,7 @@ export default function ResidencesPage() {
         </section>
 
         {/* Gallery */}
-        <section className="section-standard bg-bg-dark">
+        <section id="gallery" className="section-standard bg-bg-dark scroll-mt-24">
           <div className="container">
             <div className="max-w-3xl mb-10 md:mb-14">
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-primary-text mb-4 md:mb-6 leading-tight">

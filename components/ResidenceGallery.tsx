@@ -1,16 +1,30 @@
 'use client'
 
-import { useCallback, useEffect, useRef, useState } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import Image from 'next/image'
 
-export type GalleryImage = { src: string; alt: string }
+export type GalleryImage = { src: string; alt: string; category?: string }
 
 /**
- * Growable residence gallery: a responsive grid with an accessible lightbox.
- * Pass any number of images — the grid and lightbox scale as more
- * renderings are added, so new unit shots need no code changes.
+ * Growable, filterable residence gallery: category chips + a responsive grid
+ * with an accessible lightbox. Pass any number of images (with optional
+ * `category`) — the filters and grid scale as more renderings are added.
  */
 export default function ResidenceGallery({ images }: { images: GalleryImage[] }) {
+  const categories = useMemo(() => {
+    const seen: string[] = []
+    for (const img of images) {
+      if (img.category && !seen.includes(img.category)) seen.push(img.category)
+    }
+    return seen
+  }, [images])
+
+  const [filter, setFilter] = useState<string>('All')
+  const shown = useMemo(
+    () => (filter === 'All' ? images : images.filter((i) => i.category === filter)),
+    [images, filter]
+  )
+
   const [active, setActive] = useState<number | null>(null)
   const triggerRefs = useRef<(HTMLButtonElement | null)[]>([])
   const dialogRef = useRef<HTMLDivElement>(null)
@@ -24,15 +38,18 @@ export default function ResidenceGallery({ images }: { images: GalleryImage[] })
   const close = useCallback(() => setActive(null), [])
   const step = useCallback(
     (delta: number) =>
-      setActive((i) => (i === null ? i : (i + delta + images.length) % images.length)),
-    [images.length]
+      setActive((i) => (i === null ? i : (i + delta + shown.length) % shown.length)),
+    [shown.length]
   )
 
-  // While open: move focus into the dialog, trap Tab, handle keys, lock scroll.
+  // Reset the lightbox when the filter changes so indices stay valid.
+  useEffect(() => {
+    setActive(null)
+  }, [filter])
+
   useEffect(() => {
     if (active === null) return
     closeRef.current?.focus()
-
     const onKey = (e: KeyboardEvent) => {
       if (e.key === 'Escape') return close()
       if (e.key === 'ArrowRight') return step(1)
@@ -51,7 +68,6 @@ export default function ResidenceGallery({ images }: { images: GalleryImage[] })
         }
       }
     }
-
     document.addEventListener('keydown', onKey)
     document.body.style.overflow = 'hidden'
     return () => {
@@ -60,7 +76,6 @@ export default function ResidenceGallery({ images }: { images: GalleryImage[] })
     }
   }, [active, close, step])
 
-  // On close: restore focus to the thumbnail that opened the viewer.
   useEffect(() => {
     if (active === null && lastTrigger.current !== null) {
       triggerRefs.current[lastTrigger.current]?.focus()
@@ -70,8 +85,31 @@ export default function ResidenceGallery({ images }: { images: GalleryImage[] })
 
   return (
     <>
+      {categories.length > 1 && (
+        <div className="flex flex-wrap gap-2 md:gap-3 mb-8 md:mb-10" role="group" aria-label="Filter renderings by room">
+          {['All', ...categories].map((c) => {
+            const activeChip = filter === c
+            return (
+              <button
+                key={c}
+                type="button"
+                onClick={() => setFilter(c)}
+                aria-pressed={activeChip}
+                className={`px-4 md:px-5 py-2 rounded-full text-sm md:text-base font-semibold border transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-station-gold ${
+                  activeChip
+                    ? 'bg-station-gold text-white border-station-gold'
+                    : 'bg-transparent text-body-text border-station-gold/30 hover:border-station-gold hover:text-station-gold'
+                }`}
+              >
+                {c}
+              </button>
+            )
+          })}
+        </div>
+      )}
+
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-        {images.map((img, i) => (
+        {shown.map((img, i) => (
           <button
             key={img.src}
             ref={(el) => {
@@ -128,8 +166,8 @@ export default function ResidenceGallery({ images }: { images: GalleryImage[] })
             onClick={(e) => e.stopPropagation()}
           >
             <Image
-              src={images[active].src}
-              alt={images[active].alt}
+              src={shown[active].src}
+              alt={shown[active].alt}
               fill
               sizes="100vw"
               className="object-contain"
@@ -152,7 +190,7 @@ export default function ResidenceGallery({ images }: { images: GalleryImage[] })
             aria-live="polite"
             aria-atomic="true"
           >
-            {images[active].alt} · {active + 1} / {images.length}
+            {shown[active].alt} · {active + 1} / {shown.length}
           </p>
         </div>
       )}
