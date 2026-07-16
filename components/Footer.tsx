@@ -229,19 +229,18 @@ export default function Footer() {
           <p className="text-center text-primary-text font-semibold uppercase tracking-wider text-sm md:text-base mb-6 md:mb-8">
             Project Partners
           </p>
-          <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6">
+          <div className="flex flex-wrap items-center justify-center gap-3 md:gap-4">
             {partners.map((partner) => (
               <div
                 key={partner.name}
-                className="bg-white rounded-xl px-5 md:px-6 py-3 md:py-4 flex items-center justify-center h-20 md:h-24 w-40 md:w-48"
+                className="bg-white rounded-xl overflow-hidden w-32 sm:w-36 md:w-40"
               >
                 <Image
                   src={partner.src}
                   alt={partner.alt}
                   width={partner.w}
                   height={partner.h}
-                  style={{ height: 'auto' }}
-                  className="max-h-full max-w-full w-auto object-contain"
+                  className="w-full h-auto"
                 />
               </div>
             ))}

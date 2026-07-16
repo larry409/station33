@@ -295,15 +295,14 @@ export default function TeamPage() {
             {partners.map((partner) => (
               <div
                 key={partner.name}
-                className="bg-white rounded-2xl h-24 md:h-28 flex items-center justify-center px-5 md:px-6 hover:shadow-2xl transition-shadow"
+                className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl transition-shadow"
               >
                 <Image
                   src={partner.src}
                   alt={partner.alt}
                   width={partner.w}
                   height={partner.h}
-                  style={{ height: 'auto' }}
-                  className="max-h-[58%] max-w-full w-auto object-contain"
+                  className="w-full h-auto"
                 />
               </div>
             ))}
