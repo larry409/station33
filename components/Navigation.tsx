@@ -55,8 +55,8 @@ export default function Navigation() {
             : 'rgba(37, 42, 46, 0.75)',
         }}
       >
-        {/* Left nav links */}
-        <div className="hidden md:flex items-center gap-6">
+        {/* Left nav */}
+        <div className="hidden md:flex flex-1 items-center">
           <div className="relative group">
             <Link
               href="/spaces/residences"
@@ -87,6 +87,18 @@ export default function Navigation() {
               </div>
             </div>
           </div>
+          <div className="flex-1 flex justify-center">
+            <Link
+              href="/community"
+              className={`text-sm font-semibold uppercase tracking-wider transition-colors min-h-[44px] flex items-center px-3 ${
+                pathname === '/community'
+                  ? 'text-station-gold'
+                  : 'text-white/90 hover:text-station-gold'
+              }`}
+            >
+              Community
+            </Link>
+          </div>
         </div>
 
         {/* Center logo */}
@@ -97,28 +109,20 @@ export default function Navigation() {
           <Logo tagline className="h-10 md:h-12 w-auto" />
         </Link>
 
-        {/* Right nav links + CTA */}
-        <div className="hidden md:flex items-center gap-6">
-          <Link
-            href="/investors"
-            className={`text-sm font-semibold uppercase tracking-wider transition-colors min-h-[44px] flex items-center px-3 ${
-              pathname === '/investors'
-                ? 'text-station-gold'
-                : 'text-white/90 hover:text-station-gold'
-            }`}
-          >
-            Investors
-          </Link>
-          <Link
-            href="/community"
-            className={`text-sm font-semibold uppercase tracking-wider transition-colors min-h-[44px] flex items-center px-3 ${
-              pathname === '/community'
-                ? 'text-station-gold'
-                : 'text-white/90 hover:text-station-gold'
-            }`}
-          >
-            Community
-          </Link>
+        {/* Right nav + CTA */}
+        <div className="hidden md:flex flex-1 items-center">
+          <div className="flex-1 flex justify-center">
+            <Link
+              href="/investors"
+              className={`text-sm font-semibold uppercase tracking-wider transition-colors min-h-[44px] flex items-center px-3 ${
+                pathname === '/investors'
+                  ? 'text-station-gold'
+                  : 'text-white/90 hover:text-station-gold'
+              }`}
+            >
+              Investors
+            </Link>
+          </div>
           <Link
             href="/contact"
             className="flex items-center gap-2 px-5 py-2.5 bg-station-gold text-station-dark rounded-full hover:bg-white transition-all duration-300 text-sm font-semibold uppercase tracking-wider min-h-[44px]"
