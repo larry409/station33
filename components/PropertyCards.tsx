@@ -25,7 +25,7 @@ const properties: Property[] = [
     title: 'Premium Retail Spaces',
     description: 'Ground-floor retail with high ceilings and abundant natural light',
     size: '400 - 8,000 sq ft',
-    badge: 'Available Now',
+    badge: 'Coming Soon',
     image: '/images/img212.jpg',
   },
   {
@@ -42,7 +42,7 @@ const properties: Property[] = [
     title: 'Class-A Working Space',
     description: 'Elevated Class-A offices built for teams who expect more—efficient floor plates, abundant natural light, and premium finishes throughout',
     size: '46,000 total sq ft',
-    badge: 'Available',
+    badge: 'Coming Soon',
     image: '/images/aerial-classa.jpg',
   },
   {
@@ -50,7 +50,7 @@ const properties: Property[] = [
     title: 'Restaurants & Bar',
     description: 'Four to five full-service restaurants with indoor and outdoor seating',
     size: '4 - 5 restaurants',
-    badge: 'Coming 2026',
+    badge: 'Coming Soon',
     image: '/images/rendering-archway.jpg',
   },
 ]

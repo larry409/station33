@@ -25,11 +25,8 @@ export default function ResidencesSpotlight() {
         <div className="grid lg:grid-cols-2 gap-10 md:gap-14 items-center">
           {/* Copy */}
           <div>
-            <span className="inline-flex items-center gap-2 rounded-full bg-station-gold/15 border border-station-gold/30 text-station-gold text-xs md:text-sm font-semibold uppercase tracking-[0.18em] px-4 py-1.5 mb-5">
-              <span className="h-2 w-2 rounded-full bg-station-gold" /> Now leasing
-            </span>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-primary-text mb-5 md:mb-6 leading-tight">
-              Find your place at <BrandName />
+              Live at <BrandName />
             </h2>
             <p className="text-lg md:text-xl text-body-text leading-relaxed mb-8 max-w-xl">
               91 modern condos and townhomes on South Broad — high-end finishes, floor-to-ceiling

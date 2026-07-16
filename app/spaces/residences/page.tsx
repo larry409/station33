@@ -61,9 +61,6 @@ export default function ResidencesPage() {
 
           <div className="container relative z-10">
             <div className="max-w-3xl">
-              <span className="inline-block text-station-gold text-xs md:text-sm font-semibold uppercase tracking-[0.22em] mb-4">
-                Now Leasing
-              </span>
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-primary-text mb-5 md:mb-6 leading-[1.05] tracking-tight">
                 Residences
               </h1>
@@ -129,9 +126,6 @@ export default function ResidencesPage() {
           <div className="container">
             <div className="grid lg:grid-cols-5 gap-8 md:gap-12 items-center">
               <div className="lg:col-span-2">
-                <span className="inline-flex items-center gap-2 rounded-full bg-station-gold/15 border border-station-gold/30 text-station-gold text-xs md:text-sm font-semibold uppercase tracking-[0.18em] px-4 py-1.5 mb-5">
-                  <span className="h-2 w-2 rounded-full bg-station-gold" /> Now leasing
-                </span>
                 <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-primary-text mb-5 md:mb-6 leading-tight">
                   Two bedrooms, two baths
                 </h2>
