@@ -58,6 +58,16 @@ export default function Navigation() {
         {/* Left nav links */}
         <div className="hidden md:flex items-center gap-6">
           <Link
+            href="/spaces/residences"
+            className={`text-sm font-semibold uppercase tracking-wider transition-colors min-h-[44px] flex items-center px-3 ${
+              pathname === '/spaces/residences'
+                ? 'text-station-gold'
+                : 'text-white/90 hover:text-station-gold'
+            }`}
+          >
+            Residences
+          </Link>
+          <Link
             href="/investors"
             className={`text-sm font-semibold uppercase tracking-wider transition-colors min-h-[44px] flex items-center px-3 ${
               pathname === '/investors'
@@ -127,6 +137,15 @@ export default function Navigation() {
           className="pointer-events-auto md:hidden fixed inset-0 top-0 bg-station-dark/98 backdrop-blur-lg z-40 pt-28 px-6"
         >
           <nav className="flex flex-col gap-6">
+            <Link
+              href="/spaces/residences"
+              className={`text-2xl font-semibold uppercase tracking-wider py-3 min-h-[56px] flex items-center transition-colors ${
+                pathname === '/spaces/residences' ? 'text-station-gold' : 'text-white hover:text-station-gold'
+              }`}
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Residences
+            </Link>
             <Link
               href="/investors"
               className={`text-2xl font-semibold uppercase tracking-wider py-3 min-h-[56px] flex items-center transition-colors ${
