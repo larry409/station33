@@ -375,7 +375,6 @@ export default function CommunityPage() {
             <div>
               <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-primary-text mb-6">
                 Residences
-                <span className="text-station-gold block mt-2">Now Leasing</span>
               </h2>
               <p className="text-xl text-body-text mb-8 leading-relaxed">
                 91 thoughtfully designed residences and townhomes featuring high-end finishes,
