@@ -8,6 +8,7 @@ import Footer from '@/components/Footer'
 import Link from 'next/link'
 import Image from 'next/image'
 import { BrandName } from '@/components/BrandName'
+import { partners } from '@/lib/partners'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -133,29 +134,6 @@ export default function TeamPage() {
       description:
         'Prioritizing local contractors, artists, and businesses. Built by Chattanooga, for Chattanooga.',
       icon: '📍',
-    },
-  ]
-
-  const partners = [
-    {
-      name: 'Summit Architecture Group',
-      role: 'Lead Architects',
-      description: 'Award-winning design firm specializing in urban mixed-use developments',
-    },
-    {
-      name: 'Riverfront Construction',
-      role: 'General Contractor',
-      description: 'Chattanooga-based builder with 40+ years of local experience',
-    },
-    {
-      name: 'Marriott International',
-      role: 'Hospitality Partner',
-      description: 'Operating the 120-room Aloft by Marriott hotel and rooftop amenities',
-    },
-    {
-      name: 'GreenBuild Engineering',
-      role: 'Sustainability Consultants',
-      description: 'Sustainability and energy-efficiency experts for high-performance building systems',
     },
   ]
 
@@ -313,15 +291,19 @@ export default function TeamPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {partners.map((partner, index) => (
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 max-w-5xl mx-auto">
+            {partners.map((partner) => (
               <div
-                key={index}
-                className="bg-card-bg border border-divider-gray rounded-2xl p-8 hover:border-accent-teal hover:shadow-2xl transition-all duration-300"
+                key={partner.name}
+                className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl transition-shadow"
               >
-                <h3 className="text-2xl font-semibold text-primary-text mb-2">{partner.name}</h3>
-                <p className="text-station-gold font-semibold mb-4">{partner.role}</p>
-                <p className="text-body-text leading-relaxed">{partner.description}</p>
+                <Image
+                  src={partner.src}
+                  alt={partner.alt}
+                  width={partner.w}
+                  height={partner.h}
+                  className="w-full h-auto"
+                />
               </div>
             ))}
           </div>

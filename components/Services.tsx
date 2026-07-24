@@ -4,11 +4,22 @@ import { useState, useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Image from 'next/image'
+import Link from 'next/link'
 import { brandify } from './BrandName'
 
 gsap.registerPlugin(ScrollTrigger)
 
-const services = [
+type Service = {
+  id: string
+  label: string
+  title: string
+  description: string
+  features: string[]
+  image: string
+  href?: string
+}
+
+const services: Service[] = [
   {
     id: 'living',
     label: 'Living',
@@ -23,7 +34,8 @@ const services = [
       'Casual & fine-dining on-site',
       'Fitness and wellness center',
     ],
-    image: '/images/img140.jpg',
+    image: '/images/residences/interior-4.jpg',
+    href: '/spaces/residences',
   },
   {
     id: 'working',
@@ -39,7 +51,7 @@ const services = [
       'Ground-floor visibility',
       'Loading dock access',
     ],
-    image: '/images/img44.jpg',
+    image: '/images/aerial-classa.jpg',
   },
   {
     id: 'gathering',
@@ -186,9 +198,9 @@ export default function Services() {
             </ul>
 
             {/* CTA Button */}
-            <button className="btn-primary">
+            <Link href={activeService.href ?? '/contact'} className="btn-primary inline-block">
               Learn More
-            </button>
+            </Link>
           </div>
         </div>
       </div>

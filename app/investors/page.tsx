@@ -65,7 +65,7 @@ export default function InvestorsPage() {
     {
       title: 'Diversified Revenue Streams',
       description:
-        'Four income sources create stability: residential leasing (91 units), Grade-A commercial (25K+ SF), Aloft by Marriott hotel (120 rooms), and retail/F&B operations.',
+        'Four income sources create stability: residential leasing (91 units), Class-A commercial (25K+ SF), Aloft by Marriott hotel (120 rooms), and retail/F&B operations.',
       metrics: '4 revenue streams',
       accentColor: 'accent-teal',
     },
@@ -93,7 +93,7 @@ export default function InvestorsPage() {
     {
       title: 'Future-Proof Design',
       description:
-        'EV charging infrastructure, walkable urban layout, and energy-efficient systems. Sustainable, future-ready design that aligns with millennial/Gen-Z preferences driving 70% of new rentals.',
+        'Walkable urban layout and energy-efficient systems. Sustainable, future-ready design that aligns with millennial/Gen-Z preferences driving 70% of new rentals.',
       metrics: 'Energy-efficient design',
       accentColor: 'accent-teal',
     },
@@ -101,7 +101,7 @@ export default function InvestorsPage() {
 
   const projectStats = [
     { label: 'Total Investment', value: '$100M+', subtext: 'Multi-phase development' },
-    { label: 'Commercial Space', value: '25,000+ SF', subtext: 'Grade-A office' },
+    { label: 'Commercial Space', value: '25,000+ SF', subtext: 'Class-A office' },
     { label: 'Residential Units', value: '91 Units', subtext: 'Condos & townhomes' },
     { label: 'Hotel Rooms', value: '120 Rooms', subtext: 'Aloft by Marriott' },
     { label: 'Market Growth', value: '6.0%', subtext: 'Jan 2025 YoY' },
@@ -330,14 +330,6 @@ export default function InvestorsPage() {
                 ))}
               </div>
 
-              <div className="mt-6 md:mt-8 pt-6 border-t-2 border-station-gold/30">
-                <Link
-                  href="#opportunities"
-                  className="block w-full text-center px-6 py-4 bg-station-gold text-white rounded-2xl hover:bg-station-gold-light transition-colors font-semibold text-base md:text-lg min-h-[56px] flex items-center justify-center"
-                >
-                  View Investment Details →
-                </Link>
-              </div>
             </div>
           </div>
         </div>

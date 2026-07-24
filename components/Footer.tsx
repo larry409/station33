@@ -2,8 +2,10 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import Logo from './Logo'
 import { BrandName } from './BrandName'
+import { partners } from '@/lib/partners'
 
 export default function Footer() {
   const [email, setEmail] = useState('')
@@ -219,6 +221,29 @@ export default function Footer() {
               <br />
               #ChatLife
             </p>
+          </div>
+        </div>
+
+        {/* Project Partners */}
+        <div className="border-t border-divider-gray pt-10 md:pt-12 mb-10 md:mb-12">
+          <p className="text-center text-primary-text font-semibold uppercase tracking-wider text-sm md:text-base mb-6 md:mb-8">
+            Project Partners
+          </p>
+          <div className="flex flex-wrap items-center justify-center gap-3 md:gap-4">
+            {partners.map((partner) => (
+              <div
+                key={partner.name}
+                className="bg-white rounded-xl overflow-hidden w-32 sm:w-36 md:w-40"
+              >
+                <Image
+                  src={partner.src}
+                  alt={partner.alt}
+                  width={partner.w}
+                  height={partner.h}
+                  className="w-full h-auto"
+                />
+              </div>
+            ))}
           </div>
         </div>
 

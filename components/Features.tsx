@@ -56,13 +56,13 @@ export default function Features() {
       description:
         '120-room Aloft by Marriott hotel. Rooftop bar, guest amenities, and built-in neighborhood energy. Your friends will actually want to visit.',
       link: '/community#hotel',
-      image: '/images/rendering-hotel.jpg',
+      image: '/images/rendering-aloft.jpg',
     },
     {
       icon: '🅿️',
-      title: 'Covered Parking + EV Charging',
+      title: 'Covered Parking',
       description:
-        'Secure covered parking with Level 2 EV charging stations. Protected from the elements with convenient elevator access to all buildings.',
+        'Secure covered parking protected from the elements, with convenient elevator access to all buildings.',
       link: '/contact',
       image: '/images/aerial-station33.jpg',
     },
@@ -118,7 +118,7 @@ export default function Features() {
                       src={feature.image}
                       alt={feature.title}
                       fill
-                      className="object-cover group-hover:scale-110 transition-transform duration-500"
+                      className={`object-cover ${feature.title === 'Aloft by Marriott' ? 'object-top' : ''} group-hover:scale-110 transition-transform duration-500`}
                     />
                   </div>
 
