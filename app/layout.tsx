@@ -8,7 +8,15 @@ const interTight = Inter_Tight({
   display: 'swap',
 })
 
+// Absolute base for OG/Twitter image URLs. Netlify sets DEPLOY_PRIME_URL on
+// deploy previews/branch deploys and URL on production; fall back to the prod
+// domain for local dev. Without this, Next resolves image URLs to localhost,
+// which social/link-preview crawlers can't reach.
+const siteUrl =
+  process.env.DEPLOY_PRIME_URL || process.env.URL || 'https://station33.co'
+
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: 'Station33 | Chattanooga\'s Premier Mixed-Use Development',
   description: 'Experience the future of urban living at Station33 - a $100M+ mixed-use development featuring commercial spaces, residences, hospitality, and riverfront access in downtown Chattanooga, TN.',
   keywords: 'Station33, Chattanooga, mixed-use development, real estate, downtown Chattanooga, commercial space, residential, Tennessee',
@@ -30,10 +38,10 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/images/og-share.jpg',
+        url: '/images/og-station33-aerial.jpg',
         width: 1200,
         height: 630,
-        alt: 'Station33 - Chattanooga\'s premier mixed-use development at dusk',
+        alt: 'Aerial view of Station33, a mixed-use development in downtown Chattanooga at dusk',
       },
     ],
   },
@@ -41,7 +49,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Station33 | Chattanooga\'s Premier Mixed-Use Development',
     description: 'Experience the future of urban living at Station33 in downtown Chattanooga, TN.',
-    images: ['/images/og-share.jpg'],
+    images: ['/images/og-station33-aerial.jpg'],
   },
   viewport: {
     width: 'device-width',
