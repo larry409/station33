@@ -75,6 +75,7 @@ export default function Navigation() {
                 {[
                   { href: '/spaces/residences', label: 'Overview' },
                   { href: '/spaces/residences#floor-plan', label: 'Floor Plan' },
+                  { href: '/spaces/residences#penthouses', label: 'Penthouses' },
                   { href: '/spaces/residences#gallery', label: 'Gallery' },
                 ].map((item) => (
                   <Link
@@ -171,7 +172,7 @@ export default function Navigation() {
       {mobileMenuOpen && (
         <div
           ref={mobileMenuRef}
-          className="pointer-events-auto lg:hidden fixed inset-0 top-0 bg-station-dark/98 backdrop-blur-lg z-40 pt-28 px-6"
+          className="pointer-events-auto lg:hidden fixed inset-0 top-0 bg-station-dark/98 backdrop-blur-lg z-40 pt-28 px-6 pb-10 overflow-y-auto overscroll-contain"
         >
           <nav className="flex flex-col gap-6">
             <Link
@@ -190,6 +191,13 @@ export default function Navigation() {
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Floor Plan
+              </Link>
+              <Link
+                href="/spaces/residences#penthouses"
+                className="text-lg font-medium text-white/75 hover:text-station-gold min-h-[44px] flex items-center transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Penthouses
               </Link>
               <Link
                 href="/spaces/residences#gallery"
