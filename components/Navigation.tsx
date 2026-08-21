@@ -74,6 +74,7 @@ export default function Navigation() {
                 {[
                   { href: '/spaces/residences', label: 'Overview' },
                   { href: '/spaces/residences#floor-plan', label: 'Floor Plan' },
+                  { href: '/spaces/residences#penthouses', label: 'Penthouses' },
                   { href: '/spaces/residences#gallery', label: 'Gallery' },
                 ].map((item) => (
                   <Link
@@ -179,6 +180,13 @@ export default function Navigation() {
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Floor Plan
+              </Link>
+              <Link
+                href="/spaces/residences#penthouses"
+                className="text-lg font-medium text-white/75 hover:text-station-gold min-h-[44px] flex items-center transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Penthouses
               </Link>
               <Link
                 href="/spaces/residences#gallery"

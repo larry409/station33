@@ -5,11 +5,12 @@ import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 import { BrandName } from '@/components/BrandName'
 import ResidenceGallery, { type GalleryImage } from '@/components/ResidenceGallery'
+import PenthouseTour from '@/components/PenthouseTour'
 
 export const metadata: Metadata = {
   title: 'Residences | Station33',
   description:
-    'Two-bedroom condo residences at Station33 — modern finishes, floor-to-ceiling windows, and mountain and Riverwalk views on South Broad in Chattanooga.',
+    'Condo residences and two-story penthouse suites at Station33 — modern finishes, floor-to-ceiling glass, and Lookout Mountain and Riverwalk views on South Broad in Chattanooga.',
 }
 
 const heroStats = [
@@ -153,6 +154,9 @@ export default function ResidencesPage() {
             </div>
           </div>
         </section>
+
+        {/* Penthouses */}
+        <PenthouseTour />
 
         {/* Gallery */}
         <section id="gallery" className="section-standard bg-bg-dark scroll-mt-24">
