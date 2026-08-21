@@ -74,6 +74,9 @@ export default function PenthouseTour() {
             poster="/images/residences/penthouse-poster.jpg"
             className="absolute inset-0 w-full h-full object-cover"
             src="/video/penthouse-tour.mp4"
+            // The AAC track is a music bed with no narration (confirmed with the
+            // client), so no <track kind="captions"> is required under WCAG 1.2.2.
+            // If a narrated cut ever replaces this file, captions become mandatory.
             onWaiting={() => setBuffering(true)}
             onPlaying={() => setBuffering(false)}
             onCanPlay={() => setBuffering(false)}
