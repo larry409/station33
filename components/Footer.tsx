@@ -173,7 +173,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/community"
+                  href="/news"
                   className="text-body-text hover:text-accent-teal transition-colors text-sm md:text-base inline-block min-h-[44px] flex items-center"
                 >
                   News & Updates

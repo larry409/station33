@@ -55,8 +55,9 @@ export default function Navigation() {
             : 'rgba(37, 42, 46, 0.75)',
         }}
       >
-        {/* Left nav */}
-        <div className="hidden md:flex flex-1 items-center">
+        {/* Left nav — pr/pl reserve the centered logo's half-width (~91px at h-12)
+            so the flex-1 link groups centre in the space that is actually free. */}
+        <div className="hidden lg:flex flex-1 items-center pr-[92px]">
           <div className="relative group">
             <Link
               href="/spaces/residences"
@@ -87,7 +88,7 @@ export default function Navigation() {
               </div>
             </div>
           </div>
-          <div className="flex-1 flex justify-center">
+          <div className="flex-1 flex justify-center items-center">
             <Link
               href="/community"
               className={`text-sm font-semibold uppercase tracking-wider transition-colors min-h-[44px] flex items-center px-3 ${
@@ -97,6 +98,16 @@ export default function Navigation() {
               }`}
             >
               Community
+            </Link>
+            <Link
+              href="/news"
+              className={`text-sm font-semibold uppercase tracking-wider transition-colors min-h-[44px] flex items-center px-3 ${
+                pathname.startsWith('/news')
+                  ? 'text-station-gold'
+                  : 'text-white/90 hover:text-station-gold'
+              }`}
+            >
+              News
             </Link>
           </div>
         </div>
@@ -110,7 +121,7 @@ export default function Navigation() {
         </Link>
 
         {/* Right nav + CTA */}
-        <div className="hidden md:flex flex-1 items-center">
+        <div className="hidden lg:flex flex-1 items-center pl-[92px]">
           <div className="flex-1 flex justify-center">
             <Link
               href="/investors"
@@ -134,7 +145,7 @@ export default function Navigation() {
 
         {/* Mobile menu toggle */}
         <button
-          className="md:hidden flex flex-col gap-1.5 p-3 z-50 min-w-[44px] min-h-[44px] justify-center items-center ml-auto"
+          className="lg:hidden flex flex-col gap-1.5 p-3 z-50 min-w-[44px] min-h-[44px] justify-center items-center ml-auto"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label="Toggle menu"
         >
@@ -160,7 +171,7 @@ export default function Navigation() {
       {mobileMenuOpen && (
         <div
           ref={mobileMenuRef}
-          className="pointer-events-auto md:hidden fixed inset-0 top-0 bg-station-dark/98 backdrop-blur-lg z-40 pt-28 px-6"
+          className="pointer-events-auto lg:hidden fixed inset-0 top-0 bg-station-dark/98 backdrop-blur-lg z-40 pt-28 px-6"
         >
           <nav className="flex flex-col gap-6">
             <Link
@@ -205,6 +216,15 @@ export default function Navigation() {
               onClick={() => setMobileMenuOpen(false)}
             >
               Community
+            </Link>
+            <Link
+              href="/news"
+              className={`text-2xl font-semibold uppercase tracking-wider py-3 min-h-[56px] flex items-center transition-colors ${
+                pathname.startsWith('/news') ? 'text-station-gold' : 'text-white hover:text-station-gold'
+              }`}
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              News
             </Link>
             <Link
               href="/contact"

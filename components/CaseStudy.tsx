@@ -117,7 +117,7 @@ export default function CaseStudy() {
               <div className="case-study-feature">
                 <div className="text-3xl font-semibold text-accent-rust mb-2">2026</div>
                 <div className="text-sm text-body-text uppercase tracking-wider">
-                  Grand Opening
+                  Groundbreaking
                 </div>
               </div>
             </div>
