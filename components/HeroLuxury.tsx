@@ -1,12 +1,12 @@
 'use client'
 
 import { useEffect, useRef } from 'react'
+import HeroVideo from './HeroVideo'
 import gsap from 'gsap'
 
 export default function HeroLuxury() {
   const heroRef = useRef<HTMLElement>(null)
   const titleRef = useRef<HTMLHeadingElement>(null)
-  const videoRef = useRef<HTMLVideoElement>(null)
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -64,17 +64,11 @@ export default function HeroLuxury() {
     >
       {/* Background Video with Overlay */}
       <div className="absolute inset-0 z-0">
-        <video
-          ref={videoRef}
-          autoPlay
-          loop
-          muted
-          playsInline
+        <HeroVideo
+          src="/video/hero-home.mp4"
           poster="/video/hero-poster.jpg"
           className="absolute inset-0 w-full h-full object-cover brightness-150 contrast-105 saturate-105"
-          src="/video/hero-home.mp4"
-        >
-        </video>
+        />
         {/* Dark overlay for text readability */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-bg-dark" />
       </div>

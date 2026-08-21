@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Navigation from '@/components/Navigation'
+import HeroVideo from '@/components/HeroVideo'
 import Footer from '@/components/Footer'
 import InvestorContactModal from '@/components/InvestorContactModal'
 import Link from 'next/link'
@@ -153,14 +154,10 @@ export default function InvestorsPage() {
       >
         {/* Background Video — dimmed and scrimmed so the copy stays legible */}
         <div className="absolute inset-0 z-0">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
+          <HeroVideo
+            src="/video/hero-home.mp4"
             poster="/video/hero-poster.jpg"
             className="absolute inset-0 w-full h-full object-cover brightness-[0.5] contrast-105"
-            src="/video/hero-home.mp4"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-bg-darker/85 via-bg-darker/70 to-bg-darker/92" />
           <div className="absolute inset-0 bg-gradient-to-tr from-accent-rust/20 via-transparent to-transparent" />
