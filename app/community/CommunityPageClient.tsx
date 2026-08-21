@@ -4,6 +4,7 @@ import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Navigation from '@/components/Navigation'
+import HeroVideo from '@/components/HeroVideo'
 import Footer from '@/components/Footer'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -167,16 +168,11 @@ export default function CommunityPage() {
       >
         {/* Background Video with Overlay */}
         <div className="absolute inset-0 z-0">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
+          <HeroVideo
+            src="/video/hero.mp4"
             poster="/video/hero-poster.jpg"
             className="absolute inset-0 w-full h-full object-cover"
-            src="/video/hero.mp4"
-          >
-          </video>
+          />
           <div className="absolute inset-0 bg-gradient-to-br from-bg-darker/95 via-bg-dark/90 to-station-green/30" />
         </div>
 

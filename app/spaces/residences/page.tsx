@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import Navigation from '@/components/Navigation'
+import HeroVideo from '@/components/HeroVideo'
 import Footer from '@/components/Footer'
 import { BrandName } from '@/components/BrandName'
 import ResidenceGallery, { type GalleryImage } from '@/components/ResidenceGallery'
@@ -51,14 +52,10 @@ export default function ResidencesPage() {
         {/* Hero — exterior / context */}
         <section className="relative min-h-[70vh] flex items-end pt-24 md:pt-32 pb-12 md:pb-16 overflow-hidden">
           <div className="absolute inset-0 z-0">
-            <video
-              autoPlay
-              loop
-              muted
-              playsInline
+            <HeroVideo
+              src="/video/residences-hero.mp4"
               poster="/images/residences/hero-poster.jpg"
               className="absolute inset-0 w-full h-full object-cover"
-              src="/video/residences-hero.mp4"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-bg-darker via-bg-darker/70 to-bg-darker/40" />
           </div>
