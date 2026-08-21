@@ -190,20 +190,35 @@ export const newsPosts: NewsPost[] = [
       },
     ],
     credits: [
+      // Barbera Development has no website of its own that could be verified —
+      // barberahomes.com is an unrelated New York builder. Left unlinked
+      // deliberately rather than pointing at the wrong company.
       { role: 'Developer', name: 'Barbera Development' },
-      { role: 'Development partner', name: 'The Kinsey Company' },
-      { role: 'Architect', name: 'Franklin Architects' },
-      { role: 'Civil engineer', name: 'Pape-Dawson' },
-      { role: 'Commercial builder', name: 'Grace Construction' },
-      { role: 'Residential builder', name: 'Collier Construction' },
-      { role: 'Financing', name: 'SouthEast Bank' },
-      { role: 'Commercial real estate', name: 'SVN | Second Story Real Estate Management' },
+      { role: 'Development partner', name: 'The Kinsey Company', url: 'https://www.kinseycompany.com' },
+      { role: 'Architect', name: 'Franklin Architects', url: 'https://www.franklinarch.com' },
+      { role: 'Civil engineer', name: 'Pape-Dawson', url: 'https://www.pape-dawson.com' },
+      // Trades as Grace Construction Consultants; the release credits it as
+      // Grace Construction, so the release's wording is kept.
+      { role: 'Commercial builder', name: 'Grace Construction', url: 'https://www.grace-cc.com' },
+      { role: 'Residential builder', name: 'Collier Construction', url: 'https://www.collierbuild.com' },
+      { role: 'Financing', name: 'SouthEast Bank', url: 'https://www.southeastbank.com' },
+      {
+        role: 'Commercial real estate',
+        name: 'SVN | Second Story Real Estate Management',
+        // secondstory.properties redirects here; link the destination directly.
+        url: 'https://svn-cha.com',
+      },
       {
         role: 'Residential real estate',
         name: 'Better Homes & Gardens Real Estate Signature Brokers',
+        url: 'https://thesignaturefirm.com',
       },
-      { role: 'Hotel developer', name: 'Dynamic Group' },
-      { role: 'Hotel architect', name: 'River Street Architecture' },
+      { role: 'Hotel developer', name: 'Dynamic Group', url: 'https://www.dynamicgroupmgmt.com' },
+      {
+        role: 'Hotel architect',
+        name: 'River Street Architecture',
+        url: 'https://www.riverstreetarchitecture.com',
+      },
     ],
     boilerplate: [
       {

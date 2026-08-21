@@ -271,7 +271,7 @@ export default async function NewsArticlePage({ params }: PageProps) {
                           href={credit.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="hover:text-station-gold-light transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-station-gold rounded"
+                          className="underline decoration-station-gold/40 underline-offset-4 hover:text-station-gold-light hover:decoration-station-gold-light transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-station-gold rounded"
                         >
                           {credit.name}
                         </a>
