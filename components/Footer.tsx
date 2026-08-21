@@ -6,6 +6,19 @@ import Image from 'next/image'
 import Logo from './Logo'
 import { BrandName } from './BrandName'
 import { partners } from '@/lib/partners'
+import { FacebookIcon, InstagramIcon, LinkedInIcon } from './SocialIcons'
+
+// Social profiles. LinkedIn is still a placeholder pointing at the network's
+// homepage — swap in the real URL or delete the row when that's decided.
+const socialLinks = [
+  {
+    name: 'Facebook',
+    href: 'https://www.facebook.com/profile.php?id=61591535446114',
+    Icon: FacebookIcon,
+  },
+  { name: 'Instagram', href: 'https://www.instagram.com/station33_broad/', Icon: InstagramIcon },
+  { name: 'LinkedIn', href: 'https://linkedin.com', Icon: LinkedInIcon },
+]
 
 export default function Footer() {
   const [email, setEmail] = useState('')
@@ -188,33 +201,18 @@ export default function Footer() {
               Follow Us
             </h4>
             <div className="flex gap-3 md:gap-4 mb-6">
-              <a
-                href="https://facebook.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-12 h-12 md:w-14 md:h-14 bg-card-bg rounded-full flex items-center justify-center text-body-text hover:bg-accent-teal hover:text-white transition-all"
-                aria-label="Follow us on Facebook"
-              >
-                <span className="text-xl md:text-2xl">f</span>
-              </a>
-              <a
-                href="https://www.instagram.com/station33_broad/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-12 h-12 md:w-14 md:h-14 bg-card-bg rounded-full flex items-center justify-center text-body-text hover:bg-accent-teal hover:text-white transition-all"
-                aria-label="Follow us on Instagram"
-              >
-                <span className="text-xl md:text-2xl">📷</span>
-              </a>
-              <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-12 h-12 md:w-14 md:h-14 bg-card-bg rounded-full flex items-center justify-center text-body-text hover:bg-accent-teal hover:text-white transition-all"
-                aria-label="Follow us on LinkedIn"
-              >
-                <span className="text-xl md:text-2xl">in</span>
-              </a>
+              {socialLinks.map(({ name, href, Icon }) => (
+                <a
+                  key={name}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-12 h-12 md:w-14 md:h-14 bg-card-bg rounded-full flex items-center justify-center text-body-text hover:bg-accent-teal hover:text-white transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-station-gold focus-visible:ring-offset-2 focus-visible:ring-offset-bg-darker"
+                  aria-label={`Follow us on ${name}`}
+                >
+                  <Icon />
+                </a>
+              ))}
             </div>
             <p className="text-body-text text-sm md:text-base">
               #Station33
