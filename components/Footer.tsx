@@ -198,7 +198,7 @@ export default function Footer() {
                 <span className="text-xl md:text-2xl">f</span>
               </a>
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/station33_broad/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-12 h-12 md:w-14 md:h-14 bg-card-bg rounded-full flex items-center justify-center text-body-text hover:bg-accent-teal hover:text-white transition-all"
