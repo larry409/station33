@@ -133,7 +133,7 @@ export default function CTASection() {
             {/* Content */}
             <div className="relative z-10 flex flex-col h-full">
               <div className="inline-block px-4 py-2 bg-white/10 text-white text-xs sm:text-sm font-semibold rounded-lg mb-4 md:mb-6 w-fit backdrop-blur-sm transition-all duration-300 group-hover:bg-white/20">
-                Now Leasing
+                Under Construction
               </div>
 
               <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-white mb-4 md:mb-6 leading-tight transition-all duration-300 group-hover:text-white group-hover:drop-shadow-[0_2px_8px_rgba(255,255,255,0.3)]">
@@ -141,7 +141,7 @@ export default function CTASection() {
               </h3>
 
               <p className="text-base sm:text-lg md:text-xl text-white/90 mb-6 md:mb-8 leading-relaxed transition-colors duration-300 group-hover:text-white">
-                Experience elevated urban living and modern commercial spaces in Chattanooga's most vibrant neighborhood. Residential units and retail spaces now available.
+                Experience elevated urban living and modern commercial spaces in Chattanooga's most vibrant neighborhood. Residential units and retail spaces are now under construction.
               </p>
 
               <ul className="space-y-2 md:space-y-3 mb-8 md:mb-10 flex-grow">

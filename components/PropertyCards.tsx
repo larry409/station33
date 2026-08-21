@@ -25,7 +25,7 @@ const properties: Property[] = [
     title: 'Premium Retail Spaces',
     description: 'Ground-floor retail with high ceilings and abundant natural light',
     size: '400 - 8,000 sq ft',
-    badge: 'Coming Soon',
+    badge: 'Under Construction',
     image: '/images/img212.jpg',
   },
   {
@@ -33,7 +33,7 @@ const properties: Property[] = [
     title: 'Residences',
     description: 'Modern condos and townhomes with chic design and mountain views',
     size: '800 - 1,800 sq ft',
-    badge: 'Leasing',
+    badge: 'Under Construction',
     href: '/spaces/residences',
     image: '/images/rendering-alley-buildings.jpg',
   },
@@ -42,7 +42,7 @@ const properties: Property[] = [
     title: 'Class-A Working Space',
     description: 'Elevated Class-A offices built for teams who expect more—efficient floor plates, abundant natural light, and premium finishes throughout',
     size: '46,000 total sq ft',
-    badge: 'Coming Soon',
+    badge: 'Under Construction',
     image: '/images/aerial-classa.jpg',
   },
   {
@@ -50,7 +50,7 @@ const properties: Property[] = [
     title: 'Restaurants & Bar',
     description: 'Four to five full-service restaurants with indoor and outdoor seating',
     size: '4 - 5 restaurants',
-    badge: 'Coming Soon',
+    badge: 'Under Construction',
     image: '/images/rendering-archway.jpg',
   },
 ]

@@ -1,4 +1,3 @@
-import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import Navigation from '@/components/Navigation'
@@ -6,12 +5,16 @@ import Footer from '@/components/Footer'
 import { BrandName } from '@/components/BrandName'
 import ResidenceGallery, { type GalleryImage } from '@/components/ResidenceGallery'
 import PenthouseTour from '@/components/PenthouseTour'
+import { pageMetadata } from '@/lib/seo'
 
-export const metadata: Metadata = {
+// Without an explicit canonical this page inherits the root layout's `/`,
+// which would declare it a duplicate of the homepage.
+export const metadata = pageMetadata({
   title: 'Residences | Station33',
   description:
     'Condo residences and two-story penthouse suites at Station33 — modern finishes, floor-to-ceiling glass, and Lookout Mountain views on South Broad, Chattanooga.',
-}
+  path: '/spaces/residences',
+})
 
 const heroStats = [
   { value: '91', label: 'Residences & townhomes' },

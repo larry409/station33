@@ -1,6 +1,8 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Inter_Tight } from 'next/font/google'
 import './globals.css'
+import JsonLd from '@/components/JsonLd'
+import { absoluteUrl, siteName, siteUrl } from '@/lib/seo'
 
 const interTight = Inter_Tight({
   subsets: ['latin'],
@@ -8,19 +10,15 @@ const interTight = Inter_Tight({
   display: 'swap',
 })
 
-// Absolute base for OG/Twitter image URLs. Netlify sets DEPLOY_PRIME_URL on
-// deploy previews/branch deploys and URL on production; fall back to the prod
-// domain for local dev. Without this, Next resolves image URLs to localhost,
-// which social/link-preview crawlers can't reach.
-const siteUrl =
-  process.env.DEPLOY_PRIME_URL || process.env.URL || 'https://station33.co'
-
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: 'Station33 | Chattanooga\'s Premier Mixed-Use Development',
   description: 'Experience the future of urban living at Station33 - a $100M+ mixed-use development featuring commercial spaces, residences, hospitality, and riverfront access in downtown Chattanooga, TN.',
   keywords: 'Station33, Chattanooga, mixed-use development, real estate, downtown Chattanooga, commercial space, residential, Tennessee',
   authors: [{ name: 'Station33' }],
+  alternates: {
+    canonical: '/',
+  },
   icons: {
     icon: [
       { url: '/favicon.svg', type: 'image/svg+xml' },
@@ -51,11 +49,59 @@ export const metadata: Metadata = {
     description: 'Experience the future of urban living at Station33 in downtown Chattanooga, TN.',
     images: ['/images/og-station33-aerial.jpg'],
   },
-  viewport: {
-    width: 'device-width',
-    initialScale: 1,
-    maximumScale: 1,
-  },
+}
+
+// Next 16 warns when `viewport` lives inside the `metadata` export.
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+}
+
+const postalAddress = {
+  '@type': 'PostalAddress',
+  streetAddress: '3210 Broad Street',
+  addressLocality: 'Chattanooga',
+  addressRegion: 'TN',
+  postalCode: '37408',
+  addressCountry: 'US',
+}
+
+// Sitewide structured data. `sameAs` is intentionally empty until verified
+// social profile URLs exist, and the Place omits `geo` rather than publishing
+// unverified coordinates.
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  '@id': absoluteUrl('/#organization'),
+  name: siteName,
+  url: absoluteUrl('/'),
+  logo: absoluteUrl('/android-chrome-512x512.png'),
+  description:
+    'Developer of Station33, a mixed-use development on South Broad in Chattanooga, Tennessee.',
+  address: postalAddress,
+  sameAs: [],
+  contactPoint: [
+    {
+      '@type': 'ContactPoint',
+      contactType: 'sales',
+      email: 'info@station33.co',
+      areaServed: 'US',
+      availableLanguage: ['en'],
+    },
+  ],
+}
+
+const placeSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Place',
+  '@id': absoluteUrl('/#place'),
+  name: siteName,
+  description:
+    'Station33 — a mixed-use development in the South Broad District of Chattanooga, Tennessee, with residences, commercial space, dining, and a 120-room Aloft by Marriott.',
+  url: absoluteUrl('/'),
+  image: absoluteUrl('/images/og-station33-aerial.jpg'),
+  address: postalAddress,
 }
 
 export default function RootLayout({
@@ -65,7 +111,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={interTight.variable}>
-      <body className={interTight.className}>{children}</body>
+      <body className={interTight.className}>
+        <JsonLd data={[organizationSchema, placeSchema]} />
+        {children}
+      </body>
     </html>
   )
 }
