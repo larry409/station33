@@ -339,30 +339,6 @@ export default function TermsOfServicePage() {
           </div>
         </section>
 
-        {/* Draft notice */}
-        <section className="container pb-10 md:pb-14">
-          <aside
-            role="note"
-            aria-labelledby="draft-notice-heading"
-            className="max-w-[70ch] rounded-2xl border border-station-gold/50 bg-station-gold/10 p-5 md:p-7"
-          >
-            <h2
-              id="draft-notice-heading"
-              className="flex items-center gap-3 text-sm md:text-base font-semibold uppercase tracking-[0.18em] text-station-gold mb-3"
-            >
-              <span aria-hidden="true" className="text-lg leading-none">
-                ⚠
-              </span>
-              Draft — pending legal review
-            </h2>
-            <p className="text-base md:text-lg text-primary-text/90 leading-relaxed">
-              This document is a plain-language draft written to describe how this website currently
-              works. It has not been reviewed or approved by an attorney, it is not legal advice, and
-              it is not a substitute for counsel. Treat it as a starting point for our lawyers to
-              redline before it is relied upon.
-            </p>
-          </aside>
-        </section>
 
         {/* Body — sticky contents on large screens, readable measure for prose */}
         <section className="container pb-20 md:pb-28">
