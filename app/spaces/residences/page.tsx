@@ -10,7 +10,7 @@ import PenthouseTour from '@/components/PenthouseTour'
 export const metadata: Metadata = {
   title: 'Residences | Station33',
   description:
-    'Condo residences and two-story penthouse suites at Station33 — modern finishes, floor-to-ceiling glass, and Lookout Mountain and Riverwalk views on South Broad in Chattanooga.',
+    'Condo residences and two-story penthouse suites at Station33 — modern finishes, floor-to-ceiling glass, and Lookout Mountain views on South Broad, Chattanooga.',
 }
 
 const heroStats = [
@@ -159,7 +159,7 @@ export default function ResidencesPage() {
         <PenthouseTour />
 
         {/* Gallery */}
-        <section id="gallery" className="section-standard bg-bg-dark scroll-mt-24">
+        <section id="gallery" className="section-standard bg-bg-darker scroll-mt-24">
           <div className="container">
             <div className="max-w-3xl mb-10 md:mb-14">
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-primary-text mb-4 md:mb-6 leading-tight">
@@ -175,7 +175,7 @@ export default function ResidencesPage() {
         </section>
 
         {/* Closing CTA */}
-        <section className="section-standard bg-bg-darker">
+        <section className="section-standard bg-bg-dark">
           <div className="container">
             <div className="max-w-4xl mx-auto text-center bg-gradient-to-br from-station-green/10 to-station-gold/10 border border-station-gold/30 rounded-3xl p-10 md:p-16">
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-primary-text mb-6">

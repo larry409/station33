@@ -161,7 +161,7 @@ export default function Navigation() {
       {mobileMenuOpen && (
         <div
           ref={mobileMenuRef}
-          className="pointer-events-auto md:hidden fixed inset-0 top-0 bg-station-dark/98 backdrop-blur-lg z-40 pt-28 px-6"
+          className="pointer-events-auto md:hidden fixed inset-0 top-0 bg-station-dark/98 backdrop-blur-lg z-40 pt-28 px-6 pb-10 overflow-y-auto overscroll-contain"
         >
           <nav className="flex flex-col gap-6">
             <Link
