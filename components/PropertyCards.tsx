@@ -45,7 +45,7 @@ const properties: Property[] = [
   {
     id: 5,
     title: 'Class-A Working Space',
-    description: 'Elevated Class-A offices built for teams who expect more—efficient floor plates, abundant natural light, and premium finishes throughout',
+    description: 'Offices finished to a higher standard, with windows on every side and room to grow into',
     size: '46,000 total sq ft',
     badge: 'Under Construction',
     href: '/spaces/offices',
@@ -55,7 +55,7 @@ const properties: Property[] = [
   {
     id: 6,
     title: 'Restaurants & Bar',
-    description: 'Four to five full-service restaurants with indoor and outdoor seating',
+    description: 'Four to five restaurants with patios opening onto the plaza and room for a full bar',
     size: '4 - 5 restaurants',
     badge: 'Under Construction',
     href: '/spaces/restaurants',

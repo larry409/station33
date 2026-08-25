@@ -3,7 +3,9 @@
  *
  * The lit look — a copper bar along the top edge that extends to full width on
  * hover, light spilling in from the top-left corner, and a lift with the border
- * igniting — lives here so all three pages stay in step.
+ * igniting — lives here so all four space pages stay in step: /spaces/residences
+ * uses these directly, and retail/offices/restaurants get them via
+ * SpaceInterestPage.
  *
  * Note on the palette: the brand copper (`station-gold`, #a85f42) is muted, not
  * a bright gold. At low opacity under a heavy blur it disappears against the
@@ -16,11 +18,13 @@
 export function HighlightCard({ title, body }: { title: string; body: string }) {
   return (
     <div className="group relative overflow-hidden rounded-2xl border-2 border-station-gold/30 bg-card-bg p-6 md:p-8 transition-all duration-500 hover:-translate-y-1.5 hover:border-station-gold hover:shadow-2xl hover:shadow-station-gold/20">
-      {/* Copper light spilling in from the top-left, always faintly on so the
-          effect reads on touch devices too. */}
+      {/* Copper light hugging the top-left corner, always faintly on so the
+          effect reads on touch devices too. It is deliberately pushed outside the
+          padding box: sitting under the body copy dropped that text below the
+          WCAG AA 4.5:1 contrast floor at peak hover alpha. */}
       <span
         aria-hidden="true"
-        className="pointer-events-none absolute -left-12 -top-20 h-44 w-44 rounded-full bg-station-gold-light/25 blur-2xl opacity-60 transition-all duration-500 group-hover:bg-station-gold-light/40 group-hover:opacity-100"
+        className="pointer-events-none absolute -left-20 -top-28 h-40 w-40 rounded-full bg-station-gold-light/25 blur-2xl opacity-60 transition-all duration-500 group-hover:bg-station-gold-light/40 group-hover:opacity-100"
       />
       {/* Accent bar that runs the full top edge on hover. */}
       <span

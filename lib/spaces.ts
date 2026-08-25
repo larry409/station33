@@ -113,7 +113,7 @@ export const offices: SpaceConfig = {
     'Class-A office space at Station33 on South Broad, Chattanooga — 46,000 sq ft, whole floors or single suites, with on-site parking and fiber internet. Join the pre-leasing interest list.',
   stats: [
     { value: '46,000', label: 'Sq ft total' },
-    { value: 'Whole floor', label: 'Or a single suite' },
+    { value: 'Suites', label: 'Or a whole floor' },
     { value: 'Fiber', label: 'High-speed internet' },
     { value: 'On site', label: 'Parking and dining' },
   ],

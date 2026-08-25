@@ -62,6 +62,10 @@ export default function SpaceInterestForm({ config }: { config: SpaceConfig }) {
         </label>
       </p>
 
+      <p className="text-sm text-body-text/80">
+        Fields marked <span className="text-station-gold">*</span> are required.
+      </p>
+
       <div className="grid sm:grid-cols-2 gap-6">
         {config.fields.map((field) => (
           <Field key={field.name} field={field} slug={config.slug} />
