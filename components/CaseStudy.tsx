@@ -66,7 +66,7 @@ export default function CaseStudy() {
                 src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=1200"
                 alt="Station33 South Broad Development"
                 fill
-                sizes="(max-width: 1024px) 100vw, 50vw"
+                sizes="(max-width: 1024px) 92vw, (min-width: 1920px) 740px, 42vw"
                 className="object-cover"
               />
             </div>

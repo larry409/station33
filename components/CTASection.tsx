@@ -54,7 +54,7 @@ export default function CTASection() {
                 src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1200"
                 alt="Investment opportunity"
                 fill
-                sizes="(max-width: 768px) 100vw, 50vw"
+                sizes="(max-width: 768px) 92vw, (min-width: 1920px) 740px, 42vw"
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
                 priority={false}
                 quality={85}
@@ -117,7 +117,7 @@ export default function CTASection() {
                 src="https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=1200"
                 alt="Community spaces"
                 fill
-                sizes="(max-width: 768px) 100vw, 50vw"
+                sizes="(max-width: 768px) 92vw, (min-width: 1920px) 740px, 42vw"
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
                 priority={false}
                 quality={85}

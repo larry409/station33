@@ -10,6 +10,10 @@ const nextConfig = {
     // for the photographic renderings that dominate this site; browsers that
     // don't support it fall back down the list.
     formats: ['image/avif', 'image/webp'],
+    // The default ladder jumps 1200 -> 1920, so a half-width image on a
+    // ~1800px screen at DPR 2 needs ~1280px and is forced all the way up to
+    // 1920. 1440 gives those slots a rung that actually fits.
+    deviceSizes: [640, 750, 828, 1080, 1200, 1440, 1920, 2048, 3840],
     // The renderings are static assets that only change on redeploy, so let the
     // CDN hold optimized variants for a year instead of the 60s default.
     minimumCacheTTL: 31536000,

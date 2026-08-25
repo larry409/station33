@@ -408,7 +408,7 @@ export default function InvestorsPage() {
                 src="/images/rendering-aerial.jpg"
                 alt="Aerial rendering of Station33 development at dusk with clock tower and plaza"
                 fill
-                sizes="(max-width: 1024px) 100vw, 50vw"
+                sizes="(max-width: 1024px) 92vw, (min-width: 1920px) 740px, 42vw"
                 className="object-cover"
               />
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-bg-darker/95 to-transparent p-8">

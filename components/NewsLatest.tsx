@@ -55,7 +55,7 @@ export default function NewsLatest() {
                 src={leadPost.heroImage}
                 alt=""
                 fill
-                sizes="(max-width: 1024px) 100vw, 50vw"
+                sizes="(max-width: 1024px) 92vw, (min-width: 1920px) 740px, 42vw"
                 className="object-cover transition-transform duration-500 group-hover:scale-[1.03] motion-reduce:transition-none motion-reduce:group-hover:scale-100"
               />
             </Link>
@@ -102,7 +102,7 @@ export default function NewsLatest() {
                       src={post.heroImage}
                       alt=""
                       fill
-                      sizes="(max-width: 768px) 100vw, 50vw"
+                      sizes="(max-width: 768px) 92vw, (min-width: 1920px) 740px, 42vw"
                       className="object-cover transition-transform duration-500 group-hover:scale-[1.03] motion-reduce:transition-none motion-reduce:group-hover:scale-100"
                     />
                   </div>
