@@ -3,6 +3,7 @@ import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 import SpaceInterestForm from '@/components/SpaceInterestForm'
 import { BrandName } from '@/components/BrandName'
+import { HighlightCard, StatCard } from '@/components/Cards'
 import type { SpaceConfig } from '@/lib/spaces'
 
 /**
@@ -15,7 +16,7 @@ import type { SpaceConfig } from '@/lib/spaces'
 const listBenefits = [
   {
     title: 'First look',
-    body: 'Floor plates and pricing reach the list before they go public.',
+    body: 'Plans and pricing reach the list before they go public.',
   },
   {
     title: 'A named spot',
@@ -23,7 +24,7 @@ const listBenefits = [
   },
   {
     title: 'Progress as it happens',
-    body: 'Construction milestones and delivery timing, as they are set.',
+    body: 'Construction updates and move-in timing, as soon as they are set.',
   },
 ]
 
@@ -60,15 +61,7 @@ export default function SpaceInterestPage({ config }: { config: SpaceConfig }) {
 
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 md:gap-4 max-w-2xl mb-8">
                 {config.stats.map((stat) => (
-                  <div
-                    key={stat.label}
-                    className="rounded-2xl bg-bg-darker/60 border border-station-gold/25 backdrop-blur-sm px-3 py-4"
-                  >
-                    <div className="text-xl md:text-2xl font-semibold text-station-gold leading-none">
-                      {stat.value}
-                    </div>
-                    <div className="text-xs text-body-text mt-2 leading-tight">{stat.label}</div>
-                  </div>
+                  <StatCard key={stat.label} value={stat.value} label={stat.label} />
                 ))}
               </div>
 
@@ -95,15 +88,7 @@ export default function SpaceInterestPage({ config }: { config: SpaceConfig }) {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
               {config.highlights.map((h) => (
-                <div
-                  key={h.title}
-                  className="bg-card-bg border-2 border-station-gold/25 rounded-2xl p-6 md:p-8"
-                >
-                  <h3 className="text-xl md:text-2xl font-semibold text-primary-text mb-3">
-                    {h.title}
-                  </h3>
-                  <p className="text-body-text leading-relaxed">{h.body}</p>
-                </div>
+                <HighlightCard key={h.title} title={h.title} body={h.body} />
               ))}
             </div>
           </div>
@@ -119,9 +104,9 @@ export default function SpaceInterestPage({ config }: { config: SpaceConfig }) {
                   Be first in line
                 </h2>
                 <p className="text-lg md:text-xl text-body-text leading-relaxed mb-10">
-                  <BrandName /> is under construction, and the operators on this list are the ones we
-                  call first. Add your name and you will have floor plates, pricing, and delivery
-                  dates ahead of the public release.
+                  <BrandName /> is under construction, and the businesses on this list are the ones
+                  we call first. Add your name and you will see plans, pricing, and move-in dates
+                  ahead of everyone else.
                 </p>
 
                 <dl className="divide-y divide-white/10 border-t border-white/10">

@@ -4,6 +4,7 @@ import Navigation from '@/components/Navigation'
 import HeroVideo from '@/components/HeroVideo'
 import Footer from '@/components/Footer'
 import { BrandName } from '@/components/BrandName'
+import { HighlightCard, StatCard } from '@/components/Cards'
 import ResidenceGallery, { type GalleryImage } from '@/components/ResidenceGallery'
 import PenthouseTour from '@/components/PenthouseTour'
 import { pageMetadata } from '@/lib/seo'
@@ -72,15 +73,7 @@ export default function ResidencesPage() {
 
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 md:gap-4 max-w-2xl mb-8">
                 {heroStats.map((stat) => (
-                  <div
-                    key={stat.label}
-                    className="rounded-2xl bg-bg-darker/60 border border-station-gold/25 backdrop-blur-sm px-3 py-4"
-                  >
-                    <div className="text-xl md:text-2xl font-semibold text-station-gold leading-none">
-                      {stat.value}
-                    </div>
-                    <div className="text-xs text-body-text mt-2 leading-tight">{stat.label}</div>
-                  </div>
+                  <StatCard key={stat.label} value={stat.value} label={stat.label} />
                 ))}
               </div>
 
@@ -110,13 +103,7 @@ export default function ResidencesPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
               {highlights.map((h) => (
-                <div
-                  key={h.title}
-                  className="bg-card-bg border-2 border-station-gold/25 rounded-2xl p-6 md:p-8"
-                >
-                  <h3 className="text-xl md:text-2xl font-semibold text-primary-text mb-3">{h.title}</h3>
-                  <p className="text-body-text leading-relaxed">{h.body}</p>
-                </div>
+                <HighlightCard key={h.title} title={h.title} body={h.body} />
               ))}
             </div>
           </div>
