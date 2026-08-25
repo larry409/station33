@@ -234,6 +234,7 @@ export default function CommunityPage() {
                     src={feature.image}
                     alt={feature.title}
                     fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
                     className="object-cover group-hover:scale-110 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-bg-darker via-bg-darker/60 to-transparent" />
@@ -300,6 +301,7 @@ export default function CommunityPage() {
                 src="/images/rendering-aloft.jpg"
                 alt="Aloft by Marriott hotel at Station33 at dusk"
                 fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover object-top"
               />
             </div>
@@ -348,6 +350,7 @@ export default function CommunityPage() {
                     src={event.image}
                     alt={event.title}
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     className="object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-bg-darker/80 to-transparent" />
@@ -432,6 +435,7 @@ export default function CommunityPage() {
                 src="/images/residences/interior-3.jpg"
                 alt="Station33 two-bedroom condo living room with mountain views"
                 fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
               />
             </div>

@@ -118,6 +118,7 @@ export default function Features() {
                       src={feature.image}
                       alt={feature.title}
                       fill
+                      sizes="(max-width: 640px) 300px, (max-width: 768px) 350px, 400px"
                       className={`object-cover ${feature.title === 'Aloft by Marriott' ? 'object-top' : ''} group-hover:scale-110 transition-transform duration-500`}
                     />
                   </div>

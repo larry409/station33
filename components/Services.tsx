@@ -176,6 +176,7 @@ export default function Services() {
               src={activeService.image}
               alt={activeService.title}
               fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover"
             />
           </div>
