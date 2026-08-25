@@ -3,6 +3,12 @@
 @tailwind utilities;
 
 :root {
+  /* Tell the browser this is a dark document. Without it the UA renders its
+     light-mode furniture over the page: pale scrollbars that fade in and out
+     as you scroll, white overscroll at the top and bottom, white before the
+     stylesheet paints, and light native <select> popups. */
+  color-scheme: dark;
+
   /* ========================================
      Station33 Brand Colors (Brand Kit v2.0)
      ======================================== */
@@ -60,6 +66,12 @@
 @layer base {
   * {
     @apply border-divider-gray;
+  }
+
+  /* The canvas behind <body> — what shows through on overscroll and during
+     the first paint. body's own background does not reliably cover it. */
+  html {
+    @apply bg-bg-dark;
   }
 
   body {

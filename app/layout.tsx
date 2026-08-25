@@ -55,7 +55,12 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
-  maximumScale: 1,
+  // Matches --bg-dark so mobile browser chrome and the pre-paint canvas are
+  // dark rather than white.
+  themeColor: '#2b2f33',
+  colorScheme: 'dark',
+  // No maximumScale: capping zoom at 1 blocks pinch-to-zoom, which fails
+  // WCAG 2.1 SC 1.4.4 (Resize Text).
 }
 
 const postalAddress = {

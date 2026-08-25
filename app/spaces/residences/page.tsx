@@ -129,12 +129,17 @@ export default function ResidencesPage() {
                   <span className="text-2xl">→</span>
                 </Link>
               </div>
-              <div className="lg:col-span-3 bg-white rounded-2xl p-4 md:p-6 shadow-2xl">
+              {/* The render has a pure-white background, so the panel has to be
+                  white for it to sit flush. The asset is cropped to the drawing
+                  to keep that white area as small as possible, and the copper
+                  edge frames it rather than letting it read as a hole in the
+                  page. */}
+              <div className="lg:col-span-3 bg-white rounded-2xl p-3 md:p-4 shadow-2xl ring-1 ring-station-gold/30">
                 <Image
                   src="/images/residences/floor-plan-2br.jpg"
                   alt="Station33 two-bedroom, two-bath condo floor plan, aerial dollhouse view"
-                  width={1800}
-                  height={1012}
+                  width={1504}
+                  height={888}
                   className="w-full h-auto rounded-lg"
                 />
               </div>
