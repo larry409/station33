@@ -351,7 +351,7 @@ export default function InvestorsPage() {
               src="/images/rendering-site-plan.jpg"
               alt="Station33 master site plan, aerial top-down view at dusk"
               fill
-              sizes="(max-width: 1280px) 100vw, 1280px"
+              sizes="(max-width: 1024px) 100vw, 1024px"
               className="object-contain"
             />
           </div>
