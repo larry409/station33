@@ -15,7 +15,7 @@ import type { SpaceConfig } from '@/lib/spaces'
 const listBenefits = [
   {
     title: 'First look',
-    body: 'Floor plates and pricing reach the list before they go public.',
+    body: 'Plans and pricing reach the list before they go public.',
   },
   {
     title: 'A named spot',
@@ -23,7 +23,7 @@ const listBenefits = [
   },
   {
     title: 'Progress as it happens',
-    body: 'Construction milestones and delivery timing, as they are set.',
+    body: 'Construction updates and move-in timing, as soon as they are set.',
   },
 ]
 
@@ -62,7 +62,7 @@ export default function SpaceInterestPage({ config }: { config: SpaceConfig }) {
                 {config.stats.map((stat) => (
                   <div
                     key={stat.label}
-                    className="rounded-2xl bg-bg-darker/60 border border-station-gold/25 backdrop-blur-sm px-3 py-4"
+                    className="rounded-2xl bg-bg-darker/60 border border-station-gold/25 backdrop-blur-sm px-3 py-4 transition-all duration-300 hover:-translate-y-0.5 hover:border-station-gold/60 hover:bg-bg-darker/80 hover:shadow-lg hover:shadow-station-gold/10"
                   >
                     <div className="text-xl md:text-2xl font-semibold text-station-gold leading-none">
                       {stat.value}
@@ -97,12 +97,25 @@ export default function SpaceInterestPage({ config }: { config: SpaceConfig }) {
               {config.highlights.map((h) => (
                 <div
                   key={h.title}
-                  className="bg-card-bg border-2 border-station-gold/25 rounded-2xl p-6 md:p-8"
+                  className="group relative overflow-hidden rounded-2xl border-2 border-station-gold/30 bg-card-bg p-6 md:p-8 transition-all duration-500 hover:-translate-y-1.5 hover:border-station-gold hover:shadow-2xl hover:shadow-station-gold/20"
                 >
-                  <h3 className="text-xl md:text-2xl font-semibold text-primary-text mb-3">
-                    {h.title}
-                  </h3>
-                  <p className="text-body-text leading-relaxed">{h.body}</p>
+                  {/* Copper light spilling in from the top-left, always faintly
+                      on so the effect reads on touch devices too. */}
+                  <span
+                    aria-hidden="true"
+                    className="pointer-events-none absolute -left-12 -top-20 h-44 w-44 rounded-full bg-station-gold-light/25 blur-2xl opacity-60 transition-all duration-500 group-hover:bg-station-gold-light/40 group-hover:opacity-100"
+                  />
+                  {/* Accent bar that runs the full top edge on hover. */}
+                  <span
+                    aria-hidden="true"
+                    className="pointer-events-none absolute left-0 top-0 h-[3px] w-10 bg-gradient-to-r from-station-gold-light to-transparent transition-all duration-500 group-hover:w-full"
+                  />
+                  <div className="relative">
+                    <h3 className="text-xl md:text-2xl font-semibold text-primary-text mb-3">
+                      {h.title}
+                    </h3>
+                    <p className="text-body-text leading-relaxed">{h.body}</p>
+                  </div>
                 </div>
               ))}
             </div>
@@ -119,9 +132,9 @@ export default function SpaceInterestPage({ config }: { config: SpaceConfig }) {
                   Be first in line
                 </h2>
                 <p className="text-lg md:text-xl text-body-text leading-relaxed mb-10">
-                  <BrandName /> is under construction, and the operators on this list are the ones we
-                  call first. Add your name and you will have floor plates, pricing, and delivery
-                  dates ahead of the public release.
+                  <BrandName /> is under construction, and the businesses on this list are the ones
+                  we call first. Add your name and you will see plans, pricing, and move-in dates
+                  ahead of everyone else.
                 </p>
 
                 <dl className="divide-y divide-white/10 border-t border-white/10">

@@ -48,39 +48,39 @@ export const retail: SpaceConfig = {
   eyebrow: 'Pre-leasing interest',
   title: 'Retail',
   lede:
-    'Ground-floor storefronts on South Broad, from 400 to 8,000 square feet, with high ceilings, deep glass lines, and steady traffic from the residences and offices above.',
+    'Street-level storefronts on South Broad, from 400 to 8,000 square feet, with tall ceilings, wide front windows, and a steady stream of people living and working in the building above.',
   heroImage: '/images/img212.jpg',
   heroImageAlt: 'Ground-floor retail storefronts at Station33 on South Broad',
   metaTitle: 'Retail Space | Station33',
   metaDescription:
-    'Ground-floor retail at Station33 on South Broad, Chattanooga — 400 to 8,000 sq ft storefronts with plaza frontage. Join the pre-leasing interest list for first look at floor plates and pricing.',
+    'Ground-floor retail at Station33 on South Broad, Chattanooga — 400 to 8,000 sq ft storefronts facing the plaza. Join the pre-leasing interest list for a first look at plans and pricing.',
   stats: [
     { value: '400–8,000', label: 'Sq ft per storefront' },
-    { value: '91', label: 'Residences above' },
+    { value: '91', label: 'Homes above' },
     { value: '46,000', label: 'Sq ft of offices on site' },
     { value: '4–5', label: 'Restaurants on the block' },
   ],
   sectionHeading: 'A storefront with a neighborhood already in it',
   sectionBody:
-    'Station33 brings residents, office tenants, and restaurant traffic to the same block. Retail sits at street level, where all of it passes by.',
+    'Station33 puts residents, office workers, and restaurant crowds on the same block. Your storefront sits at street level, where all of them walk past.',
   highlights: [
     {
-      title: 'Traffic that lives here',
-      body: '91 residences and 46,000 square feet of Class-A office sit directly above the storefronts, with restaurants pulling the neighborhood in after five.',
+      title: 'Customers who live upstairs',
+      body: '91 homes and 46,000 square feet of offices sit directly above the shops. The restaurants bring in the rest of the neighborhood after work.',
     },
     {
-      title: 'Room to build out',
-      body: 'High ceilings and wide glass give you the volume and daylight to make the space yours, with loading access at the back of house.',
+      title: 'Room to make it yours',
+      body: 'Tall ceilings and wide windows give you height and daylight to work with, and there is a place to take deliveries around back.',
     },
     {
-      title: 'The South Broad moment',
-      body: "Station33 anchors the district's redevelopment, steps from the Tennessee Riverwalk and minutes from downtown.",
+      title: 'A street on the way up',
+      body: 'Station33 anchors the rebuilding of South Broad, steps from the Tennessee Riverwalk and minutes from downtown.',
     },
   ],
   formHeading: 'Join the retail interest list',
   formIntro: 'Only your name and email are required. The rest helps us match you to the right storefront.',
   submitLabel: 'Join the list',
-  successMessage: "You're on the list. We'll be in touch as retail floor plates are released.",
+  successMessage: "You're on the list. We'll be in touch as retail plans and pricing are released.",
   fields: [
     { name: 'name', label: 'Name', type: 'text', placeholder: 'Your full name', required: true },
     { name: 'email', label: 'Email', type: 'email', placeholder: 'you@example.com', required: true },
@@ -105,39 +105,39 @@ export const offices: SpaceConfig = {
   eyebrow: 'Pre-leasing interest',
   title: 'Class-A Offices',
   lede:
-    'Elevated Class-A workspace above the plaza — efficient floor plates, daylight on every side, and premium finishes throughout 46,000 square feet.',
+    '46,000 square feet of offices above the plaza, finished to the standard your team would otherwise drive downtown for — windows on every side, quality materials throughout, and room to grow into.',
   heroImage: '/images/aerial-classa.jpg',
-  heroImageAlt: 'Aerial view of the Class-A office building at Station33',
+  heroImageAlt: 'Aerial view of the office building at Station33',
   metaTitle: 'Class-A Office Space | Station33',
   metaDescription:
-    'Class-A office space at Station33 on South Broad, Chattanooga — 46,000 sq ft with efficient floor plates, on-site parking, and fiber. Join the pre-leasing interest list.',
+    'Class-A office space at Station33 on South Broad, Chattanooga — 46,000 sq ft, whole floors or single suites, with on-site parking and fiber internet. Join the pre-leasing interest list.',
   stats: [
     { value: '46,000', label: 'Sq ft total' },
-    { value: 'Class-A', label: 'Finishes throughout' },
+    { value: 'Whole floor', label: 'Or a single suite' },
     { value: 'Fiber', label: 'High-speed internet' },
     { value: 'On site', label: 'Parking and dining' },
   ],
   sectionHeading: 'Built for teams who expect more',
   sectionBody:
-    'Full floors and suites with the light, the finishes, and the amenities your people would otherwise commute downtown for.',
+    'Take a whole floor or a single suite. Either way your team gets the daylight, the finishes, and everything downstairs.',
   highlights: [
     {
-      title: 'Floor plates that work',
-      body: 'Efficient layouts with daylight on every side, ready to divide for a growing team or hold as a full floor.',
+      title: 'Space that fits your team',
+      body: 'Open, light-filled floors that divide into suites for a small team or stay whole for a large one.',
     },
     {
-      title: 'Everything downstairs',
-      body: 'Restaurants, a fitness center, and the plaza are an elevator ride away, with parking on site and the Riverwalk out front.',
+      title: 'Lunch is one elevator ride',
+      body: 'Restaurants, a fitness center, and the plaza are all downstairs. Parking is on site and the Riverwalk is out front.',
     },
     {
-      title: 'Terms built around you',
-      body: 'Suites and full floors, with lease structures we shape around where your team is headed.',
+      title: 'A lease that bends',
+      body: 'Tell us how fast you expect to grow and we will shape the lease around it, instead of locking you into a size that stops fitting.',
     },
   ],
   formHeading: 'Join the office interest list',
-  formIntro: 'Only your name and email are required. The rest helps us bring you the right floor plate.',
+  formIntro: 'Only your name and email are required. The rest helps us bring you the right space.',
   submitLabel: 'Join the list',
-  successMessage: "You're on the list. We'll be in touch as office floor plates are released.",
+  successMessage: "You're on the list. We'll be in touch as office plans and pricing are released.",
   fields: [
     { name: 'name', label: 'Name', type: 'text', placeholder: 'Your full name', required: true },
     { name: 'email', label: 'Email', type: 'email', placeholder: 'you@example.com', required: true },
@@ -167,39 +167,39 @@ export const restaurants: SpaceConfig = {
   eyebrow: 'Pre-leasing interest',
   title: 'Restaurants & Bar',
   lede:
-    'Four to five full-service restaurants anchor Station33, with patios opening onto the plaza, full bar capability, and back-of-house infrastructure designed in from the start.',
+    'Four to five restaurants anchor Station33, with patios opening onto the plaza, room for a full bar, and the kitchen infrastructure already built into the building.',
   heroImage: '/images/rendering-food-hall.jpg',
   heroImageAlt: 'Rendering of the dining and gathering space at Station33',
   metaTitle: 'Restaurant Space | Station33',
   metaDescription:
-    'Restaurant and bar space at Station33 on South Broad, Chattanooga — four to five full-service spaces with patios, full bar capability, and grease trap and ventilation built in. Join the pre-leasing interest list.',
+    'Restaurant and bar space at Station33 on South Broad, Chattanooga — four to five spaces with plaza patios, room for a full bar, and grease traps and ventilation already built in. Join the pre-leasing interest list.',
   stats: [
     { value: '4–5', label: 'Restaurant spaces' },
     { value: 'Patios', label: 'Facing the plaza' },
-    { value: '91', label: 'Residences above' },
+    { value: '91', label: 'Homes above' },
     { value: '46,000', label: 'Sq ft of offices on site' },
   ],
-  sectionHeading: 'A room with covers from open to close',
+  sectionHeading: 'A dining room that stays busy',
   sectionBody:
-    'Residents upstairs, offices next door, and events on the plaza put people at your door across every daypart.',
+    'Residents upstairs, offices next door, and events on the plaza keep people coming through from lunch to last call.',
   highlights: [
     {
-      title: 'Infrastructure from day one',
-      body: 'Grease trap and ventilation systems designed in, so your build-out starts ahead instead of catching up.',
+      title: 'The expensive parts are already done',
+      body: 'Grease traps and ventilation are designed into the building, so you are not paying to add them later.',
     },
     {
       title: 'Patios on the plaza',
-      body: 'Indoor and outdoor seating facing the gathering space at the center of the district.',
+      body: 'Seating indoors and out, facing the open square at the center of the district.',
     },
     {
       title: 'Neighbors who show up',
-      body: '91 residences, 46,000 square feet of office, and a programmed plaza feeding lunch, dinner, and late service.',
+      body: '91 homes and 46,000 square feet of offices sit right here, and the plaza runs events through the year.',
     },
   ],
   formHeading: 'Join the restaurant interest list',
   formIntro: 'Only your name and email are required. The rest helps us match your concept to the right space.',
   submitLabel: 'Join the list',
-  successMessage: "You're on the list. We'll be in touch as restaurant spaces are released.",
+  successMessage: "You're on the list. We'll be in touch as restaurant plans and pricing are released.",
   fields: [
     { name: 'name', label: 'Name', type: 'text', placeholder: 'Your full name', required: true },
     { name: 'email', label: 'Email', type: 'email', placeholder: 'you@example.com', required: true },
