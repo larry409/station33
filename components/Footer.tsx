@@ -275,6 +275,7 @@ export default function Footer() {
                   alt={partner.alt}
                   width={partner.w}
                   height={partner.h}
+                  sizes="(max-width: 640px) 128px, (max-width: 768px) 144px, 160px"
                   className="w-full h-auto"
                 />
               </div>

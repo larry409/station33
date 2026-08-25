@@ -152,6 +152,7 @@ export default function TeamPage() {
             src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2000"
             alt="Team Collaboration"
             fill
+            sizes="100vw"
             className="object-cover"
             priority
           />
@@ -225,6 +226,7 @@ export default function TeamPage() {
                     src={member.image}
                     alt={member.name}
                     fill
+                    sizes="(max-width: 768px) 92vw, (max-width: 1024px) 45vw, (min-width: 1920px) 490px, 27vw"
                     className="object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-card-bg via-transparent to-transparent" />
@@ -302,6 +304,7 @@ export default function TeamPage() {
                   alt={partner.alt}
                   width={partner.w}
                   height={partner.h}
+                  sizes="(max-width: 640px) 45vw, (max-width: 1024px) 30vw, 240px"
                   className="w-full h-auto"
                 />
               </div>
@@ -358,6 +361,7 @@ export default function TeamPage() {
                 src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=1200"
                 alt="Development Projects"
                 fill
+                sizes="(max-width: 1024px) 92vw, (min-width: 1920px) 740px, 42vw"
                 className="object-cover"
               />
             </div>

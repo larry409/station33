@@ -126,6 +126,7 @@ export default function PropertyCards() {
                     src={property.image}
                     alt={property.title}
                     fill
+                    sizes="(max-width: 768px) 88vw, (max-width: 1024px) 40vw, (min-width: 1920px) 410px, 23vw"
                     className="object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                   {/* Badge */}

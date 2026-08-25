@@ -69,7 +69,7 @@ export default function ResidencesSpotlight() {
                 src="/images/residences/interior-3.jpg"
                 alt="Station33 two-bedroom condo living room with mountain views"
                 fill
-                sizes="(max-width: 1024px) 100vw, 50vw"
+                sizes="(max-width: 1024px) 92vw, (min-width: 1920px) 740px, 42vw"
                 className="object-cover transition-transform duration-500 group-hover:scale-105 motion-reduce:group-hover:scale-100"
               />
             </Link>

@@ -124,7 +124,7 @@ export default function ResidenceGallery({ images }: { images: GalleryImage[] })
               src={img.src}
               alt={img.alt}
               fill
-              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              sizes="(max-width: 640px) 92vw, (max-width: 1024px) 45vw, (min-width: 1920px) 490px, 27vw"
               className="object-cover transition-transform duration-500 group-hover:scale-105 motion-reduce:transition-none motion-reduce:group-hover:scale-100"
             />
             <span className="absolute inset-0 bg-bg-darker/0 group-hover:bg-bg-darker/20 transition-colors" />

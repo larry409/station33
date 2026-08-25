@@ -325,7 +325,7 @@ export default function PressKitPage() {
                       src={rendering.src}
                       alt={rendering.alt}
                       fill
-                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      sizes="(max-width: 768px) 92vw, (max-width: 1024px) 45vw, (min-width: 1920px) 490px, 27vw"
                       className="object-cover transition-transform duration-500 group-hover:scale-[1.03] motion-reduce:transition-none motion-reduce:group-hover:scale-100"
                     />
                   </a>

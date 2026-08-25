@@ -43,7 +43,17 @@ export default function HeroVideo({ src, poster, className }: HeroVideoProps) {
     // must be the exact same file and object-cover geometry. next/image would
     // fetch a second, differently-sized asset for the same pixels.
     // eslint-disable-next-line @next/next/no-img-element
-    return <img src={poster} alt="" className={className} />
+    return (
+      <img
+        src={poster}
+        alt=""
+        // This poster is the hero's LCP element on first paint, so it has to
+        // outrank the lazy imagery further down the document.
+        fetchPriority="high"
+        decoding="async"
+        className={className}
+      />
+    )
   }
 
   return (
