@@ -25,26 +25,32 @@ export default function Footer() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [message, setMessage] = useState('')
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const [isError, setIsError] = useState(false)
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setIsSubmitting(true)
     setMessage('')
+    setIsError(false)
+
+    // Encode all named fields (including form-name and the honeypot) for Netlify Forms
+    const params = new URLSearchParams()
+    new FormData(e.currentTarget).forEach((value, key) => params.append(key, value.toString()))
 
     try {
-      const response = await fetch('/api/newsletter', {
+      const res = await fetch('/__forms.html', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email }),
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: params.toString(),
       })
+      if (!res.ok) throw new Error(`Netlify Forms responded ${res.status}`)
 
-      if (response.ok) {
-        setMessage('Thank you for subscribing!')
-        setEmail('')
-      } else {
-        setMessage('Something went wrong. Please try again.')
-      }
-    } catch (error) {
-      setMessage('Something went wrong. Please try again.')
+      setMessage('Thank you for subscribing!')
+      setEmail('')
+    } catch (err) {
+      console.error('Newsletter signup failed:', err)
+      setIsError(true)
+      setMessage('Something went wrong. Please email info@station33.co or try again.')
     } finally {
       setIsSubmitting(false)
     }
@@ -61,9 +67,24 @@ export default function Footer() {
             events.
           </p>
 
-          <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 md:gap-4">
+          <form
+            name="newsletter"
+            method="POST"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
+            onSubmit={handleSubmit}
+            className="flex flex-col sm:flex-row gap-3 md:gap-4"
+          >
+            <input type="hidden" name="form-name" value="newsletter" />
+            {/* Honeypot field — hidden from users, catches bots */}
+            <p className="hidden">
+              <label>
+                Don&rsquo;t fill this out if you&rsquo;re human: <input name="bot-field" />
+              </label>
+            </p>
             <input
               type="email"
+              name="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Enter your email"
@@ -85,9 +106,9 @@ export default function Footer() {
           {message && (
             <p
               className={`mt-4 text-sm md:text-base ${
-                message.includes('Thank you') ? 'text-accent-teal' : 'text-red-400'
+                isError ? 'text-station-red' : 'text-accent-teal'
               }`}
-              role="status"
+              role={isError ? 'alert' : 'status'}
               aria-live="polite"
             >
               {message}
@@ -162,7 +183,7 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <Link
-                  href="/contact"
+                  href="/spaces/residences"
                   className="text-body-text hover:text-accent-teal transition-colors text-sm md:text-base inline-block min-h-[44px] flex items-center"
                 >
                   Residential Leasing
@@ -170,10 +191,26 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/contact"
+                  href="/spaces/retail"
                   className="text-body-text hover:text-accent-teal transition-colors text-sm md:text-base inline-block min-h-[44px] flex items-center"
                 >
-                  Commercial Space
+                  Retail Space
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/spaces/offices"
+                  className="text-body-text hover:text-accent-teal transition-colors text-sm md:text-base inline-block min-h-[44px] flex items-center"
+                >
+                  Office Space
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/spaces/restaurants"
+                  className="text-body-text hover:text-accent-teal transition-colors text-sm md:text-base inline-block min-h-[44px] flex items-center"
+                >
+                  Restaurant Space
                 </Link>
               </li>
               <li>

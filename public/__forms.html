@@ -8,8 +8,10 @@
     <!--
       Static form definitions so Netlify's build-time crawler can register
       forms that are otherwise rendered client-side by React. Do not delete.
-      The live forms submit here via fetch(); see components/InvestorContactModal.tsx
-      and app/contact/page.tsx.
+      The live forms submit here via fetch(); see components/InvestorContactModal.tsx,
+      app/contact/ContactPageClient.tsx, components/SpaceInterestForm.tsx, and
+      the newsletter form in components/Footer.tsx.
+      Field names must match lib/spaces.ts for the commercial space forms.
     -->
     <form name="investor-relations" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
       <input type="text" name="name" />
@@ -19,10 +21,55 @@
       <input name="bot-field" />
     </form>
 
+    <form name="newsletter" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
+      <input type="email" name="email" />
+      <input name="bot-field" />
+    </form>
+
     <form name="contact" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
       <input type="text" name="name" />
       <input type="email" name="email" />
       <input type="tel" name="phone" />
+      <textarea name="message"></textarea>
+      <input name="bot-field" />
+    </form>
+
+
+    <form name="retail-interest" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <input type="text" name="company" />
+      <input type="tel" name="phone" />
+      <input type="text" name="category" />
+      <input type="text" name="square-footage" />
+      <input type="text" name="timeline" />
+      <input type="text" name="existing-locations" />
+      <textarea name="message"></textarea>
+      <input name="bot-field" />
+    </form>
+
+    <form name="office-interest" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <input type="text" name="company" />
+      <input type="tel" name="phone" />
+      <input type="text" name="team-size" />
+      <input type="text" name="square-footage" />
+      <input type="text" name="lease-expiration" />
+      <textarea name="message"></textarea>
+      <input name="bot-field" />
+    </form>
+
+    <form name="restaurant-interest" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <input type="text" name="concept" />
+      <input type="tel" name="phone" />
+      <input type="text" name="service-type" />
+      <input type="text" name="seats" />
+      <input type="text" name="patio" />
+      <input type="text" name="timeline" />
+      <input type="text" name="existing-locations" />
       <textarea name="message"></textarea>
       <input name="bot-field" />
     </form>
