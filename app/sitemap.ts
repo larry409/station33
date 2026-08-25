@@ -11,6 +11,9 @@ const staticRoutes: Array<{
 }> = [
   { path: '/', changeFrequency: 'weekly', priority: 1 },
   { path: '/spaces/residences', changeFrequency: 'monthly', priority: 0.9 },
+  { path: '/spaces/retail', changeFrequency: 'monthly', priority: 0.8 },
+  { path: '/spaces/offices', changeFrequency: 'monthly', priority: 0.8 },
+  { path: '/spaces/restaurants', changeFrequency: 'monthly', priority: 0.8 },
   { path: '/community', changeFrequency: 'monthly', priority: 0.8 },
   { path: '/investors', changeFrequency: 'monthly', priority: 0.8 },
   { path: '/news', changeFrequency: 'weekly', priority: 0.8 },

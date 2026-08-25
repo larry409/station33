@@ -52,6 +52,7 @@ const services: Service[] = [
       'Loading dock access',
     ],
     image: '/images/aerial-classa.jpg',
+    href: '/spaces/offices',
   },
   {
     id: 'gathering',
@@ -84,6 +85,7 @@ const services: Service[] = [
       'Ample ventilation systems',
     ],
     image: '/images/rendering-food-hall.jpg',
+    href: '/spaces/restaurants',
   },
 ]
 

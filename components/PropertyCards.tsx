@@ -16,7 +16,9 @@ type Property = {
   size: string
   badge: string
   image: string
-  href?: string
+  href: string
+  /** Link text — commercial spaces lead to an interest list, not a spec page. */
+  cta: string
 }
 
 const properties: Property[] = [
@@ -26,6 +28,8 @@ const properties: Property[] = [
     description: 'Ground-floor retail with high ceilings and abundant natural light',
     size: '400 - 8,000 sq ft',
     badge: 'Under Construction',
+    href: '/spaces/retail',
+    cta: 'Pre-leasing interest',
     image: '/images/img212.jpg',
   },
   {
@@ -35,6 +39,7 @@ const properties: Property[] = [
     size: '800 - 1,800 sq ft',
     badge: 'Under Construction',
     href: '/spaces/residences',
+    cta: 'Learn more',
     image: '/images/rendering-alley-buildings.jpg',
   },
   {
@@ -43,6 +48,8 @@ const properties: Property[] = [
     description: 'Elevated Class-A offices built for teams who expect more—efficient floor plates, abundant natural light, and premium finishes throughout',
     size: '46,000 total sq ft',
     badge: 'Under Construction',
+    href: '/spaces/offices',
+    cta: 'Pre-leasing interest',
     image: '/images/aerial-classa.jpg',
   },
   {
@@ -51,6 +58,8 @@ const properties: Property[] = [
     description: 'Four to five full-service restaurants with indoor and outdoor seating',
     size: '4 - 5 restaurants',
     badge: 'Under Construction',
+    href: '/spaces/restaurants',
+    cta: 'Pre-leasing interest',
     image: '/images/rendering-archway.jpg',
   },
 ]
@@ -98,7 +107,7 @@ export default function PropertyCards() {
             Explore <BrandName />
           </h2>
           <p className="text-xl text-body-text max-w-3xl mx-auto">
-            Chattanooga, TN's premier mixed-use destination on South Broad
+            Chattanooga, TN&rsquo;s premier mixed-use destination on South Broad
           </p>
         </div>
 
@@ -107,7 +116,7 @@ export default function PropertyCards() {
           {properties.map((property) => (
             <Link
               key={property.id}
-              href={property.href ?? `/spaces/${property.id}`}
+              href={property.href}
               className="property-card group block"
             >
               <div className="feature-card h-full flex flex-col">
@@ -138,7 +147,7 @@ export default function PropertyCards() {
                   <div className="flex items-center justify-between pt-4 border-t border-divider-gray">
                     <span className="text-sm text-body-text font-medium">{property.size}</span>
                     <span className="text-accent-teal font-medium group-hover:translate-x-1 transition-transform inline-flex items-center gap-2">
-                      Learn More <span className="text-lg">→</span>
+                      {property.cta} <span className="text-lg">→</span>
                     </span>
                   </div>
                 </div>

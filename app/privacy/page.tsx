@@ -7,11 +7,11 @@ import { BrandName } from '@/components/BrandName'
 export const metadata: Metadata = {
   title: 'Privacy Policy | Station33',
   description:
-    'How Station33 handles the information you share through this site — newsletter signups, contact and investor inquiries, and the limited data our hosting provider records.',
+    'How Station33 handles the information you share through this site — newsletter signups, contact, investor, and pre-leasing inquiries, and the limited data our hosting provider records.',
   alternates: { canonical: '/privacy' },
 }
 
-const LAST_UPDATED = 'August 21, 2026'
+const LAST_UPDATED = 'August 25, 2026'
 
 /* ---------- Prose primitives (shared look for long-form legal copy) ---------- */
 
@@ -94,7 +94,7 @@ const sections: Section[] = [
     body: (
       <>
         <SubHeading>Information you give us</SubHeading>
-        <P>There are three places on this site where you can send us information:</P>
+        <P>There are a few places on this site where you can send us information:</P>
         <Bullets
           items={[
             <>
@@ -122,17 +122,40 @@ const sections: Section[] = [
               page collects the same four fields: <em>name</em>, <em>email address</em>, optional{' '}
               <em>phone number</em>, and <em>message</em>.
             </>,
+            <>
+              <strong className="text-primary-text font-semibold">
+                The pre-leasing interest forms
+              </strong>{' '}
+              on our{' '}
+              <Link href="/spaces/retail" className={linkClass}>
+                Retail
+              </Link>
+              ,{' '}
+              <Link href="/spaces/offices" className={linkClass}>
+                Offices
+              </Link>
+              , and{' '}
+              <Link href="/spaces/restaurants" className={linkClass}>
+                Restaurants
+              </Link>{' '}
+              pages require only your <em>name</em> and <em>email address</em>. Everything else is
+              optional and up to you: your <em>business, brand, or concept name</em>, a{' '}
+              <em>phone number</em>, the <em>size and type of space</em> you are looking for, your{' '}
+              <em>timeline</em>, any <em>locations you operate today</em>, and — on the office form
+              only — <em>when your current lease expires</em>. We ask so we can send you the right
+              plans at the right time, not because any of it is required.
+            </>,
           ]}
         />
         <P>
-          All three forms are optional. You can read every page of this site without submitting
-          anything. Whatever you choose to put in the message field is up to you — please don&rsquo;t
+          Every one of these forms is optional. You can read every page of this site without
+          submitting anything. Whatever you choose to put in the message field is up to you — please don&rsquo;t
           send sensitive personal information (financial account numbers, government ID numbers,
           health information) through a web form.
         </P>
         <P>
-          Both the contact and investor forms include a hidden anti-spam field that people never see
-          and never fill in. If it comes back filled in, the submission is treated as automated spam.
+          Every form on this site includes a hidden anti-spam field that people never see and never
+          fill in. If it comes back filled in, the submission is treated as automated spam.
         </P>
 
         <SubHeading>Information collected automatically</SubHeading>
@@ -181,10 +204,10 @@ const sections: Section[] = [
           <strong className="text-primary-text font-semibold">
             A note on the newsletter, in the interest of being straight with you:
           </strong>{' '}
-          the newsletter signup is not yet connected to an email marketing platform. Today,
-          submissions are received by our site&rsquo;s server and recorded in its logs; no automated
-          mailing list is running behind it yet. When we connect a mailing platform, we will update
-          this policy and name the provider here before sending anything.
+          newsletter addresses are delivered to Netlify&rsquo;s forms service along with our other
+          submissions, where our team receives them. We are not yet running an automated mailing
+          list. When we connect an email marketing platform, we will update this policy and name the
+          provider here before sending anything.
         </P>
       </>
     ),
@@ -201,9 +224,10 @@ const sections: Section[] = [
           items={[
             <>
               <strong className="text-primary-text font-semibold">Netlify</strong> hosts this
-              website and processes our form submissions. When you submit the contact form or the
-              investor inquiry form, the contents are delivered to Netlify&rsquo;s forms service,
-              which stores the submission and notifies our team. Netlify also operates the servers
+              website and processes our form submissions. When you submit any form here — the
+              newsletter signup, the contact form, the investor inquiry form, or a pre-leasing
+              interest form — the contents are delivered to Netlify&rsquo;s forms service, which
+              stores the submission and notifies our team. Netlify also operates the servers
               that deliver these pages and keeps the delivery logs described above. Netlify&rsquo;s
               handling of that data is governed by its own privacy policy and by our agreement with
               them.
