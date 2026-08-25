@@ -78,7 +78,7 @@ export const retail: SpaceConfig = {
     },
   ],
   formHeading: 'Join the retail interest list',
-  formIntro: 'Only your name and email are required. The rest helps us match you to the right storefront.',
+  formIntro: 'The more you tell us about your concept, the better we can match you to the right storefront.',
   submitLabel: 'Join the list',
   successMessage: "You're on the list. We'll be in touch as retail plans and pricing are released.",
   fields: [
@@ -135,7 +135,7 @@ export const offices: SpaceConfig = {
     },
   ],
   formHeading: 'Join the office interest list',
-  formIntro: 'Only your name and email are required. The rest helps us bring you the right space.',
+  formIntro: 'The more you tell us about your team, the better we can bring you the right space.',
   submitLabel: 'Join the list',
   successMessage: "You're on the list. We'll be in touch as office plans and pricing are released.",
   fields: [
@@ -197,7 +197,7 @@ export const restaurants: SpaceConfig = {
     },
   ],
   formHeading: 'Join the restaurant interest list',
-  formIntro: 'Only your name and email are required. The rest helps us match your concept to the right space.',
+  formIntro: 'The more you tell us about the food and the room you want, the better we can match your concept to the right space.',
   submitLabel: 'Join the list',
   successMessage: "You're on the list. We'll be in touch as restaurant plans and pricing are released.",
   fields: [
