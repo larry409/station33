@@ -56,7 +56,7 @@ export const retail: SpaceConfig = {
     'Ground-floor retail at Station33 on South Broad, Chattanooga — 400 to 8,000 sq ft storefronts facing the plaza. Join the pre-leasing interest list for a first look at plans and pricing.',
   stats: [
     { value: '400–8,000', label: 'Sq ft per storefront' },
-    { value: '91', label: 'Homes above' },
+    { value: '86', label: 'Homes above' },
     { value: '46,000', label: 'Sq ft of offices on site' },
     { value: '4–5', label: 'Restaurants on the block' },
   ],
@@ -66,7 +66,7 @@ export const retail: SpaceConfig = {
   highlights: [
     {
       title: 'Customers who live upstairs',
-      body: '91 homes and 46,000 square feet of offices sit directly above the shops. The restaurants bring in the rest of the neighborhood after work.',
+      body: '86 homes and 46,000 square feet of offices sit directly above the shops. The restaurants bring in the rest of the neighborhood after work.',
     },
     {
       title: 'Room to make it yours',
@@ -176,7 +176,7 @@ export const restaurants: SpaceConfig = {
   stats: [
     { value: '4–5', label: 'Restaurant spaces' },
     { value: 'Patios', label: 'Facing the plaza' },
-    { value: '91', label: 'Homes above' },
+    { value: '86', label: 'Homes above' },
     { value: '46,000', label: 'Sq ft of offices on site' },
   ],
   sectionHeading: 'A dining room that stays busy',
@@ -193,7 +193,7 @@ export const restaurants: SpaceConfig = {
     },
     {
       title: 'Neighbors who show up',
-      body: '91 homes and 46,000 square feet of offices sit right here, and the plaza runs events through the year.',
+      body: '86 homes and 46,000 square feet of offices sit right here, and the plaza runs events through the year.',
     },
   ],
   formHeading: 'Join the restaurant interest list',

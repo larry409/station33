@@ -21,7 +21,7 @@ const stats = [
   },
   {
     id: 3,
-    number: '91',
+    number: '86',
     label: 'Residential Units',
     suffix: '',
   },

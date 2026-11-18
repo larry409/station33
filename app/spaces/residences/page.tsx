@@ -19,7 +19,7 @@ export const metadata = pageMetadata({
 })
 
 const heroStats = [
-  { value: '91', label: 'Residences & townhomes' },
+  { value: '86', label: 'Residences & townhomes' },
   { value: '2BR / 2BA', label: 'Signature layout' },
   { value: '800–1,800', label: 'Sq ft' },
   { value: 'Mountain', label: '& Riverwalk views' },
@@ -67,7 +67,7 @@ export default function ResidencesPage() {
                 Residences
               </h1>
               <p className="text-lg md:text-xl text-primary-text/90 leading-relaxed mb-8 max-w-2xl">
-                91 thoughtfully designed condos and townhomes on South Broad — where home is an
+                86 thoughtfully designed condos and townhomes on South Broad — where home is an
                 elevator ride from everything else.
               </p>
 
