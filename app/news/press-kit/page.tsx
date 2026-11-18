@@ -111,7 +111,7 @@ const factSheet: { label: string; value: string }[] = [
   { label: 'Investment', value: '$130 million' },
   { label: 'Scale', value: '500,000 sq ft across five buildings and a parking garage' },
   { label: 'Hotel', value: '120-room Aloft Hotel by Marriott, seven stories, operated by Dynamic Group' },
-  { label: 'Residential', value: 'More than 100 condos and townhomes, including six penthouse suites' },
+  { label: 'Residential', value: '86 condos and townhomes, including six penthouse suites' },
   { label: 'Food & retail', value: 'Curated food hall with a shared bar, full-service restaurant and lounge, ground-floor retail' },
   { label: 'Landmark', value: 'Clock tower rising more than 75 feet' },
   { label: 'Parking', value: '475 spaces' },

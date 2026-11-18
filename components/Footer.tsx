@@ -186,7 +186,7 @@ export default function Footer() {
                   href="/spaces/residences"
                   className="text-body-text hover:text-accent-teal transition-colors text-sm md:text-base inline-block min-h-[44px] flex items-center"
                 >
-                  Residential Leasing
+                  Residential Sales
                 </Link>
               </li>
               <li>

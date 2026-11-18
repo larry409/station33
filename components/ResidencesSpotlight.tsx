@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { BrandName } from './BrandName'
 
 const stats = [
-  { value: '91', label: 'Residences' },
+  { value: '86', label: 'Residences' },
   { value: '800–1,800', label: 'Sq ft' },
   { value: '2 BR / 2 BA', label: 'Layout' },
 ]
@@ -29,7 +29,7 @@ export default function ResidencesSpotlight() {
               Live at <BrandName />
             </h2>
             <p className="text-lg md:text-xl text-body-text leading-relaxed mb-8 max-w-xl">
-              91 modern condos and townhomes on South Broad — high-end finishes, floor-to-ceiling
+              86 modern condos and townhomes on South Broad — high-end finishes, floor-to-ceiling
               windows, and mountain and Riverwalk views, with everything you need an elevator ride away.
             </p>
 

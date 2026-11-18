@@ -71,7 +71,7 @@ export default function CommunityPage() {
     {
       title: 'Live',
       description:
-        '91 residences and townhomes with modern finishes, Riverwalk views, and pet-friendly amenities. Walk downstairs for coffee, not to your car.',
+        '86 residences and townhomes with modern finishes, Riverwalk views, and pet-friendly amenities. Walk downstairs for coffee, not to your car.',
       image: '/images/img132.jpg',
       icon: '🏠',
     },
@@ -380,7 +380,7 @@ export default function CommunityPage() {
                 Residences
               </h2>
               <p className="text-xl text-body-text mb-8 leading-relaxed">
-                91 thoughtfully designed residences and townhomes featuring high-end finishes,
+                86 thoughtfully designed residences and townhomes featuring high-end finishes,
                 floor-to-ceiling windows, and modern open layouts.
               </p>
 
