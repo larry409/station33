@@ -1,13 +1,26 @@
 import type { Metadata } from 'next'
 
+/** The one domain search engines should index. */
+export const productionUrl = 'https://station33.co'
+
 /**
- * Absolute base for canonicals and OG/Twitter image URLs. Netlify sets
- * DEPLOY_PRIME_URL on deploy previews/branch deploys and URL on production;
- * fall back to the prod domain for local dev. Without this, Next resolves
- * URLs to localhost, which social/link-preview crawlers can't reach.
+ * True only for Netlify's production build. Netlify sets CONTEXT to
+ * `production`, `deploy-preview` or `branch-deploy`; local dev has none.
  */
-export const siteUrl =
-  process.env.DEPLOY_PRIME_URL || process.env.URL || 'https://station33.co'
+export const isProductionBuild = process.env.CONTEXT === 'production'
+
+/**
+ * Absolute base for canonicals, sitemap, robots and OG/Twitter image URLs.
+ *
+ * Production always uses the custom domain. Do NOT read DEPLOY_PRIME_URL here
+ * for production: on production builds Netlify sets it to
+ * `https://main--<site>.netlify.app`, which made every canonical and sitemap
+ * entry point Google at the Netlify branch URL instead of station33.co.
+ * Previews use their own URL so share images resolve; they are noindexed.
+ */
+export const siteUrl = isProductionBuild
+  ? productionUrl
+  : process.env.DEPLOY_PRIME_URL || productionUrl
 
 export const siteName = 'Station33'
 
