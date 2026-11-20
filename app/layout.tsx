@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from 'next'
 import { Inter_Tight } from 'next/font/google'
 import './globals.css'
 import JsonLd from '@/components/JsonLd'
-import { absoluteUrl, siteName, siteUrl } from '@/lib/seo'
+import { absoluteUrl, isProductionBuild, productionUrl, siteName, siteUrl } from '@/lib/seo'
 
 const interTight = Inter_Tight({
   subsets: ['latin'],
@@ -16,6 +16,8 @@ export const metadata: Metadata = {
   description: 'Experience the future of urban living at Station33 - a $100M+ mixed-use development featuring commercial spaces, residences, hospitality, and riverfront access in downtown Chattanooga, TN.',
   keywords: 'Station33, Chattanooga, mixed-use development, real estate, downtown Chattanooga, commercial space, residential, Tennessee',
   authors: [{ name: 'Station33' }],
+  // Deploy previews and branch deploys must never be indexed.
+  ...(isProductionBuild ? {} : { robots: { index: false, follow: false } }),
   alternates: {
     canonical: '/',
   },
@@ -30,7 +32,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Station33 | Chattanooga\'s Premier Mixed-Use Development',
     description: 'Experience the future of urban living at Station33 in downtown Chattanooga, TN.',
-    url: 'https://station33.co',
+    url: productionUrl,
     siteName: 'Station33',
     locale: 'en_US',
     type: 'website',
@@ -97,6 +99,16 @@ const organizationSchema = {
   ],
 }
 
+// Tells Google the site name to show in results (it was showing "Netlify").
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  '@id': absoluteUrl('/#website'),
+  name: siteName,
+  url: absoluteUrl('/'),
+  publisher: { '@id': absoluteUrl('/#organization') },
+}
+
 const placeSchema = {
   '@context': 'https://schema.org',
   '@type': 'Place',
@@ -117,7 +129,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={interTight.variable}>
       <body className={interTight.className}>
-        <JsonLd data={[organizationSchema, placeSchema]} />
+        <JsonLd data={[organizationSchema, websiteSchema, placeSchema]} />
         {children}
       </body>
     </html>

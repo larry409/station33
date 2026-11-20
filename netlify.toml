@@ -1,0 +1,15 @@
+# Send anyone (and Google) who lands on the Netlify production-branch URL to
+# the real domain. Netlify redirects the bare <site>.netlify.app to the primary
+# domain on its own, but not branch URLs like main--<site>.netlify.app.
+# Deploy-preview URLs (deploy-preview-N--station33v2) are not affected.
+[[redirects]]
+  from = "https://main--station33v2.netlify.app/*"
+  to = "https://station33.co/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://station33v2.netlify.app/*"
+  to = "https://station33.co/:splat"
+  status = 301
+  force = true
